@@ -282,11 +282,11 @@
       
         
           
-            <h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h3 id="将本地文件添加到远程服务器"><a href="#将本地文件添加到远程服务器" class="headerlink" title="将本地文件添加到远程服务器"></a>将本地文件添加到远程服务器</h3><ul>
-<li>我的远程服务器tiger@192.168.0.3</li>
+            <h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h3 id="&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"><a href="#&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;" class="headerlink" title="&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"></a>&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;</h3><ul>
+<li>&#x6211;&#x7684;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;tiger@192.168.0.3</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp 本地文件路径 tiger@192.168.0.3:服务器的路径</div></pre></td></tr></table></figure>
-<p><img src="/make/first.jpg" alt="图片"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp &#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84; tiger@192.168.0.3:&#x670D;&#x52A1;&#x5668;&#x7684;&#x8DEF;&#x5F84;</div></pre></td></tr></table></figure>
+<p><img src="/2016/08/11/Linux-Code/first.jpg" alt="&#x56FE;&#x7247;"></p>
 
           
         
@@ -380,14 +380,14 @@
       
         
           
-            <h2 id="自动处理键盘事件的第三方库"><a href="#自动处理键盘事件的第三方库" class="headerlink" title="自动处理键盘事件的第三方库"></a>自动处理键盘事件的第三方库</h2><h3 id="IQKeyboardManager"><a href="#IQKeyboardManager" class="headerlink" title="IQKeyboardManager"></a>IQKeyboardManager</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="external">IQKeyboardManager</a></p>
+            <h2 id="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"><a href="#&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;" class="headerlink" title="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"></a>&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;</h2><h3 id="IQKeyboardManager"><a href="#IQKeyboardManager" class="headerlink" title="IQKeyboardManager"></a>IQKeyboardManager</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="external">IQKeyboardManager</a></p>
 <ul>
-<li>点击空白处回收键盘</li>
-<li>被遮挡上移动控件<h4 id="在AppDelegate中添加"><a href="#在AppDelegate中添加" class="headerlink" title="在AppDelegate中添加"></a>在AppDelegate中添加</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</div><div class="line">    </div><div class="line">    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];</div><div class="line">    manager.enable = YES;</div><div class="line">    manager.shouldResignOnTouchOutside = YES;</div><div class="line">    manager.shouldToolbarUsesTextFieldTintColor = YES;</div><div class="line">    manager.enableAutoToolbar = NO;</div><div class="line">    </div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>&#x70B9;&#x51FB;&#x7A7A;&#x767D;&#x5904;&#x56DE;&#x6536;&#x952E;&#x76D8;</li>
+<li>&#x88AB;&#x906E;&#x6321;&#x4E0A;&#x79FB;&#x52A8;&#x63A7;&#x4EF6;<h4 id="&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;"><a href="#&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;" class="headerlink" title="&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;"></a>&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {</div><div class="line">    </div><div class="line">    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];</div><div class="line">    manager.enable = YES;</div><div class="line">    manager.shouldResignOnTouchOutside = YES;</div><div class="line">    manager.shouldToolbarUsesTextFieldTintColor = YES;</div><div class="line">    manager.enableAutoToolbar = NO;</div><div class="line">    </div><div class="line">    return YES;</div><div class="line">}</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Masonry-代码约束-这个我一直在用，感觉就是神器"><a href="#Masonry-代码约束-这个我一直在用，感觉就是神器" class="headerlink" title="Masonry 代码约束(这个我一直在用，感觉就是神器)"></a>Masonry 代码约束(这个我一直在用，感觉就是神器)</h2><p><a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a></p>
-<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
+<h2 id="Masonry-&#x4EE3;&#x7801;&#x7EA6;&#x675F;-&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;"><a href="#Masonry-&#x4EE3;&#x7801;&#x7EA6;&#x675F;-&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;" class="headerlink" title="Masonry &#x4EE3;&#x7801;&#x7EA6;&#x675F;(&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;)"></a>Masonry &#x4EE3;&#x7801;&#x7EA6;&#x675F;(&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;)</h2><p><a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a></p>
+<h2 id="&#x672A;&#x5B8C;&#x5F85;&#x7EED;"><a href="#&#x672A;&#x5B8C;&#x5F85;&#x7EED;" class="headerlink" title="&#x672A;&#x5B8C;&#x5F85;&#x7EED;"></a>&#x672A;&#x5B8C;&#x5F85;&#x7EED;</h2>
           
         
       
@@ -480,11 +480,11 @@
       
         
           
-            <h2 id="第一步：看咯"><a href="#第一步：看咯" class="headerlink" title="第一步：看咯"></a>第一步：看咯</h2><p><a href="https://zsisme.gitbooks.io/ios-/content/index.html" target="_blank" rel="external">你要看的网址</a></p>
+            <h2 id="&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x770B;&#x54AF;"><a href="#&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x770B;&#x54AF;" class="headerlink" title="&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x770B;&#x54AF;"></a>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x770B;&#x54AF;</h2><p><a href="https://zsisme.gitbooks.io/ios-/content/index.html" target="_blank" rel="external">&#x4F60;&#x8981;&#x770B;&#x7684;&#x7F51;&#x5740;</a></p>
 <h3 id="CALayer"><a href="#CALayer" class="headerlink" title="CALayer"></a>CALayer</h3><ul>
-<li>面试题</li>
+<li>&#x9762;&#x8BD5;&#x9898;</li>
 </ul>
-<p>CALyer和UIView的区别</p>
+<p>CALyer&#x548C;UIView&#x7684;&#x533A;&#x522B;</p>
 
           
         
@@ -578,8 +578,8 @@
       
         
           
-            <h2 id="json-decode出现的怀疑人生问题"><a href="#json-decode出现的怀疑人生问题" class="headerlink" title="json_decode出现的怀疑人生问题"></a>json_decode出现的怀疑人生问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$respBody = &apos;&#123;&quot;message&quot;:&quot;streamStatus&quot;,&quot;updatedAt&quot;:&quot;2016-08-09T10:20:38.035549157+08:00&quot;,&quot;data&quot;:&#123;&quot;id&quot;:&quot;z1.com-jyjapp-zb.JYJLive414&quot;,&quot;url&quot;:&quot;rtmp://127.0.0.1/com-jyjapp-zb/JYJLive414?key=4846e65a-cce6-4e62-a375-745d7f02</div><div class="line">        e032\u0026sourceConnId=zOmKiH2XRsuWmWht\u0026node=vc-scgy-tel-1-1\u0026remote=171.217.118.64%3A51789&quot;,&quot;status&quot;:&quot;connected&quot;&#125;&#125;&apos;;</div><div class="line">$re  = json_decode($respBody,true);</div></pre></td></tr></table></figure>
-<p>这一串很普通的代码$respBody = null解析失败的原因居然是—–&gt;不能换行的字符<br>你会问我这么简单的问题看不出来吗中间明显空了一块吗！但是在编辑器中是分辨不出来的</p>
+            <h2 id="json-decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;"><a href="#json-decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;" class="headerlink" title="json_decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;"></a>json_decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$respBody = &apos;{&quot;message&quot;:&quot;streamStatus&quot;,&quot;updatedAt&quot;:&quot;2016-08-09T10:20:38.035549157+08:00&quot;,&quot;data&quot;:{&quot;id&quot;:&quot;z1.com-jyjapp-zb.JYJLive414&quot;,&quot;url&quot;:&quot;rtmp://127.0.0.1/com-jyjapp-zb/JYJLive414?key=4846e65a-cce6-4e62-a375-745d7f02</div><div class="line">        e032\u0026sourceConnId=zOmKiH2XRsuWmWht\u0026node=vc-scgy-tel-1-1\u0026remote=171.217.118.64%3A51789&quot;,&quot;status&quot;:&quot;connected&quot;}}&apos;;</div><div class="line">$re  = json_decode($respBody,true);</div></pre></td></tr></table></figure>
+<p>&#x8FD9;&#x4E00;&#x4E32;&#x5F88;&#x666E;&#x901A;&#x7684;&#x4EE3;&#x7801;$respBody = null&#x89E3;&#x6790;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x5C45;&#x7136;&#x662F;&#x2014;&#x2013;&gt;&#x4E0D;&#x80FD;&#x6362;&#x884C;&#x7684;&#x5B57;&#x7B26;<br>&#x4F60;&#x4F1A;&#x95EE;&#x6211;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#x7684;&#x95EE;&#x9898;&#x770B;&#x4E0D;&#x51FA;&#x6765;&#x5417;&#x4E2D;&#x95F4;&#x660E;&#x663E;&#x7A7A;&#x4E86;&#x4E00;&#x5757;&#x5417;&#xFF01;&#x4F46;&#x662F;&#x5728;&#x7F16;&#x8F91;&#x5668;&#x4E2D;&#x662F;&#x5206;&#x8FA8;&#x4E0D;&#x51FA;&#x6765;&#x7684;</p>
 
           
         
@@ -674,7 +674,7 @@
         
           
             <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
@@ -776,7 +776,7 @@
         
           
             <blockquote>
-<p>我有一头<strong>小毛驴</strong>，可是我从来都不骑。</p>
+<p>&#x6211;&#x6709;&#x4E00;&#x5934;<strong>&#x5C0F;&#x6BDB;&#x9A74;</strong>&#xFF0C;&#x53EF;&#x662F;&#x6211;&#x4ECE;&#x6765;&#x90FD;&#x4E0D;&#x9A91;&#x3002;</p>
 </blockquote>
 
           
