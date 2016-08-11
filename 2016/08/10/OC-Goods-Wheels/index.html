@@ -84,16 +84,25 @@
 
 
 
-<meta name="description" content="json_decode出现的怀疑人生问题123$respBody = &amp;apos;&amp;#123;&amp;quot;message&amp;quot;:&amp;quot;streamStatus&amp;quot;,&amp;quot;updatedAt&amp;quot;:&amp;quot;2016-08-09T10:20:38.035549157+08:00&amp;quot;,&amp;quot;data&amp;quot;:&amp;#123;&amp;quot;id&amp;quot;:">
+<meta name="description" content="自动处理键盘事件的第三方库IQKeyboardManagerIQKeyboardManager
+
+点击空白处回收键盘
+被遮挡上移动控件在AppDelegate中添加12345678910- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习PHP遇到的问题">
-<meta property="og:url" content="http://yoursite.com/2016/08/09/PHP-Study-problems/index.html">
+<meta property="og:title" content="OC好用的轮子">
+<meta property="og:url" content="http://yoursite.com/2016/08/10/OC-Goods-Wheels/index.html">
 <meta property="og:site_name" content="DSPerson">
-<meta property="og:description" content="json_decode出现的怀疑人生问题123$respBody = &amp;apos;&amp;#123;&amp;quot;message&amp;quot;:&amp;quot;streamStatus&amp;quot;,&amp;quot;updatedAt&amp;quot;:&amp;quot;2016-08-09T10:20:38.035549157+08:00&amp;quot;,&amp;quot;data&amp;quot;:&amp;#123;&amp;quot;id&amp;quot;:">
-<meta property="og:updated_time" content="2016-08-09T06:58:15.000Z">
+<meta property="og:description" content="自动处理键盘事件的第三方库IQKeyboardManagerIQKeyboardManager
+
+点击空白处回收键盘
+被遮挡上移动控件在AppDelegate中添加12345678910- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption">
+<meta property="og:updated_time" content="2016-08-10T08:36:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="学习PHP遇到的问题">
-<meta name="twitter:description" content="json_decode出现的怀疑人生问题123$respBody = &amp;apos;&amp;#123;&amp;quot;message&amp;quot;:&amp;quot;streamStatus&amp;quot;,&amp;quot;updatedAt&amp;quot;:&amp;quot;2016-08-09T10:20:38.035549157+08:00&amp;quot;,&amp;quot;data&amp;quot;:&amp;#123;&amp;quot;id&amp;quot;:">
+<meta name="twitter:title" content="OC好用的轮子">
+<meta name="twitter:description" content="自动处理键盘事件的第三方库IQKeyboardManagerIQKeyboardManager
+
+点击空白处回收键盘
+被遮挡上移动控件在AppDelegate中添加12345678910- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption">
 
 
 
@@ -114,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/09/PHP-Study-problems/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/10/OC-Goods-Wheels/"/>
 
-  <title> 学习PHP遇到的问题 | DSPerson </title>
+  <title> OC好用的轮子 | DSPerson </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +245,7 @@
             
             
               
-                学习PHP遇到的问题
+                OC好用的轮子
               
             
           </h1>
@@ -248,8 +257,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-09T14:58:15+08:00" content="2016-08-09">
-              2016-08-09
+            <time itemprop="dateCreated" datetime="2016-08-10T16:36:44+08:00" content="2016-08-10">
+              2016-08-10
             </time>
           </span>
 
@@ -276,9 +285,14 @@
       
 
       
-        <h2 id="json-decode出现的怀疑人生问题"><a href="#json-decode出现的怀疑人生问题" class="headerlink" title="json_decode出现的怀疑人生问题"></a>json_decode出现的怀疑人生问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$respBody = &apos;&#123;&quot;message&quot;:&quot;streamStatus&quot;,&quot;updatedAt&quot;:&quot;2016-08-09T10:20:38.035549157+08:00&quot;,&quot;data&quot;:&#123;&quot;id&quot;:&quot;z1.com-jyjapp-zb.JYJLive414&quot;,&quot;url&quot;:&quot;rtmp://127.0.0.1/com-jyjapp-zb/JYJLive414?key=4846e65a-cce6-4e62-a375-745d7f02</div><div class="line">        e032\u0026sourceConnId=zOmKiH2XRsuWmWht\u0026node=vc-scgy-tel-1-1\u0026remote=171.217.118.64%3A51789&quot;,&quot;status&quot;:&quot;connected&quot;&#125;&#125;&apos;;</div><div class="line">$re  = json_decode($respBody,true);</div></pre></td></tr></table></figure>
-<p>这一串很普通的代码$respBody = null解析失败的原因居然是—–&gt;不能换行的字符<br>你会问我这么简单的问题看不出来吗中间明显空了一块吗！但是在编辑器中是分辨不出来的</p>
-
+        <h2 id="自动处理键盘事件的第三方库"><a href="#自动处理键盘事件的第三方库" class="headerlink" title="自动处理键盘事件的第三方库"></a>自动处理键盘事件的第三方库</h2><h3 id="IQKeyboardManager"><a href="#IQKeyboardManager" class="headerlink" title="IQKeyboardManager"></a>IQKeyboardManager</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="external">IQKeyboardManager</a></p>
+<ul>
+<li>点击空白处回收键盘</li>
+<li>被遮挡上移动控件<h4 id="在AppDelegate中添加"><a href="#在AppDelegate中添加" class="headerlink" title="在AppDelegate中添加"></a>在AppDelegate中添加</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</div><div class="line">    </div><div class="line">    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];</div><div class="line">    manager.enable = YES;</div><div class="line">    manager.shouldResignOnTouchOutside = YES;</div><div class="line">    manager.shouldToolbarUsesTextFieldTintColor = YES;</div><div class="line">    manager.enableAutoToolbar = NO;</div><div class="line">    </div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Masonry-代码约束-这个我一直在用，感觉就是神器"><a href="#Masonry-代码约束-这个我一直在用，感觉就是神器" class="headerlink" title="Masonry 代码约束(这个我一直在用，感觉就是神器)"></a>Masonry 代码约束(这个我一直在用，感觉就是神器)</h2><p><a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a></p>
+<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
       
     </div>
 
@@ -303,17 +317,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/08/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/08/09/OC-Study-CoreAnimation/" rel="next" title="学习CoreAnimation">
+                <i class="fa fa-chevron-left"></i> 学习CoreAnimation
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/09/OC-Study-CoreAnimation/" rel="prev" title="学习CoreAnimation">
-                学习CoreAnimation <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -413,7 +423,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#json-decode出现的怀疑人生问题"><span class="nav-number">1.</span> <span class="nav-text">json_decode出现的怀疑人生问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#自动处理键盘事件的第三方库"><span class="nav-number">1.</span> <span class="nav-text">自动处理键盘事件的第三方库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IQKeyboardManager"><span class="nav-number">1.1.</span> <span class="nav-text">IQKeyboardManager</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在AppDelegate中添加"><span class="nav-number">1.1.1.</span> <span class="nav-text">在AppDelegate中添加</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Masonry-代码约束-这个我一直在用，感觉就是神器"><span class="nav-number">2.</span> <span class="nav-text">Masonry 代码约束(这个我一直在用，感觉就是神器)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未完待续"><span class="nav-number">3.</span> <span class="nav-text">未完待续</span></a></li></ol></div>
             
           </div>
         </section>
