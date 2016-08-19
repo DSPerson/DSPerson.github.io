@@ -45,6 +45,10 @@
 </ul>
 <p>base64EncodedStringWithOptions&#x4E00;&#x6B21;<br>&#x5728;PHP&#x5728;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x636E;json_encode(array(&#x201C;receipt-data&#x201D; =&gt; $receipt));&#x4E00;&#x6B21;&#x5728;&#x4F20;&#x7ED9;&#x82F9;&#x679C;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x81EA;&#x5DF1;&#x5199;&#x767E;&#x5EA6;&#x8C37;&#x6B4C;&#x4E00;&#x8D77;&#x6765;&#x771F;&#x5FC3;&#x597D;&#x96BE;&#x3002;<br>&#x4E00;&#x904D;&#x4E00;&#x904D;&#x7684;&#x6539;OC&#x548C;PHP&#x4EE3;&#x7801;&#xFF0C;&#x8FD8;&#x597D;&#x516C;&#x53F8;&#x592A;&#x5C0F;&#x4E24;&#x4E2A;&#x90FD;&#x662F;&#x6211;&#x5728;&#x505A;&#xFF0C;&#x6211;&#x6709;&#x5927;&#x628A;&#x65F6;&#x95F4;&#x548C;&#x4E0D;&#x7528;&#x9EBB;&#x70E6;&#x522B;&#x4EBA;&#x3002;</p>
 </blockquote>
+<p>&#x53C2;&#x8003;:</p>
+<blockquote>
+<p><a href="http://www.jianshu.com/p/e9ae4cece800" target="_blank" rel="external">&#x5E94;&#x7528;&#x5185;&#x652F;&#x4ED8;IAP&#x5168;&#x90E8;&#x6D41;&#x7A0B;</a><br><a href="http://www.jianshu.com/p/86ac7d3b593a" target="_blank" rel="external">&#x5E94;&#x7528;&#x5185;&#x652F;&#x4ED8;IAP&#x5168;&#x90E8;&#x6D41;&#x7A0B;</a></p>
+</blockquote>
 ]]></content>
     </entry>
     
