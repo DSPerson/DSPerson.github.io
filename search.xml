@@ -13,7 +13,7 @@
 <li>&#x548C;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4EA4;&#x4E92;&#x95EE;&#x9898;(&#x6B64;&#x5904;&#x4EE5;PHP&#x4E3A;&#x4F8B;&#x5B50;&#xFF0C;&#x672C;&#x4EBA;PHP&#x521A;&#x5165;&#x95E8;&#x4E5F;&#x662F;copy&#x6765;&#x7684;&#xFF0C;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x505A;&#x51FA;&#x5C0F;&#x5C0F;&#x6539;&#x53D8;)</li>
 </ul>
 </blockquote>
-<p><code>&lt;!- &#x9605;&#x8BFB;&#x5168;&#x6587; -&gt;</code></p>
+<a id="more"></a>
 <h2 id="&#x95EE;&#x9898;"><a href="#&#x95EE;&#x9898;" class="headerlink" title="&#x95EE;&#x9898;"></a>&#x95EE;&#x9898;</h2><h3 id="&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;"><a href="#&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;" class="headerlink" title="&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;"></a>&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;</h3><ul>
 <li><p>&#x9700;&#x8981;&#x5728;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray&lt;SKPaymentTransaction *&gt; *)transactions</div></pre></td></tr></table></figure>
