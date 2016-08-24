@@ -266,7 +266,7 @@
   
   
 
-  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
       <header class="post-header">
@@ -297,6 +297,25 @@
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS功能/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS功能</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -437,16 +456,17 @@
 
       
         
-          
-            <h2 id="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"><a href="#&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;" class="headerlink" title="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"></a>&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;</h2><h3 id="IQKeyboardManager"><a href="#IQKeyboardManager" class="headerlink" title="IQKeyboardManager"></a>IQKeyboardManager</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="external">IQKeyboardManager</a></p>
+          <h2 id="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"><a href="#&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;" class="headerlink" title="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"></a>&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;</h2><h3 id="IQKeyboardManager"><a href="#IQKeyboardManager" class="headerlink" title="IQKeyboardManager"></a>IQKeyboardManager</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager">IQKeyboardManager</a></p>
 <ul>
 <li>&#x70B9;&#x51FB;&#x7A7A;&#x767D;&#x5904;&#x56DE;&#x6536;&#x952E;&#x76D8;</li>
 <li>&#x88AB;&#x906E;&#x6321;&#x4E0A;&#x79FB;&#x52A8;&#x63A7;&#x4EF6;<h4 id="&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;"><a href="#&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;" class="headerlink" title="&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;"></a>&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {</div><div class="line">    </div><div class="line">    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];</div><div class="line">    manager.enable = YES;</div><div class="line">    manager.shouldResignOnTouchOutside = YES;</div><div class="line">    manager.shouldToolbarUsesTextFieldTintColor = YES;</div><div class="line">    manager.enableAutoToolbar = NO;</div><div class="line">    </div><div class="line">    return YES;</div><div class="line">}</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="Masonry-&#x4EE3;&#x7801;&#x7EA6;&#x675F;-&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;"><a href="#Masonry-&#x4EE3;&#x7801;&#x7EA6;&#x675F;-&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;" class="headerlink" title="Masonry &#x4EE3;&#x7801;&#x7EA6;&#x675F;(&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;)"></a>Masonry &#x4EE3;&#x7801;&#x7EA6;&#x675F;(&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;)</h2><p><a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a></p>
-<h2 id="&#x672A;&#x5B8C;&#x5F85;&#x7EED;"><a href="#&#x672A;&#x5B8C;&#x5F85;&#x7EED;" class="headerlink" title="&#x672A;&#x5B8C;&#x5F85;&#x7EED;"></a>&#x672A;&#x5B8C;&#x5F85;&#x7EED;</h2>
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/19/OC-Goods-Wheels/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1146,6 +1166,13 @@
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
