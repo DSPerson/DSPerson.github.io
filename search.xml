@@ -79,21 +79,11 @@
 <h3 id="f-&#x5F3A;&#x5236;&#x5220;&#x9664;"><a href="#f-&#x5F3A;&#x5236;&#x5220;&#x9664;" class="headerlink" title="f &#x5F3A;&#x5236;&#x5220;&#x9664;"></a>f &#x5F3A;&#x5236;&#x5220;&#x9664;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -f</div></pre></td></tr></table></figure>
 <h3 id="r-&#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;"><a href="#r-&#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;" class="headerlink" title="r &#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;"></a>r &#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf</div></pre></td></tr></table></figure>
 <p>&#x6709;&#x6743;&#x9650;&#x5C31;&#x6DFB;&#x52A0;sudo &#x52A0;&#x4E0A;&#x9762;&#x7684;&#x547D;&#x4EE4;</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://yoursite.com/2016/08/12/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h2 id="git-ssh-&#x95EE;&#x9898;"><a href="#git-ssh-&#x95EE;&#x9898;" class="headerlink" title="git ssh &#x95EE;&#x9898;"></a>git ssh &#x95EE;&#x9898;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh/</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim config</div></pre></td></tr></table></figure>
+<p>&#x6309;i &#x63D2;&#x5165;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Host git.oschina.net</div><div class="line">IdentityFile ~/.ssh/&#x4F60;&#x7684;ssh&#x516C;&#x94A5;&#x4E0D;&#x5E26;.pub</div></pre></td></tr></table></figure>
+<p>ssh  .ssh/id_rsa id_rsa.pub</p>
 ]]></content>
     </entry>
     
