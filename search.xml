@@ -6,7 +6,9 @@
     <entry>
       <title><![CDATA[Mac上搭建phpStorm和Xdebug教程]]></title>
       <url>http://yoursite.com/2016/09/18/MAC-PHPSTORM-XDEBUG/</url>
-      <content type="html"><![CDATA[<h2 id="&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew"><a href="#&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew" class="headerlink" title="&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew"></a>&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew</h2><ul>
+      <content type="html"><![CDATA[<p>&#x611F;&#x89C9;&#x767E;&#x5EA6;&#x5230;&#x7684;&#x5C31;&#x662F;&#x5728;&#x626F;&#x6DE1;- -&#xFF0C;&#x6700;&#x540E;&#x53EA;&#x80FD;google&#x3002;<br>&#x4EE5;&#x5907;&#x4E0D;&#x65F6;&#x4E4B;&#x9700;&#x3002;</p>
+<a id="more"></a>
+<h2 id="&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew"><a href="#&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew" class="headerlink" title="&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew"></a>&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew</h2><ul>
 <li>&#x5982;&#x679C;&#x771F;&#x6CA1;&#x6709;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF1B;<a href="http://brew.sh/" target="_blank" rel="external">&#x8BF7;&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x5B89;&#x88C5;</a></li>
 </ul>
 <h2 id="&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;"><a href="#&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;" class="headerlink" title="&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;"></a>&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;</h2><ul>
