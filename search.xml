@@ -4,6 +4,54 @@
   
     
     <entry>
+      <title><![CDATA[微信小程序问题总结]]></title>
+      <url>http://yoursite.com/2016/10/02/WX-IDE/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>&#x6211;&#x662F;&#x505A;iOS&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x4F1A;&#x8BF4;&#x8FD9;&#x4E2A;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x53C8;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x6211;&#x4E0D;&#x53CD;&#x5BF9;&#x82F9;&#x679C;&#x5BF9;&#x52A8;&#x6001;&#x7684;&#x8BA8;&#x538C;&#xFF0C;&#x6BD5;&#x7ADF;&#x8FD9;&#x6837;&#x5F88;&#x5BB9;&#x6613;&#x4E0D;&#x53D7;&#x63A7;&#x5236;&#xFF0C;&#x4F46;&#x662F;<a href="reactnative.cn">ReactNative(&#x4E2D;&#x6587;&#x7F51;)</a>&#x4E0D;&#x662F;&#x8FD8;&#x6D3B;&#x7684;&#x597D;&#x597D;&#x7684;&#x5417;(&#x8C8C;&#x4F3C;&#x7248;&#x672C;&#x5230;&#x4E86;0.33&#x4E86;)!&#x800C;&#x4E14;&#x6211;&#x89C9;&#x5F97;&#x53EF;&#x4EE5;&#x5B66;&#x4E2A;&#x5927;&#x6982;&#x4E07;&#x4E00;&#x771F;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x4E0D;&#x81F3;&#x4E8E;&#x65E0;&#x6240;&#x9002;&#x4ECE;(&#x6211;&#x5148;&#x505A;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x964B;&#x7684;&#x7535;&#x5546;&#x7C7B;&#xFF0C;&#x5B8C;&#x4E8B;&#x540E;&#x653E;&#x5230;&#x4E0B;&#x9762;)&#x3002;&#x5B66;&#x4E60;&#xFF01;&#x5B66;&#x4E60;&#xFF01;&#x5B66;&#x4E60;&#xFF01;&#x624D;&#x4E0D;&#x4F1A;&#x88AB;&#x6DD8;&#x6C70;&#x3002;</p>
+<p>&#x7533;&#x660E; &#xFF1A;&#x4F1A;&#x5C06;&#x6211;&#x8BA4;&#x4E3A;&#x662F;&#x95EE;&#x9898;&#x7684;&#x95EE;&#x9898;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x89C9;&#x5F97;&#x592A;&#x7B80;&#x5355;&#x53EF;&#x4EE5;&#x5173;&#x6389;&#x3002;&#x5E76;&#x4E14;&#x6211;&#x662F;&#x8FB9;&#x505A;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FB9;&#x5199;&#x7684;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#xFF0C;&#x4F1A;&#x4E00;&#x76F4;&#x66F4;&#x65B0;&#xFF0C;&#xFF01;&#xFF01;&#xFF01;MAC&#x73AF;&#x5883;</p>
+<p>&#x6211;&#x53EF;&#x4EE5;&#x8BF4;&#x4E0D;&#x592A;&#x61C2;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x8BED;&#x8A00;&#x3002;&#x5B83;&#x4F7F;&#x7528;XML+JS &#xFF0C;&#x4E0D;&#x652F;&#x6301;HTML5&#xFF0C;&#x517C;&#x5BB9;&#x90E8;&#x5206;CSS&#x5199;&#x6CD5;(&#x4ECE;&#x8FD9;&#x4E2A;&#x53E5;&#x53F7;&#x5230;&#x8FD9;&#x53E5;&#x8BDD;&#x5B8C;&#x4E8B;&#x6211;&#x662F;&#x6284;&#x6765;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4E0D;&#x61C2;XML&#x548C;JS)&#x3002;&#x4E0D;&#x61C2;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x5F00;&#x53D1;&#x5417;&#xFF1F;&#x6211;&#x89C9;&#x5F97;&#x8BED;&#x8A00;&#x90FD;&#x662F;&#x60F3;&#x901A;&#x7684;&#xFF0C;&#x8FD8;&#x597D;&#x4E4B;&#x524D;&#x505A;&#x4E86;<code>React Native</code>&#x9879;&#x76EE;(&#x603B;&#x89C9;&#x5F97;&#x5F88;&#x76F8;&#x4F3C;)&#xFF0C;&#x4E0A;&#x624B;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E5F;&#x5F88;&#x5FEB;&#x3002;</p>
+<p>ps: &#x5F88;&#x51B7;&#x6E05;&#x3002;&#x3002;&#x3002;&#x6211;&#x77E5;&#x9053;&#x6211;&#x662F;&#x83DC;&#x9E1F;</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="&#x4ECE;&#x5934;&#x5F00;&#x59CB;-&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;"><a href="#&#x4ECE;&#x5934;&#x5F00;&#x59CB;-&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;" class="headerlink" title="&#x4ECE;&#x5934;&#x5F00;&#x59CB; - &#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;"></a>&#x4ECE;&#x5934;&#x5F00;&#x59CB; - &#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;</h2><h3 id="&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><a href="#&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;" class="headerlink" title="&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"></a>&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</h3><p><a href="https://servicewechat.com/wxa-dev-logic/download_redirect?type=darwin&amp;from=mpwiki&amp;t=1475052055457" target="_blank" rel="external">&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;</a></p>
+<ul>
+<li>&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x7F3A;&#x5C11;appid&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x4E2A;&#x53EA;&#x8981;&#x7834;&#x89E3;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;(<a href="http://blog.csdn.net/chenqiuge1984/article/details/52692394" target="_blank" rel="external">&#x5F15;&#x7528; &#x4E00;</a>) </li>
+</ul>
+<h3 id="&#x65B0;&#x5EFA;&#x9879;&#x76EE;"><a href="#&#x65B0;&#x5EFA;&#x9879;&#x76EE;" class="headerlink" title="&#x65B0;&#x5EFA;&#x9879;&#x76EE;"></a>&#x65B0;&#x5EFA;&#x9879;&#x76EE;</h3><ul>
+<li>&#x4E0D;&#x6E05;&#x695A;&#x662F;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x7684;&#x539F;&#x56E0;&#x8FD8;&#x662F;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#xFF0C;&#x8BF4;&#x597D;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;QuickStart&#x7684;&#xFF0C;&#x7136;&#x800C;&#x6211;&#x5E76;&#x6CA1;&#x6709;&#x6240;&#x4EE5;&#x6253;&#x5F00;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x7684;</li>
+</ul>
+<p><img src="/2016/10/02/WX-IDE/startError.png" alt="11"></p>
+<ul>
+<li>&#x53EA;&#x80FD;&#x4ECE;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/demo/quickstart.zip?t=1475052047016" target="_blank" rel="external">HelloWorld</a>&#x76F4;&#x63A5;&#x653E;&#x5927;&#x5F00;&#x91C7;&#x521B;&#x5EFA;&#x7684;&#x9879;&#x76EE;&#x8DEF;&#x5F84;&#x4E0B;&#x9762;</li>
+</ul>
+<h3 id="&#x6587;&#x4EF6;&#x7ED3;&#x6784;"><a href="#&#x6587;&#x4EF6;&#x7ED3;&#x6784;" class="headerlink" title="&#x6587;&#x4EF6;&#x7ED3;&#x6784;"></a>&#x6587;&#x4EF6;&#x7ED3;&#x6784;</h3><p><img src="/2016/10/02/WX-IDE/appDetail.png" alt="&#x9ED8;&#x8BA4;&#x7684;"><br>&#x9ED8;&#x8BA4;&#x5C31;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x662F;&#x76EE;&#x5F55;&#x518D;&#x52A0;&#x4E0A;&#x4E0D;&#x540C;&#x540D;&#x5B57;&#x7684;&#x8FD9;&#x4E2A;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5F53;&#x7136;&#x8FD8;&#x5F97;&#x52A0;&#x4E0A;.wxml&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x6765;&#x4E66;&#x5199;&#x754C;&#x9762;&#x7684;</p>
+<h2 id="&#x4EE3;&#x7801;"><a href="#&#x4EE3;&#x7801;" class="headerlink" title="&#x4EE3;&#x7801;"></a>&#x4EE3;&#x7801;</h2><p>app.json</p>
+<p><img src="/2016/10/02/WX-IDE/appJson.png" alt=""></p>
+<ul>
+<li>pages : &#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x9879;&#x76EE;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x5165;&#x53E3;(&#x7528;&#x5E94;&#x8BE5;&#x7684;&#x539F;&#x56E0;&#x662F;&#x6211;&#x4E0D;&#x786E;&#x5B9A;)&#xFF0C;&#x5982;&#x679C;&#x6B64;&#x5904;&#x4E0D;&#x52A0;&#x8F7D;&#x7684;&#x8BDD;&#x540E;&#x9762;&#x7528;&#x4E86;&#x4E5F;&#x662F;&#x4E0D;&#x4F1A;&#x6709;&#x6240;&#x663E;&#x793A;&#x7684;(&#x8FD9;&#x91CC;&#x662F;&#x786E;&#x5B9A;&#x7684;&#x5982;&#x679C;&#x4E0D;&#x4FE1;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;)&#x3002;</li>
+<li>window : &#x7A0B;&#x5E8F;&#x7684;&#x7A97;&#x53E3;</li>
+<li>tabBar : &#x5F88;&#x597D;&#x7406;&#x89E3;&#x5C31;&#x662F;&#x6807;&#x7B7E;&#x680F;(App&#x4E0B;&#x9762;&#x8D1F;&#x8D23;&#x5207;&#x6362;&#x4E0D;&#x540C;&#x754C;&#x9762;)</li>
+</ul>
+<h2 id="&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;"><a href="#&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;" class="headerlink" title="&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;"></a>&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;</h2><h3 id="scroll-view"><a href="#scroll-view" class="headerlink" title="scroll-view"></a>scroll-view</h3><h4 id="&#x6CE8;&#x610F;&#x95EE;&#x9898;"><a href="#&#x6CE8;&#x610F;&#x95EE;&#x9898;" class="headerlink" title="&#x6CE8;&#x610F;&#x95EE;&#x9898;"></a>&#x6CE8;&#x610F;&#x95EE;&#x9898;</h4><ul>
+<li>&#x6A2A;&#x5411;&#x9700;&#x8981;&#x7ED9;scroll-view &#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;<code>height: 200px</code>&#x6587;&#x6863;&#x4E0A;&#x662F;&#x8FD9;&#x4E48;&#x8BF4;&#x7684;&#x4F46;&#x662F;scroll-view&#x4E2D;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x9AD8;&#x5EA6;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;scroll-view&#x6491;&#x8D77;&#x6765;&#x4E86;</li>
+</ul>
+<h4 id="&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;"><a href="#&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;" class="headerlink" title="&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;"></a>&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;</h4><ul>
+<li><p>scroll-view&#x9700;&#x8981;&#x8BBE;&#x7F6E;<code>white-space: nowrap;</code>(&#x767E;&#x5EA6;&#x4E00;&#x4E0B;:&#x6587;&#x672C;&#x4E0D;&#x4F1A;&#x6362;&#x884C;&#xFF0C;&#x6587;&#x672C;&#x4F1A;&#x5728;&#x5728;&#x540C;&#x4E00;&#x884C;&#x4E0A;&#x7EE7;&#x7EED;&#xFF0C;&#x76F4;&#x5230;&#x9047;&#x5230; <br> &#x6807;&#x7B7E;&#x4E3A;&#x6B62;&#x3002;)</p>
+</li>
+<li><p>&#x5B50;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;<code>display:inline-block</code>(&#x767E;&#x5EA6;&#x4E00;&#x4E0B;:&#x8BA9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5177;&#x6709;&#x201C;&#x533A;&#x5757;&#x5143;&#x7D20;&#x201D;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;width&#x548C;height&#xFF09;&#xFF0C;&#x53C8;&#x5177;&#x6709;&#x201C;&#x5185;&#x8054;&#x5143;&#x7D20;&#x201D;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x4EA7;&#x751F;&#x6362;&#x884C;))</p>
+</li>
+</ul>
+<p>&#x8FD9;&#x6837;scroll-view&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x5C55;&#x793A;&#x4E86;</p>
+<blockquote>
+<p>&#x95EE;&#x9898;&#xFF1A;&#x4F46;&#x662F;scroll-view&#x5982;&#x679C;&#x7ED1;&#x5B9A;<code>wx:for = &apos;&apos;</code>&#x5B50;&#x7C7B;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;view &#x4ED6;&#x4E00;&#x76F4;&#x90FD;&#x662F;<code>column</code>&#x6392;&#x5217;&#x4E0D;&#x4F1A;&#x662F;<code>row</code>&#x6392;&#x5217;&#x3002;&#x5E0C;&#x671B;&#x6709;&#x4EBA;&#x5E2E;&#x89E3;&#x51B3;</p>
+</blockquote>
+<p>&#x9488;&#x5BF9;&#x4E0A;&#x9762;&#x95EE;&#x9898; &#x6211;&#x53EA;&#x80FD;&#x7528;<code>swiper</code>&#x6765;&#x89E3;&#x51B3;&#x6682;&#x65F6;&#x672A;&#x60F3;&#x5230;&#x529E;&#x6CD5;.</p>
+<p>&#x53D1;&#x5E03;&#x4E8E;2016-10-2&#x65E5; </p>
+<p><a href="http://blog.csdn.net/chenqiuge1984/article/details/52692394" target="_blank" rel="external">&#x5F15;&#x7528; &#x4E00;</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Mac上搭建phpStorm和Xdebug教程;出现phpinfo()和php -v版本不一致问题]]></title>
       <url>http://yoursite.com/2016/09/18/MAC-PHPSTORM-XDEBUG/</url>
       <content type="html"><![CDATA[<p>&#x611F;&#x89C9;&#x767E;&#x5EA6;&#x90FD;&#x662F;&#x8BF4;&#x5E9F;&#x8BDD;&#x7684;&#x3002;google&#x8FD8;&#x662F;&#x4EB2;&#x513F;&#x5B50;&#x3002;</p>
