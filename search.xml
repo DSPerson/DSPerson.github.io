@@ -13,7 +13,9 @@
 <p> &#x7B2C;&#x4E00;&#x6B65;&#x6267;&#x884C;</p>
 <pre><code>brew install mysql
 </code></pre><p>&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x7B49;&#x5F85;&#x4E86;&#x5EFA;&#x8BAE;&#x7FFB;&#x5899;&#x901F;&#x5EA6;&#x6C47;&#x6B3E;&#x5F88;&#x591A;&#x56E0;&#x4E3A;&#x5185;&#x5BB9;&#x8F83;&#x5927; 400&#x591A;M</p>
-<p> &#x7B2C;&#x4E8C;&#x6B65; &#x8FDB;&#x5165;Mysql</p>
+<p>&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;</p>
+<pre><code>base mysql.server start
+</code></pre><p> &#x7B2C;&#x4E8C;&#x6B65; &#x8FDB;&#x5165;Mysql</p>
 <pre><code>mysql -uroot -p
 </code></pre><p>&#x6B64;&#x5904;&#x4F1A;&#x8BA9;&#x4F60;&#x8F93;&#x5165;&#x5BC6;&#x7801; &#x8BB0;&#x5F97; &#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x6211;&#x5728;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x803D;&#x8BEF;&#x4E0D;&#x5C11;&#x65F6;&#x95F4;</p>
 <pre><code>&#x6B64;&#x5904;&#x5E94;&#x8BE5;&#x6709;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x7684;&#x56FE;&#x7247;
