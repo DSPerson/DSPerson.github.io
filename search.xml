@@ -94,7 +94,14 @@ git push  &#x76F4;&#x63A5;&#x63A8;&#x9001; &#x9ED8;&#x8BA4;&#x7684;&#x662F; mast
 </code></pre><blockquote>
 <p>&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x8FDC;&#x7A0B;&#x5206;&#x652F; &#x4EE3;&#x7801;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x4F60;&#x60F3;&#x8981;&#x56DE;&#x6EDA;&#x7684;&#x5206;&#x652F;&#x4E2D;&#x4E86;</p>
 </blockquote>
-<p><a href="http://blog.jobbole.com/87700/" target="_blank" rel="external">&#x5F15;&#x7528; &#x4E00;</a></p>
+<h1 id="&#x66F4;&#x65B0;"><a href="#&#x66F4;&#x65B0;" class="headerlink" title="&#x66F4;&#x65B0;"></a>&#x66F4;&#x65B0;</h1><ul>
+<li>git init</li>
+<li>git add .</li>
+<li>git commit -m &#x201C;xxx&#x201D;</li>
+<li>git remote add origin &#x7F51;&#x5740; (&#x67E5;&#x770B; git remote)</li>
+<li>git push origin master</li>
+<li><a href="http://blog.jobbole.com/87700/" target="_blank" rel="external">&#x5F15;&#x7528; &#x4E00;</a></li>
+</ul>
 ]]></content>
     </entry>
     
