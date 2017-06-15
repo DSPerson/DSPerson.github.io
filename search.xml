@@ -4,6 +4,36 @@
   
     
     <entry>
+      <title><![CDATA[lldb 学习]]></title>
+      <url>http://yoursite.com/2017/06/14/lldb%E5%AD%A6%E4%B9%A0/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>lldb &#x66FF;&#x4EE3;gdb &#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E2D; &#x6682;&#x505C; &#x5373;&#x53EF;&#x4F7F;&#x7528;lldb&#x4E86;</p>
+<h1 id="&#x5B89;&#x88C5;Chisel"><a href="#&#x5B89;&#x88C5;Chisel" class="headerlink" title="&#x5B89;&#x88C5;Chisel"></a>&#x5B89;&#x88C5;Chisel</h1></blockquote>
+<p><a href="https://github.com/facebook/chisel" target="_blank" rel="external">Chisel&#x7F51;&#x5740;</a></p>
+<p>&#x4E5F;&#x53EF;&#x4EE5; &#x5728;&#x7EC8;&#x7AEF;&#x76F4;&#x63A5;</p>
+<pre><code>brew update
+brew install chisel
+</code></pre><p><img src="/2017/06/14/lldb&#x5B66;&#x4E60;/Snip20170614_1.png" alt=""></p>
+<blockquote>
+<p>&#x6210;&#x529F;&#x540E; &#x5C06;&#x7EA2;&#x8272;&#x6846;&#x5185;&#x5728; &#x7EC8;&#x7AEF; &#x4E2D; &#x8F93;&#x5165; <code>touch ~/.lldbinit</code> &#x590D;&#x5236;&#x8FDB;&#x53BB; &#x91CD;&#x542F;Xcode</p>
+</blockquote>
+<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="headerlink" title="&#x5E38;&#x7528;&#x547D;&#x4EE4;"></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2><blockquote>
+<p>&#x90FD;&#x662F;&#x5728;&#x9879;&#x76EE;&#x5728;&#x8FD0;&#x884C;&#x540E; &#x6682;&#x505C;&#x6761;&#x4EF6;&#x4E0B;</p>
+</blockquote>
+<p> &#x4F7F;&#x7528; <code>visualize</code> + &#x5185;&#x5B58;&#x5730;&#x5740;&#x5373;&#x53EF;&#x5728;&#x9884;&#x89C8;&#x4E2D;&#x6253;&#x5F00;&#x56FE;&#x7247;&#x67E5;&#x770B;</p>
+<p> &#x4F7F;&#x7528; <code>pvc</code> &#x67E5;&#x770B;&#x5F53;&#x524D;NavigationBar&#x6808;</p>
+<p> &#x4F7F;&#x7528; <code>pintnals</code> + &#x5185;&#x5B58;&#x5730;&#x5740; &#x67E5;&#x770B; &#x79C1;&#x6709;&#x5C5E;&#x6027;</p>
+<p> &#x4F7F;&#x7528; <code>pviews</code> &#x4ECE;&#x5F53;&#x524D;&#x5230;&#x5F53;&#x524D;View&#x6240;&#x6709;&#x89C6;&#x56FE; <code>pviews</code>  + &#x5185;&#x5B58;&#x5730;&#x5740;</p>
+<p> &#x4F7F;&#x7528; <code>caflush</code> &#x624B;&#x52A8;&#x5237;&#x65B0;</p>
+<p> &#x4F7F;&#x7528; <code>presponder + &#x5185;&#x5B58;&#x5730;&#x5740;</code> &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5730;&#x5740;&#x7684;&#x5C42;&#x7EA7;</p>
+<p> &#x4F7F;&#x7528; <code>taplog</code> &#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x6682;&#x505C;&#x4E4B;&#x540E;&#x70B9;&#x51FB;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E; &#x4F1A;&#x6253;&#x5370;&#x51FA;&#x6700;&#x8FD1;&#x4E00;&#x4E2A;     &#x54CD;&#x5E94;&#x70B9;&#x51FB;&#x65F6;&#x95F4;&#x7684;View</p>
+<p> &#x4F7F;&#x7528; <code>pclass + &#x5185;&#x5B58;&#x5730;&#x5740;</code> &#x67E5;&#x770B;&#x7EE7;&#x627F;&#x5173;&#x7CFB;</p>
+<p> &#x4F7F;&#x7528; <code>bmessage + &#x7C7B; + &#x65B9;&#x6CD5;</code> &#x7C7B;&#x4F3C;&#x65AD;&#x70B9;</p>
+<p> &#x4F7F;&#x7528; <code>show</code> &#x6216;&#x8005; <code>hide</code> + &#x5185;&#x5B58;&#x5730;&#x5740; &#x6765; &#x5C55;&#x793A;&#x6216;&#x8005;&#x9690;&#x85CF;&#x63A7;&#x4EF6;</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[回首2016，展望2017]]></title>
       <url>http://yoursite.com/2017/02/04/talkIsCheap/</url>
       <content type="html"><![CDATA[<p>2016&#x5E74;&#x662F;iOS &#x5E02;&#x573A;&#x5D29;&#x6E83;&#x7684;&#x4E00;&#x5E74;&#xFF0C;15&#x5E74;&#x8E0F;&#x5165;&#x8FD9;&#x4E2A;&#x884C;&#x5217;&#x4E2D;&#xFF0C;&#x5728;16&#x5E74;&#x5DEE;&#x70B9;&#x88AB;&#x6324;&#x6B7B;&#xFF0C;&#x8FD8;&#x597D;&#x6211;&#x633A;&#x4E86;&#x8FC7;&#x6765;&#x3002;</p>
