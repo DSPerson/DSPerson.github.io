@@ -1,78 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git 基本操作学习</title>
-    <url>/2016/12/22/Git/</url>
-    <content><![CDATA[<blockquote>
-<p>&#x575A;&#x6301;&#x771F;&#x7684;&#x5F88;&#x91CD;&#x8981; &#x4EC5;&#x6B64;&#x800C;&#x5DF2;</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="&#x4ECE;&#x521B;&#x5EFA;&#x4ED3;&#x5E93;&#x5230;&#x63A8;&#x9001;"><a href="#&#x4ECE;&#x521B;&#x5EFA;&#x4ED3;&#x5E93;&#x5230;&#x63A8;&#x9001;" class="headerlink" title="&#x4ECE;&#x521B;&#x5EFA;&#x4ED3;&#x5E93;&#x5230;&#x63A8;&#x9001;"></a>&#x4ECE;&#x521B;&#x5EFA;&#x4ED3;&#x5E93;&#x5230;&#x63A8;&#x9001;</h1><h2 id="&#x514B;&#x9686;&#x5206;&#x652F;"><a href="#&#x514B;&#x9686;&#x5206;&#x652F;" class="headerlink" title="&#x514B;&#x9686;&#x5206;&#x652F;"></a>&#x514B;&#x9686;&#x5206;&#x652F;</h2><pre><code>git clone &lt;url&gt;
-</code></pre><h2 id="&#x5C06;&#x4EE3;&#x7801;&#x4E2D;&#x6240;&#x9700;&#x8981;&#x7684;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;-&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x6DFB;&#x52A0;-&#x5373;&#x6240;&#x6709;&#x7684;&#x610F;&#x601D;"><a href="#&#x5C06;&#x4EE3;&#x7801;&#x4E2D;&#x6240;&#x9700;&#x8981;&#x7684;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;-&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x6DFB;&#x52A0;-&#x5373;&#x6240;&#x6709;&#x7684;&#x610F;&#x601D;" class="headerlink" title="&#x5C06;&#x4EE3;&#x7801;&#x4E2D;&#x6240;&#x9700;&#x8981;&#x7684;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;(&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x6DFB;&#x52A0; . &#x5373;&#x6240;&#x6709;&#x7684;&#x610F;&#x601D;)"></a>&#x5C06;&#x4EE3;&#x7801;&#x4E2D;&#x6240;&#x9700;&#x8981;&#x7684;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;(&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x6DFB;&#x52A0; . &#x5373;&#x6240;&#x6709;&#x7684;&#x610F;&#x601D;)</h2><pre><code>git add . ||(||&#x6216;&#x8005;) git add -A
-</code></pre><h2 id="&#x63D0;&#x4EA4;"><a href="#&#x63D0;&#x4EA4;" class="headerlink" title="&#x63D0;&#x4EA4;"></a>&#x63D0;&#x4EA4;</h2><pre><code>git commit -m &quot;&lt;1&gt;&quot; 
-</code></pre><p><strong>&#x5907;&#x6CE8; &#x4E00;&#xFF1A;&#x6B64;&#x5904; &#x5F15;&#x53F7;&lt;&gt;&#x4E2D;&#x6700;&#x597D;&#x5199;&#x4E1C;&#x897F; &#x4E0D;&#x5199;&#x6216;&#x8005; &#x5F15;&#x53F7;&#x5185;&#x4E3A;&#x7A7A; &#x90FD;&#x4F1A;&#x4E0A;&#x4F20;&#x5931;&#x8D25;&#x4E0D;&#x660E;&#x767D;&#x539F;&#x56E0;</strong></p>
-<h2 id="&#x4EE3;&#x7801;&#x62C9;&#x53D6;&#x548C;&#x63A8;&#x9001;"><a href="#&#x4EE3;&#x7801;&#x62C9;&#x53D6;&#x548C;&#x63A8;&#x9001;" class="headerlink" title="&#x4EE3;&#x7801;&#x62C9;&#x53D6;&#x548C;&#x63A8;&#x9001;"></a>&#x4EE3;&#x7801;&#x62C9;&#x53D6;&#x548C;&#x63A8;&#x9001;</h2><blockquote>
-<p>   &#x5206;<strong>&#x4E24;&#x79CD;</strong>&#x60C5;&#x51B5; </p>
-<p> <strong>&#x7B2C;&#x4E00;&#x79CD;</strong> &#x662F; &#x6CA1;&#x6709;&#x521B;&#x5EFA;&#x8FC7;&#x8FDC;&#x7A0B;&#x5206;&#x652F; &#xFF0C;&#x7B80;&#x5355;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;</p>
-<p> <strong>&#x7B2C;&#x4E8C;&#x79CD;</strong> &#x662F; &#x521B;&#x5EFA;&#x4E86;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#xFF0C;&#x8FD9;&#x79CD;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;&#x7B2C;&#x4E00;&#x79CD; &#x5982;&#x679C;&#x6CA1;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x7A0D;&#x663E;&#x9EBB;&#x70E6;</p>
-</blockquote>
-<p> <strong>&#x7B2C;&#x4E00;&#x79CD;</strong></p>
-<pre><code>git pull  &#x76F4;&#x63A5;&#x62C9;&#x53D6; &#x9ED8;&#x8BA4;&#x7684;&#x662F; master
-git push  &#x76F4;&#x63A5;&#x63A8;&#x9001; &#x9ED8;&#x8BA4;&#x7684;&#x662F; master
-</code></pre><p> <strong>&#x7B2C;&#x4E8C;&#x79CD;</strong></p>
-<pre><code>git pull origin &lt;&#x672C;&#x5730;&#x5206;&#x652F;&#x540D;&#x5B57;&gt;:&lt;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D;&#x5B57;&gt;     
-</code></pre><p> <strong>&#x5907;&#x6CE8; &#x4E8C;: origin &#x4E00;&#x822C;&#x4E3A;&#x8FD9;&#x4E2A;&#x540D;&#x5B57; &#x5982;&#x679C;&#x672C;&#x5730;&#x5206;&#x652F;&#x662F;&#x8DDF;&#x8E2A;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x4E0D;&#x5199;&#x8FDC;&#x7A0B;&#x5206;&#x652F; &#x76F4;&#x63A5;&#x4F7F;&#x7528; &#xFF1A;<code>git pull origin &lt;&#x672C;&#x5730;&#x5206;&#x652F;&gt;</code> &#x5C31;&#x53EF;&#x4EE5; &#x4E00;&#x822C; &#x672C;&#x5730;&#x5206;&#x652F;&#x548C;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D;&#x5B57;&#x76F8;&#x7B49;</strong></p>
-<pre><code>git push origin &lt;&#x672C;&#x5730;&#x5206;&#x652F;&#x540D;&#x5B57;&gt;:&lt;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D;&#x5B57;&gt;   
-</code></pre><p><strong>&#x7C7B;&#x6BD4;&#x5907;&#x6CE8; &#x4E8C;</strong></p>
-<h1 id="&#x5206;&#x652F;&#x64CD;&#x4F5C;"><a href="#&#x5206;&#x652F;&#x64CD;&#x4F5C;" class="headerlink" title="&#x5206;&#x652F;&#x64CD;&#x4F5C;"></a>&#x5206;&#x652F;&#x64CD;&#x4F5C;</h1><h2 id="&#x67E5;&#x770B;&#x672C;&#x5730;&#x5206;&#x652F;"><a href="#&#x67E5;&#x770B;&#x672C;&#x5730;&#x5206;&#x652F;" class="headerlink" title="&#x67E5;&#x770B;&#x672C;&#x5730;&#x5206;&#x652F;"></a>&#x67E5;&#x770B;&#x672C;&#x5730;&#x5206;&#x652F;</h2><pre><code>git branch
-</code></pre><h2 id="&#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F;-&#x5305;&#x62EC;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"><a href="#&#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F;-&#x5305;&#x62EC;&#x8FDC;&#x7A0B;&#x5206;&#x652F;" class="headerlink" title="&#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F; &#x5305;&#x62EC;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"></a>&#x67E5;&#x770B;&#x6240;&#x6709;&#x5206;&#x652F; &#x5305;&#x62EC;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</h2><pre><code>git branch -a
-</code></pre><h2 id="&#x66F4;&#x65B0;&#x5206;&#x652F;-&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x7684;&#x540C;&#x4E8B;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7684;&#x5206;&#x652F;&#x4F60;&#x5374;&#x770B;&#x4E0D;&#x5230;"><a href="#&#x66F4;&#x65B0;&#x5206;&#x652F;-&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x7684;&#x540C;&#x4E8B;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7684;&#x5206;&#x652F;&#x4F60;&#x5374;&#x770B;&#x4E0D;&#x5230;" class="headerlink" title="&#x66F4;&#x65B0;&#x5206;&#x652F;(&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x7684;&#x540C;&#x4E8B;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7684;&#x5206;&#x652F;&#x4F60;&#x5374;&#x770B;&#x4E0D;&#x5230;)"></a>&#x66F4;&#x65B0;&#x5206;&#x652F;(&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x7684;&#x540C;&#x4E8B;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7684;&#x5206;&#x652F;&#x4F60;&#x5374;&#x770B;&#x4E0D;&#x5230;)</h2><pre><code>git fetch
-</code></pre><h2 id="&#x521B;&#x5EFA;&#x672C;&#x5730;&#x5206;&#x652F;"><a href="#&#x521B;&#x5EFA;&#x672C;&#x5730;&#x5206;&#x652F;" class="headerlink" title="&#x521B;&#x5EFA;&#x672C;&#x5730;&#x5206;&#x652F;"></a>&#x521B;&#x5EFA;&#x672C;&#x5730;&#x5206;&#x652F;</h2><pre><code>git branch -b &lt;&#x5206;&#x652F;&#x540D;&#x5B57;&gt;
-</code></pre><h2 id="&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"><a href="#&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;" class="headerlink" title="&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"></a>&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</h2><h3 id="&#x7B2C;&#x4E00;&#x6B65;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x5206;&#x652F;"><a href="#&#x7B2C;&#x4E00;&#x6B65;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x5206;&#x652F;" class="headerlink" title="&#x7B2C;&#x4E00;&#x6B65;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x5206;&#x652F;"></a>&#x7B2C;&#x4E00;&#x6B65;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x5206;&#x652F;</h3><pre><code>git branch -b &lt;&#x5206;&#x652F;&#x540D;&#x5B57;&gt;
-</code></pre><h3 id="&#x7B2C;&#x4E8C;&#x6B65;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"><a href="#&#x7B2C;&#x4E8C;&#x6B65;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x6B65;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"></a>&#x7B2C;&#x4E8C;&#x6B65;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</h3><pre><code>git push origin &lt;&#x521A;&#x624D;&#x7B2C;&#x4E00;&#x6B65;&#x521B;&#x5EFA;&#x5206;&#x652F;&#x7684;&#x540D;&#x5B57;&gt;:&lt;&#x6700;&#x597D;&#x7B49;&#x4E8E;&#x521A;&#x624D;&#x90A3;&#x4E2A;&#x5206;&#x652F;(&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D;&#x5B57;)&gt;
-</code></pre><h1 id="&#x4EE3;&#x7801;&#x56DE;&#x6EDA;"><a href="#&#x4EE3;&#x7801;&#x56DE;&#x6EDA;" class="headerlink" title="&#x4EE3;&#x7801;&#x56DE;&#x6EDA;"></a>&#x4EE3;&#x7801;&#x56DE;&#x6EDA;</h1><h2 id="&#x4FDD;&#x8BC1;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x57DF;&#x5E72;&#x51C0;-&#x5373;&#x4EE3;&#x7801;&#x6CA1;&#x6709;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x4E86;&#x5E76;&#x4E14;&#x548C;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x4EE3;&#x7801;&#x4E00;&#x81F4;"><a href="#&#x4FDD;&#x8BC1;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x57DF;&#x5E72;&#x51C0;-&#x5373;&#x4EE3;&#x7801;&#x6CA1;&#x6709;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x4E86;&#x5E76;&#x4E14;&#x548C;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x4EE3;&#x7801;&#x4E00;&#x81F4;" class="headerlink" title="&#x4FDD;&#x8BC1;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x57DF;&#x5E72;&#x51C0;(&#x5373;&#x4EE3;&#x7801;&#x6CA1;&#x6709;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x4E86;&#x5E76;&#x4E14;&#x548C;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x4EE3;&#x7801;&#x4E00;&#x81F4;)"></a>&#x4FDD;&#x8BC1;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x57DF;&#x5E72;&#x51C0;(&#x5373;&#x4EE3;&#x7801;&#x6CA1;&#x6709;&#x8981;&#x63D0;&#x4EA4;&#x7684;&#x4E86;&#x5E76;&#x4E14;&#x548C;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x4EE3;&#x7801;&#x4E00;&#x81F4;)</h2><blockquote>
-<p>&#x53EF;&#x4EE5;&#x5C06;&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#x5230;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x4E0A;&#x4FDD;&#x8BC1;&#x4E00;&#x81F4;&#x6027;(&#x91CD;&#x590D; commit &#x2013;&gt; pull &#x2013;&gt; push ) &#x518D; &#x7EE7;&#x7EED;</p>
-</blockquote>
-<h2 id="&#x67E5;&#x770B;&#x65E5;&#x5FD7;"><a href="#&#x67E5;&#x770B;&#x65E5;&#x5FD7;" class="headerlink" title="&#x67E5;&#x770B;&#x65E5;&#x5FD7;"></a>&#x67E5;&#x770B;&#x65E5;&#x5FD7;</h2><pre><code>git reflog
-</code></pre><h2 id="&#x627E;&#x5230;&#x6240;&#x9700;&#x8981;&#x56DE;&#x6EDA;&#x7684;&#x7248;&#x672C;"><a href="#&#x627E;&#x5230;&#x6240;&#x9700;&#x8981;&#x56DE;&#x6EDA;&#x7684;&#x7248;&#x672C;" class="headerlink" title="&#x627E;&#x5230;&#x6240;&#x9700;&#x8981;&#x56DE;&#x6EDA;&#x7684;&#x7248;&#x672C;"></a>&#x627E;&#x5230;&#x6240;&#x9700;&#x8981;&#x56DE;&#x6EDA;&#x7684;&#x7248;&#x672C;</h2><p><img src="/2016/12/22/Git/Snip20161220_1.png" alt="1"></p>
-<blockquote>
-<p>&#x6BD4;&#x5982;&#x8BF4; HEAD@{2} &#x8FD9;&#x4E2A;&#x662F;&#x54B1;&#x4EEC;&#x56DE;&#x6EDA;&#x5230;&#x7684;&#x7248;&#x672C;</p>
-</blockquote>
-<pre><code>git reset --hard HEAD@{2}
-</code></pre><h2 id="&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"><a href="#&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;" class="headerlink" title="&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"></a>&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</h2><pre><code>git push origin :&lt;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D;&#x5B57;&gt; 
-&#x6216;&#x8005;&#x4F7F;&#x7528; git push origin &#x2014;delete &lt;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D;&#x5B57;&gt;
-</code></pre><h2 id="&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"><a href="#&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;" class="headerlink" title="&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;"></a>&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</h2><pre><code>git push origin &lt;&#x8FDC;&#x7A0B;&#x5206;&#x652F;&#x540D;&#x5B57;&gt; 
-</code></pre><blockquote>
-<p>&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x8FDC;&#x7A0B;&#x5206;&#x652F; &#x4EE3;&#x7801;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x4F60;&#x60F3;&#x8981;&#x56DE;&#x6EDA;&#x7684;&#x5206;&#x652F;&#x4E2D;&#x4E86;</p>
-</blockquote>
-<h1 id="&#x66F4;&#x65B0;"><a href="#&#x66F4;&#x65B0;" class="headerlink" title="&#x66F4;&#x65B0;"></a>&#x66F4;&#x65B0;</h1><ul>
-<li>git init</li>
-<li>git add .</li>
-<li>git commit -m &#x201C;xxx&#x201D;</li>
-<li>git remote add origin &#x7F51;&#x5740; (&#x67E5;&#x770B; git remote)</li>
-<li>git push origin master</li>
-<li><a href="http://blog.jobbole.com/87700/" target="_blank" rel="external">&#x5F15;&#x7528; &#x4E00;</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux命令行学习</title>
     <url>/2016/08/12/Linux-Code/</url>
-    <content><![CDATA[<h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h3 id="&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"><a href="#&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;" class="headerlink" title="&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"></a>&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;</h3><ul>
-<li>&#x6211;&#x7684;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;tiger@192.168.0.3</li>
+    <content><![CDATA[<h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h3 id="将本地文件添加到远程服务器"><a href="#将本地文件添加到远程服务器" class="headerlink" title="将本地文件添加到远程服务器"></a>将本地文件添加到远程服务器</h3><ul>
+<li>我的远程服务器tiger@192.168.0.3</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">scp &#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84; tiger@192.168.0.3:&#x670D;&#x52A1;&#x5668;&#x7684;&#x8DEF;&#x5F84;</div></pre></td></tr></table></figure>
-<h2 id="&#x5220;&#x9664;-rm"><a href="#&#x5220;&#x9664;-rm" class="headerlink" title="&#x5220;&#x9664; rm"></a>&#x5220;&#x9664; rm</h2><p>&#x4E24;&#x4E2A;&#x53C2;&#x6570;</p>
-<h3 id="f-&#x5F3A;&#x5236;&#x5220;&#x9664;"><a href="#f-&#x5F3A;&#x5236;&#x5220;&#x9664;" class="headerlink" title="f &#x5F3A;&#x5236;&#x5220;&#x9664;"></a>f &#x5F3A;&#x5236;&#x5220;&#x9664;</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">rm -f</div></pre></td></tr></table></figure>
-<h3 id="r-&#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;"><a href="#r-&#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;" class="headerlink" title="r &#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;"></a>r &#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">rm -rf</div></pre></td></tr></table></figure>
-<p>&#x6709;&#x6743;&#x9650;&#x5C31;&#x6DFB;&#x52A0;sudo &#x52A0;&#x4E0A;&#x9762;&#x7684;&#x547D;&#x4EE4;</p>
-<h2 id="git-ssh-&#x95EE;&#x9898;"><a href="#git-ssh-&#x95EE;&#x9898;" class="headerlink" title="git ssh &#x95EE;&#x9898;"></a>git ssh &#x95EE;&#x9898;</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd ~/.ssh/</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">scp 本地文件路径 tiger@192.168.0.3:服务器的路径</div></pre></td></tr></table></figure>
+<h2 id="删除-rm"><a href="#删除-rm" class="headerlink" title="删除 rm"></a>删除 rm</h2><p>两个参数</p>
+<h3 id="f-强制删除"><a href="#f-强制删除" class="headerlink" title="f 强制删除"></a>f 强制删除</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">rm -f</div></pre></td></tr></table></figure>
+<h3 id="r-递归删除有多少都删除掉"><a href="#r-递归删除有多少都删除掉" class="headerlink" title="r 递归删除有多少都删除掉"></a>r 递归删除有多少都删除掉</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">rm -rf</div></pre></td></tr></table></figure>
+<p>有权限就添加sudo 加上面的命令</p>
+<h2 id="git-ssh-问题"><a href="#git-ssh-问题" class="headerlink" title="git ssh 问题"></a>git ssh 问题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd ~/.ssh/</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">vim config</div></pre></td></tr></table></figure>
-<p>&#x6309;i &#x63D2;&#x5165;</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Host git.oschina.net</div><div class="line">IdentityFile ~/.ssh/&#x4F60;&#x7684;ssh&#x516C;&#x94A5;&#x4E0D;&#x5E26;.pub</div></pre></td></tr></table></figure>
+<p>按i 插入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Host git.oschina.net</div><div class="line">IdentityFile ~/.ssh/你的ssh公钥不带.pub</div></pre></td></tr></table></figure>
 <p>ssh  .ssh/id_rsa id_rsa.pub</p>
 ]]></content>
       <tags>
@@ -82,85 +24,85 @@ git push  &#x76F4;&#x63A5;&#x63A8;&#x9001; &#x9ED8;&#x8BA4;&#x7684;&#x662F; mast
   <entry>
     <title>Mac上搭建phpStorm和Xdebug教程;出现phpinfo()和php -v版本不一致问题</title>
     <url>/2016/09/18/MAC-PHPSTORM-XDEBUG/</url>
-    <content><![CDATA[<p>&#x611F;&#x89C9;&#x767E;&#x5EA6;&#x90FD;&#x662F;&#x8BF4;&#x5E9F;&#x8BDD;&#x7684;&#x3002;google&#x8FD8;&#x662F;&#x4EB2;&#x513F;&#x5B50;&#x3002;</p>
+    <content><![CDATA[<p>感觉百度都是说废话的。google还是亲儿子。</p>
 <a id="more"></a>
-<h2 id="&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew"><a href="#&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew" class="headerlink" title="&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew"></a>&#x522B;&#x8DDF;&#x6211;&#x8BF4;&#x4F60;&#x7535;&#x8111;&#x6CA1;&#x6709;HomeBrew</h2><ul>
-<li>&#x5982;&#x679C;&#x771F;&#x6CA1;&#x6709;&#x4E5F;&#x6CA1;&#x5173;&#x7CFB;&#xFF1B;<a href="http://brew.sh/" target="_blank" rel="external">&#x8BF7;&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x5B89;&#x88C5;</a></li>
+<h2 id="别跟我说你电脑没有HomeBrew"><a href="#别跟我说你电脑没有HomeBrew" class="headerlink" title="别跟我说你电脑没有HomeBrew"></a>别跟我说你电脑没有HomeBrew</h2><ul>
+<li>如果真没有也没关系；<a href="http://brew.sh/" target="_blank" rel="external">请点击这里安装</a></li>
 </ul>
-<h2 id="&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;"><a href="#&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;" class="headerlink" title="&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;"></a>&#x524D;&#x63D0;&#x662F;&#x4F60;&#x7684;PHP&#x73AF;&#x5883;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;</h2><ul>
-<li>&#x5148;&#x67E5;&#x770B;&#x4F60;&#x7684;php&#x7248;&#x672C;&#x53F7;</li>
+<h2 id="前提是你的PHP环境已经安装完毕"><a href="#前提是你的PHP环境已经安装完毕" class="headerlink" title="前提是你的PHP环境已经安装完毕"></a>前提是你的PHP环境已经安装完毕</h2><ul>
+<li>先查看你的php版本号</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">php -v</div></pre></td></tr></table></figure>
-<p>&#x6211;&#x7684;&#x7248;&#x672C;&#x662F;5.5.38&#x6240;&#x4EE5;&#x4E0B;&#x9762;&#x6211;&#x7528;55&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x4F60;&#x8981;&#x662F;5.6&#x5C31;&#x7528;php56&#x5373;&#x53EF;</p>
+<p>我的版本是5.5.38所以下面我用55就可以了你要是5.6就用php56即可</p>
 <ul>
-<li>&#x5B89;&#x88C5;<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">brew install homebrew/php/php55-xdebug</div></pre></td></tr></table></figure>
+<li>安装<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">brew install homebrew/php/php55-xdebug</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>loading&#x2026;..</p>
-<p>&#x4E4B;&#x540E;&#x5B8C;&#x4E8B;&#x4F60;&#x4F1A;&#x770B;&#x5230;</p>
+<p>loading…..</p>
+<p>之后完事你会看到</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">To finish installing xdebug for PHP 5.5:</div><div class="line">  </div><div class="line">  * /usr/local/etc/php/5.5/conf.d/ext-xdebug.ini was created,</div><div class="line">    do not forget to remove it upon extension removal.</div><div class="line">  * Validate installation via one of the following methods:</div><div class="line">  *</div><div class="line">  * Using PHP from a webserver:</div><div class="line">  * - Restart your webserver.</div><div class="line">  * - Write a PHP page that calls &quot;phpinfo();&quot;</div><div class="line">  * - Load it in a browser and look for the info on the xdebug module.</div><div class="line">  * - If you see it, you have been successful!</div><div class="line">  *</div><div class="line">  * Using PHP from the command line:</div><div class="line">  * - Run `php -i &quot;(command-line &apos;phpinfo()&apos;)&quot;`</div><div class="line">  * - Look for the info on the xdebug module.</div><div class="line">  * - If you see it, you have been successful!</div><div class="line">  *</div></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x4E48;&#x4E00;&#x5927;&#x5806;</p>
+<p>这么一大堆</p>
 <ul>
-<li>&#x8FDB;&#x5165;&#x4F60;&#x8BE5;&#x53BB;&#x7684;&#x6587;&#x4EF6;&#x5939;</li>
+<li>进入你该去的文件夹</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">cd /usr/local/etc/php/5.5/conf.d/</div></pre></td></tr></table></figure>
 <ul>
-<li>&#x7F16;&#x8F91;&#x91CC;&#x9762;&#x552F;&#x4E00;&#x7684;ext-xdebug.ini&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;</li>
+<li>编辑里面唯一的ext-xdebug.ini这个文件</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">vi ext-xdebug.ini</div></pre></td></tr></table></figure>
 <ul>
-<li>&#x6309; i &#x8FDB;&#x5165;&#x63D2;&#x5165;&#x6A21;&#x5F0F; &#x4E00;&#x822C;&#x8FD9;&#x4E2A;port&#x7AEF;&#x53E3;&#x8BBE;&#x7F6E;&#x4E3A;9000&#x56E0;&#x4E3A;phpStorm&#x9ED8;&#x8BA4;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5F53;&#x7136;&#x4F60;&#x53EF;&#x4EE5;&#x6539;&#x3002;&#x5C06;&#x4E0B;&#x9762;&#x4E00;&#x5806;&#x590D;&#x5236;&#x5230;&#x91CC;&#x9762;&#x53BB;&#x8BB0;&#x5F97;&#x522B;&#x628A;&#x4E4B;&#x524D;&#x7684;&#x5185;&#x5BB9;&#x8986;&#x76D6;&#x6389;<br>&lt;&#x73AF;&#x5883;&#x914D;&#x7F6E;&gt;<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=&quot;dbgp&quot;</div><div class="line">xdebug.remote_host=&quot;localhost&quot;</div><div class="line">xdebug.idekey=PHPSTORM</div></pre></td></tr></table></figure>
+<li>按 i 进入插入模式 一般这个port端口设置为9000因为phpStorm默认就是这个当然你可以改。将下面一堆复制到里面去记得别把之前的内容覆盖掉<br>&lt;环境配置&gt;<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">xdebug.remote_enable=1</div><div class="line">xdebug.remote_port=9000</div><div class="line">xdebug.remote_handler=&quot;dbgp&quot;</div><div class="line">xdebug.remote_host=&quot;localhost&quot;</div><div class="line">xdebug.idekey=PHPSTORM</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>&#x6309; esc &#x2013;&gt; : &#x2013;&gt; wq &#x8FDB;&#x884C;&#x4FDD;&#x5B58;(&#x7BAD;&#x5934;(&#x2013;&gt;)&#x662F;&#x544A;&#x8BC9;&#x4F60;&#x6B65;&#x9AA4;)&#xFF1B;<br>&#x4E4B;&#x540E;&#x73AF;&#x5883;&#x5C31;&#x914D;&#x7F6E;&#x5B8C;&#x4E86;&#x5982;&#x679C;&#x4F60;&#x66F4;&#x6539;9000&#x8FD9;&#x4E2A;&#x7AEF;&#x53E3;&#x7684;&#x8BDD;&#x3002;phpStrom&#x4E2D;&#x4E0D;&#x7528;&#x8BBE;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x6539;&#x4E86;&#x5728;phpStorm&#x4E2D;&#x70B9;&#x51FB; commond + &#x9017;&#x53F7;&#xFF0C;&#x9009;&#x62E9; Languages&amp;Frameworks&#x627E;&#x5230;PHP&#x4E0B;&#x9762;&#x7684;Debug&#x6709;&#x4E2A;Xdebug &#x4E0B;&#x9762;&#x7684;Debug prot&#x66F4;&#x6539;&#x5373;&#x53EF;&#x3002;</p>
+<p>按 esc –&gt; : –&gt; wq 进行保存(箭头(–&gt;)是告诉你步骤)；<br>之后环境就配置完了如果你更改9000这个端口的话。phpStrom中不用设置。如果改了在phpStorm中点击 commond + 逗号，选择 Languages&amp;Frameworks找到PHP下面的Debug有个Xdebug 下面的Debug prot更改即可。</p>
 <ul>
-<li>&#x6700;&#x540E;&#x4E0B;&#x8F7D;xdebug helper &#x5B89;&#x88C5;&#x5230;&#x8C37;&#x6B4C;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x8FD9;&#x4E2A;&#x8C8C;&#x4F3C;&#x9700;&#x8981;&#x79D1;&#x5B66;&#x4E0A;&#x7F51; </li>
+<li>最后下载xdebug helper 安装到谷歌浏览器上这个貌似需要科学上网 </li>
 </ul>
-<p>[&#x6B64;&#x6587;&#x7F16;&#x8F91;&#x4E8E;2016-9-18]</p>
-<p>&#x5728;Apache log&#x627E;&#x4E0D;&#x5230;&#x60C5;&#x51B5;&#x4E0B;&#x7684;&#x9519;&#x8BEF;</p>
+<p>[此文编辑于2016-9-18]</p>
+<p>在Apache log找不到情况下的错误</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">apachectl -k start -e DEBUG</div></pre></td></tr></table></figure>
-<h2 id="xdebug&#x5B89;&#x88C5;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;"><a href="#xdebug&#x5B89;&#x88C5;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;" class="headerlink" title="xdebug&#x5B89;&#x88C5;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;"></a>xdebug&#x5B89;&#x88C5;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;</h2><h3 id="&#x5B89;&#x88C5;&#x663E;&#x793A;&#x6210;&#x529F;&#x4F46;&#x662F;&#x5F53;&#x4F60;phpinfo-&#x754C;&#x9762;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;xdebug"><a href="#&#x5B89;&#x88C5;&#x663E;&#x793A;&#x6210;&#x529F;&#x4F46;&#x662F;&#x5F53;&#x4F60;phpinfo-&#x754C;&#x9762;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;xdebug" class="headerlink" title="&#x5B89;&#x88C5;&#x663E;&#x793A;&#x6210;&#x529F;&#x4F46;&#x662F;&#x5F53;&#x4F60;phpinfo() &#x754C;&#x9762;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;xdebug"></a>&#x5B89;&#x88C5;&#x663E;&#x793A;&#x6210;&#x529F;&#x4F46;&#x662F;&#x5F53;&#x4F60;phpinfo() &#x754C;&#x9762;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;xdebug</h3><h4 id="&#x8FD9;&#x4E2A;&#x4E5F;&#x53EF;&#x4EE5;php-v-&#x548C;phpinfo-&#x4E2D;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#x95EE;&#x9898;"><a href="#&#x8FD9;&#x4E2A;&#x4E5F;&#x53EF;&#x4EE5;php-v-&#x548C;phpinfo-&#x4E2D;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#x95EE;&#x9898;" class="headerlink" title="&#x8FD9;&#x4E2A;&#x4E5F;&#x53EF;&#x4EE5;php -v &#x548C;phpinfo()&#x4E2D;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#x95EE;&#x9898;"></a>&#x8FD9;&#x4E2A;&#x4E5F;&#x53EF;&#x4EE5;php -v &#x548C;phpinfo()&#x4E2D;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#x95EE;&#x9898;</h4><ul>
-<li>&#x6709;&#x5F88;&#x591A;&#x4EBA;&#x6267;&#x884C;</li>
+<h2 id="xdebug安装可能出现的问题"><a href="#xdebug安装可能出现的问题" class="headerlink" title="xdebug安装可能出现的问题"></a>xdebug安装可能出现的问题</h2><h3 id="安装显示成功但是当你phpinfo-界面中不存在xdebug"><a href="#安装显示成功但是当你phpinfo-界面中不存在xdebug" class="headerlink" title="安装显示成功但是当你phpinfo() 界面中不存在xdebug"></a>安装显示成功但是当你phpinfo() 界面中不存在xdebug</h3><h4 id="这个也可以php-v-和phpinfo-中版本不一致问题"><a href="#这个也可以php-v-和phpinfo-中版本不一致问题" class="headerlink" title="这个也可以php -v 和phpinfo()中版本不一致问题"></a>这个也可以php -v 和phpinfo()中版本不一致问题</h4><ul>
+<li>有很多人执行</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6</div></pre></td></tr></table></figure>
 <ul>
-<li>&#x8FDB;&#x884C;&#x66F4;&#x65B0;php&#x4EA7;&#x751F;&#x7684;xdebug&#x4E0D;&#x597D;&#x4F7F;&#x7684;&#x95EE;&#x9898;&#x662F;&#x56E0;&#x4E3A;<figure class="highlight"><figcaption><span>```&#x4E2D;php&#x7684;&#x7248;&#x672C;&#x548C;&#x4F60;&#x7535;&#x8111;&#x73B0;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#x3002;</span></figcaption><table><tr><td class="code"><pre><div class="line">* &#x6253;&#x5F00;php&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; &#x4F4D;&#x7F6E;&#xFF1A;```/etc/apache2/httpd.conf```&#x627E;&#x5230;```LoadModule php5_module libexec/apache2/libphp5.so``` &#x5176;&#x5B9E;```apache```&#x4E00;&#x76F4;&#x52A0;&#x8F7D;&#x7684;&#x662F;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7684;&#x3002;</div><div class="line">* ```mdfind -name libphp5.so``` &#x624D;&#x53D1;&#x73B0;&#x8DEF;&#x5F84;&#x6709;&#x4E24;&#x4E2A;</div></pre></td></tr></table></figure></li>
+<li>进行更新php产生的xdebug不好使的问题是因为<figure class="highlight"><figcaption><span>```中php的版本和你电脑现在运行的版本不一致。</span></figcaption><table><tr><td class="code"><pre><div class="line">* 打开php的配置文件 位置：```/etc/apache2/httpd.conf```找到```LoadModule php5_module libexec/apache2/libphp5.so``` 其实```apache```一直加载的是系统默认的。</div><div class="line">* ```mdfind -name libphp5.so``` 才发现路径有两个</div></pre></td></tr></table></figure></li>
 </ul>
-<p>/usr/local/Cellar/php55/5.5.38/libexec/apache2/libphp5.so<br>/usr/libexec/apache2/libphp5.so<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">* &#x4E00;&#x4E2A;&#x662F;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x4E00;&#x4E2A;&#x662F;&#x66F4;&#x65B0;&#x6765;&#x7684; &#x5F53;&#x7136;&#x6211;&#x8FD9;&#x91CC;&#x4E0D;&#x662F;&#x66F4;&#x65B0;&#xFF1B;&#x662F;&#x6211;sb&#x6765;&#x7684;~~~~(&gt;_&lt;)~~~~</div><div class="line">* &#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6253;&#x5F00;httpd.conf&#x4E2D;&#x5C06;```libexec/apache2/libphp5.so```&#x66F4;&#x6362;&#x4E3A;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x8DEF;&#x5F84;&#x7684;&#x8DEF;&#x5F84;&#x5373;&#xFF1A;</div><div class="line"></div><div class="line">```local/Cellar/php55/5.5.38/libexec/apache2/libphp5.so</div></pre></td></tr></table></figure></p>
-<p>last&#xFF1A;<code>sudo apachectl restart</code></p>
-<p><a href="https://antistatique.net/en/we/blog/2013/09/17/debugging-with-xdebug-and-phpstorm-on-macos-x" target="_blank" rel="external">&#x89E3;&#x51B3;&#xFF1A;xdebug&#x5B89;&#x88C5;&#x95EE;&#x9898;</a></p>
-<p><a href="http://stackoverflow.com/questions/14357107/installing-mcrypt-on-osx-10-8-2-php-5-3-15-with-homebrew" target="_blank" rel="external">&#x89E3;&#x51B3;&#xFF1A;php -v&#x51FA;&#x73B0;&#x8B66;&#x544A;&#x95EE;&#x9898;</a></p>
-<p><a href="http://blog.csdn.net/ul646691993/article/details/45769721" target="_blank" rel="external">&#x89E3;&#x51B3;&#xFF1A;&#x641C;&#x7D22;&#x95EE;&#x9898;&#xFF01;&#x5173;&#x952E;&#x70B9;&#x554A;&#xFF01;&#xFF01;&#xFF01;</a></p>
-<p><a href="https://www.jetbrains.com/help/phpstorm/2016.2/configuring-xdebug.html" target="_blank" rel="external">&#x5B98;&#x65B9;phpStrom&#x5B89;&#x88C5;xdebug</a></p>
+<p>/usr/local/Cellar/php55/5.5.38/libexec/apache2/libphp5.so<br>/usr/libexec/apache2/libphp5.so<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">* 一个是系统默认一个是更新来的 当然我这里不是更新；是我sb来的~~~~(&gt;_&lt;)~~~~</div><div class="line">* 这个时候打开httpd.conf中将```libexec/apache2/libphp5.so```更换为更新后的路径的路径即：</div><div class="line"></div><div class="line">```local/Cellar/php55/5.5.38/libexec/apache2/libphp5.so</div></pre></td></tr></table></figure></p>
+<p>last：<code>sudo apachectl restart</code></p>
+<p><a href="https://antistatique.net/en/we/blog/2013/09/17/debugging-with-xdebug-and-phpstorm-on-macos-x" target="_blank" rel="external">解决：xdebug安装问题</a></p>
+<p><a href="http://stackoverflow.com/questions/14357107/installing-mcrypt-on-osx-10-8-2-php-5-3-15-with-homebrew" target="_blank" rel="external">解决：php -v出现警告问题</a></p>
+<p><a href="http://blog.csdn.net/ul646691993/article/details/45769721" target="_blank" rel="external">解决：搜索问题！关键点啊！！！</a></p>
+<p><a href="https://www.jetbrains.com/help/phpstorm/2016.2/configuring-xdebug.html" target="_blank" rel="external">官方phpStrom安装xdebug</a></p>
 <hr>
-<h1 id="&#x6B64;&#x6587;&#x66F4;&#x65B0;&#x4E8E;mac-10-12-&#x540E;&#x91CD;&#x65B0;&#x4F7F;&#x7528;php"><a href="#&#x6B64;&#x6587;&#x66F4;&#x65B0;&#x4E8E;mac-10-12-&#x540E;&#x91CD;&#x65B0;&#x4F7F;&#x7528;php" class="headerlink" title="&#x6B64;&#x6587;&#x66F4;&#x65B0;&#x4E8E;mac 10.12 &#x540E;&#x91CD;&#x65B0;&#x4F7F;&#x7528;php"></a>&#x6B64;&#x6587;&#x66F4;&#x65B0;&#x4E8E;mac 10.12 &#x540E;&#x91CD;&#x65B0;&#x4F7F;&#x7528;php</h1><blockquote>
-<p>&#x80CC;&#x666F;&#xFF1A;&#x81EA;&#x5DF1;&#x60F3;&#x505A;&#x4E2A;&#x540E;&#x53F0;php &#x79FB;&#x52A8;&#x7AEF;iOS &#x7684; &#x9879;&#x76EE;&#x6240;&#x6709;&#x90FD;&#x662F;&#x81EA;&#x5DF1;&#x64CD;&#x5200;&#x3002;&#x4E4B;&#x540E;&#x521A;&#x4E70;&#x7535;&#x8111;&#x914D;&#x7F6E;&#x7684;xdebug&#x53C8;&#x4E0D;&#x597D;&#x7528;&#x4E86;&#x3002;</p>
-<p>&#x7B2C;&#x4E00;&#x6B65;&#x60F3;&#x6CD5;&#xFF1A;&#x60F3;&#x4F7F;&#x7528;&#x6211;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F88;&#x4E0D;&#x5E78;&#x6211;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x7EC8;&#x7AEF;&#x62A5;&#x9519;&#x539F;&#x56E0;&#x662F;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x7684;&#x7248;&#x672C;&#x8FC7;&#x4F4E;&#x3002;</p>
-<p>&#x7B2C;&#x4E8C;&#x6B65;&#x5B9E;&#x8DF5;:&#x7A81;&#x7136;&#x95F4;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x4E00;&#x76F4;&#x8BEF;&#x89E3;&#x4E86;Xdebug&#x5B98;&#x7F51;(&#x4E4B;&#x524D;&#x8BA4;&#x4E3A;&#x4E4B;&#x540E;windows) <a href="https://xdebug.org/wizard.php" target="_blank" rel="external">&#x5B98;&#x7F51;</a>&#x4E5F;&#x602A;&#x6211;&#x82F1;&#x8BED;&#x5DEE;&#x3002;&#x3002;&#x5728;&#x67D0;&#x4E2A;&#x6587;&#x7AE0;&#x53D1;&#x73B0;&#x5B98;&#x7F51;&#x91CC;&#x9762;&#x7684;&#x6846;&#x6846;&#x662F;&#x5C06;&#x4F60;&#x7684;&#x672C;&#x5730;&#x7684;phpinfo()&#x7684;&#x6E90;&#x7F51;&#x9875;&#x590D;&#x5236;&#x8FDB;&#x53BB;&#x4ED6;&#x4F1A;&#x81EA;&#x52A8;&#x7ED9;&#x4F60;&#x5206;&#x6790;&#x4F60;&#x6240;&#x9700;&#x8981;&#x7684;Xdebug&#x3002;</p>
+<h1 id="此文更新于mac-10-12-后重新使用php"><a href="#此文更新于mac-10-12-后重新使用php" class="headerlink" title="此文更新于mac 10.12 后重新使用php"></a>此文更新于mac 10.12 后重新使用php</h1><blockquote>
+<p>背景：自己想做个后台php 移动端iOS 的 项目所有都是自己操刀。之后刚买电脑配置的xdebug又不好用了。</p>
+<p>第一步想法：想使用我这篇文章之前的方法，很不幸我失败了，终端报错原因是一个环境的版本过低。</p>
+<p>第二步实践:突然间发现一个自己一直误解了Xdebug官网(之前认为之后windows) <a href="https://xdebug.org/wizard.php" target="_blank" rel="external">官网</a>也怪我英语差。。在某个文章发现官网里面的框框是将你的本地的phpinfo()的源网页复制进去他会自动给你分析你所需要的Xdebug。</p>
 </blockquote>
 <p><img src="/2016/09/18/MAC-PHPSTORM-XDEBUG/Snip20170120_1.png" alt=""></p>
 <blockquote>
-<p>&#x4E00;&#x5171;&#x4E5D;&#x4E2A;&#x6B65;&#x9AA4; &#xFF0C;&#x6211;&#x628A;&#x5176;&#x4E2D;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x5217;&#x51FA;&#x6765;&#x548C;&#x65B9;&#x6CD5;</p>
+<p>一共九个步骤 ，我把其中出现问题的列出来和方法</p>
 </blockquote>
-<pre><code>4: phpize &#x5E94;&#x8BE5;&#x662F;mac&#x7F3A;&#x5C11;&#x6B64;&#x5DE5;&#x5177; &#x6267;&#x884C;:xcode-select --install &#x4E4B;&#x540E;&#x70B9;&#x51FB;&#x5B89;&#x88C5;&#x4E4B;&#x540E;&#x5728;&#x4F7F;
-&#x7528;&#x5C31;&#x53EF;&#x4EE5;
+<pre><code>4: phpize 应该是mac缺少此工具 执行:xcode-select --install 之后点击安装之后在使
+用就可以
 7: cp modules/xdebug.so /usr/lib/php/extensions/no-debug-non-
-zts-20131226 &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x62A5;&#x9519;&#x8BEF;&#xFF0C;&#x5373;&#x4F7F;&#x4F60;&#x4F7F;&#x7528;sudo &#x4E5F;&#x4E0D;&#x884C;&#x3002;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#x662F;&#x8BF4;&#x4ED6;&#x662F;&#x9632;&#x62A4;&#x7F69;&#x7684;&#x6700;&#x540E;
-&#x4E00;&#x5C42;&#xFF0C;&#x4E4B;&#x524D;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x4F46;&#x662F;&#x66F4;&#x65B0;&#x540E;&#x505A;&#x51FA;&#x6765;&#x4E0D;&#x80FD;&#x6539;&#x53D8;(&#x9700;&#x8981;&#x518D;&#x91CD;&#x542F;command+R&#x7B49;&#x7CFB;&#x5217;&#x64CD;&#x4F5C;&#x9EBB;&#x70E6;&#x7684;&#x5F88;)
-&#x6211;&#x53D6;&#x5DE7;&#x505A;&#x4E86;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x4ED6;&#x7684;&#x672C;&#x610F;&#x662F;&#x5C06;modules/xdebug.so&#x590D;&#x5236;&#x5230;/usr/lib/php/extensions/
-no-debug-non-zts-20131226 &#x4F46;&#x662F;&#x590D;&#x5236;&#x5931;&#x8D25;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x5C06;&#x8FD9;&#x4E2A;modules/xdebug.so&#x653E;&#x5230;&#x4E86;&#x5E73;
-&#x5E38;&#x4E0D;&#x6CE8;&#x610F;&#x7684;&#x4E5F;&#x4E0D;&#x4F1A;&#x5220;&#x9664;&#x7684;&#x5730;&#x65B9;&#x3002;&#x6B64;&#x5904;&#x6211;&#x56E0;&#x4E3A;&#x6587;&#x7A3F;&#x76F4;&#x653E;&#x4E00;&#x4E9B;&#x6211;&#x9700;&#x8981;&#x7684;&#x6587;&#x4EF6;&#x800C;&#x4E14;&#x4ECE;&#x6765;&#x4E0D;&#x5220;&#x9664;&#x6240;&#x4EE5;&#x6211;&#x653E;&#x5230;
-&#x4E86;&#x6587;&#x7A3F;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;
+zts-20131226 这个方法会报错误，即使你使用sudo 也不行。百度一下是说他是防护罩的最后
+一层，之前可以做到但是更新后做出来不能改变(需要再重启command+R等系列操作麻烦的很)
+我取巧做了个操作，他的本意是将modules/xdebug.so复制到/usr/lib/php/extensions/
+no-debug-non-zts-20131226 但是复制失败。所以我将这个modules/xdebug.so放到了平
+常不注意的也不会删除的地方。此处我因为文稿直放一些我需要的文件而且从来不删除所以我放到
+了文稿这个地方
 </code></pre><p><img src="/2016/09/18/MAC-PHPSTORM-XDEBUG/Snip20170120_2.png" alt=""></p>
-<pre><code>8:&#x8FD9;&#x4E2A;&#x6B65;&#x9AA4;&#x5C31;&#x9700;&#x8981;&#x4F5C;&#x51FA;&#x76F8;&#x5E94;&#x7684;&#x6539;&#x53D8;&#x4E86;&#x3002;&#x9ED8;&#x8BA4;&#x662F;
+<pre><code>8:这个步骤就需要作出相应的改变了。默认是
 zend_extension = /usr/lib/php/extensions/no-debug-non-zts-20131226/
-xdebug.so(&#x4F60;&#x7684;&#x53EF;&#x80FD;&#x548C;&#x6211;&#x4E0D;&#x540C;) &#x53EA;&#x9700;&#x8981;&#x5C06;/usr/lib/php/extensions/no-debug-non-
-zts-20131226/&#x6362;&#x6210;&#x4F60;&#x7684;&#x6587;&#x7A3F;&#x8DEF;&#x5F84;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;(&#x6211;&#x7684;&#x8DEF;&#x5F84;/Users/&#x4F60;&#x672C;&#x673A;&#x540D;&#x5B57;/Documents/
+xdebug.so(你的可能和我不同) 只需要将/usr/lib/php/extensions/no-debug-non-
+zts-20131226/换成你的文稿路径就可以了(我的路径/Users/你本机名字/Documents/
 xdebug.so)
 </code></pre><blockquote>
-<p>&#x5982;&#x679C;&#x6B64;&#x5904;&#x8FD9;&#x6837;&#x5199;&#x8FD8;&#x5DEE;&#x4E86;&#x70B9;&#x4E1C;&#x897F;&#x5373;&#x6211;&#x6B64;&#x6587;&#x7AE0;&#x4E0A;&#x9762;&#x7684;&#x4FE1;&#x606F;&#x914D;&#x7F6E;(commond + f &#x641C;&#x7D22;&#xFF1A;&lt;&#x73AF;&#x5883;&#x914D;&#x7F6E;&gt;)&#x590D;&#x5236;&#x8FDB;&#x53BB;&#x5373;&#x53EF;</p>
+<p>如果此处这样写还差了点东西即我此文章上面的信息配置(commond + f 搜索：&lt;环境配置&gt;)复制进去即可</p>
 </blockquote>
-<p><a href="http://www.codesec.net/view/218436.html" target="_blank" rel="external">&#x89E3;&#x51B3;phpize&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x95EE;&#x9898;</a></p>
+<p><a href="http://www.codesec.net/view/218436.html" target="_blank" rel="external">解决phpize无法使用问题</a></p>
 ]]></content>
       <categories>
         <category>PHP环境搭建</category>
@@ -170,50 +112,108 @@ xdebug.so)
       </tags>
   </entry>
   <entry>
+    <title>Git 基本操作学习</title>
+    <url>/2016/12/22/Git/</url>
+    <content><![CDATA[<blockquote>
+<p>坚持真的很重要 仅此而已</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="从创建仓库到推送"><a href="#从创建仓库到推送" class="headerlink" title="从创建仓库到推送"></a>从创建仓库到推送</h1><h2 id="克隆分支"><a href="#克隆分支" class="headerlink" title="克隆分支"></a>克隆分支</h2><pre><code>git clone &lt;url&gt;
+</code></pre><h2 id="将代码中所需要的添加进去-一般情况下都添加-即所有的意思"><a href="#将代码中所需要的添加进去-一般情况下都添加-即所有的意思" class="headerlink" title="将代码中所需要的添加进去(一般情况下都添加 . 即所有的意思)"></a>将代码中所需要的添加进去(一般情况下都添加 . 即所有的意思)</h2><pre><code>git add . ||(||或者) git add -A
+</code></pre><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><pre><code>git commit -m &quot;&lt;1&gt;&quot; 
+</code></pre><p><strong>备注 一：此处 引号&lt;&gt;中最好写东西 不写或者 引号内为空 都会上传失败不明白原因</strong></p>
+<h2 id="代码拉取和推送"><a href="#代码拉取和推送" class="headerlink" title="代码拉取和推送"></a>代码拉取和推送</h2><blockquote>
+<p>   分<strong>两种</strong>情况 </p>
+<p> <strong>第一种</strong> 是 没有创建过远程分支 ，简单的操作方式</p>
+<p> <strong>第二种</strong> 是 创建了远程分支，这种可以替代第一种 如果没创建远程分支稍显麻烦</p>
+</blockquote>
+<p> <strong>第一种</strong></p>
+<pre><code>git pull  直接拉取 默认的是 master
+git push  直接推送 默认的是 master
+</code></pre><p> <strong>第二种</strong></p>
+<pre><code>git pull origin &lt;本地分支名字&gt;:&lt;远程分支名字&gt;     
+</code></pre><p> <strong>备注 二: origin 一般为这个名字 如果本地分支是跟踪远程分支的话可以不写远程分支 直接使用 ：<code>git pull origin &lt;本地分支&gt;</code> 就可以 一般 本地分支和远程分支名字相等</strong></p>
+<pre><code>git push origin &lt;本地分支名字&gt;:&lt;远程分支名字&gt;   
+</code></pre><p><strong>类比备注 二</strong></p>
+<h1 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h1><h2 id="查看本地分支"><a href="#查看本地分支" class="headerlink" title="查看本地分支"></a>查看本地分支</h2><pre><code>git branch
+</code></pre><h2 id="查看所有分支-包括远程分支"><a href="#查看所有分支-包括远程分支" class="headerlink" title="查看所有分支 包括远程分支"></a>查看所有分支 包括远程分支</h2><pre><code>git branch -a
+</code></pre><h2 id="更新分支-比如说你的同事创建了新的分支你却看不到"><a href="#更新分支-比如说你的同事创建了新的分支你却看不到" class="headerlink" title="更新分支(比如说你的同事创建了新的分支你却看不到)"></a>更新分支(比如说你的同事创建了新的分支你却看不到)</h2><pre><code>git fetch
+</code></pre><h2 id="创建本地分支"><a href="#创建本地分支" class="headerlink" title="创建本地分支"></a>创建本地分支</h2><pre><code>git branch -b &lt;分支名字&gt;
+</code></pre><h2 id="创建远程分支"><a href="#创建远程分支" class="headerlink" title="创建远程分支"></a>创建远程分支</h2><h3 id="第一步先创建一个本地分支"><a href="#第一步先创建一个本地分支" class="headerlink" title="第一步先创建一个本地分支"></a>第一步先创建一个本地分支</h3><pre><code>git branch -b &lt;分支名字&gt;
+</code></pre><h3 id="第二步创建远程分支"><a href="#第二步创建远程分支" class="headerlink" title="第二步创建远程分支"></a>第二步创建远程分支</h3><pre><code>git push origin &lt;刚才第一步创建分支的名字&gt;:&lt;最好等于刚才那个分支(远程分支名字)&gt;
+</code></pre><h1 id="代码回滚"><a href="#代码回滚" class="headerlink" title="代码回滚"></a>代码回滚</h1><h2 id="保证当前工作区域干净-即代码没有要提交的了并且和远程分支代码一致"><a href="#保证当前工作区域干净-即代码没有要提交的了并且和远程分支代码一致" class="headerlink" title="保证当前工作区域干净(即代码没有要提交的了并且和远程分支代码一致)"></a>保证当前工作区域干净(即代码没有要提交的了并且和远程分支代码一致)</h2><blockquote>
+<p>可以将代码提交到远程分支上保证一致性(重复 commit –&gt; pull –&gt; push ) 再 继续</p>
+</blockquote>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><pre><code>git reflog
+</code></pre><h2 id="找到所需要回滚的版本"><a href="#找到所需要回滚的版本" class="headerlink" title="找到所需要回滚的版本"></a>找到所需要回滚的版本</h2><p><img src="/2016/12/22/Git/Snip20161220_1.png" alt="1"></p>
+<blockquote>
+<p>比如说 HEAD@{2} 这个是咱们回滚到的版本</p>
+</blockquote>
+<pre><code>git reset --hard HEAD@{2}
+</code></pre><h2 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h2><pre><code>git push origin :&lt;远程分支名字&gt; 
+或者使用 git push origin —delete &lt;远程分支名字&gt;
+</code></pre><h2 id="重新创建远程分支"><a href="#重新创建远程分支" class="headerlink" title="重新创建远程分支"></a>重新创建远程分支</h2><pre><code>git push origin &lt;远程分支名字&gt; 
+</code></pre><blockquote>
+<p>创建新的远程分支 代码就变成了你想要回滚的分支中了</p>
+</blockquote>
+<h1 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h1><ul>
+<li>git init</li>
+<li>git add .</li>
+<li>git commit -m “xxx”</li>
+<li>git remote add origin 网址 (查看 git remote)</li>
+<li>git push origin master</li>
+<li><a href="http://blog.jobbole.com/87700/" target="_blank" rel="external">引用 一</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac 上搭建Mysql总结</title>
     <url>/2017/01/19/MacMysql/</url>
     <content><![CDATA[<blockquote>
-<p>&#x4F7F;&#x7528;<code>Homebrew</code> &#x642D;&#x5EFA;<code>Mysql</code>&#x662F;&#x975E;&#x5E38;&#x7A33;&#x59A5;&#xFF0C;&#x56E0;&#x4E3A;&#x5899;&#x7684;&#x539F;&#x56E0;&#x53EF;&#x80FD;&#x901F;&#x5EA6;&#x8F83;&#x6162;&#x4E00;&#x4E9B;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x68AF;&#x5B50;&#x53EF;&#x80FD;&#x4F1A;&#x5F88;&#x5FEB;(&#x6BD4;&#x5982;&#x6211;)&#x3002;&#x4E0B;&#x9762;&#x770B;&#x5230;&#x6211;&#x5199;&#x5206;&#x53F7;&#x7684;&#x4F60;&#x4E5F;&#x5F97;&#x8BB0;&#x5F97;&#x5199;&#x4E0A;&#x3002;</p>
+<p>使用<code>Homebrew</code> 搭建<code>Mysql</code>是非常稳妥，因为墙的原因可能速度较慢一些，如果使用梯子可能会很快(比如我)。下面看到我写分号的你也得记得写上。</p>
 </blockquote>
 <a id="more"></a>
-<p> &#x7B2C;&#x4E00;&#x6B65;&#x6267;&#x884C;</p>
+<p> 第一步执行</p>
 <pre><code>brew install mysql
-</code></pre><p>&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x7B49;&#x5F85;&#x4E86;&#x5EFA;&#x8BAE;&#x7FFB;&#x5899;&#x901F;&#x5EA6;&#x6C47;&#x6B3E;&#x5F88;&#x591A;&#x56E0;&#x4E3A;&#x5185;&#x5BB9;&#x8F83;&#x5927; 400&#x591A;M</p>
-<p>&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;</p>
+</code></pre><p>之后就是等待了建议翻墙速度汇款很多因为内容较大 400多M</p>
+<p>启动服务器</p>
 <pre><code>base mysql.server start
-</code></pre><p> &#x7B2C;&#x4E8C;&#x6B65; &#x8FDB;&#x5165;Mysql</p>
+</code></pre><p> 第二步 进入Mysql</p>
 <pre><code>mysql -uroot -p
-</code></pre><p>&#x6B64;&#x5904;&#x4F1A;&#x8BA9;&#x4F60;&#x8F93;&#x5165;&#x5BC6;&#x7801; &#x8BB0;&#x5F97; &#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x6211;&#x5728;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x803D;&#x8BEF;&#x4E0D;&#x5C11;&#x65F6;&#x95F4;</p>
-<pre><code>&#x6B64;&#x5904;&#x5E94;&#x8BE5;&#x6709;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x7684;&#x56FE;&#x7247;
+</code></pre><p>此处会让你输入密码 记得 直接回车！！！直接回车！！！直接回车！！！我在这个地方耽误不少时间</p>
+<pre><code>此处应该有一个成功的图片
 /-------------------\
-</code></pre><p><img src="/2017/01/19/MacMysql/success.png" alt="&#x6B64;&#x5904;&#x5E94;&#x8BE5;&#x6709;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x7684;&#x56FE;&#x7247;"></p>
+</code></pre><p><img src="/2017/01/19/MacMysql/success.png" alt="此处应该有一个成功的图片"></p>
 <hr>
-<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;</p>
+<p>查看当前数据库</p>
 <pre><code>show databases;    
 </code></pre><p><img src="/2017/01/19/MacMysql/show_one.png" alt=""></p>
-<p>&#x7B2C;&#x4E09;&#x6B65;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;<br>&#x6B64;&#x5904;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x4F1A;&#x63D0;&#x793A;&#x4F60;&#x9009;&#x7528;&#x90A3;&#x4E2A;&#x6570;&#x636E;&#x5E93; &#x53EF;&#x4EE5;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x8981;&#x52A8;&#x5B83;&#x81EA;&#x5E26;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4EE5;&#x514D;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x3002;</p>
-<p>&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x636E;&#x5E93;</p>
+<p>第三步设置密码<br>此处如果直接设置会提示你选用那个数据库 可以用命令行创建一个自己的数据库不要动它自带的数据库，以免出现错误。</p>
+<p>先创建一个新的数据库</p>
 <pre><code>create databases DS;
 </code></pre><p><img src="/2017/01/19/MacMysql/show_2.png" alt=""></p>
-<p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x9519;&#x7684;&#x8BDD;&#x5C31;&#x628A;&#x5206;&#x53F7;&#x52A0;&#x4E0A;&#x5427; &#x5F53;&#x7136;&#x4F60;&#x590D;&#x5236;&#x4E0B;&#x6765;&#x6700;&#x597D;<code>DS</code>&#x6570;&#x636E;&#x5E93;&#x540D;&#x5B57;&#x968F;&#x4FBF;&#x6539;&#x522B;&#x91CD;&#x590D;&#x5C31;&#x884C;&#x3002;&#x3002;&#x3002;</p>
+<p>如果不想错的话就把分号加上吧 当然你复制下来最好<code>DS</code>数据库名字随便改别重复就行。。。</p>
 <pre><code>use DS;
-</code></pre><p>&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;</p>
+</code></pre><p>设置密码</p>
 <pre><code>set password=password(&apos;xxxxxx&apos;)
-</code></pre><p>xxxx&#x5373;&#x5BC6;&#x7801;</p>
+</code></pre><p>xxxx即密码</p>
 ]]></content>
   </entry>
   <entry>
     <title>OC好用的轮子</title>
     <url>/2016/08/19/OC-Goods-Wheels/</url>
-    <content><![CDATA[<h2 id="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"><a href="#&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;" class="headerlink" title="&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;"></a>&#x81EA;&#x52A8;&#x5904;&#x7406;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;</h2><h3 id="IQKeyboardManager"><a href="#IQKeyboardManager" class="headerlink" title="IQKeyboardManager"></a>IQKeyboardManager</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="external">IQKeyboardManager</a></p>
+    <content><![CDATA[<h2 id="自动处理键盘事件的第三方库"><a href="#自动处理键盘事件的第三方库" class="headerlink" title="自动处理键盘事件的第三方库"></a>自动处理键盘事件的第三方库</h2><h3 id="IQKeyboardManager"><a href="#IQKeyboardManager" class="headerlink" title="IQKeyboardManager"></a>IQKeyboardManager</h3><p><a href="https://github.com/hackiftekhar/IQKeyboardManager" target="_blank" rel="external">IQKeyboardManager</a></p>
 <ul>
-<li>&#x70B9;&#x51FB;&#x7A7A;&#x767D;&#x5904;&#x56DE;&#x6536;&#x952E;&#x76D8;</li>
-<li>&#x88AB;&#x906E;&#x6321;&#x4E0A;&#x79FB;&#x52A8;&#x63A7;&#x4EF6;<h4 id="&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;"><a href="#&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;" class="headerlink" title="&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;"></a>&#x5728;AppDelegate&#x4E2D;&#x6DFB;&#x52A0;</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {</div><div class="line">    </div><div class="line">    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];</div><div class="line">    manager.enable = YES;</div><div class="line">    manager.shouldResignOnTouchOutside = YES;</div><div class="line">    manager.shouldToolbarUsesTextFieldTintColor = YES;</div><div class="line">    manager.enableAutoToolbar = NO;</div><div class="line">    </div><div class="line">    return YES;</div><div class="line">}</div></pre></td></tr></table></figure>
+<li>点击空白处回收键盘</li>
+<li>被遮挡上移动控件<h4 id="在AppDelegate中添加"><a href="#在AppDelegate中添加" class="headerlink" title="在AppDelegate中添加"></a>在AppDelegate中添加</h4><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</div><div class="line">    </div><div class="line">    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];</div><div class="line">    manager.enable = YES;</div><div class="line">    manager.shouldResignOnTouchOutside = YES;</div><div class="line">    manager.shouldToolbarUsesTextFieldTintColor = YES;</div><div class="line">    manager.enableAutoToolbar = NO;</div><div class="line">    </div><div class="line">    return YES;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <a id="more"></a>
-<h2 id="Masonry-&#x4EE3;&#x7801;&#x7EA6;&#x675F;-&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;"><a href="#Masonry-&#x4EE3;&#x7801;&#x7EA6;&#x675F;-&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;" class="headerlink" title="Masonry &#x4EE3;&#x7801;&#x7EA6;&#x675F;(&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;)"></a>Masonry &#x4EE3;&#x7801;&#x7EA6;&#x675F;(&#x8FD9;&#x4E2A;&#x6211;&#x4E00;&#x76F4;&#x5728;&#x7528;&#xFF0C;&#x611F;&#x89C9;&#x5C31;&#x662F;&#x795E;&#x5668;)</h2><p><a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a></p>
-<h2 id="&#x672A;&#x5B8C;&#x5F85;&#x7EED;"><a href="#&#x672A;&#x5B8C;&#x5F85;&#x7EED;" class="headerlink" title="&#x672A;&#x5B8C;&#x5F85;&#x7EED;"></a>&#x672A;&#x5B8C;&#x5F85;&#x7EED;</h2>]]></content>
+<h2 id="Masonry-代码约束-这个我一直在用，感觉就是神器"><a href="#Masonry-代码约束-这个我一直在用，感觉就是神器" class="headerlink" title="Masonry 代码约束(这个我一直在用，感觉就是神器)"></a>Masonry 代码约束(这个我一直在用，感觉就是神器)</h2><p><a href="https://github.com/SnapKit/Masonry" target="_blank" rel="external">Masonry</a></p>
+<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>]]></content>
       <tags>
         <tag>iOS</tag>
       </tags>
@@ -222,49 +222,49 @@ xdebug.so)
     <title>iOS内购买IAP和服务器交互问题</title>
     <url>/2016/09/08/OC-IAP/</url>
     <content><![CDATA[<blockquote>
-<p>#warning &#x6B64;&#x5904;&#x4E0D;&#x8BB2;&#x89E3;IA&#x5982;&#x4F55;P&#x914D;&#x7F6E;&#x4E86;&#xFF0C;&#x7F51;&#x4E0A;&#x633A;&#x5168;&#x9762;&#x7684;&#x800C;&#x4E14;&#x8FD8;&#x5199;&#x7684;&#x90FD;&#x4E0D;&#x9519;&#x7684;&#x3002;&#x4F46;&#x662F;&#x524D;&#x63D0;&#x662F;&#x4F60;&#x6709;&#x6C99;&#x76D2;&#x6D4B;&#x8BD5;&#x8D26;&#x53F7;&#x548C;itunesconnect&#x8BBE;&#x7F6E;&#x8FC7;&#x4E86;&#x5185;&#x8D2D;&#x4E70;&#x6240;&#x9700;&#x865A;&#x62DF;&#x7269;&#x54C1;&#x548C;&#x94F6;&#x884C;&#x534F;&#x8BAE;&#x7684;&#x4E00;&#x5806;&#x914D;&#x7F6E;<br>&#x6B64;&#x5904;&#x53EA;&#x8BB2;&#x89E3;&#x4E24;&#x70B9;</p>
+<p>#warning 此处不讲解IA如何P配置了，网上挺全面的而且还写的都不错的。但是前提是你有沙盒测试账号和itunesconnect设置过了内购买所需虚拟物品和银行协议的一堆配置<br>此处只讲解两点</p>
 <ul>
-<li>&#x6211;&#x78B0;&#x89C1;&#x7684;&#x95EE;&#x9898;</li>
-<li>&#x548C;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4EA4;&#x4E92;&#x95EE;&#x9898;(&#x6B64;&#x5904;&#x4EE5;PHP&#x4E3A;&#x4F8B;&#x5B50;&#xFF0C;&#x672C;&#x4EBA;PHP&#x521A;&#x5165;&#x95E8;&#x4E5F;&#x662F;copy&#x6765;&#x7684;&#xFF0C;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x505A;&#x51FA;&#x5C0F;&#x5C0F;&#x6539;&#x53D8;)</li>
+<li>我碰见的问题</li>
+<li>和服务器的交互问题(此处以PHP为例子，本人PHP刚入门也是copy来的，根据自己的需求做出小小改变)</li>
 </ul>
 </blockquote>
 <a id="more"></a>
-<h2 id="&#x95EE;&#x9898;"><a href="#&#x95EE;&#x9898;" class="headerlink" title="&#x95EE;&#x9898;"></a>&#x95EE;&#x9898;</h2><h3 id="&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;"><a href="#&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;" class="headerlink" title="&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;"></a>&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;</h3><ul>
-<li><p>&#x9700;&#x8981;&#x5728;</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="配置消耗型物品重复购买却显示此项目免费恢复"><a href="#配置消耗型物品重复购买却显示此项目免费恢复" class="headerlink" title="配置消耗型物品重复购买却显示此项目免费恢复"></a>配置消耗型物品重复购买却显示此项目免费恢复</h3><ul>
+<li><p>需要在</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray&lt;SKPaymentTransaction *&gt; *)transactions</div></pre></td></tr></table></figure>
 </li>
-<li><p>&#x7684;&#x6BCF;&#x4E2A;&#x72B6;&#x6001;&#x540E;&#x9762;&#x90FD;&#x9700;&#x8981;&#x6DFB;&#x52A0;</p>
+<li><p>的每个状态后面都需要添加</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">[[SKPaymentQueue defaultQueue] finishTransaction:tran];</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="&#x4EA4;&#x4E92;"><a href="#&#x4EA4;&#x4E92;" class="headerlink" title="&#x4EA4;&#x4E92;"></a>&#x4EA4;&#x4E92;</h2><h3 id="&#x5148;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;OC&#x4EE3;&#x7801;&#x548C;PHP&#x4EE3;&#x7801;"><a href="#&#x5148;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;OC&#x4EE3;&#x7801;&#x548C;PHP&#x4EE3;&#x7801;" class="headerlink" title="&#x5148;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;OC&#x4EE3;&#x7801;&#x548C;PHP&#x4EE3;&#x7801;"></a>&#x5148;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;OC&#x4EE3;&#x7801;&#x548C;PHP&#x4EE3;&#x7801;</h3><blockquote>
-<p>&#x7B2C;&#x4E00;&#x6B65;&#x62FE;&#x6387;&#x62FE;&#x6387;&#x9700;&#x8981;&#x7684;&#x4E1C;&#x897F;</p>
+<h2 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h2><h3 id="先解释一下OC代码和PHP代码"><a href="#先解释一下OC代码和PHP代码" class="headerlink" title="先解释一下OC代码和PHP代码"></a>先解释一下OC代码和PHP代码</h3><blockquote>
+<p>第一步拾掇拾掇需要的东西</p>
 <ul>
 <li>#import <storekit storekit.h=""></storekit></li>
-<li><skpaymenttransactionobserver, skproductsrequestdelegate=""> &#x4E24;&#x4E2A;&#x534F;&#x8BAE;&#x65B9;&#x6CD5;&#x4F60;&#x4E5F;&#x5F97;&#x5B9E;&#x73B0;&#x5427;<br>&#x7B2C;&#x4E8C;&#x6B65;&#x6CE8;&#x518C;&#x89C2;&#x5BDF;&#x8005;&#xFF0C;&#x5E76;&#x4E14;&#x5224;&#x65AD;&#x8BE5;&#x7528;&#x6237;&#x80FD;&#x5426;&#x4F7F;&#x7528;&#x5185;&#x8D2D;&#x4E70;<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">[[SKPaymentQueue defaultQueue] addTransactionObserver:self];</div><div class="line">            if([SKPaymentQueue canMakePayments]){</div><div class="line">                weakSelf.currentProId         = productID;</div><div class="line">                [weakSelf requestProductData:productID];</div><div class="line">            }else{</div><div class="line">                UIAlertView *alerView         = [[UIAlertView alloc] initWithTitle:@&quot;&#x63D0;&#x793A;&quot;</div><div class="line">                                                                           message:@&quot;&#x60A8;&#x7684;&#x624B;&#x673A;&#x6CA1;&#x6709;&#x6253;&#x5F00;&#x7A0B;&#x5E8F;&#x5185;&#x4ED8;&#x8D39;&#x8D2D;&#x4E70;&quot;</div><div class="line">                                                                          delegate:self cancelButtonTitle:NSLocalizedString(@&quot;&#x5173;&#x95ED;&quot;,nil) otherButtonTitles:NSLocalizedString(@&quot;&#x63D0;&#x793A;&quot;,nil), nil];     </div><div class="line">                [alerView show];</div><div class="line">            }</div></pre></td></tr></table></figure>
+<li><skpaymenttransactionobserver, skproductsrequestdelegate=""> 两个协议方法你也得实现吧<br>第二步注册观察者，并且判断该用户能否使用内购买<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">[[SKPaymentQueue defaultQueue] addTransactionObserver:self];</div><div class="line">            if([SKPaymentQueue canMakePayments])&#123;</div><div class="line">                weakSelf.currentProId         = productID;</div><div class="line">                [weakSelf requestProductData:productID];</div><div class="line">            &#125;else&#123;</div><div class="line">                UIAlertView *alerView         = [[UIAlertView alloc] initWithTitle:@&quot;提示&quot;</div><div class="line">                                                                           message:@&quot;您的手机没有打开程序内付费购买&quot;</div><div class="line">                                                                          delegate:self cancelButtonTitle:NSLocalizedString(@&quot;关闭&quot;,nil) otherButtonTitles:NSLocalizedString(@&quot;提示&quot;,nil), nil];     </div><div class="line">                [alerView show];</div><div class="line">            &#125;</div></pre></td></tr></table></figure>
 </skpaymenttransactionobserver,></li>
 </ul>
-<p>&#x7B2C;&#x4E09;&#x6B65;&#x67E5;&#x8BE2; =&gt; &#x4F60;&#x4F20;&#x4E00;&#x4E2A;&#x4F60;&#x5728;itunesconnect &#x4E2D;App&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5185;&#x8D2D;&#x4E70;Product_ID<br><img src="/2016/09/08/OC-IAP/itunesconntent.png" alt="&#x6211;&#x662F;&#x56FE;"><br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">NSArray *product = [[NSArray alloc] initWithObjects:type, nil];</div><div class="line">NSSet *nsset = [NSSet setWithArray:product];</div><div class="line">// &#x8BF7;&#x6C42;&#x52A8;&#x4F5C;</div><div class="line">SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:nsset];</div><div class="line">request.delegate = self;</div><div class="line">[request start];</div></pre></td></tr></table></figure></p>
-<p>&#x7B2C;&#x56DB;&#x6B65; &#x6536;&#x5230;&#x4F60;&#x5728;itunesconnect &#x4E2D;&#x5B9A;&#x4E49;&#x7684;Product_ID&#x7684;&#x8BE6;&#x7EC6;&#x6570;&#x636E;,&#x987A;&#x4FBF;&#x628A;&#x8D2D;&#x4E70;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x4E86;()<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response {</div><div class="line">    NSLog(@&quot;--------------&#x6536;&#x5230;&#x4EA7;&#x54C1;&#x53CD;&#x9988;&#x6D88;&#x606F;---------------------&quot;);</div><div class="line">    NSArray *product              = response.products;</div><div class="line">    if([product count] == 0){</div><div class="line">        //[SVProgressHUD dismiss];</div><div class="line">        NSLog(@&quot;--------------&#x6CA1;&#x6709;&#x5546;&#x54C1;------------------&quot;);</div><div class="line">        return;</div><div class="line">    }</div><div class="line">    </div><div class="line">    NSLog(@&quot;productID:%@&quot;, response.invalidProductIdentifiers);</div><div class="line">    NSLog(@&quot;&#x4EA7;&#x54C1;&#x4ED8;&#x8D39;&#x6570;&#x91CF;:%lu&quot;,(unsigned long)[product count]);</div><div class="line">    </div><div class="line">    SKProduct *p                  = nil;</div><div class="line">    for (SKProduct *pro in product) {</div><div class="line">        NSLog(@&quot;%@&quot;, [pro description]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro localizedTitle]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro localizedDescription]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro price]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro productIdentifier]);</div><div class="line">        </div><div class="line">        if([pro.productIdentifier isEqualToString:_currentProId]){</div><div class="line">            p                             = pro;</div><div class="line">        }</div><div class="line">    }</div><div class="line">    </div><div class="line">    SKPayment *payment            = [SKPayment paymentWithProduct:p];</div><div class="line">    NSLog(@&quot;&#x53D1;&#x9001;&#x8D2D;&#x4E70;&#x8BF7;&#x6C42;&quot;);</div><div class="line">    [[SKPaymentQueue defaultQueue] addPayment:payment];</div><div class="line">}</div></pre></td></tr></table></figure></p>
-<p>&#x7B2C;&#x4E94;&#x6B65;&#x6536;&#x5230;&#x4FE1;&#x606F;&#x7ED9;&#x4F60;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x4E86;<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray&lt;SKPaymentTransaction *&gt; *)transactions {</div><div class="line">    for(SKPaymentTransaction *tran in transactions){</div><div class="line">        </div><div class="line">        switch (tran.transactionState) {</div><div class="line">            case SKPaymentTransactionStatePurchased:{</div><div class="line">                NSLog(@&quot;&#x4EA4;&#x6613;&#x5B8C;&#x6210;&quot;);</div><div class="line">                //&#x65B9;&#x6CD5;&#x5728;&#x4E0B;&#x9762;</div><div class="line">                [self completeTransaction:tran];</div><div class="line">            }</div><div class="line">                break;</div><div class="line">            case SKPaymentTransactionStatePurchasing:</div><div class="line">                NSLog(@&quot;&#x5546;&#x54C1;&#x6DFB;&#x52A0;&#x8FDB;&#x5217;&#x8868;&quot;);</div><div class="line">                </div><div class="line">                break;</div><div class="line">            case SKPaymentTransactionStateRestored:{</div><div class="line">                NSLog(@&quot;&#x5DF2;&#x7ECF;&#x8D2D;&#x4E70;&#x8FC7;&#x5546;&#x54C1;&quot;);</div><div class="line">                </div><div class="line">                [[SKPaymentQueue defaultQueue] finishTransaction:tran];</div><div class="line">            }</div><div class="line">                break;</div><div class="line">            case SKPaymentTransactionStateFailed:{</div><div class="line">                NSLog(@&quot;&#x4EA4;&#x6613;&#x5931;&#x8D25;&quot;);</div><div class="line">                [[SKPaymentQueue defaultQueue] finishTransaction:tran];</div><div class="line">              //  [SVProgressHUD showErrorWithStatus:@&quot;&#x8D2D;&#x4E70;&#x5931;&#x8D25;&quot;];</div><div class="line">                startConntentService = false;</div><div class="line">            }</div><div class="line">                break;</div><div class="line">            default:</div><div class="line">                break;</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure></p>
-<p>&#x6B64;&#x5904;&#x662F;&#x6700;&#x540E;&#x7684;&#x65B9;&#x6CD5;&#x8FD8;&#x6709;&#x6211;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x4E92;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x4F46;&#x662F;&#x6B64;&#x5904;&#x6211;&#x4E5F;&#x4E0D;&#x61C2;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x8C03;&#x7528;&#x4E24;&#x6B21;&#x5982;&#x679C;&#x60A8;&#x660E;&#x767D;&#xFF0C;&#x8BF7;&#x5728;&#x4E0B;&#x9762;&#x7559;&#x8A00;&#x544A;&#x8BC9;&#x6211;&#x8C22;&#x8C22;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x6B64;&#x5904;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x6765;&#x7EA6;&#x675F;&#x5B83;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x4E92;&#x7684;&#x6B21;&#x6570;&#x3002;<br>&#xFF01;&#xFF01;&#xFF01;&#x770B;&#x597D;&#x6211;&#x53D1;&#x9001;&#x6570;&#x636E;&#x8BF7;&#x6C42;&#x7684;&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x5C31;&#x662F;AFNetworing&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x90FD;&#x4F1A;&#x7528;&#x5BF9;&#x5427;&#x3002;&#x3002;&#x3002;&#x7F51;&#x5740;&#x770B;&#x597D;&#xFF0C;&#x522B;&#x5149;&#x987E;&#x7740;&#x590D;&#x5236;&#x54E6;<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (void)completeTransaction:(SKPaymentTransaction *)transaction {</div><div class="line">    NSLog(@&quot;&#x4EA4;&#x6613;&#x7ED3;&#x675F;&quot;);</div><div class="line">    [SVProgressHUD dismiss];</div><div class="line">    </div><div class="line">    NSURL *receiptURL             = [[NSBundle mainBundle] appStoreReceiptURL];</div><div class="line">    NSData *receipt               = [NSData dataWithContentsOfURL:receiptURL];</div><div class="line">    if (!receipt) { /* No local receipt -- handle the error. */ }</div><div class="line">    //&#x56E0;&#x4E3A;&#x6B64;&#x5904;&#x53EF;&#x80FD;&#x4F1A;&#x591A;&#x6B21;&#x8C03;&#x7528;&#x539F;&#x56E0;&#x4E0D;&#x660E;&#x6240;&#x4EE5;&#x52A0;&#x5224;&#x65AD;&#x53EA;&#x8C03;&#x7528;&#x4E00;&#x6B21;</div><div class="line">    else if (receipt &amp;&amp; startConntentService) {</div><div class="line">        /**</div><div class="line">                  &#x670D;&#x52A1;&#x5668;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;:</div><div class="line">                  &#x63A5;&#x6536;ios&#x7AEF;&#x53D1;&#x8FC7;&#x6765;&#x7684;&#x8D2D;&#x4E70;&#x51ED;&#x8BC1;&#x3002;</div><div class="line">                  &#x5224;&#x65AD;&#x51ED;&#x8BC1;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x6216;&#x9A8C;&#x8BC1;&#x8FC7;&#xFF0C;&#x7136;&#x540E;&#x5B58;&#x50A8;&#x8BE5;&#x51ED;&#x8BC1;&#x3002;</div><div class="line">                  &#x5C06;&#x8BE5;&#x51ED;&#x8BC1;&#x53D1;&#x9001;&#x5230;&#x82F9;&#x679C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1;&#xFF0C;&#x5E76;&#x5C06;&#x9A8C;&#x8BC1;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</div><div class="line">                  &#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x4FEE;&#x6539;&#x7528;&#x6237;&#x76F8;&#x5E94;&#x7684;&#x4F1A;&#x5458;&#x6743;&#x9650;</div><div class="line">                 */</div><div class="line">        startConntentService = false;</div><div class="line">        //&#x5B57;&#x5178;&#x4E2D;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E3A;&#x4E86;debug&#x51C6;&#x5907;&#x7684;&#xFF0C;&#x6B63;&#x5E38;&#x4F60;&#x4E0D;&#x7528;&#x5199;</div><div class="line">        NSDictionary *requestContents = @{</div><div class="line">                                          @&quot;receipt-data&quot;: [receipt base64EncodedStringWithOptions:0],</div><div class="line">                                          @&quot;XDEBUG_SESSION_START&quot;:@&quot;12477&quot;</div><div class="line">                                          };</div><div class="line">        [HTTPClient postWithURLString:@&quot;&#x4F60;&#x7684;&#x540E;&#x53F0;&#x7F51;&#x5740;&quot; parameters:requestContents success:^(id returnValue) {</div><div class="line">            id name                       = returnValue;</div><div class="line">            </div><div class="line">        } failure:^(id failureValue) {</div><div class="line">            </div><div class="line">        }];</div><div class="line">    }</div><div class="line">    //&#x8FD9;&#x4E2A;&#x5343;&#x4E07;&#x522B;&#x5FD8;&#x4E86; &#xFF0C;&#x8981;&#x4E0D;&#x4F60;&#x5C31;&#x4F1A;&#x72AF;&#x7B2C;&#x4E00;&#x6761;&#x95EE;&#x9898;(&#x914D;&#x7F6E;&#x6D88;&#x8017;&#x578B;&#x7269;&#x54C1;&#x91CD;&#x590D;&#x8D2D;&#x4E70;&#x5374;&#x663E;&#x793A;&#x6B64;&#x9879;&#x76EE;&#x514D;&#x8D39;&#x6062;&#x590D;)</div><div class="line">    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>第三步查询 =&gt; 你传一个你在itunesconnect 中App中定义的内购买Product_ID<br><img src="/2016/09/08/OC-IAP/itunesconntent.png" alt="我是图"><br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">NSArray *product = [[NSArray alloc] initWithObjects:type, nil];</div><div class="line">NSSet *nsset = [NSSet setWithArray:product];</div><div class="line">// 请求动作</div><div class="line">SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:nsset];</div><div class="line">request.delegate = self;</div><div class="line">[request start];</div></pre></td></tr></table></figure></p>
+<p>第四步 收到你在itunesconnect 中定义的Product_ID的详细数据,顺便把购买请求发送了()<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response &#123;</div><div class="line">    NSLog(@&quot;--------------收到产品反馈消息---------------------&quot;);</div><div class="line">    NSArray *product              = response.products;</div><div class="line">    if([product count] == 0)&#123;</div><div class="line">        //[SVProgressHUD dismiss];</div><div class="line">        NSLog(@&quot;--------------没有商品------------------&quot;);</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    NSLog(@&quot;productID:%@&quot;, response.invalidProductIdentifiers);</div><div class="line">    NSLog(@&quot;产品付费数量:%lu&quot;,(unsigned long)[product count]);</div><div class="line">    </div><div class="line">    SKProduct *p                  = nil;</div><div class="line">    for (SKProduct *pro in product) &#123;</div><div class="line">        NSLog(@&quot;%@&quot;, [pro description]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro localizedTitle]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro localizedDescription]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro price]);</div><div class="line">        NSLog(@&quot;%@&quot;, [pro productIdentifier]);</div><div class="line">        </div><div class="line">        if([pro.productIdentifier isEqualToString:_currentProId])&#123;</div><div class="line">            p                             = pro;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    SKPayment *payment            = [SKPayment paymentWithProduct:p];</div><div class="line">    NSLog(@&quot;发送购买请求&quot;);</div><div class="line">    [[SKPaymentQueue defaultQueue] addPayment:payment];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>第五步收到信息给你返回数据了<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray&lt;SKPaymentTransaction *&gt; *)transactions &#123;</div><div class="line">    for(SKPaymentTransaction *tran in transactions)&#123;</div><div class="line">        </div><div class="line">        switch (tran.transactionState) &#123;</div><div class="line">            case SKPaymentTransactionStatePurchased:&#123;</div><div class="line">                NSLog(@&quot;交易完成&quot;);</div><div class="line">                //方法在下面</div><div class="line">                [self completeTransaction:tran];</div><div class="line">            &#125;</div><div class="line">                break;</div><div class="line">            case SKPaymentTransactionStatePurchasing:</div><div class="line">                NSLog(@&quot;商品添加进列表&quot;);</div><div class="line">                </div><div class="line">                break;</div><div class="line">            case SKPaymentTransactionStateRestored:&#123;</div><div class="line">                NSLog(@&quot;已经购买过商品&quot;);</div><div class="line">                </div><div class="line">                [[SKPaymentQueue defaultQueue] finishTransaction:tran];</div><div class="line">            &#125;</div><div class="line">                break;</div><div class="line">            case SKPaymentTransactionStateFailed:&#123;</div><div class="line">                NSLog(@&quot;交易失败&quot;);</div><div class="line">                [[SKPaymentQueue defaultQueue] finishTransaction:tran];</div><div class="line">              //  [SVProgressHUD showErrorWithStatus:@&quot;购买失败&quot;];</div><div class="line">                startConntentService = false;</div><div class="line">            &#125;</div><div class="line">                break;</div><div class="line">            default:</div><div class="line">                break;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>此处是最后的方法还有我和服务器交互的地方，但是此处我也不懂为什么这个方法会调用两次如果您明白，请在下面留言告诉我谢谢，所以我此处加了一个全局的判断，来约束它和服务器交互的次数。<br>！！！看好我发送数据请求的方法其实就是AFNetworing的封装，都会用对吧。。。网址看好，别光顾着复制哦<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- (void)completeTransaction:(SKPaymentTransaction *)transaction &#123;</div><div class="line">    NSLog(@&quot;交易结束&quot;);</div><div class="line">    [SVProgressHUD dismiss];</div><div class="line">    </div><div class="line">    NSURL *receiptURL             = [[NSBundle mainBundle] appStoreReceiptURL];</div><div class="line">    NSData *receipt               = [NSData dataWithContentsOfURL:receiptURL];</div><div class="line">    if (!receipt) &#123; /* No local receipt -- handle the error. */ &#125;</div><div class="line">    //因为此处可能会多次调用原因不明所以加判断只调用一次</div><div class="line">    else if (receipt &amp;&amp; startConntentService) &#123;</div><div class="line">        /**</div><div class="line">                  服务器要做的事情:</div><div class="line">                  接收ios端发过来的购买凭证。</div><div class="line">                  判断凭证是否已经存在或验证过，然后存储该凭证。</div><div class="line">                  将该凭证发送到苹果的服务器验证，并将验证结果返回给客户端。</div><div class="line">                  如果需要，修改用户相应的会员权限</div><div class="line">                 */</div><div class="line">        startConntentService = false;</div><div class="line">        //字典中第二个参数是为了debug准备的，正常你不用写</div><div class="line">        NSDictionary *requestContents = @&#123;</div><div class="line">                                          @&quot;receipt-data&quot;: [receipt base64EncodedStringWithOptions:0],</div><div class="line">                                          @&quot;XDEBUG_SESSION_START&quot;:@&quot;12477&quot;</div><div class="line">                                          &#125;;</div><div class="line">        [HTTPClient postWithURLString:@&quot;你的后台网址&quot; parameters:requestContents success:^(id returnValue) &#123;</div><div class="line">            id name                       = returnValue;</div><div class="line">            </div><div class="line">        &#125; failure:^(id failureValue) &#123;</div><div class="line">            </div><div class="line">        &#125;];</div><div class="line">    &#125;</div><div class="line">    //这个千万别忘了 ，要不你就会犯第一条问题(配置消耗型物品重复购买却显示此项目免费恢复)</div><div class="line">    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="&#x4E0B;&#x9762;&#x662F;PHP&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x7528;&#x7684;&#x662F;ThinkPHP&#x6846;&#x67B6;-&#x4F1A;php&#x90FD;&#x4F1A;&#x6846;&#x67B6;&#xFF0C;&#x50CF;&#x6211;&#x53EA;&#x4F1A;&#x6846;&#x67B6;&#x6682;&#x65F6;&#x8FD8;&#x4E0D;&#x4F1A;php-&#x54B3;&#x54B3;&#x2026;"><a href="#&#x4E0B;&#x9762;&#x662F;PHP&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x7528;&#x7684;&#x662F;ThinkPHP&#x6846;&#x67B6;-&#x4F1A;php&#x90FD;&#x4F1A;&#x6846;&#x67B6;&#xFF0C;&#x50CF;&#x6211;&#x53EA;&#x4F1A;&#x6846;&#x67B6;&#x6682;&#x65F6;&#x8FD8;&#x4E0D;&#x4F1A;php-&#x54B3;&#x54B3;&#x2026;" class="headerlink" title="&#x4E0B;&#x9762;&#x662F;PHP&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x7528;&#x7684;&#x662F;ThinkPHP&#x6846;&#x67B6;(&#x4F1A;php&#x90FD;&#x4F1A;&#x6846;&#x67B6;&#xFF0C;&#x50CF;&#x6211;&#x53EA;&#x4F1A;&#x6846;&#x67B6;&#x6682;&#x65F6;&#x8FD8;&#x4E0D;&#x4F1A;php.&#x54B3;&#x54B3;&#x2026;)"></a>&#x4E0B;&#x9762;&#x662F;PHP&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x7528;&#x7684;&#x662F;ThinkPHP&#x6846;&#x67B6;(&#x4F1A;php&#x90FD;&#x4F1A;&#x6846;&#x67B6;&#xFF0C;&#x50CF;&#x6211;&#x53EA;&#x4F1A;&#x6846;&#x67B6;&#x6682;&#x65F6;&#x8FD8;&#x4E0D;&#x4F1A;php.&#x54B3;&#x54B3;&#x2026;)</h3><blockquote>
-<p>&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;<br>1 &#x5916;&#x90E8;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x5904;&#x6211;&#x7684;&#x903B;&#x8F91;&#x90FD;&#x7CFB;&#x5728;&#x4E86;Controller&#x4E2D;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x5927;&#x5BB6;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x5EFA;&#x8BAE;&#x8FD8;&#x662F;&#x5199;&#x5728;Model&#x4E2D;(MVC&#x54E6;&#xFF0C;&#x5176;&#x5B9E;&#x611F;&#x89C9;&#x90FD;&#x4E00;&#x6837;&#x54C8;&#x54C8;)<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">public function iosIAPPay() {</div><div class="line"></div><div class="line">        $status = array(&apos;status&apos;=&gt;-1);</div><div class="line">        //&#x83B7;&#x53D6; App &#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;,&#x8BBE;&#x7F6E;&#x65F6;&#x5019;&#x662F;&#x6C99;&#x76D2;&#x72B6;&#x6001;</div><div class="line">        $receipt   = $_POST[&apos;receipt-data&apos;];</div><div class="line">        $isSandbox = true;</div><div class="line">        //&#x5F00;&#x59CB;&#x6267;&#x884C;&#x9A8C;&#x8BC1;</div><div class="line">        try</div><div class="line">        {</div><div class="line">            $info = $this-&gt;getReceiptData($receipt, $isSandbox);</div><div class="line">            // &#x901A;&#x8FC7;product_id &#x6765;&#x5224;&#x65AD;&#x662F;&#x4E0B;&#x8F7D;&#x54EA;&#x4E2A;&#x8D44;&#x6E90;</div><div class="line">            switch($info[&apos;product_id&apos;]){</div><div class="line">                case &apos;&#x4F60;&#x7684;Product_ID&apos;:</div><div class="line">                    $status[&apos;status&apos;] = 1;</div><div class="line">                    Header(&quot;Location:xxxx.zip&quot;);</div><div class="line">                    break;</div><div class="line">            }</div><div class="line">            return $status;</div><div class="line">        }</div><div class="line">            //&#x6355;&#x83B7;&#x5F02;&#x5E38;</div><div class="line">        catch(\Exception $e)</div><div class="line">        {</div><div class="line">            $this-&gt;ajaxReturn($status);</div><div class="line">        }</div><div class="line">    }</div></pre></td></tr></table></figure></p>
+<h3 id="下面是PHP代码，我用的是ThinkPHP框架-会php都会框架，像我只会框架暂时还不会php-咳咳…"><a href="#下面是PHP代码，我用的是ThinkPHP框架-会php都会框架，像我只会框架暂时还不会php-咳咳…" class="headerlink" title="下面是PHP代码，我用的是ThinkPHP框架(会php都会框架，像我只会框架暂时还不会php.咳咳…)"></a>下面是PHP代码，我用的是ThinkPHP框架(会php都会框架，像我只会框架暂时还不会php.咳咳…)</h3><blockquote>
+<p>只有两个方法<br>1 外部调用的方法，此处我的逻辑都系在了Controller中，是为了大家方便，我建议还是写在Model中(MVC哦，其实感觉都一样哈哈)<br><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">public function iosIAPPay() &#123;</div><div class="line"></div><div class="line">        $status = array(&apos;status&apos;=&gt;-1);</div><div class="line">        //获取 App 发送过来的数据,设置时候是沙盒状态</div><div class="line">        $receipt   = $_POST[&apos;receipt-data&apos;];</div><div class="line">        $isSandbox = true;</div><div class="line">        //开始执行验证</div><div class="line">        try</div><div class="line">        &#123;</div><div class="line">            $info = $this-&gt;getReceiptData($receipt, $isSandbox);</div><div class="line">            // 通过product_id 来判断是下载哪个资源</div><div class="line">            switch($info[&apos;product_id&apos;])&#123;</div><div class="line">                case &apos;你的Product_ID&apos;:</div><div class="line">                    $status[&apos;status&apos;] = 1;</div><div class="line">                    Header(&quot;Location:xxxx.zip&quot;);</div><div class="line">                    break;</div><div class="line">            &#125;</div><div class="line">            return $status;</div><div class="line">        &#125;</div><div class="line">            //捕获异常</div><div class="line">        catch(\Exception $e)</div><div class="line">        &#123;</div><div class="line">            $this-&gt;ajaxReturn($status);</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">//&#x670D;&#x52A1;&#x5668;&#x4E8C;&#x6B21;&#x9A8C;&#x8BC1;&#x4EE3;&#x7801;</div><div class="line">    function getReceiptData($receipt, $isSandbox = false)</div><div class="line">    {</div><div class="line">        if ($isSandbox) {</div><div class="line">            $endpoint = &apos;https://sandbox.itunes.apple.com/verifyReceipt&apos;;</div><div class="line">        }</div><div class="line">        else {</div><div class="line">            $endpoint = &apos;https://buy.itunes.apple.com/verifyReceipt&apos;;</div><div class="line">        }</div><div class="line"></div><div class="line">        $postData = json_encode(array(&quot;receipt-data&quot; =&gt; $receipt));;</div><div class="line"></div><div class="line">        $ch = curl_init($endpoint);</div><div class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);</div><div class="line">        curl_setopt($ch, CURLOPT_POST, true);</div><div class="line">        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);</div><div class="line">        curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, 0);  //&#x8FD9;&#x4E24;&#x884C;&#x4E00;&#x5B9A;&#x8981;&#x52A0;&#xFF0C;&#x4E0D;&#x52A0;&#x4F1A;&#x62A5;SSL &#x9519;&#x8BEF;</div><div class="line">        curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 0);</div><div class="line"></div><div class="line"></div><div class="line">        $response = curl_exec($ch);</div><div class="line">        $errno    = curl_errno($ch);</div><div class="line">        $errmsg   = curl_error($ch);</div><div class="line">        curl_close($ch);</div><div class="line">        //&#x5224;&#x65AD;&#x65F6;&#x5019;&#x51FA;&#x9519;&#xFF0C;&#x629B;&#x51FA;&#x5F02;&#x5E38;</div><div class="line">        if ($errno != 0) {</div><div class="line">            throw new \Exception($errmsg, $errno);</div><div class="line">        }</div><div class="line"></div><div class="line">        $data = json_decode($response);</div><div class="line">        //&#x6B64;&#x5904;&#x662F;&#x770B;&#x5230;&#x5148;&#x4EBA;&#x4EEC;&#x7684;&#x6307;&#x5BFC;&#xFF0C;&#x53C8;&#x770B;&#x5230;apple&#x7684;&#x5B98;&#x65B9;&#x8BF4;&#x6CD5;&#x6539;&#x7684;&#x3002;&#x5426;&#x5219;&#x4F1A;&#x5BA1;&#x6838;&#x4E0D;&#x8FC7;&#x8C8C;&#x4F3C;&#x662F;&#x5BA1;&#x6838;&#x4E5F;&#x4F1A;&#x8D70;&#x6C99;&#x76D2;&#x6D4B;&#x8BD5;&#x8005;&#xFF0C;</div><div class="line">        //&#x6B64;&#x5904;&#x5148;&#x5224;&#x65AD;&#x4E00;&#x6B21;&#x8FD4;&#x56DE;&#x7684;status&#x662F;&#x5426;=21007 &#x8FD9;&#x6570;&#x636E;&#x662F;&#x4ECE;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#xFF0C;&#x4F46;&#x5B83;&#x53D1;&#x9001;&#x5230;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;&#x5B83;&#x53D1;&#x9001;&#x5230;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x6765;&#x4EE3;&#x66FF;&#x3002;</div><div class="line">        if ($data-&gt;status == 21007) {</div><div class="line">            $this-&gt;getReceiptData($receipt,true);</div><div class="line">            return;</div><div class="line">        }</div><div class="line">        //&#x5224;&#x65AD;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x662F;&#x5426;&#x662F;&#x5BF9;&#x8C61;</div><div class="line">        if (!is_object($data)) {</div><div class="line">            throw new \Exception(&apos;Invalid response data&apos;);</div><div class="line">        }</div><div class="line">        //&#x5224;&#x65AD;&#x8D2D;&#x4E70;&#x65F6;&#x5019;&#x6210;&#x529F;</div><div class="line">        if (!isset($data-&gt;status) || $data-&gt;status != 0) {</div><div class="line">            throw new \Exception(&apos;Invalid receipt&apos;);</div><div class="line">        }</div><div class="line">         $in_app = $data-&gt;receipt-&gt;in_app;</div><div class="line">        //&#x8FD4;&#x56DE;&#x4EA7;&#x54C1;&#x7684;&#x4FE1;&#x606F;</div><div class="line">        </div><div class="line">         $status[&apos;data&apos;] = array(</div><div class="line">            &apos;quantity&apos; =&gt; $in_app-&gt;quantity,</div><div class="line">            &apos;product_id&apos; =&gt; $in_app-&gt;product_id,</div><div class="line">            &apos;transaction_id&apos; =&gt; $in_app-&gt;transaction_id,</div><div class="line">            &apos;purchase_date&apos; =&gt; $in_app-&gt;purchase_date,</div><div class="line">            &apos;app_item_id&apos; =&gt; $data-&gt;receipt-&gt;app_item_id,</div><div class="line">        );</div><div class="line">        return(</div><div class="line">            $status;</div><div class="line">    }</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">//服务器二次验证代码</div><div class="line">    function getReceiptData($receipt, $isSandbox = false)</div><div class="line">    &#123;</div><div class="line">        if ($isSandbox) &#123;</div><div class="line">            $endpoint = &apos;https://sandbox.itunes.apple.com/verifyReceipt&apos;;</div><div class="line">        &#125;</div><div class="line">        else &#123;</div><div class="line">            $endpoint = &apos;https://buy.itunes.apple.com/verifyReceipt&apos;;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $postData = json_encode(array(&quot;receipt-data&quot; =&gt; $receipt));;</div><div class="line"></div><div class="line">        $ch = curl_init($endpoint);</div><div class="line">        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);</div><div class="line">        curl_setopt($ch, CURLOPT_POST, true);</div><div class="line">        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);</div><div class="line">        curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, 0);  //这两行一定要加，不加会报SSL 错误</div><div class="line">        curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 0);</div><div class="line"></div><div class="line"></div><div class="line">        $response = curl_exec($ch);</div><div class="line">        $errno    = curl_errno($ch);</div><div class="line">        $errmsg   = curl_error($ch);</div><div class="line">        curl_close($ch);</div><div class="line">        //判断时候出错，抛出异常</div><div class="line">        if ($errno != 0) &#123;</div><div class="line">            throw new \Exception($errmsg, $errno);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        $data = json_decode($response);</div><div class="line">        //此处是看到先人们的指导，又看到apple的官方说法改的。否则会审核不过貌似是审核也会走沙盒测试者，</div><div class="line">        //此处先判断一次返回的status是否=21007 这数据是从测试环境，但它发送到生产环境中进行验证。它发送到测试环境来代替。</div><div class="line">        if ($data-&gt;status == 21007) &#123;</div><div class="line">            $this-&gt;getReceiptData($receipt,true);</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        //判断返回的数据是否是对象</div><div class="line">        if (!is_object($data)) &#123;</div><div class="line">            throw new \Exception(&apos;Invalid response data&apos;);</div><div class="line">        &#125;</div><div class="line">        //判断购买时候成功</div><div class="line">        if (!isset($data-&gt;status) || $data-&gt;status != 0) &#123;</div><div class="line">            throw new \Exception(&apos;Invalid receipt&apos;);</div><div class="line">        &#125;</div><div class="line">         $in_app = $data-&gt;receipt-&gt;in_app;</div><div class="line">        //返回产品的信息</div><div class="line">        </div><div class="line">         $status[&apos;data&apos;] = array(</div><div class="line">            &apos;quantity&apos; =&gt; $in_app-&gt;quantity,</div><div class="line">            &apos;product_id&apos; =&gt; $in_app-&gt;product_id,</div><div class="line">            &apos;transaction_id&apos; =&gt; $in_app-&gt;transaction_id,</div><div class="line">            &apos;purchase_date&apos; =&gt; $in_app-&gt;purchase_date,</div><div class="line">            &apos;app_item_id&apos; =&gt; $data-&gt;receipt-&gt;app_item_id,</div><div class="line">        );</div><div class="line">        return(</div><div class="line">            $status;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <blockquote>
-<p>&#x6211;&#x4E00;&#x76F4;&#x90FD;&#x56F0;&#x5728;&#x548C;&#x540E;&#x53F0;&#x4EA4;&#x4E92;&#x7684;&#x65F6;&#x5019;&#x82F9;&#x679C;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x4E2D;status=21002,&#x54ED;&#x6B7B;&#x3002;&#x3002;&#x3002;&#x56E0;&#x4E3A;status=0&#x624D;&#x662F;&#x8D2D;&#x4E70;&#x6210;&#x529F;.</p>
+<p>我一直都困在和后台交互的时候苹果返回的数据中status=21002,哭死。。。因为status=0才是购买成功.</p>
 <ul>
-<li>OC&#x4E2D;&#x5C06;&#x82F9;&#x679C;&#x6240;&#x9700;&#x7684;&#x51ED;&#x8BC1;&#x5176;&#x5B9E;&#x5C31;&#x662F;<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">NSData *receipt               = [NSData dataWithContentsOfURL:receiptURL];</div></pre></td></tr></table></figure>
+<li>OC中将苹果所需的凭证其实就是<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">NSData *receipt               = [NSData dataWithContentsOfURL:receiptURL];</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>base64EncodedStringWithOptions&#x4E00;&#x6B21;<br>&#x5728;PHP&#x5728;&#x5C06;&#x8FD9;&#x4E2A;&#x6570;&#x636E;json_encode(array(&#x201C;receipt-data&#x201D; =&gt; $receipt));&#x4E00;&#x6B21;&#x5728;&#x4F20;&#x7ED9;&#x82F9;&#x679C;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x81EA;&#x5DF1;&#x5199;&#x767E;&#x5EA6;&#x8C37;&#x6B4C;&#x4E00;&#x8D77;&#x6765;&#x771F;&#x5FC3;&#x597D;&#x96BE;&#x3002;<br>&#x4E00;&#x904D;&#x4E00;&#x904D;&#x7684;&#x6539;OC&#x548C;PHP&#x4EE3;&#x7801;&#xFF0C;&#x8FD8;&#x597D;&#x516C;&#x53F8;&#x592A;&#x5C0F;&#x4E24;&#x4E2A;&#x90FD;&#x662F;&#x6211;&#x5728;&#x505A;&#xFF0C;&#x6211;&#x6709;&#x5927;&#x628A;&#x65F6;&#x95F4;&#x548C;&#x4E0D;&#x7528;&#x9EBB;&#x70E6;&#x522B;&#x4EBA;&#x3002;</p>
-<h3 id="&#x603B;&#x7ED3;&#x4E00;&#x4E0B;"><a href="#&#x603B;&#x7ED3;&#x4E00;&#x4E0B;" class="headerlink" title="&#x603B;&#x7ED3;&#x4E00;&#x4E0B;"></a>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;</h3><p>&#x5E2E;&#x5927;&#x5BB6;&#x7406;&#x7406;&#x601D;&#x8DEF;&#x4E5F;&#x662F;&#x6211;&#x76EE;&#x524D;&#x77E5;&#x9053;&#x7684;&#x6700;&#x597D;&#x7684;app&#x548C;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x4E92;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<br>&#x5728;&#x652F;&#x4ED8;&#x4E4B;&#x524D;&#x5728;&#x540E;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x8BB0;&#x5F55;&#x4E00;&#x6B21;&#x4F60;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;product_id&#xFF0C;&#x4E4B;&#x540E;&#x624D;&#x5F00;&#x59CB;&#x53BB;&#x652F;&#x4ED8;&#x652F;&#x4ED8;&#x6210;&#x529F;&#x540E;&#x518D;&#x548C;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x6BD4;&#x5BF9;product_id&#x53EF;&#x4EE5;&#x9884;&#x9632;app&#x672C;&#x5730;&#x7834;&#x89E3;&#x652F;&#x4ED8;&#x548C;&#x9632;&#x6B62;&#x7528;&#x6237;&#x7BE1;&#x6539;(&#x6BD4;&#x5982;&#x4ED6;&#x4E70;&#x7684;518&#x5374;&#x53EA;&#x652F;&#x4ED8;6&#x5757;)&#x7B49;.<br>&#x8FD8;&#x6709;&#x5C31;&#x662F;&#x6F0F;&#x5355;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;&#x7528;&#x6237;&#x4E70;&#x4E1C;&#x897F;&#x6210;&#x529F;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x548C;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x4E92;&#x51FA;&#x73B0;&#x4E86;&#x610F;&#x5916;(&#x4E0D;&#x4F1A;&#x6000;&#x5B55;)&#xFF0C;&#x6211;&#x73B0;&#x5728;&#x5E76;&#x672A;&#x5C1D;&#x8BD5;&#x4F46;&#x89C9;&#x5F97;&#x53EF;&#x884C;(&#x5728;&#x66F4;&#x65B0;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x4E4B;&#x524D;&#xFF0C;&#x56E0;&#x4E3A;&#x4ECA;&#x5929;&#x5468;&#x4E94;&#x8981;&#x56DE;&#x5BB6;&#x4E86;&#x6240;&#x4EE5;&#x4E0B;&#x5468;&#x6D4B;&#x8BD5;)&#xFF0C;&#x5C31;&#x662F;&#x8BB2;xcode&#x7684;&#x51ED;&#x8BC1;&#x4FDD;&#x5B58;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x8FD9;&#x6837;&#x7528;&#x6237;&#x5C31;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x91CD;&#x65B0;&#x70B9;&#x51FB;&#x4E00;&#x6B21;&#xFF0C;&#x5728;&#x548C;&#x670D;&#x52A1;&#x5668;&#x4EA4;&#x4E92;&#x4E00;&#x6B21;&#xFF0C;&#x5C06;&#x865A;&#x62DF;&#x7269;&#x54C1;&#x91CD;&#x65B0;&#x4E0D;&#x7ED9;&#x4ED6;&#x4E00;&#x6B21;&#x3002;</p>
+<p>base64EncodedStringWithOptions一次<br>在PHP在将这个数据json_encode(array(“receipt-data” =&gt; $receipt));一次在传给苹果服务器，自己写百度谷歌一起来真心好难。<br>一遍一遍的改OC和PHP代码，还好公司太小两个都是我在做，我有大把时间和不用麻烦别人。</p>
+<h3 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h3><p>帮大家理理思路也是我目前知道的最好的app和服务器交互的方法：<br>在支付之前在后台服务器记录一次你的数据，包括product_id，之后才开始去支付支付成功后再和服务器进行比对product_id可以预防app本地破解支付和防止用户篡改(比如他买的518却只支付6块)等.<br>还有就是漏单问题，就是用户买东西成功了，但是和自己服务器交互出现了意外(不会怀孕)，我现在并未尝试但觉得可行(在更新这个博客之前，因为今天周五要回家了所以下周测试)，就是讲xcode的凭证保存到本地，这样用户就可以自己重新点击一次，在和服务器交互一次，将虚拟物品重新不给他一次。</p>
 </blockquote>
-<p>&#x53C2;&#x8003;:</p>
+<p>参考:</p>
 <blockquote>
-<p><a href="http://www.jianshu.com/p/e9ae4cece800" target="_blank" rel="external">&#x5E94;&#x7528;&#x5185;&#x652F;&#x4ED8;IAP&#x5168;&#x90E8;&#x6D41;&#x7A0B;</a><br><a href="http://www.jianshu.com/p/86ac7d3b593a" target="_blank" rel="external">iOS&#x5F00;&#x53D1;&#x5185;&#x8D2D;&#x5168;&#x5957;&#x56FE;&#x6587;&#x6559;&#x7A0B;</a></p>
+<p><a href="http://www.jianshu.com/p/e9ae4cece800" target="_blank" rel="external">应用内支付IAP全部流程</a><br><a href="http://www.jianshu.com/p/86ac7d3b593a" target="_blank" rel="external">iOS开发内购全套图文教程</a></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -277,103 +277,110 @@ xdebug.so)
   <entry>
     <title>学习PHP遇到的问题</title>
     <url>/2016/08/09/PHP-Study-problems/</url>
-    <content><![CDATA[<h2 id="json-decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;"><a href="#json-decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;" class="headerlink" title="json_decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;"></a>json_decode&#x51FA;&#x73B0;&#x7684;&#x6000;&#x7591;&#x4EBA;&#x751F;&#x95EE;&#x9898;</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$respBody = &apos;{&quot;message&quot;:&quot;streamStatus&quot;,&quot;updatedAt&quot;:&quot;2016-08-09T10:20:38.035549157+08:00&quot;,&quot;data&quot;:{&quot;id&quot;:&quot;z1.com-jyjapp-zb.JYJLive414&quot;,&quot;url&quot;:&quot;rtmp://127.0.0.1/com-jyjapp-zb/JYJLive414?key=4846e65a-cce6-4e62-a375-745d7f02</div><div class="line">        e032\u0026sourceConnId=zOmKiH2XRsuWmWht\u0026node=vc-scgy-tel-1-1\u0026remote=171.217.118.64%3A51789&quot;,&quot;status&quot;:&quot;connected&quot;}}&apos;;</div><div class="line">$re  = json_decode($respBody,true);</div></pre></td></tr></table></figure>
-<p>&#x8FD9;&#x4E00;&#x4E32;&#x5F88;&#x666E;&#x901A;&#x7684;&#x4EE3;&#x7801;$respBody = null&#x89E3;&#x6790;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x5C45;&#x7136;&#x662F;&#x2014;&#x2013;&gt;&#x4E0D;&#x80FD;&#x6362;&#x884C;&#x7684;&#x5B57;&#x7B26;<br>&#x4F60;&#x4F1A;&#x95EE;&#x6211;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#x7684;&#x95EE;&#x9898;&#x770B;&#x4E0D;&#x51FA;&#x6765;&#x5417;&#x4E2D;&#x95F4;&#x660E;&#x663E;&#x7A7A;&#x4E86;&#x4E00;&#x5757;&#x5417;&#xFF01;&#x4F46;&#x662F;&#x5728;&#x7F16;&#x8F91;&#x5668;&#x4E2D;&#x662F;&#x5206;&#x8FA8;&#x4E0D;&#x51FA;&#x6765;&#x7684;</p>
+    <content><![CDATA[<h2 id="json-decode出现的怀疑人生问题"><a href="#json-decode出现的怀疑人生问题" class="headerlink" title="json_decode出现的怀疑人生问题"></a>json_decode出现的怀疑人生问题</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$respBody = &apos;&#123;&quot;message&quot;:&quot;streamStatus&quot;,&quot;updatedAt&quot;:&quot;2016-08-09T10:20:38.035549157+08:00&quot;,&quot;data&quot;:&#123;&quot;id&quot;:&quot;z1.com-jyjapp-zb.JYJLive414&quot;,&quot;url&quot;:&quot;rtmp://127.0.0.1/com-jyjapp-zb/JYJLive414?key=4846e65a-cce6-4e62-a375-745d7f02</div><div class="line">        e032\u0026sourceConnId=zOmKiH2XRsuWmWht\u0026node=vc-scgy-tel-1-1\u0026remote=171.217.118.64%3A51789&quot;,&quot;status&quot;:&quot;connected&quot;&#125;&#125;&apos;;</div><div class="line">$re  = json_decode($respBody,true);</div></pre></td></tr></table></figure>
+<p>这一串很普通的代码$respBody = null解析失败的原因居然是—–&gt;不能换行的字符<br>你会问我这么简单的问题看不出来吗中间明显空了一块吗！但是在编辑器中是分辨不出来的</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Swift-数组&amp;链表</title>
+    <url>/2020/05/23/swift_algorithm_0/</url>
+    <content><![CDATA[<blockquote>
+<p>数组和链表都是线性数据结构</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><blockquote>
+<p>数组插入和删除，都要重新移动位置内存位置要重新布局，相较于它的查询较慢. </p>
+<p>插入和删除时间复杂度O(N), 如果很幸运的插入到最后面复杂度是O(1), 但是插入到最前面则是O(N), 平均是O(N/2)还是O(N)</p>
+<p>查询时间复杂度O(1)</p>
+</blockquote>
+<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><blockquote>
+<p>33444</p>
+</blockquote>
+<p><img src="/2020/05/23/swift_algorithm_0/node_head.png" alt="333"></p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
   </entry>
   <entry>
     <title>微信小程序问题总结</title>
     <url>/2016/10/02/WX-IDE/</url>
     <content><![CDATA[<blockquote>
-<p>&#x6211;&#x662F;&#x505A;iOS&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x90FD;&#x4F1A;&#x8BF4;&#x8FD9;&#x4E2A;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x53C8;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x6211;&#x4E0D;&#x53CD;&#x5BF9;&#x82F9;&#x679C;&#x5BF9;&#x52A8;&#x6001;&#x7684;&#x8BA8;&#x538C;&#xFF0C;&#x6BD5;&#x7ADF;&#x8FD9;&#x6837;&#x5F88;&#x5BB9;&#x6613;&#x4E0D;&#x53D7;&#x63A7;&#x5236;&#xFF0C;&#x4F46;&#x662F;<a href="http://reactnative.cn/" target="_blank" rel="external">ReactNative(&#x4E2D;&#x6587;&#x7F51;)</a>&#x4E0D;&#x662F;&#x8FD8;&#x6D3B;&#x7684;&#x597D;&#x597D;&#x7684;&#x5417;(&#x8C8C;&#x4F3C;&#x7248;&#x672C;&#x5230;&#x4E86;0.33&#x4E86;)!&#x800C;&#x4E14;&#x6211;&#x89C9;&#x5F97;&#x53EF;&#x4EE5;&#x5B66;&#x4E2A;&#x5927;&#x6982;&#x4E07;&#x4E00;&#x771F;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x4E0D;&#x81F3;&#x4E8E;&#x65E0;&#x6240;&#x9002;&#x4ECE;(&#x6211;&#x5148;&#x505A;&#x4E2A;&#x975E;&#x5E38;&#x7B80;&#x964B;&#x7684;&#x7535;&#x5546;&#x7C7B;&#xFF0C;&#x5B8C;&#x4E8B;&#x540E;&#x653E;&#x5230;&#x4E0B;&#x9762;)&#x3002;&#x5B66;&#x4E60;&#xFF01;&#x5B66;&#x4E60;&#xFF01;&#x5B66;&#x4E60;&#xFF01;&#x624D;&#x4E0D;&#x4F1A;&#x88AB;&#x6DD8;&#x6C70;&#x3002;</p>
-<p>&#x7533;&#x660E; &#xFF1A;&#x4F1A;&#x5C06;&#x6211;&#x8BA4;&#x4E3A;&#x662F;&#x95EE;&#x9898;&#x7684;&#x95EE;&#x9898;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x89C9;&#x5F97;&#x592A;&#x7B80;&#x5355;&#x53EF;&#x4EE5;&#x5173;&#x6389;&#x3002;&#x5E76;&#x4E14;&#x6211;&#x662F;&#x8FB9;&#x505A;&#x5C0F;&#x7A0B;&#x5E8F;&#x8FB9;&#x5199;&#x7684;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#xFF0C;&#x4F1A;&#x4E00;&#x76F4;&#x66F4;&#x65B0;&#xFF0C;&#xFF01;&#xFF01;&#xFF01;MAC&#x73AF;&#x5883;</p>
-<p>&#x6211;&#x53EF;&#x4EE5;&#x8BF4;&#x4E0D;&#x592A;&#x61C2;&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684;&#x8BED;&#x8A00;&#x3002;&#x5B83;&#x4F7F;&#x7528;XML+JS &#xFF0C;&#x4E0D;&#x652F;&#x6301;HTML5&#xFF0C;&#x517C;&#x5BB9;&#x90E8;&#x5206;CSS&#x5199;&#x6CD5;(&#x4ECE;&#x8FD9;&#x4E2A;&#x53E5;&#x53F7;&#x5230;&#x8FD9;&#x53E5;&#x8BDD;&#x5B8C;&#x4E8B;&#x6211;&#x662F;&#x6284;&#x6765;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4E0D;&#x61C2;XML&#x548C;JS)&#x3002;&#x4E0D;&#x61C2;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x5F00;&#x53D1;&#x5417;&#xFF1F;&#x6211;&#x89C9;&#x5F97;&#x8BED;&#x8A00;&#x90FD;&#x662F;&#x76F8;&#x901A;&#x7684;&#xFF0C;&#x8FD8;&#x597D;&#x4E4B;&#x524D;&#x505A;&#x4E86;<code>React Native</code>&#x9879;&#x76EE;(&#x603B;&#x89C9;&#x5F97;&#x5F88;&#x76F8;&#x4F3C;)&#xFF0C;&#x4E0A;&#x624B;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E5F;&#x5F88;&#x5FEB;&#x3002;</p>
-<p>ps: &#x5F88;&#x51B7;&#x6E05;&#x3002;&#x3002;&#x3002;&#x6211;&#x77E5;&#x9053;&#x6211;&#x662F;&#x83DC;&#x9E1F;</p>
+<p>我是做iOS开发的，很多人都会说这个微信小程序又是动态的，我不反对苹果对动态的讨厌，毕竟这样很容易不受控制，但是<a href="http://reactnative.cn/" target="_blank" rel="external">ReactNative(中文网)</a>不是还活的好好的吗(貌似版本到了0.33了)!而且我觉得可以学个大概万一真用到的时候也不至于无所适从(我先做个非常简陋的电商类，完事后放到下面)。学习！学习！学习！才不会被淘汰。</p>
+<p>申明 ：会将我认为是问题的问题记录下来，如果您觉得太简单可以关掉。并且我是边做小程序边写的这个博客，会一直更新，！！！MAC环境</p>
+<p>我可以说不太懂微信小程序的语言。它使用XML+JS ，不支持HTML5，兼容部分CSS写法(从这个句号到这句话完事我是抄来的，因为我不懂XML和JS)。不懂但是不能开发吗？我觉得语言都是相通的，还好之前做了<code>React Native</code>项目(总觉得很相似)，上手小程序也很快。</p>
+<p>ps: 很冷清。。。我知道我是菜鸟</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="&#x4ECE;&#x5934;&#x5F00;&#x59CB;-&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;"><a href="#&#x4ECE;&#x5934;&#x5F00;&#x59CB;-&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;" class="headerlink" title="&#x4ECE;&#x5934;&#x5F00;&#x59CB; - &#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;"></a>&#x4ECE;&#x5934;&#x5F00;&#x59CB; - &#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x9879;&#x76EE;</h2><h3 id="&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"><a href="#&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;" class="headerlink" title="&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;"></a>&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</h3><p><a href="https://servicewechat.com/wxa-dev-logic/download_redirect?type=darwin&amp;from=mpwiki&amp;t=1475052055457" target="_blank" rel="external">&#x5FAE;&#x4FE1;&#x5C0F;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x4E0B;&#x8F7D;</a></p>
+<h2 id="从头开始-开始一个项目"><a href="#从头开始-开始一个项目" class="headerlink" title="从头开始 - 开始一个项目"></a>从头开始 - 开始一个项目</h2><h3 id="工具下载安装"><a href="#工具下载安装" class="headerlink" title="工具下载安装"></a>工具下载安装</h3><p><a href="https://servicewechat.com/wxa-dev-logic/download_redirect?type=darwin&amp;from=mpwiki&amp;t=1475052055457" target="_blank" rel="external">微信小程序开发者工具下载</a></p>
 <ul>
-<li>&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x7F3A;&#x5C11;appid&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x4E2A;&#x53EA;&#x8981;&#x7834;&#x89E3;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;(<a href="http://blog.csdn.net/chenqiuge1984/article/details/52692394" target="_blank" rel="external">&#x5F15;&#x7528; &#x4E00;</a>) </li>
+<li>开发工具缺少appid问题，这个只要破解就可以了(<a href="http://blog.csdn.net/chenqiuge1984/article/details/52692394" target="_blank" rel="external">引用 一</a>) </li>
 </ul>
-<h3 id="&#x65B0;&#x5EFA;&#x9879;&#x76EE;"><a href="#&#x65B0;&#x5EFA;&#x9879;&#x76EE;" class="headerlink" title="&#x65B0;&#x5EFA;&#x9879;&#x76EE;"></a>&#x65B0;&#x5EFA;&#x9879;&#x76EE;</h3><ul>
-<li>&#x4E0D;&#x6E05;&#x695A;&#x662F;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x7684;&#x539F;&#x56E0;&#x8FD8;&#x662F;&#x600E;&#x4E48;&#x56DE;&#x4E8B;&#xFF0C;&#x8BF4;&#x597D;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;QuickStart&#x7684;&#xFF0C;&#x7136;&#x800C;&#x6211;&#x5E76;&#x6CA1;&#x6709;&#x6240;&#x4EE5;&#x6253;&#x5F00;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#x7684;</li>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><ul>
+<li>不清楚是开发工具的原因还是怎么回事，说好新建一个项目会有一个QuickStart的，然而我并没有所以打开就是这个样子的</li>
 </ul>
 <p><img src="/2016/10/02/WX-IDE/startError.png" alt="11"></p>
 <ul>
-<li>&#x53EA;&#x80FD;&#x4ECE;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;&#x4E00;&#x4E2A;<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/demo/quickstart.zip?t=1475052047016" target="_blank" rel="external">HelloWorld</a>&#x76F4;&#x63A5;&#x653E;&#x5927;&#x5F00;&#x91C7;&#x521B;&#x5EFA;&#x7684;&#x9879;&#x76EE;&#x8DEF;&#x5F84;&#x4E0B;&#x9762;</li>
+<li>只能从官网下载一个<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/demo/quickstart.zip?t=1475052047016" target="_blank" rel="external">HelloWorld</a>直接放大开采创建的项目路径下面</li>
 </ul>
-<h3 id="&#x6587;&#x4EF6;&#x7ED3;&#x6784;"><a href="#&#x6587;&#x4EF6;&#x7ED3;&#x6784;" class="headerlink" title="&#x6587;&#x4EF6;&#x7ED3;&#x6784;"></a>&#x6587;&#x4EF6;&#x7ED3;&#x6784;</h3><p><img src="/2016/10/02/WX-IDE/appDetail.png" alt="&#x9ED8;&#x8BA4;&#x7684;"><br>&#x9ED8;&#x8BA4;&#x5C31;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x662F;&#x76EE;&#x5F55;&#x518D;&#x52A0;&#x4E0A;&#x4E0D;&#x540C;&#x540D;&#x5B57;&#x7684;&#x8FD9;&#x4E2A;&#x51E0;&#x4E2A;&#x6587;&#x4EF6;&#x5F53;&#x7136;&#x8FD8;&#x5F97;&#x52A0;&#x4E0A;.wxml&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x6765;&#x4E66;&#x5199;&#x754C;&#x9762;&#x7684;</p>
-<h2 id="&#x4EE3;&#x7801;"><a href="#&#x4EE3;&#x7801;" class="headerlink" title="&#x4EE3;&#x7801;"></a>&#x4EE3;&#x7801;</h2><p>app.json</p>
+<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><p><img src="/2016/10/02/WX-IDE/appDetail.png" alt="默认的"><br>默认就几个文件剩下的就是目录再加上不同名字的这个几个文件当然还得加上.wxml，这个文件就是来书写界面的</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>app.json</p>
 <p><img src="/2016/10/02/WX-IDE/appJson.png" alt=""></p>
 <ul>
-<li>pages : &#x5E94;&#x8BE5;&#x5C31;&#x662F;&#x9879;&#x76EE;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x5165;&#x53E3;(&#x7528;&#x5E94;&#x8BE5;&#x7684;&#x539F;&#x56E0;&#x662F;&#x6211;&#x4E0D;&#x786E;&#x5B9A;)&#xFF0C;&#x5982;&#x679C;&#x6B64;&#x5904;&#x4E0D;&#x52A0;&#x8F7D;&#x7684;&#x8BDD;&#x540E;&#x9762;&#x7528;&#x4E86;&#x4E5F;&#x662F;&#x4E0D;&#x4F1A;&#x6709;&#x6240;&#x663E;&#x793A;&#x7684;(&#x8FD9;&#x91CC;&#x662F;&#x786E;&#x5B9A;&#x7684;&#x5982;&#x679C;&#x4E0D;&#x4FE1;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;)&#x3002;</li>
-<li>window : &#x7A0B;&#x5E8F;&#x7684;&#x7A97;&#x53E3;</li>
-<li>tabBar : &#x5F88;&#x597D;&#x7406;&#x89E3;&#x5C31;&#x662F;&#x6807;&#x7B7E;&#x680F;(App&#x4E0B;&#x9762;&#x8D1F;&#x8D23;&#x5207;&#x6362;&#x4E0D;&#x540C;&#x754C;&#x9762;)</li>
+<li>pages : 应该就是项目加载文件的入口(用应该的原因是我不确定)，如果此处不加载的话后面用了也是不会有所显示的(这里是确定的如果不信可以尝试)。</li>
+<li>window : 程序的窗口</li>
+<li>tabBar : 很好理解就是标签栏(App下面负责切换不同界面)</li>
 </ul>
-<h2 id="&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;"><a href="#&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;" class="headerlink" title="&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;"></a>&#x9700;&#x8BB0;&#x5F55;&#x95EE;&#x9898;</h2><h3 id="scroll-view"><a href="#scroll-view" class="headerlink" title="scroll-view"></a>scroll-view</h3><h4 id="&#x6CE8;&#x610F;&#x95EE;&#x9898;"><a href="#&#x6CE8;&#x610F;&#x95EE;&#x9898;" class="headerlink" title="&#x6CE8;&#x610F;&#x95EE;&#x9898;"></a>&#x6CE8;&#x610F;&#x95EE;&#x9898;</h4><ul>
-<li>&#x6A2A;&#x5411;&#x9700;&#x8981;&#x7ED9;scroll-view &#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;<code>height: 200px</code>&#x6587;&#x6863;&#x4E0A;&#x662F;&#x8FD9;&#x4E48;&#x8BF4;&#x7684;&#x4F46;&#x662F;scroll-view&#x4E2D;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x9AD8;&#x5EA6;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;scroll-view&#x6491;&#x8D77;&#x6765;&#x4E86;</li>
+<h2 id="需记录问题"><a href="#需记录问题" class="headerlink" title="需记录问题"></a>需记录问题</h2><h3 id="scroll-view"><a href="#scroll-view" class="headerlink" title="scroll-view"></a>scroll-view</h3><h4 id="注意问题"><a href="#注意问题" class="headerlink" title="注意问题"></a>注意问题</h4><ul>
+<li>横向需要给scroll-view 一个高度<code>height: 200px</code>文档上是这么说的但是scroll-view中元素设置高度就可以将scroll-view撑起来了</li>
 </ul>
-<h4 id="&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;"><a href="#&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;" class="headerlink" title="&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;"></a>&#x53EA;&#x5C55;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x65E0;&#x6548;</h4><ul>
-<li><p>scroll-view&#x9700;&#x8981;&#x8BBE;&#x7F6E;<code>white-space: nowrap;</code>(&#x767E;&#x5EA6;&#x4E00;&#x4E0B;:&#x6587;&#x672C;&#x4E0D;&#x4F1A;&#x6362;&#x884C;&#xFF0C;&#x6587;&#x672C;&#x4F1A;&#x5728;&#x5728;&#x540C;&#x4E00;&#x884C;&#x4E0A;&#x7EE7;&#x7EED;&#xFF0C;&#x76F4;&#x5230;&#x9047;&#x5230; <br> &#x6807;&#x7B7E;&#x4E3A;&#x6B62;&#x3002;)</p>
+<h4 id="只展示第一个元素滑动无效"><a href="#只展示第一个元素滑动无效" class="headerlink" title="只展示第一个元素滑动无效"></a>只展示第一个元素滑动无效</h4><ul>
+<li><p>scroll-view需要设置<code>white-space: nowrap;</code>(百度一下:文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。)</p>
 </li>
-<li><p>&#x5B50;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;<code>display:inline-block</code>(&#x767E;&#x5EA6;&#x4E00;&#x4E0B;:&#x8BA9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5177;&#x6709;&#x201C;&#x533A;&#x5757;&#x5143;&#x7D20;&#x201D;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;width&#x548C;height&#xFF09;&#xFF0C;&#x53C8;&#x5177;&#x6709;&#x201C;&#x5185;&#x8054;&#x5143;&#x7D20;&#x201D;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x4E0D;&#x4EA7;&#x751F;&#x6362;&#x884C;))</p>
+<li><p>子元素设置<code>display:inline-block</code>(百度一下:让一个元素具有“区块元素”的属性（可以设置width和height），又具有“内联元素”的属性（不产生换行))</p>
 </li>
 </ul>
-<p>&#x8FD9;&#x6837;scroll-view&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x5C55;&#x793A;&#x4E86;</p>
+<p>这样scroll-view可以正常展示了</p>
 <blockquote>
-<p>&#x95EE;&#x9898;&#xFF1A;&#x4F46;&#x662F;scroll-view&#x5982;&#x679C;&#x7ED1;&#x5B9A;<code>wx:for = &apos;&apos;</code>&#x5B50;&#x7C7B;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;view &#x4ED6;&#x4E00;&#x76F4;&#x90FD;&#x662F;<code>column</code>&#x6392;&#x5217;&#x4E0D;&#x4F1A;&#x662F;<code>row</code>&#x6392;&#x5217;&#x3002;&#x5E0C;&#x671B;&#x6709;&#x4EBA;&#x5E2E;&#x89E3;&#x51B3;</p>
+<p>问题：但是scroll-view如果绑定<code>wx:for = &#39;&#39;</code>子类中有一个view 他一直都是<code>column</code>排列不会是<code>row</code>排列。希望有人帮解决</p>
 </blockquote>
-<p>&#x9488;&#x5BF9;&#x4E0A;&#x9762;&#x95EE;&#x9898; &#x6211;&#x53EA;&#x80FD;&#x7528;<code>swiper</code>&#x6765;&#x89E3;&#x51B3;&#x6682;&#x65F6;&#x672A;&#x60F3;&#x5230;&#x529E;&#x6CD5;.</p>
-<p>&#x53D1;&#x5E03;&#x4E8E;2016-10-2&#x65E5; </p>
-<p><a href="https://github.com/DSPerson/wx-demo" target="_blank" rel="external">&#x81EA;&#x5DF1;&#x505A;&#x7684;demo&#x5F88;&#x4E11;&#x4F46;&#x662F;&#x5E0C;&#x671B;&#x7ED9;&#x661F;</a></p>
-<p><a href="http://blog.csdn.net/chenqiuge1984/article/details/52692394" target="_blank" rel="external">&#x5F15;&#x7528; &#x4E00;</a></p>
+<p>针对上面问题 我只能用<code>swiper</code>来解决暂时未想到办法.</p>
+<p>发布于2016-10-2日 </p>
+<p><a href="https://github.com/DSPerson/wx-demo" target="_blank" rel="external">自己做的demo很丑但是希望给星</a></p>
+<p><a href="http://blog.csdn.net/chenqiuge1984/article/details/52692394" target="_blank" rel="external">引用 一</a></p>
 ]]></content>
       <categories>
         <category>微信小程序</category>
       </categories>
   </entry>
   <entry>
-    <title>回首2016，展望2017</title>
-    <url>/2017/02/04/talkIsCheap/</url>
-    <content><![CDATA[<p>2016&#x5E74;&#x662F;iOS &#x5E02;&#x573A;&#x5D29;&#x6E83;&#x7684;&#x4E00;&#x5E74;&#xFF0C;15&#x5E74;&#x8E0F;&#x5165;&#x8FD9;&#x4E2A;&#x884C;&#x5217;&#x4E2D;&#xFF0C;&#x5728;16&#x5E74;&#x5DEE;&#x70B9;&#x88AB;&#x6324;&#x6B7B;&#xFF0C;&#x8FD8;&#x597D;&#x6211;&#x633A;&#x4E86;&#x8FC7;&#x6765;&#x3002;</p>
-<a id="more"></a>
-<p>&#x6211;&#x5728;&#x6211;&#x7B2C;&#x4E00;&#x5BB6;&#x516C;&#x53F8;&#x5446;&#x4E86;&#x4E00;&#x5E74;&#x591A;&#xFF0C;&#x6CA1;&#x60F3;&#x5230;(&#x4E5F;&#x4E0D;&#x80FD;&#x8BF4;&#x60F3;&#x5230;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x4E0D;&#x60F3;&#x53BB;&#x60F3;)&#x6211;&#x6210;&#x529F;&#x4E86;&#x628A;&#x5B83;&#x5E72;&#x9EC4;&#x4E86;&#xFF0C;&#x4E5F;&#x662F;&#x633A;&#x9A84;&#x50B2;&#x7684;&#xFF0C;&#x6BD5;&#x7ADF;&#x633A;&#x4E0D;&#x5BB9;&#x6613;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x6B20;&#x6211;&#x7684;&#x4E24;&#x4E2A;&#x6708;&#x5DE5;&#x8D44;&#x8FD8;&#x6CA1;&#x7ED9;&#xFF0C;&#x4F30;&#x8BA1;&#x5C31;&#x5F97;17&#x5E74;&#x4EF2;&#x88C1;&#x4E86;&#xFF0C;17&#x5E74;&#x7B2C;&#x4E00;&#x4EF6;&#x5C55;&#x671B;&#x7684;&#x4E8B;&#x60C5;&#x51FA;&#x6765;&#x4E86;&#x3002;</p>
-<p>16&#x5E74;&#x5B66;&#x5230;&#x4E86;&#x5F88;&#x591A;&#xFF0C;ReactNative&#x706B;&#x4E86;&#x4E00;&#x628A;&#xFF0C;&#x6211;&#x4E5F;&#x8DDF;&#x7740;&#x8E6D;&#x4E86;&#x4E00;&#x628A;&#x3002;&#x7528;PHP&#x5B66;&#x8FC7;&#x540E;&#x53F0;&#xFF0C;&#x4E5F;&#x7B97;&#x8D70;&#x5230;&#x4E86;IT&#x9886;&#x57DF;&#x7684;&#x540E;&#x65B9;(&#x53EF;&#x60DC;&#x4E0D;&#x592A;&#x5408;&#x683C;)&#x3002;</p>
-<p>17&#x5E74;&#x5C55;&#x671B;,&#x4E5F;&#x7B97;&#x662F;16&#x5E74;&#x7ED9;&#x81EA;&#x5DF1;&#x627E;&#x4E86;&#x4E2A;&#x5954;&#x5934;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x80FD;&#x4E0D;&#x80FD;&#x6210;&#x529F;&#xFF0C;&#x81EA;&#x5DF1;&#x505A;&#x4E2A;&#x5C0F;&#x9879;&#x76EE;&#x770B;&#x770B;&#x80FD;&#x4E0D;&#x80FD;&#x6316;&#x5230;&#x4F20;&#x8BF4;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x6876;&#x91D1;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x548C;&#x6211;&#x5973;&#x670B;&#x53CB;&#x914D;&#x5408;&#x4E00;&#x4E0B;&#x5171;&#x540C;&#x5B8C;&#x6210;&#xFF0C;&#x4F46;&#x662F;&#x622A;&#x81F3;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x662F;&#x6211;&#x4E00;&#x4E2A;&#x4EBA;&#x5728;&#x642D;&#x5EFA;&#x540E;&#x53F0;&#xFF0C;&#x7B49;&#x5DEE;&#x4E0D;&#x591A;&#x4E86;&#x5728;&#x5F00;&#x59CB;App&#x65B9;&#x5411;&#x7684;&#x642D;&#x5EFA;&#x3002;</p>
-<p>&#x4E8E;2017&#x5E74;2&#x6708;4&#x65E5; &#x2014;&gt; &#x7B2C;&#x4E00;&#x6876;&#x91D1;&#x6765;&#x5A36;&#x6211;&#x5973;&#x670B;&#x53CB;</p>
-]]></content>
-      <categories>
-        <category>闲聊</category>
-      </categories>
-  </entry>
-  <entry>
     <title>lldb 学习</title>
     <url>/2017/06/14/lldb%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<blockquote>
-<p>lldb &#x66FF;&#x4EE3;gdb &#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E2D; &#x6682;&#x505C; &#x5373;&#x53EF;&#x4F7F;&#x7528;lldb&#x4E86; &#x5728;&#x9879;&#x76EE;&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x5E2E;&#x52A9;</p>
+<p>lldb 替代gdb 在程序运行中 暂停 即可使用lldb了 在项目中可以有多帮助</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="&#x5B89;&#x88C5;Chisel"><a href="#&#x5B89;&#x88C5;Chisel" class="headerlink" title="&#x5B89;&#x88C5;Chisel"></a>&#x5B89;&#x88C5;Chisel</h1><p><a href="https://github.com/facebook/chisel" target="_blank" rel="external">Chisel&#x7F51;&#x5740;</a></p>
-<p>&#x4E5F;&#x53EF;&#x4EE5; &#x5728;&#x7EC8;&#x7AEF;&#x76F4;&#x63A5;</p>
+<h1 id="安装Chisel"><a href="#安装Chisel" class="headerlink" title="安装Chisel"></a>安装Chisel</h1><p><a href="https://github.com/facebook/chisel" target="_blank" rel="external">Chisel网址</a></p>
+<p>也可以 在终端直接</p>
 <pre><code>brew update
 brew install chisel
-</code></pre><p><img src="/2017/06/14/lldb&#x5B66;&#x4E60;/Snip20170614_1.png" alt=""></p>
+</code></pre><p><img src="/2017/06/14/lldb学习/Snip20170614_1.png" alt=""></p>
 <blockquote>
-<p>&#x6210;&#x529F;&#x540E; &#x5C06;&#x7EA2;&#x8272;&#x6846;&#x5185;&#x5728; &#x7EC8;&#x7AEF; &#x4E2D; &#x8F93;&#x5165; <code>touch ~/.lldbinit</code> &#x590D;&#x5236;&#x8FDB;&#x53BB; &#x91CD;&#x542F;Xcode</p>
+<p>成功后 将红色框内在 终端 中 输入 <code>touch ~/.lldbinit</code> 复制进去 重启Xcode</p>
 </blockquote>
-<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="headerlink" title="&#x5E38;&#x7528;&#x547D;&#x4EE4;"></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2><blockquote>
-<p>&#x90FD;&#x662F;&#x5728;&#x9879;&#x76EE;&#x5728;&#x8FD0;&#x884C;&#x540E; &#x6682;&#x505C;&#x6761;&#x4EF6;&#x4E0B;</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><blockquote>
+<p>都是在项目在运行后 暂停条件下</p>
 </blockquote>
-<p> &#x4F7F;&#x7528; <code>visualize</code> + &#x5185;&#x5B58;&#x5730;&#x5740;&#x5373;&#x53EF;&#x5728;&#x9884;&#x89C8;&#x4E2D;&#x6253;&#x5F00;&#x56FE;&#x7247;&#x67E5;&#x770B;</p>
-<p> &#x4F7F;&#x7528; <code>pvc</code> &#x67E5;&#x770B;&#x5F53;&#x524D;NavigationBar&#x6808;</p>
-<p> &#x4F7F;&#x7528; <code>pintnals</code> + &#x5185;&#x5B58;&#x5730;&#x5740; &#x67E5;&#x770B; &#x79C1;&#x6709;&#x5C5E;&#x6027;</p>
-<p> &#x4F7F;&#x7528; <code>pviews</code> &#x4ECE;&#x5F53;&#x524D;&#x5230;&#x5F53;&#x524D;View&#x6240;&#x6709;&#x89C6;&#x56FE; <code>pviews</code>  + &#x5185;&#x5B58;&#x5730;&#x5740;</p>
-<p> &#x4F7F;&#x7528; <code>caflush</code> &#x624B;&#x52A8;&#x5237;&#x65B0;</p>
-<p> &#x4F7F;&#x7528; <code>presponder + &#x5185;&#x5B58;&#x5730;&#x5740;</code> &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5730;&#x5740;&#x7684;&#x5C42;&#x7EA7;</p>
-<p> &#x4F7F;&#x7528; <code>taplog</code> &#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x6682;&#x505C;&#x4E4B;&#x540E;&#x70B9;&#x51FB;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E; &#x4F1A;&#x6253;&#x5370;&#x51FA;&#x6700;&#x8FD1;&#x4E00;&#x4E2A;     &#x54CD;&#x5E94;&#x70B9;&#x51FB;&#x65F6;&#x95F4;&#x7684;View</p>
-<p> &#x4F7F;&#x7528; <code>pclass + &#x5185;&#x5B58;&#x5730;&#x5740;</code> &#x67E5;&#x770B;&#x7EE7;&#x627F;&#x5173;&#x7CFB;</p>
-<p> &#x4F7F;&#x7528; <code>bmessage + &#x7C7B; + &#x65B9;&#x6CD5;</code> &#x7C7B;&#x4F3C;&#x65AD;&#x70B9;</p>
-<p> &#x4F7F;&#x7528; <code>show</code> &#x6216;&#x8005; <code>hide</code> + &#x5185;&#x5B58;&#x5730;&#x5740; &#x6765; &#x5C55;&#x793A;&#x6216;&#x8005;&#x9690;&#x85CF;&#x63A7;&#x4EF6;</p>
+<p> 使用 <code>visualize</code> + 内存地址即可在预览中打开图片查看</p>
+<p> 使用 <code>pvc</code> 查看当前NavigationBar栈</p>
+<p> 使用 <code>pintnals</code> + 内存地址 查看 私有属性</p>
+<p> 使用 <code>pviews</code> 从当前到当前View所有视图 <code>pviews</code>  + 内存地址</p>
+<p> 使用 <code>caflush</code> 手动刷新</p>
+<p> 使用 <code>presponder + 内存地址</code> 查看当前地址的层级</p>
+<p> 使用 <code>taplog</code> 会自动关闭暂停之后点击任意位置 会打印出最近一个     响应点击时间的View</p>
+<p> 使用 <code>pclass + 内存地址</code> 查看继承关系</p>
+<p> 使用 <code>bmessage + 类 + 方法</code> 类似断点</p>
+<p> 使用 <code>show</code> 或者 <code>hide</code> + 内存地址 来 展示或者隐藏控件</p>
 ]]></content>
       <categories>
         <category>iOS功能</category>
@@ -383,277 +390,265 @@ brew install chisel
       </tags>
   </entry>
   <entry>
-    <title>Swift-数组&amp;链表</title>
-    <url>/2020/05/23/swift_algorithm_0/</url>
-    <content><![CDATA[<blockquote>
-<p>&#x6570;&#x7EC4;&#x548C;&#x94FE;&#x8868;&#x90FD;&#x662F;&#x7EBF;&#x6027;&#x6570;&#x636E;&#x7ED3;&#x6784;</p>
-</blockquote>
+    <title>回首2016，展望2017</title>
+    <url>/2017/02/04/talkIsCheap/</url>
+    <content><![CDATA[<p>2016年是iOS 市场崩溃的一年，15年踏入这个行列中，在16年差点被挤死，还好我挺了过来。</p>
 <a id="more"></a>
-<h2 id="&#x6570;&#x7EC4;"><a href="#&#x6570;&#x7EC4;" class="headerlink" title="&#x6570;&#x7EC4;"></a>&#x6570;&#x7EC4;</h2><blockquote>
-<p>&#x6570;&#x7EC4;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#xFF0C;&#x90FD;&#x8981;&#x91CD;&#x65B0;&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;&#x5185;&#x5B58;&#x4F4D;&#x7F6E;&#x8981;&#x91CD;&#x65B0;&#x5E03;&#x5C40;&#xFF0C;&#x76F8;&#x8F83;&#x4E8E;&#x5B83;&#x7684;&#x67E5;&#x8BE2;&#x8F83;&#x6162;. </p>
-<p>&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(N), &#x5982;&#x679C;&#x5F88;&#x5E78;&#x8FD0;&#x7684;&#x63D2;&#x5165;&#x5230;&#x6700;&#x540E;&#x9762;&#x590D;&#x6742;&#x5EA6;&#x662F;O(1), &#x4F46;&#x662F;&#x63D2;&#x5165;&#x5230;&#x6700;&#x524D;&#x9762;&#x5219;&#x662F;O(N), &#x5E73;&#x5747;&#x662F;O(N/2)&#x8FD8;&#x662F;O(N)</p>
-<p>&#x67E5;&#x8BE2;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(1)</p>
-</blockquote>
-<h2 id="&#x94FE;&#x8868;"><a href="#&#x94FE;&#x8868;" class="headerlink" title="&#x94FE;&#x8868;"></a>&#x94FE;&#x8868;</h2><blockquote>
-<p>333</p>
-</blockquote>
-<p><img src="/2020/05/23/swift_algorithm_0/imgs/node_head.png" alt=""></p>
+<p>我在我第一家公司呆了一年多，没想到(也不能说想到，只不过不想去想)我成功了把它干黄了，也是挺骄傲的，毕竟挺不容易的，但是欠我的两个月工资还没给，估计就得17年仲裁了，17年第一件展望的事情出来了。</p>
+<p>16年学到了很多，ReactNative火了一把，我也跟着蹭了一把。用PHP学过后台，也算走到了IT领域的后方(可惜不太合格)。</p>
+<p>17年展望,也算是16年给自己找了个奔头，不知道能不能成功，自己做个小项目看看能不能挖到传说中的第一桶金，应该是和我女朋友配合一下共同完成，但是截至目前为止是我一个人在搭建后台，等差不多了在开始App方向的搭建。</p>
+<p>于2017年2月4日 —&gt; 第一桶金来娶我女朋友</p>
 ]]></content>
       <categories>
-        <category>算法</category>
+        <category>闲聊</category>
       </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>算法</tag>
-        <tag>Swift</tag>
-      </tags>
   </entry>
   <entry>
     <title>面试总结</title>
     <url>/2017/06/13/%E9%9D%A2%E8%AF%95/</url>
     <content><![CDATA[<blockquote>
-<p>&#x88AB;&#x9762;&#x8BD5;&#x95EE;&#x7684;&#x95EE;&#x9898;, &#x548C;&#x7F51;&#x4E0A;&#x627E;&#x5230;&#x7684;&#x6211;&#x89C9;&#x5F97;&#x4E0D;&#x9519;&#x7684;&#x95EE;&#x9898;</p>
-<p>&#x4F1A;&#x4FDD;&#x6301;&#x66F4;&#x65B0; &#x2013; &#x56E0;&#x90FD;&#x5199;&#x5728;&#x4E00;&#x8D77;&#x4E86;, &#x6240;&#x4EE5;&#x53EF;&#x80FD;&#x4F1A;&#x7A7F;&#x63D2;&#x6DFB;&#x52A0;. &#x8BF7;&#x8C05;&#x89E3;</p>
+<p>被面试问的问题, 和网上找到的我觉得不错的问题</p>
+<p>会保持更新 – 因都写在一起了, 所以可能会穿插添加. 请谅解</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="iOS-&#x591A;&#x7EBF;&#x7A0B;"><a href="#iOS-&#x591A;&#x7EBF;&#x7A0B;" class="headerlink" title="iOS-&#x591A;&#x7EBF;&#x7A0B;"></a>iOS-&#x591A;&#x7EBF;&#x7A0B;</h1><h2 id="&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x7EBF;&#x7A0B;&#x9501;-&#x4FDD;&#x8BC1;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;"><a href="#&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x7EBF;&#x7A0B;&#x9501;-&#x4FDD;&#x8BC1;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;" class="headerlink" title="&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x7EBF;&#x7A0B;&#x9501; / &#x4FDD;&#x8BC1;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;"></a>&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x79CD;&#x7EBF;&#x7A0B;&#x9501; / &#x4FDD;&#x8BC1;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;</h2><ul>
-<li>@synchronized &#x9002;&#x7528;&#x7EBF;&#x7A0B;&#x4E0D;&#x591A;,&#x4EFB;&#x52A1;&#x91CF;&#x4E0D;&#x5927;&#x7684;&#x591A;&#x7EBF;&#x7A0B;&#x52A0;&#x9501;</li>
-<li>NSLock &#x5E38;&#x7528;&#x9501; &#x6027;&#x80FD;&#x4E00;&#x822C;</li>
-<li>dispatch_semaphore_t GCD&#x4FE1;&#x53F7;&#x9501;,&#x6027;&#x80FD;&#x4E0D;&#x9519;</li>
-<li>OSSpinLock &#x6027;&#x80FD;&#x975E;&#x5E38;&#x9AD8; &#x4F46;&#x662F;&#x7EBF;&#x7A0B;&#x51FA;&#x73B0;&#x4E86;&#x95EE;&#x9898;</li>
+<h1 id="iOS-多线程"><a href="#iOS-多线程" class="headerlink" title="iOS-多线程"></a>iOS-多线程</h1><h2 id="常见的几种线程锁-保证线程安全"><a href="#常见的几种线程锁-保证线程安全" class="headerlink" title="常见的几种线程锁 / 保证线程安全"></a>常见的几种线程锁 / 保证线程安全</h2><ul>
+<li>@synchronized 适用线程不多,任务量不大的多线程加锁</li>
+<li>NSLock 常用锁 性能一般</li>
+<li>dispatch_semaphore_t GCD信号锁,性能不错</li>
+<li>OSSpinLock 性能非常高 但是线程出现了问题</li>
 </ul>
-<h1 id="Run&#x5B57;&#x8F88;"><a href="#Run&#x5B57;&#x8F88;" class="headerlink" title="Run&#x5B57;&#x8F88;"></a>Run&#x5B57;&#x8F88;</h1><h2 id="&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Runtime"><a href="#&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Runtime" class="headerlink" title="&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Runtime"></a>&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Runtime</h2><blockquote>
-<p>Runtime &#x5B83;&#x662F;OC&#x7684;&#x8FD0;&#x884C;&#x65F6;, &#x5176;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F;&#x6D88;&#x606F;&#x673A;&#x5236; C&#x8BED;&#x8A00;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#x4E86;&#x5982;&#x4F55;&#x8C03;&#x7528;.<br>OC&#x662F;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x786E;&#x5B9A;</p>
+<h1 id="Run字辈"><a href="#Run字辈" class="headerlink" title="Run字辈"></a>Run字辈</h1><h2 id="简单讲一下Runtime"><a href="#简单讲一下Runtime" class="headerlink" title="简单讲一下Runtime"></a>简单讲一下Runtime</h2><blockquote>
+<p>Runtime 它是OC的运行时, 其中最重要的就是消息机制 C语言是编译时就已经确定了如何调用.<br>OC是在运行的时候才会确定</p>
 </blockquote>
-<h3 id="&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;-&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x662F;"><a href="#&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;-&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x662F;" class="headerlink" title="&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019; &#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x662F;?"></a>&#x5F53;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019; &#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x662F;?</h3><ol>
-<li>Runtime&#x4F1A;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528; &#x8F6C;&#x4E3A;&#x6D88;&#x606F;&#x53D1;&#x9001;<code>objc_msgSend</code>, &#x5E76;&#x4E14;&#x628A;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x8005;&#x548C;&#x65B9;&#x6CD5;&#x9009;&#x62E9;&#x5668; &#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4E00;&#x8D77;&#x4F20;&#x9012;&#x8FC7;&#x53BB;</li>
-<li>&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x8005;&#x4F1A;&#x901A;&#x8FC7;isa&#x6307;&#x9488;&#x67E5;&#x627E;&#x5230;&#x8BE5;&#x65B9;&#x6CD5;&#x6240;&#x5C5E;&#x7684;&#x7C7B;, &#x7136;&#x540E;&#x5728;Cache &#x6216;&#x8005; Method_Lists&#x4E2D;&#x67E5;&#x627E;&#x8BE5;&#x65B9;&#x6CD5;, &#x5982;&#x679C;&#x6709;&#x5219;&#x8C03;&#x7528;&#x6267;&#x884C;</li>
-<li>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x8BE5;&#x65B9;&#x6CD5;, &#x5219;&#x901A;&#x8FC7;SuperClass &#x7EE7;&#x7EED;&#x50CF;&#x7236;&#x7C7B;&#x67E5;&#x627E;(&#x5982;&#x4F55;&#x5230;NSObject&#x8FD8;&#x672A;&#x67E5;&#x627E;&#x5230;&#x5219;&#x8FDB;&#x5165;&#x6D88;&#x606F;&#x8F6C;&#x53D1;)</li>
+<h3 id="当我们调用了一个方法的时候-运行过程是"><a href="#当我们调用了一个方法的时候-运行过程是" class="headerlink" title="当我们调用了一个方法的时候 运行过程是?"></a>当我们调用了一个方法的时候 运行过程是?</h3><ol>
+<li>Runtime会将我们的方法调用 转为消息发送<code>objc_msgSend</code>, 并且把方法的调用者和方法选择器 作为参数一起传递过去</li>
+<li>方法的调用者会通过isa指针查找到该方法所属的类, 然后在Cache 或者 Method_Lists中查找该方法, 如果有则调用执行</li>
+<li>如果没有找到该方法, 则通过SuperClass 继续像父类查找(如何到NSObject还未查找到则进入消息转发)</li>
 </ol>
-<h3 id="&#x52A8;&#x6001;&#x65B9;&#x6CD5;&#x89E3;&#x6790;"><a href="#&#x52A8;&#x6001;&#x65B9;&#x6CD5;&#x89E3;&#x6790;" class="headerlink" title="&#x52A8;&#x6001;&#x65B9;&#x6CD5;&#x89E3;&#x6790;"></a>&#x52A8;&#x6001;&#x65B9;&#x6CD5;&#x89E3;&#x6790;</h3><blockquote>
-<p>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x7A0B;&#x5E8F;Carsh &#x7C7B;&#x4F3C;</p>
-<p><code>unrecognized selector sent to instance &#x5185;&#x5B58;&#x5730;&#x5740;</code></p>
-<p>&#x5728;Crash&#x4E4B;&#x524D;Runtime&#x4F1A;&#x7ED9;&#x6211;&#x4EEC;&#x8865;&#x6551;&#x7684;&#x673A;&#x4F1A;(&#x6D88;&#x606F;&#x8F6C;&#x53D1;) </p>
+<h3 id="动态方法解析"><a href="#动态方法解析" class="headerlink" title="动态方法解析"></a>动态方法解析</h3><blockquote>
+<p>一般情况下程序Carsh 类似</p>
+<p><code>unrecognized selector sent to instance 内存地址</code></p>
+<p>在Crash之前Runtime会给我们补救的机会(消息转发) </p>
 </blockquote>
 <ol>
-<li>&#x68C0;&#x6D4B;&#x8FD9;&#x4E2A; selector &#x662F;&#x4E0D;&#x662F;&#x8981;&#x5FFD;&#x7565;&#x7684;&#x3002;&#x6BD4;&#x5982; Mac OS X &#x5F00;&#x53D1;&#xFF0C;&#x6709;&#x4E86;&#x5783;&#x573E;&#x56DE;&#x6536;&#x5C31;&#x4E0D;&#x7406;&#x4F1A; retain&#xFF0C;release &#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x4E86;</li>
-<li>&#x68C0;&#x6D4B;&#x8FD9;&#x4E2A; target &#x662F;&#x4E0D;&#x662F; nil &#x5BF9;&#x8C61;&#x3002;ObjC &#x7684;&#x7279;&#x6027;&#x662F;&#x5141;&#x8BB8;&#x5BF9;&#x4E00;&#x4E2A; nil &#x5BF9;&#x8C61;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A; Crash&#xFF0C;&#x56E0;&#x4E3A;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#x6389;</li>
-<li>&#x5982;&#x679C;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x90FD;&#x8FC7;&#x4E86;&#xFF0C;&#x90A3;&#x5C31;&#x5F00;&#x59CB;&#x67E5;&#x627E;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684; IMP&#xFF0C;&#x5148;&#x4ECE; cache &#x91CC;&#x9762;&#x627E;&#xFF0C;&#x5B8C;&#x4E86;&#x627E;&#x5F97;&#x5230;&#x5C31;&#x8DF3;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x51FD;&#x6570;&#x53BB;&#x6267;&#x884C;. &#x5982;&#x679C; cache &#x627E;&#x4E0D;&#x5230;&#x5C31;&#x627E;&#x4E00;&#x4E0B;&#x65B9;&#x6CD5;&#x5206;&#x53D1;&#x8868;</li>
-<li>&#x5982;&#x679C;&#x5206;&#x53D1;&#x8868;&#x627E;&#x4E0D;&#x5230;&#x5C31;&#x5230;&#x8D85;&#x7C7B;&#x7684;&#x5206;&#x53D1;&#x8868;&#x53BB;&#x627E;&#xFF0C;&#x4E00;&#x76F4;&#x627E;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;NSObject&#x7C7B;&#x4E3A;&#x6B62;</li>
+<li>检测这个 selector 是不是要忽略的。比如 Mac OS X 开发，有了垃圾回收就不理会 retain，release 这些函数了</li>
+<li>检测这个 target 是不是 nil 对象。ObjC 的特性是允许对一个 nil 对象执行任何一个方法不会 Crash，因为会被忽略掉</li>
+<li>如果上面两个都过了，那就开始查找这个类的 IMP，先从 cache 里面找，完了找得到就跳到对应的函数去执行. 如果 cache 找不到就找一下方法分发表</li>
+<li>如果分发表找不到就到超类的分发表去找，一直找，直到找到NSObject类为止</li>
 </ol>
 <blockquote>
-<p>&#x5982;&#x679C;&#x8FD8;&#x627E;&#x4E0D;&#x5230;&#x5C31;&#x8981;&#x5F00;&#x59CB;&#x8FDB;&#x5165;&#x6D88;&#x606F;&#x8F6C;&#x53D1;&#x4E86;&#xFF0C;&#x6D88;&#x606F;&#x8F6C;&#x53D1;&#x7684;&#x5927;&#x81F4;&#x8FC7;&#x7A0B;&#x5982;&#x56FE;&#xFF1A;</p>
+<p>如果还找不到就要开始进入消息转发了，消息转发的大致过程如图：</p>
 </blockquote>
 <p><img src="http://cc.cocimg.com/api/uploads/20160520/1463741650158770.jpg" alt=""></p>
 <ol>
-<li>&#x8FDB;&#x5165;<code>resolveInstanceMethod:</code>&#x65B9;&#x6CD5;,&#x8BE2;&#x95EE;&#x662F;&#x5426;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x65B9;&#x6CD5;,&#x5982;&#x679C;&#x8FD4;&#x56DE;Yes, &#x901A;&#x8FC7;<code>class_addMethod</code>&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x51FD;&#x6570;&#x65B9;&#x6CD5;, &#x6D88;&#x606F;&#x7684;&#x5904;&#x7406;&#x5B8C;&#x6BD5;, &#x6B64;&#x6D41;&#x7A0B;&#x5B8C;&#x6BD5;. &#x8FD4;&#x56DE;No &#x8FDB;&#x5165; 2</li>
-<li>&#x8FDB;&#x5165;<code>ForwardTargetForSelector:</code> &#x65B9;&#x6CD5;, &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x90A3;&#x4E2A;&#x5BF9;&#x8C61;&#x6765;&#x54CD;&#x5E94;&#x8FD9;&#x4E2A;<code>Selector</code>, &#x5982;&#x679C;&#x8FD4;&#x56DE;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;, &#x8BE5;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;, &#x6B64;&#x6D41;&#x7A0B;&#x5B8C;&#x6BD5;. &#x8FD4;&#x56DE;nil &#x8FDB;&#x5165; 3</li>
-<li>&#x901A;&#x8FC7;<code>methodSignatureForSelector:</code>&#x6765;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x7B7E;&#x540D;,&#x8FD4;&#x56DE;nil, &#x8868;&#x793A;&#x4E0D;&#x5904;&#x7406;, &#x8FD4;&#x56DE;&#x7B7E;&#x540D;(&#x901A;&#x8FC7;<code>NSMethodSignature signatureWithObjcType:&quot;v@:&quot;</code> &#x6765;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x7B7E;&#x540D;)&#x5219;&#x8FDB;&#x5165; 4</li>
-<li>&#x8C03;&#x7528;<code>forwardInvlication:</code>&#x65B9;&#x6CD5;, &#x901A;&#x8FC7;<code>invocation</code> &#x4FEE;&#x6539;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#xFF0C;&#x4FEE;&#x6539;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#x7B49;&#x3002;</li>
+<li>进入<code>resolveInstanceMethod:</code>方法,询问是否动态添加方法,如果返回Yes, 通过<code>class_addMethod</code>动态添加函数方法, 消息的处理完毕, 此流程完毕. 返回No 进入 2</li>
+<li>进入<code>ForwardTargetForSelector:</code> 方法, 用于指定那个对象来响应这个<code>Selector</code>, 如果返回某个对象, 该对象调用此方法, 此流程完毕. 返回nil 进入 3</li>
+<li>通过<code>methodSignatureForSelector:</code>来指定方法签名,返回nil, 表示不处理, 返回签名(通过<code>NSMethodSignature signatureWithObjcType:&quot;v@:&quot;</code> 来进行重新签名)则进入 4</li>
+<li>调用<code>forwardInvlication:</code>方法, 通过<code>invocation</code> 修改实现方法，修改响应对象等。</li>
 </ol>
-<h3 id="Runtime-&#x80FD;&#x505A;&#x4EC0;&#x4E48;"><a href="#Runtime-&#x80FD;&#x505A;&#x4EC0;&#x4E48;" class="headerlink" title="Runtime &#x80FD;&#x505A;&#x4EC0;&#x4E48;"></a>Runtime &#x80FD;&#x505A;&#x4EC0;&#x4E48;</h3><ul>
-<li>&#x5B57;&#x5178;&#x548C;&#x6A21;&#x578B;&#x76F8;&#x4E92;&#x8F6C;&#x6362;</li>
-<li>&#x65B9;&#x6CD5;&#x4EA4;&#x6362;</li>
-<li>&#x7ED9;&#x5206;&#x7C7B;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;</li>
-<li>&#x81EA;&#x52A8;&#x5F52;&#x89E3;&#x6863;</li>
+<h3 id="Runtime-能做什么"><a href="#Runtime-能做什么" class="headerlink" title="Runtime 能做什么"></a>Runtime 能做什么</h3><ul>
+<li>字典和模型相互转换</li>
+<li>方法交换</li>
+<li>给分类添加属性</li>
+<li>自动归解档</li>
 </ul>
-<h3 id="Category-&#x539F;&#x7406;"><a href="#Category-&#x539F;&#x7406;" class="headerlink" title="Category &#x539F;&#x7406;"></a>Category &#x539F;&#x7406;</h3><p><a href="http://blog.leichunfeng.com/blog/2015/05/18/objective-c-category-implementation-principle/" target="_blank" rel="external">&#x53C2;&#x8003;&#x81EA;</a></p>
+<h3 id="Category-原理"><a href="#Category-原理" class="headerlink" title="Category 原理"></a>Category 原理</h3><p><a href="http://blog.leichunfeng.com/blog/2015/05/18/objective-c-category-implementation-principle/" target="_blank" rel="external">参考自</a></p>
 <blockquote>
-<p>&#x901A;&#x8FC7;<code>attachCategoryMethods</code>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6765;&#x5904;&#x7406;&#x7684;, &#x5C06;&#x7C7B;&#x4E2D;&#x65E7;&#x65B9;&#x6CD5;&#x548C;Category&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x65B9;&#x6CD5;&#x6574;&#x5408;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;, &#x5E76;&#x8D4B;&#x503C;&#x7ED9;<code>method_lists</code> &#x6216;&#x8005; <code>method_list</code>. &#x4E3B;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x548C; Category &#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x5728; runtime &#x770B;&#x6765;&#x5E76;&#x6CA1;&#x6709;&#x533A;&#x522B;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x88AB;&#x540C;&#x7B49;&#x5BF9;&#x5F85;&#x7684;&#xFF0C;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x4E3B;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x5217;&#x8868;&#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8C03;&#x7528;&#x65F6;&#x5F15;&#x5165;&#x5934;&#x6587;&#x4EF6;, &#x662F;&#x8981;&#x201D;&#x7167;&#x987E;&#x201D;&#x7F16;&#x8F91;&#x5668;&#x5927;&#x5927;&#x7684;&#x611F;&#x53D7;&#x800C;&#x5DF2;&#x2026;</p>
+<p>通过<code>attachCategoryMethods</code>这个函数来处理的, 将类中旧方法和Category新添加的方法整合成一个新的方法列表, 并赋值给<code>method_lists</code> 或者 <code>method_list</code>. 主类中的方法和 Category 中的方法在 runtime 看来并没有区别，它们是被同等对待的，都保存在主类的方法列表中。我们需要调用时引入头文件, 是要”照顾”编辑器大大的感受而已…</p>
 </blockquote>
-<h3 id="Runtime-&#x5E38;&#x89C1;&#x7684;&#x5B9A;&#x4E49;"><a href="#Runtime-&#x5E38;&#x89C1;&#x7684;&#x5B9A;&#x4E49;" class="headerlink" title="Runtime &#x5E38;&#x89C1;&#x7684;&#x5B9A;&#x4E49;"></a>Runtime &#x5E38;&#x89C1;&#x7684;&#x5B9A;&#x4E49;</h3><ul>
-<li>IMP implementation &#x5B9E;&#x73B0;&#x7684;&#x610F;&#x601D; &#x6307;&#x5411;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;&#x6307;&#x9488;</li>
+<h3 id="Runtime-常见的定义"><a href="#Runtime-常见的定义" class="headerlink" title="Runtime 常见的定义"></a>Runtime 常见的定义</h3><ul>
+<li>IMP implementation 实现的意思 指向一个方法实现的指针</li>
 </ul>
 <h2 id="Runloop"><a href="#Runloop" class="headerlink" title="Runloop"></a>Runloop</h2><blockquote>
-<p>&#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E00;&#x6B21;&#x53EA;&#x80FD;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x7EBF;&#x7A0B;&#x5C31;&#x4F1A;&#x9000;&#x51FA;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x673A;&#x5236;&#xFF0C;&#x8BA9;&#x7EBF;&#x7A0B;&#x80FD;&#x968F;&#x65F6;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x4F46;&#x5E76;&#x4E0D;&#x9000;&#x51FA;</p>
+<p>一般来讲，一个线程一次只能执行一个任务，执行完成后线程就会退出。如果我们需要一个机制，让线程能随时处理事件但并不退出</p>
 </blockquote>
-<p><a href="http://blog.ibireme.com/2015/05/18/runloop/" target="_blank" rel="external">&#x8D85;&#x8BE6;&#x7EC6;Runloop</a></p>
-<h3 id="NSTime-&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x6ED1;&#x52A8;UIScrollView&#x65F6;&#x5019;&#x4F1A;&#x6682;&#x505C;"><a href="#NSTime-&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x6ED1;&#x52A8;UIScrollView&#x65F6;&#x5019;&#x4F1A;&#x6682;&#x505C;" class="headerlink" title="NSTime &#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x6ED1;&#x52A8;UIScrollView&#x65F6;&#x5019;&#x4F1A;&#x6682;&#x505C;"></a>NSTime &#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x6ED1;&#x52A8;UIScrollView&#x65F6;&#x5019;&#x4F1A;&#x6682;&#x505C;</h3><blockquote>
-<p>&#x56E0;&#x4E3A;Runloop &#x539F;&#x56E0;, &#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;UIScrollView&#x6ED1;&#x52A8;&#x65F6;&#x5019;&#x7684;&#x6D41;&#x7545;&#x5EA6;, &#x4F1A;&#x5C06;Runloop&#x7684;Mode&#x5207;&#x6362;&#x4E3A;<code>TrackingRunLoopMode</code>, &#x8FD9;&#x65F6;&#x5019;NSTimer&#x5C31;&#x4E0D;&#x4F1A;&#x5F97;&#x5230;&#x56DE;&#x8C03;. &#x53EA;&#x9700;&#x8981;&#x5C06;NSTimer&#x7684;model &#x6539;&#x4E3A; <code>commonModeItems</code>&#x5373;&#x53EF;&#x4E86;</p>
+<p><a href="http://blog.ibireme.com/2015/05/18/runloop/" target="_blank" rel="external">超详细Runloop</a></p>
+<h3 id="NSTime-为什么在滑动UIScrollView时候会暂停"><a href="#NSTime-为什么在滑动UIScrollView时候会暂停" class="headerlink" title="NSTime 为什么在滑动UIScrollView时候会暂停"></a>NSTime 为什么在滑动UIScrollView时候会暂停</h3><blockquote>
+<p>因为Runloop 原因, 为了保证UIScrollView滑动时候的流畅度, 会将Runloop的Mode切换为<code>TrackingRunLoopMode</code>, 这时候NSTimer就不会得到回调. 只需要将NSTimer的model 改为 <code>commonModeItems</code>即可了</p>
 </blockquote>
 <h2 id="NSAutoreleasePool"><a href="#NSAutoreleasePool" class="headerlink" title="NSAutoreleasePool"></a>NSAutoreleasePool</h2><blockquote>
-<p> NSAutoreleasePool &#x7C7B;&#x88AB;&#x7528;&#x6765;&#x652F;&#x6301;&#x81EA;&#x52A8;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;.</p>
+<p> NSAutoreleasePool 类被用来支持自动引用计数内存管理系统.</p>
 </blockquote>
-<h3 id="autoreleased-&#x5BF9;&#x8C61;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x91CA;&#x653E;"><a href="#autoreleased-&#x5BF9;&#x8C61;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x91CA;&#x653E;" class="headerlink" title="autoreleased &#x5BF9;&#x8C61;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x91CA;&#x653E;"></a>autoreleased &#x5BF9;&#x8C61;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x91CA;&#x653E;</h3><blockquote>
-<p>&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x540E;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x6700;&#x8FD1;&#x7684;<code>autoReleasePool</code>&#x4E2D;, &#x53EA;&#x6709;&#x8FD9;&#x4E2A;<code>autoReleasePool</code> &#x81EA;&#x8EAB;drain&#x7684;&#x65F6;&#x5019;, <code>autoReleasePool</code>&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x624D;&#x4F1A;&#x88AB;<code>release</code></p>
-<p>&#x6839;&#x636E;&#x82F9;&#x679C;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x5BF9; NSAutoreleasePool &#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x77E5;&#xFF0C;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684; NSRunLoop &#x5BF9;&#x8C61;&#xFF08;&#x5728;&#x7CFB;&#x7EDF;&#x7EA7;&#x522B;&#x7684;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x4E2D;&#x5E94;&#x8BE5;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x6BD4;&#x5982;&#x901A;&#x8FC7; <code>dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)</code> &#x83B7;&#x53D6;&#x5230;&#x7684;&#x7EBF;&#x7A0B;&#xFF09;&#x7684;&#x6BCF;&#x4E2A; event loop &#x5F00;&#x59CB;&#x524D;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; autoreleasepool &#xFF0C;&#x5E76;&#x5728; event loop &#x7ED3;&#x675F;&#x65F6; drain &#x3002;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#x573A;&#x666F; 1 &#x4E2D;&#x521B;&#x5EFA;&#x7684; autoreleased &#x5BF9;&#x8C61;&#x5C31;&#x662F;&#x88AB;&#x7CFB;&#x7EDF;&#x6DFB;&#x52A0;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684; autoreleasepool &#x4E2D;&#xFF0C;&#x5E76;&#x5728;&#x8FD9;&#x4E2A; autoreleasepool &#x88AB; drain &#x65F6;&#x5F97;&#x5230;&#x91CA;&#x653E;</p>
+<h3 id="autoreleased-对象什么时候释放"><a href="#autoreleased-对象什么时候释放" class="headerlink" title="autoreleased 对象什么时候释放"></a>autoreleased 对象什么时候释放</h3><blockquote>
+<p>对象创建后会被添加到最近的<code>autoReleasePool</code>中, 只有这个<code>autoReleasePool</code> 自身drain的时候, <code>autoReleasePool</code>中的对象才会被<code>release</code></p>
+<p>根据苹果官方文档中对 NSAutoreleasePool 的描述，我们可知，在主线程的 NSRunLoop 对象（在系统级别的其他线程中应该也是如此，比如通过 <code>dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)</code> 获取到的线程）的每个 event loop 开始前，系统会自动创建一个 autoreleasepool ，并在 event loop 结束时 drain 。我们上面提到的场景 1 中创建的 autoreleased 对象就是被系统添加到了这个自动创建的 autoreleasepool 中，并在这个 autoreleasepool 被 drain 时得到释放</p>
 </blockquote>
 <h3 id="AutoreleasePoolPage"><a href="#AutoreleasePoolPage" class="headerlink" title="AutoreleasePoolPage"></a>AutoreleasePoolPage</h3><blockquote>
-<p>&#x90A3;&#x8FD9;&#x91CC;&#x7684; AutoreleasePoolPage &#x662F;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#x5462;&#xFF1F;&#x5176;&#x5B9E;&#xFF0C;autoreleasepool &#x662F;&#x6CA1;&#x6709;&#x5355;&#x72EC;&#x7684;&#x5185;&#x5B58;&#x7ED3;&#x6784;&#x7684;&#xFF0C;&#x5B83;&#x662F;&#x901A;&#x8FC7;&#x4EE5; AutoreleasePoolPage &#x4E3A;&#x7ED3;&#x70B9;&#x7684;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#x3002;<br> autoreleasepool &#x7684;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x7406;&#x89E3;&#x4E3A; <code>objc_autoreleasePoolPush()</code>&#x3001;<code>[&#x5BF9;&#x8C61; autorelease]</code> &#x548C; <code>objc_autoreleasePoolPop(void *)</code> &#x4E09;&#x4E2A;&#x8FC7;&#x7A0B;</p>
+<p>那这里的 AutoreleasePoolPage 是什么东西呢？其实，autoreleasepool 是没有单独的内存结构的，它是通过以 AutoreleasePoolPage 为结点的双向链表来实现的。<br> autoreleasepool 的运行过程可以简单地理解为 <code>objc_autoreleasePoolPush()</code>、<code>[对象 autorelease]</code> 和 <code>objc_autoreleasePoolPop(void *)</code> 三个过程</p>
 </blockquote>
-<h3 id="&#x548C;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;"><a href="#&#x548C;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;" class="headerlink" title="&#x548C;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;"></a>&#x548C;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;</h3><blockquote>
-<p>&#x6BCF;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x4F1A;&#x7EF4;&#x62A4;&#x81EA;&#x5DF1;&#x7684; autoreleasepool &#x5806;&#x6808;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4; autoreleasepool &#x662F;&#x4E0E;&#x7EBF;&#x7A0B;&#x7D27;&#x5BC6;&#x76F8;&#x5173;&#x7684;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A; autoreleasepool &#x53EA;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x3002;</p>
+<h3 id="和线程之间的关系"><a href="#和线程之间的关系" class="headerlink" title="和线程之间的关系"></a>和线程之间的关系</h3><blockquote>
+<p>每一个线程都会维护自己的 autoreleasepool 堆栈。换句话说 autoreleasepool 是与线程紧密相关的，每一个 autoreleasepool 只对应一个线程。</p>
 </blockquote>
-<h1 id="iOS&#x624B;&#x52BF;&#x95EE;&#x9898;"><a href="#iOS&#x624B;&#x52BF;&#x95EE;&#x9898;" class="headerlink" title="iOS&#x624B;&#x52BF;&#x95EE;&#x9898;"></a>iOS&#x624B;&#x52BF;&#x95EE;&#x9898;</h1><h2 id="&#x54CD;&#x5E94;&#x8005;&#x94FE;"><a href="#&#x54CD;&#x5E94;&#x8005;&#x94FE;" class="headerlink" title="&#x54CD;&#x5E94;&#x8005;&#x94FE;"></a>&#x54CD;&#x5E94;&#x8005;&#x94FE;</h2><blockquote>
-<p>&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x54CD;&#x5E94;&#x8005;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x94FE;. &#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;Touch&#x540E;&#x7CFB;&#x7EDF;&#x901A;&#x8FC7;hit test &#x673A;&#x5236;&#x627E;&#x5230;&#x4E86;&#x89E6;&#x78B0;&#x5230;&#x7684;Initial View&#xFF0C;&#x4F46;&#x662F;Initial view&#x5E76;&#x6CA1;&#x6709;&#x6216;&#x8005;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5904;&#x7406;&#x6B64;&#x6B21;Touch&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x4FBF;&#x4F1A;&#x901A;&#x8FC7;&#x54CD;&#x5E94;&#x8005;&#x94FE;&#x5BFB;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x8005;&#xFF0C;&#x4EE5;&#x5BF9;&#x6B64;&#x6B21;Touc &#x8FDB;&#x884C;&#x54CD;&#x5E94;&#x3002;</p>
+<h1 id="iOS手势问题"><a href="#iOS手势问题" class="headerlink" title="iOS手势问题"></a>iOS手势问题</h1><h2 id="响应者链"><a href="#响应者链" class="headerlink" title="响应者链"></a>响应者链</h2><blockquote>
+<p>处理事件响应者先后顺序链. 有些时候，Touch后系统通过hit test 机制找到了触碰到的Initial View，但是Initial view并没有或者无法正常处理此次Touch。这个时候，系统便会通过响应者链寻找下一个响应者，以对此次Touc 进行响应。</p>
 </blockquote>
-<h2 id="Hit-Test&#x673A;&#x5236;"><a href="#Hit-Test&#x673A;&#x5236;" class="headerlink" title="Hit-Test&#x673A;&#x5236;"></a>Hit-Test&#x673A;&#x5236;</h2><blockquote>
-<p>&#x5F53;&#x4F60;&#x70B9;&#x51FB;&#x5C4F;&#x5E55;&#x4E00;&#x4E2A;&#x70B9;&#x65F6;, &#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x7531;&#x786C;&#x4EF6;&#x7CFB;&#x7EDF;&#x4F20;&#x9012;&#x5230;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;, &#x7136;&#x540E;&#x5C01;&#x88C5;&#x4E3A;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;(Event) , &#x7531;UIApplication-&gt;UIWindows-&gt;RootView&#x5230;&#x6700;&#x63A5;&#x8FD1;&#x4F60;&#x624B;&#x6307;&#x7684;View&#x6765;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;</p>
-<p>&#x5B50;&#x7C7B;&#x8D85;&#x51FA;&#x7236;&#x7C7B;&#x8FB9;&#x7F18;&#x65F6;&#x5019;, &#x4EA6;&#x53EF;&#x4EE5;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;(&#x6B63;&#x5E38;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x7684;, &#x4F60;&#x9700;&#x8981;&#x91CD;&#x5199;<code>override func hitTest(_ point: CGPoint, with event: UIEvent?) -&gt; UIView?</code> &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;)</p>
+<h2 id="Hit-Test机制"><a href="#Hit-Test机制" class="headerlink" title="Hit-Test机制"></a>Hit-Test机制</h2><blockquote>
+<p>当你点击屏幕一个点时, 这个操作由硬件系统传递到操作系统, 然后封装为一个事件(Event) , 由UIApplication-&gt;UIWindows-&gt;RootView到最接近你手指的View来响应事件</p>
+<p>子类超出父类边缘时候, 亦可以响应事件(正常是不可以的, 你需要重写<code>override func hitTest(_ point: CGPoint, with event: UIEvent?) -&gt; UIView?</code> 这个方法)</p>
 </blockquote>
-<h1 id="iOS&#x5173;&#x952E;&#x5B57;"><a href="#iOS&#x5173;&#x952E;&#x5B57;" class="headerlink" title="iOS&#x5173;&#x952E;&#x5B57;"></a>iOS&#x5173;&#x952E;&#x5B57;</h1><h2 id="static&#x58F0;&#x660E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;"><a href="#static&#x58F0;&#x660E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;" class="headerlink" title="static&#x58F0;&#x660E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;"></a>static&#x58F0;&#x660E;&#x5C40;&#x90E8;&#x53D8;&#x91CF;</h2><blockquote>
-<p>static &#x58F0;&#x660E;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;, &#x4F1A;&#x6539;&#x53D8;&#x5B83;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;(&#x751F;&#x547D;&#x5468;&#x671F;), &#x4F7F;&#x53D8;&#x91CF;&#x6210;&#x4E3A;&#x9759;&#x6001;&#x53D8;&#x91CF;, &#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x5206;&#x914D;&#x5185;&#x5B58;, &#x77E5;&#x9053;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x624D;&#x4F1A;&#x91CA;&#x653E;&#x5185;&#x5B58;. &#x8FD9;&#x6837;&#x5C31;&#x5E26;&#x6709;&#x8BB0;&#x5FC6;&#x7684;&#x80FD;&#x529B;, &#x53EF;&#x4EE5;&#x8BB0;&#x5F55;&#x4E0A;&#x4E00;&#x6B21;&#x7684;&#x6570;&#x636E;, &#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x53D8;&#x91CF;&#x8FD8;&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;, &#x6240;&#x6709;&#x53EA;&#x80FD;&#x5728;&#x5176;&#x4EE3;&#x7801;&#x5757;&#x5185;&#x4F7F;&#x7528;.</p>
+<h1 id="iOS关键字"><a href="#iOS关键字" class="headerlink" title="iOS关键字"></a>iOS关键字</h1><h2 id="static声明局部变量"><a href="#static声明局部变量" class="headerlink" title="static声明局部变量"></a>static声明局部变量</h2><blockquote>
+<p>static 声明的局部变量, 会改变它的存储方式(生命周期), 使变量成为静态变量, 在编译时候就会分配内存, 知道程序退出才会释放内存. 这样就带有记忆的能力, 可以记录上一次的数据, 但是因为变量还是局部变量, 所有只能在其代码块内使用.</p>
 </blockquote>
-<h2 id="static-&#x58F0;&#x660E;&#x5916;&#x90E8;&#x53D8;&#x91CF;"><a href="#static-&#x58F0;&#x660E;&#x5916;&#x90E8;&#x53D8;&#x91CF;" class="headerlink" title="static &#x58F0;&#x660E;&#x5916;&#x90E8;&#x53D8;&#x91CF;"></a>static &#x58F0;&#x660E;&#x5916;&#x90E8;&#x53D8;&#x91CF;</h2><blockquote>
-<p>&#x7528;static&#x58F0;&#x660E;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x9759;&#x6001;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x53EA;&#x4F1A;&#x6539;&#x53D8;&#x5176;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#xFF0C;&#x4F7F;&#x5176;&#x53EA;&#x5728;&#x672C;&#x6587;&#x4EF6;&#x5185;&#x90E8;&#x6709;&#x6548;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x4E0D;&#x53EF;&#x8FDE;&#x63A5;&#x6216;&#x5F15;&#x7528;&#x8BE5;&#x53D8;&#x91CF;&#x3002;</p>
+<h2 id="static-声明外部变量"><a href="#static-声明外部变量" class="headerlink" title="static 声明外部变量"></a>static 声明外部变量</h2><blockquote>
+<p>用static声明外部变量，其本身就是静态变量，这只会改变其连接方式，使其只在本文件内部有效，而其他文件不可连接或引用该变量。</p>
 </blockquote>
-<h2 id="&#x4F5C;&#x7528;&#x57DF;&#x51FD;&#x6570;"><a href="#&#x4F5C;&#x7528;&#x57DF;&#x51FD;&#x6570;" class="headerlink" title="&#x4F5C;&#x7528;&#x57DF;&#x51FD;&#x6570;"></a>&#x4F5C;&#x7528;&#x57DF;&#x51FD;&#x6570;</h2><blockquote>
-<p>&#x4F7F;&#x7528;static&#x7528;&#x4E8E;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x65F6;&#xFF0C;&#x5BF9;&#x51FD;&#x6570;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#x4EA7;&#x751F;&#x5F71;&#x54CD;&#xFF0C;&#x4F7F;&#x5F97;&#x51FD;&#x6570;&#x53EA;&#x5728;&#x672C;&#x6587;&#x4EF6;&#x5185;&#x90E8;&#x6709;&#x6548;&#xFF0C;&#x5BF9;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x662F;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x51FD;&#x6570;&#x53C8;&#x53EB;&#x4F5C;&#x9759;&#x6001;&#x51FD;&#x6570;&#x3002;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x51FD;&#x6570;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x4E0E;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x7684;&#x540C;&#x540D;&#x51FD;&#x6570;&#x4EA7;&#x751F;&#x5E72;&#x6270;&#xFF0C;&#x53E6;&#x5916;&#x4E5F;&#x662F;&#x5BF9;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x7684;&#x4E00;&#x79CD;&#x4FDD;&#x62A4;&#x673A;&#x5236;&#x3002;</p>
+<h2 id="作用域函数"><a href="#作用域函数" class="headerlink" title="作用域函数"></a>作用域函数</h2><blockquote>
+<p>使用static用于函数定义时，对函数的连接方式产生影响，使得函数只在本文件内部有效，对其他文件是不可见的。这样的函数又叫作静态函数。使用静态函数的好处是，不用担心与其他文件的同名函数产生干扰，另外也是对函数本身的一种保护机制。</p>
 </blockquote>
-<h1 id="&#x7F51;&#x7EDC;&#x90E8;&#x5206;"><a href="#&#x7F51;&#x7EDC;&#x90E8;&#x5206;" class="headerlink" title="&#x7F51;&#x7EDC;&#x90E8;&#x5206;"></a>&#x7F51;&#x7EDC;&#x90E8;&#x5206;</h1><h2 id="&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Socket"><a href="#&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Socket" class="headerlink" title="&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Socket"></a>&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;Socket</h2><blockquote>
-<p>Socket &#x5957;&#x63A5;&#x5B57;, &#x4ED6;&#x672C;&#x8EAB;&#x4E0D;&#x662F;&#x534F;&#x8BAE;, &#x662F;&#x5BF9;TCP/IP&#x534F;&#x8BAE;&#x7684;&#x5C01;&#x88C5;, &#x901A;&#x8FC7;Socket&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;TCP/IP&#x534F;&#x8BAE;.<br>&#x5EFA;&#x7ACB;socket&#x8FDE;&#x63A5;. &#x670D;&#x52A1;&#x5668;&#x76D1;&#x542C;-&gt;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x8BF7;&#x6C42;-&gt;&#x8FDE;&#x63A5;&#x786E;&#x8BA4;<br>&#x5728;iOS&#x4E2D;, &#x4E00;&#x822C;&#x4F7F;&#x7528;CocoaAsyncSocket &#x8FD9;&#x4E2A;&#x5E93;&#x6765;&#x4F7F;&#x7528;Socket</p>
+<h1 id="网络部分"><a href="#网络部分" class="headerlink" title="网络部分"></a>网络部分</h1><h2 id="简单讲一下Socket"><a href="#简单讲一下Socket" class="headerlink" title="简单讲一下Socket"></a>简单讲一下Socket</h2><blockquote>
+<p>Socket 套接字, 他本身不是协议, 是对TCP/IP协议的封装, 通过Socket才可以使用TCP/IP协议.<br>建立socket连接. 服务器监听-&gt;客户端进行请求-&gt;连接确认<br>在iOS中, 一般使用CocoaAsyncSocket 这个库来使用Socket</p>
 </blockquote>
-<h2 id="&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;HTTP&#x8BF7;&#x6C42;-&#x4EE5;&#x53CA;GET&#x548C;POST&#x7684;&#x533A;&#x522B;"><a href="#&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;HTTP&#x8BF7;&#x6C42;-&#x4EE5;&#x53CA;GET&#x548C;POST&#x7684;&#x533A;&#x522B;" class="headerlink" title="&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;HTTP&#x8BF7;&#x6C42;,&#x4EE5;&#x53CA;GET&#x548C;POST&#x7684;&#x533A;&#x522B;"></a>&#x7B80;&#x5355;&#x8BB2;&#x4E00;&#x4E0B;HTTP&#x8BF7;&#x6C42;,&#x4EE5;&#x53CA;GET&#x548C;POST&#x7684;&#x533A;&#x522B;</h2><h3 id="HTTP-&#x8BF7;&#x6C42;"><a href="#HTTP-&#x8BF7;&#x6C42;" class="headerlink" title="HTTP &#x8BF7;&#x6C42;"></a>HTTP &#x8BF7;&#x6C42;</h3><p><a href="http://www.cnblogs.com/yin-jingyu/archive/2011/08/01/2123548.html" target="_blank" rel="external">&#x8FD9;&#x4E2A;Http&#x8BF7;&#x6C42;&#x8BB2;&#x7684;&#x5F88;&#x660E;&#x767D;</a></p>
+<h2 id="简单讲一下HTTP请求-以及GET和POST的区别"><a href="#简单讲一下HTTP请求-以及GET和POST的区别" class="headerlink" title="简单讲一下HTTP请求,以及GET和POST的区别"></a>简单讲一下HTTP请求,以及GET和POST的区别</h2><h3 id="HTTP-请求"><a href="#HTTP-请求" class="headerlink" title="HTTP 请求"></a>HTTP 请求</h3><p><a href="http://www.cnblogs.com/yin-jingyu/archive/2011/08/01/2123548.html" target="_blank" rel="external">这个Http请求讲的很明白</a></p>
 <blockquote>
-<p>HTTP&#x662F;&#x8BA1;&#x7B97;&#x673A;&#x901A;&#x8FC7;&#x7F51;&#x7EDC;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x7684;&#x539F;&#x5219;. HTTP&#x662F;&#x4E00;&#x4E2D;&#x65E0;&#x72B6;&#x6001;&#x534F;&#x8BAE;(&#x5373;Web&#x670D;&#x52A1;&#x5668;&#x548C;Web&#x670D;&#x52A1;&#x5668;&#x95F4;&#x4E0D;&#x7528;&#x5EFA;&#x7ACB;&#x6301;&#x4E45;&#x7684;&#x94FE;&#x63A5;,&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8BF7;&#x6C42;,&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x8FD4;&#x56DE;&#x54CD;&#x5E94;,&#x94FE;&#x63A5;&#x5C31;&#x5173;&#x95ED;&#x4E86;).</p>
-<p>&#x4E00;&#x6B21;&#x5B8C;&#x6574;&#x7684;&#x901A;&#x4FE1;&#x8FC7;&#x7A0B; &#x9700;&#x8981;&#x7ECF;&#x5386;7&#x4E2A;&#x6B65;&#x9AA4;</p>
+<p>HTTP是计算机通过网络进行通信的原则. HTTP是一中无状态协议(即Web服务器和Web服务器间不用建立持久的链接,当客户端发送请求,服务器端返回响应,链接就关闭了).</p>
+<p>一次完整的通信过程 需要经历7个步骤</p>
 </blockquote>
 <ul>
-<li>&#x5EFA;&#x7ACB;TCP&#x94FE;&#x63A5;</li>
-<li>Web&#x6D4F;&#x89C8;&#x5668;&#x5411;Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x547D;&#x4EE4;</li>
-<li>Web&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x5934;&#x4FE1;&#x606F;</li>
-<li>Web&#x670D;&#x52A1;&#x5668;&#x5E94;&#x7B54;</li>
-<li>Web&#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x5E94;&#x7B54;&#x5934;&#x4FE1;&#x606F;</li>
-<li>Web&#x670D;&#x52A1;&#x5668;&#x5411;&#x6D4F;&#x89C8;&#x5668;&#x53D1;&#x9001;&#x6570;&#x636E;</li>
-<li>Web&#x670D;&#x52A1;&#x5668;&#x5173;&#x95ED;TCP&#x94FE;&#x63A5;</li>
+<li>建立TCP链接</li>
+<li>Web浏览器向Web服务器发送请求命令</li>
+<li>Web浏览器发送请求头信息</li>
+<li>Web服务器应答</li>
+<li>Web服务器发送应答头信息</li>
+<li>Web服务器向浏览器发送数据</li>
+<li>Web服务器关闭TCP链接</li>
 </ul>
-<h3 id="GET&#x548C;POST&#x533A;&#x522B;"><a href="#GET&#x548C;POST&#x533A;&#x522B;" class="headerlink" title="GET&#x548C;POST&#x533A;&#x522B;"></a>GET&#x548C;POST&#x533A;&#x522B;</h3><h4 id="&#x2018;&#x6807;&#x51C6;&#x7B54;&#x6848;&#x2019;"><a href="#&#x2018;&#x6807;&#x51C6;&#x7B54;&#x6848;&#x2019;" class="headerlink" title="&#x2018;&#x6807;&#x51C6;&#x7B54;&#x6848;&#x2019;"></a>&#x2018;&#x6807;&#x51C6;&#x7B54;&#x6848;&#x2019;</h4><ul>
-<li>GET&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x56DE;&#x9000;&#x65F6;&#x662F;&#x65E0;&#x5BB3;&#x7684;&#xFF0C;&#x800C;POST&#x4F1A;&#x518D;&#x6B21;&#x63D0;&#x4EA4;&#x8BF7;&#x6C42;&#x3002;</li>
-<li>GET&#x4EA7;&#x751F;&#x7684;URL&#x5730;&#x5740;&#x53EF;&#x4EE5;&#x88AB;Bookmark&#xFF0C;&#x800C;POST&#x4E0D;&#x53EF;&#x4EE5;&#x3002;</li>
-<li>GET&#x8BF7;&#x6C42;&#x4F1A;&#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x4E3B;&#x52A8;cache&#xFF0C;&#x800C;POST&#x4E0D;&#x4F1A;&#xFF0C;&#x9664;&#x975E;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x3002;</li>
-<li>GET&#x8BF7;&#x6C42;&#x53EA;&#x80FD;&#x8FDB;&#x884C;url&#x7F16;&#x7801;&#xFF0C;&#x800C;POST&#x652F;&#x6301;&#x591A;&#x79CD;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;</li>
-<li>GET&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x4F1A;&#x88AB;&#x5B8C;&#x6574;&#x4FDD;&#x7559;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x91CC;&#xFF0C;&#x800C;POST&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x4E0D;&#x4F1A;&#x88AB;&#x4FDD;&#x7559;&#x3002;</li>
-<li>GET&#x8BF7;&#x6C42;&#x5728;URL&#x4E2D;&#x4F20;&#x9001;&#x7684;&#x53C2;&#x6570;&#x662F;&#x6709;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x800C;POST&#x4E48;&#x6709;&#x3002;</li>
-<li>&#x5BF9;&#x53C2;&#x6570;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;GET&#x53EA;&#x63A5;&#x53D7;ASCII&#x5B57;&#x7B26;&#xFF0C;&#x800C;POST&#x6CA1;&#x6709;&#x9650;&#x5236;&#x3002;</li>
-<li>GET&#x6BD4;POST&#x66F4;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x56E0;&#x4E3A;&#x53C2;&#x6570;&#x76F4;&#x63A5;&#x66B4;&#x9732;&#x5728;URL&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x7528;&#x6765;&#x4F20;&#x9012;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x3002;</li>
-<li>GET&#x53C2;&#x6570;&#x901A;&#x8FC7;URL&#x4F20;&#x9012;&#xFF0C;POST&#x653E;&#x5728;Request body&#x4E2D;&#x3002;</li>
+<h3 id="GET和POST区别"><a href="#GET和POST区别" class="headerlink" title="GET和POST区别"></a>GET和POST区别</h3><h4 id="‘标准答案’"><a href="#‘标准答案’" class="headerlink" title="‘标准答案’"></a>‘标准答案’</h4><ul>
+<li>GET在浏览器回退时是无害的，而POST会再次提交请求。</li>
+<li>GET产生的URL地址可以被Bookmark，而POST不可以。</li>
+<li>GET请求会被浏览器主动cache，而POST不会，除非手动设置。</li>
+<li>GET请求只能进行url编码，而POST支持多种编码方式。</li>
+<li>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。</li>
+<li>GET请求在URL中传送的参数是有长度限制的，而POST么有。</li>
+<li>对参数的数据类型，GET只接受ASCII字符，而POST没有限制。</li>
+<li>GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。</li>
+<li>GET参数通过URL传递，POST放在Request body中。</li>
 </ul>
-<h4 id="&#x88C5;B&#x7B54;&#x6848;"><a href="#&#x88C5;B&#x7B54;&#x6848;" class="headerlink" title="&#x88C5;B&#x7B54;&#x6848;"></a>&#x88C5;B&#x7B54;&#x6848;</h4><blockquote>
-<p>&#x65E0;&#x8BBA;&#x662F;GET&#x8FD8;&#x662F;POST &#x672C;&#x8D28;&#x4E0A;&#x90FD;&#x662F;TCP&#x94FE;&#x63A5;,&#x5E76;&#x65E0;&#x5DEE;&#x522B;. </p>
-<p>&#x4F46;&#x662F;&#x4ED6;&#x4EEC;&#x6709;&#x91CD;&#x8981;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;GET&#x65B9;&#x5F0F;&#x8BF7;&#x6C42;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;TCP&#x6570;&#x636E;&#x5305;;POST&#x662F;&#x4E24;&#x4E2A;.</p>
-<p>&#x5BF9;&#x4E8E;GET&#x65B9;&#x5F0F;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x628A;http header&#x548C;data&#x4E00;&#x5E76;&#x53D1;&#x9001;&#x51FA;&#x53BB;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;200&#xFF08;&#x8FD4;&#x56DE;&#x6570;&#x636E;</p>
-<p>&#x800C;&#x5BF9;&#x4E8E;POST&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5148;&#x53D1;&#x9001;header&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;100 continue&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x518D;&#x53D1;&#x9001;data&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x54CD;&#x5E94;200 ok&#xFF08;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#xFF09;&#x3002; &#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x90FD;&#x4F1A;&#x5728;POST&#x4E2D;&#x53D1;&#x9001;&#x4E24;&#x6B21;&#x5305;&#xFF0C;Firefox&#x5C31;&#x53EA;&#x53D1;&#x9001;&#x4E00;&#x6B21;&#x3002;&#x5728;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x597D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53D1;&#x4E00;&#x6B21;&#x5305;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x53D1;&#x4E24;&#x6B21;&#x5305;&#x7684;&#x65F6;&#x95F4;&#x5DEE;&#x522B;&#x57FA;&#x672C;&#x53EF;&#x4EE5;&#x65E0;&#x89C6;&#x3002;&#x800C;&#x5728;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#x5DEE;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E24;&#x6B21;&#x5305;&#x7684;TCP&#x5728;&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x5305;&#x5B8C;&#x6574;&#x6027;&#x4E0A;&#xFF0C;&#x6709;&#x975E;&#x5E38;&#x5927;&#x7684;&#x4F18;&#x70B9;&#x3002;</p>
+<h4 id="装B答案"><a href="#装B答案" class="headerlink" title="装B答案"></a>装B答案</h4><blockquote>
+<p>无论是GET还是POST 本质上都是TCP链接,并无差别. </p>
+<p>但是他们有重要的区别在于GET方式请求产生一个TCP数据包;POST是两个.</p>
+<p>对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据</p>
+<p>而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。 并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。</p>
 </blockquote>
-<h2 id="HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;"><a href="#HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;" class="headerlink" title="HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;"></a>HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;</h2><p><a href="http://www.jianshu.com/p/56fc18937d09" target="_blank" rel="external">&#x53C2;&#x8003; 1</a></p>
-<h3 id="HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;-1"><a href="#HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;-1" class="headerlink" title="HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;"></a>HTTPS&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x5F0F;</h3><h4 id="&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;"><a href="#&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;" class="headerlink" title="&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;"></a>&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;</h4><blockquote>
-<p>&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x662F;&#x6307;&#x52A0;&#x5BC6;&#x548C;&#x89E3;&#x5BC6;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x5BC6;&#x94A5;&#x7684;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x3002;&#x5B83;&#x8981;&#x6C42;&#x53D1;&#x9001;&#x65B9;&#x548C;&#x63A5;&#x6536;&#x65B9;&#x5728;&#x5B89;&#x5168;&#x901A;&#x4FE1;&#x4E4B;&#x524D;&#xFF0C;&#x5546;&#x5B9A;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x3002;&#x5BF9;&#x79F0;&#x7B97;&#x6CD5;&#x7684;&#x5B89;&#x5168;&#x6027;&#x4F9D;&#x8D56;&#x4E8E;&#x5BC6;&#x94A5;&#xFF0C;&#x6CC4;&#x6F0F;&#x5BC6;&#x94A5;&#x5C31;&#x610F;&#x5473;&#x7740;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x5BF9;&#x4ED6;&#x4EEC;&#x53D1;&#x9001;&#x6216;&#x63A5;&#x6536;&#x7684;&#x6D88;&#x606F;&#x89E3;&#x5BC6;&#xFF0C;&#x6240;&#x4EE5;&#x5BC6;&#x94A5;&#x7684;&#x4FDD;&#x5BC6;&#x6027;&#x5BF9;&#x901A;&#x4FE1;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x3002;</p>
-</blockquote>
-<ul>
-<li><p>&#x4F18;&#x70B9;&#xFF1A;&#x7B97;&#x6CD5;&#x516C;&#x5F00;&#x3001;&#x8BA1;&#x7B97;&#x91CF;&#x5C0F;&#x3001;&#x52A0;&#x5BC6;&#x901F;&#x5EA6;&#x5FEB;&#x3001;&#x52A0;&#x5BC6;&#x6548;&#x7387;&#x9AD8;&#x3002;</p>
-</li>
-<li><p>&#x7F3A;&#x70B9;&#xFF1A;         </p>
-<ul>
-<li><p>&#x4EA4;&#x6613;&#x53CC;&#x65B9;&#x90FD;&#x4F7F;&#x7528;&#x540C;&#x6837;&#x94A5;&#x5319;&#xFF0C;&#x5B89;&#x5168;&#x6027;&#x5F97;&#x4E0D;&#x5230;&#x4FDD;&#x8BC1;&#xFF1B;</p>
-<ul>
-<li><p>&#x6BCF;&#x5BF9;&#x7528;&#x6237;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x65F6;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x4EBA;&#x4E0D;&#x77E5;&#x9053;&#x7684;&#x60DF;&#x4E00;&#x94A5;&#x5319;&#xFF0C;&#x8FD9;&#x4F1A;&#x4F7F;&#x5F97;&#x53D1;&#x6536;&#x4FE1;&#x53CC;&#x65B9;&#x6240;&#x62E5;&#x6709;&#x7684;&#x94A5;&#x5319;&#x6570;&#x91CF;&#x5448;&#x51E0;&#x4F55;&#x7EA7;&#x6570;&#x589E;&#x957F;&#xFF0C;&#x5BC6;&#x94A5;&#x7BA1;&#x7406;&#x6210;&#x4E3A;&#x7528;&#x6237;&#x7684;&#x8D1F;&#x62C5;&#x3002;</p>
-</li>
-<li><p>&#x80FD;&#x63D0;&#x4F9B;&#x673A;&#x5BC6;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x63D0;&#x4F9B;&#x9A8C;&#x8BC1;&#x548C;&#x4E0D;&#x53EF;&#x5426;&#x8BA4;&#x6027;&#x3002;</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;"><a href="#&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;" class="headerlink" title="&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;"></a>&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;</h4><blockquote>
-<p>&#x8FD9;&#x79CD;&#x52A0;&#x5BC6;&#x6216;&#x8BB8;&#x7406;&#x89E3;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x56F0;&#x96BE;&#xFF0C;&#x8FD9;&#x79CD;&#x52A0;&#x5BC6;&#x6307;&#x7684;&#x662F;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x516C;&#x94A5;&#x548C;&#x79C1;&#x94A5;&#x3002;&#x51E1;&#x662F;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x516C;&#x94A5;&#x81EA;&#x8EAB;&#x4E0D;&#x80FD;&#x89E3;&#x5BC6;&#xFF0C;&#x800C;&#x9700;&#x8981;&#x79C1;&#x94A5;&#x624D;&#x80FD;&#x89E3;&#x5BC6;&#xFF1B;&#x51E1;&#x662F;&#x79C1;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x79C1;&#x94A5;&#x4E0D;&#x80FD;&#x89E3;&#x5BC6;&#xFF0C;&#x9700;&#x8981;&#x516C;&#x94A5;&#x624D;&#x80FD;&#x89E3;&#x5BC6;(&#x6BD4;&#x5982;&#x8BF4;RSA)</p>
-<p>&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x76F8;&#x6BD4;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x66F4;&#x52A0;&#x5B89;&#x5168;&#xFF0C;&#x4F46;&#x4E5F;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x660E;&#x663E;&#x7F3A;&#x70B9;&#xFF1A;</p>
+<h2 id="HTTPS的加密方式"><a href="#HTTPS的加密方式" class="headerlink" title="HTTPS的加密方式"></a>HTTPS的加密方式</h2><p><a href="http://www.jianshu.com/p/56fc18937d09" target="_blank" rel="external">参考 1</a></p>
+<h3 id="HTTPS的加密方式-1"><a href="#HTTPS的加密方式-1" class="headerlink" title="HTTPS的加密方式"></a>HTTPS的加密方式</h3><h4 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h4><blockquote>
+<p>对称加密是指加密和解密使用相同密钥的加密算法。它要求发送方和接收方在安全通信之前，商定一个密钥。对称算法的安全性依赖于密钥，泄漏密钥就意味着任何人都可以对他们发送或接收的消息解密，所以密钥的保密性对通信至关重要。</p>
 </blockquote>
 <ul>
-<li><p>CPU&#x8BA1;&#x7B97;&#x8D44;&#x6E90;&#x6D88;&#x8017;&#x975E;&#x5E38;&#x5927;&#x3002;&#x4E00;&#x6B21;&#x5B8C;&#x5168;TLS&#x63E1;&#x624B;&#xFF0C;&#x5BC6;&#x94A5;&#x4EA4;&#x6362;&#x65F6;&#x7684;&#x975E;&#x5BF9;&#x79F0;&#x89E3;&#x5BC6;&#x8BA1;&#x7B97;&#x91CF;&#x5360;&#x6574;&#x4E2A;&#x63E1;&#x624B;&#x8FC7;&#x7A0B;&#x7684;90%&#x4EE5;&#x4E0A;&#x3002;&#x800C;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7684;&#x8BA1;&#x7B97;&#x91CF;&#x53EA;&#x76F8;&#x5F53;&#x4E8E;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7684;0.1%&#xFF0C;&#x5982;&#x679C;&#x5E94;&#x7528;&#x5C42;&#x6570;&#x636E;&#x4E5F;&#x4F7F;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x89E3;&#x5BC6;&#xFF0C;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x592A;&#x5927;&#xFF0C;&#x65E0;&#x6CD5;&#x627F;&#x53D7;&#x3002;</p>
+<li><p>优点：算法公开、计算量小、加密速度快、加密效率高。</p>
 </li>
-<li><p>&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x5BF9;&#x52A0;&#x5BC6;&#x5185;&#x5BB9;&#x7684;&#x957F;&#x5EA6;&#x6709;&#x9650;&#x5236;&#xFF0C;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;&#x516C;&#x94A5;&#x957F;&#x5EA6;&#x3002;&#x6BD4;&#x5982;&#x73B0;&#x5728;&#x5E38;&#x7528;&#x7684;&#x516C;&#x94A5;&#x957F;&#x5EA6;&#x662F;2048&#x4F4D;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5F85;&#x52A0;&#x5BC6;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x8D85;&#x8FC7;256&#x4E2A;&#x5B57;&#x8282;&#x3002;</p>
+<li><p>缺点：         </p>
+<ul>
+<li><p>交易双方都使用同样钥匙，安全性得不到保证；</p>
+<ul>
+<li><p>每对用户每次使用对称加密算法时，都需要使用其他人不知道的惟一钥匙，这会使得发收信双方所拥有的钥匙数量呈几何级数增长，密钥管理成为用户的负担。</p>
+</li>
+<li><p>能提供机密性，但是不能提供验证和不可否认性。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h4><blockquote>
+<p>这种加密或许理解起来比较困难，这种加密指的是可以生成公钥和私钥。凡是公钥加密的数据，公钥自身不能解密，而需要私钥才能解密；凡是私钥加密的数据，私钥不能解密，需要公钥才能解密(比如说RSA)</p>
+<p>非对称加密相比对称加密更加安全，但也存在两个明显缺点：</p>
+</blockquote>
+<ul>
+<li><p>CPU计算资源消耗非常大。一次完全TLS握手，密钥交换时的非对称解密计算量占整个握手过程的90%以上。而对称加密的计算量只相当于非对称加密的0.1%，如果应用层数据也使用非对称加解密，性能开销太大，无法承受。</p>
+</li>
+<li><p>非对称加密算法对加密内容的长度有限制，不能超过公钥长度。比如现在常用的公钥长度是2048位，意味着待加密内容不能超过256个字节。</p>
 </li>
 </ul>
 <blockquote>
-<p>&#x6240;&#x4EE5;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x76EE;&#x524D;&#x53EA;&#x80FD;&#x7528;&#x6765;&#x4F5C;&#x5BC6;&#x94A5;&#x4EA4;&#x6362;&#x6216;&#x8005;&#x5185;&#x5BB9;&#x7B7E;&#x540D;&#xFF0C;&#x4E0D;&#x9002;&#x5408;&#x7528;&#x6765;&#x505A;&#x5E94;&#x7528;&#x5C42;&#x4F20;&#x8F93;&#x5185;&#x5BB9;&#x7684;&#x52A0;&#x89E3;&#x5BC6;</p>
+<p>所以公钥加密目前只能用来作密钥交换或者内容签名，不适合用来做应用层传输内容的加解密</p>
 </blockquote>
-<h4 id="&#x6D41;&#x7A0B;"><a href="#&#x6D41;&#x7A0B;" class="headerlink" title="&#x6D41;&#x7A0B;"></a>&#x6D41;&#x7A0B;</h4><blockquote>
-<p>&#x9996;&#x5148;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#xFF08;RSA&#xFF09;&#x4EA7;&#x751F;&#x516C;&#x94A5;&#x548C;&#x79C1;&#x94A5;&#x3002;&#x7136;&#x540E;&#x628A;&#x516C;&#x94A5;&#x53D1;&#x7ED9;&#x5BA2; &#x6237;&#x7AEF;&#xFF0C;&#x8DEF;&#x5F84;&#x6216;&#x8BB8;&#x6709;&#x4EBA;&#x4F1A;&#x622A;&#x53D6;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x7528;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x6587;&#x4EF6;&#x53EA;&#x6709;&#x79C1;&#x94A5;&#x53EF;&#x4EE5;&#x89E3;&#x5BC6;&#xFF0C;&#x800C;&#x79C1;&#x94A5;&#x6C38;&#x8FDC;&#x90FD;&#x4E0D;&#x4F1A;&#x79BB;&#x5F00;&#x670D;&#x52A1;&#x5668;&#x7684;&#x3002;&#x5F53;&#x516C;&#x94A5;&#x5230;&#x8FBE;&#x5BA2;&#x6237;&#x7AEF;&#x4E4B;&#x540E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x7528;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x79D8;&#x94A5;&#x5E76;&#x4E14;&#x7528;&#x516C;&#x94A5;&#x6765;&#x52A0;&#x5BC6;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#xFF0C;&#x8FD9;&#x4E2A;&#x79D8;&#x94A5;&#x5C31;&#x662F;&#x4EE5;&#x540E;&#x7528;&#x6765;&#x901A;&#x4FE1;&#x7684;&#x94A5;&#x5319;&#x3002;&#x8FD9;&#x6837;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6536;&#x5230;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x7684;&#x79D8;&#x94A5;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x79C1;&#x94A5;&#x6765;&#x89E3;&#x516C;&#x94A5;&#x4ECE;&#x800C;&#x83B7;&#x5F97;&#x79D8;&#x94A5;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x90FD;&#x83B7;&#x5F97;&#x4E86;&#x79D8;&#x94A5;&#xFF0C;&#x4FE1;&#x606F;&#x4EA4;&#x6D41;&#x76F8;&#x5BF9;&#x662F;&#x5B89;&#x5168;&#x7684;</p>
+<h4 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h4><blockquote>
+<p>首先服务器端用非对称加密（RSA）产生公钥和私钥。然后把公钥发给客 户端，路径或许有人会截取，但是没有用，因为用公钥加密的文件只有私钥可以解密，而私钥永远都不会离开服务器的。当公钥到达客户端之后，客户端会用对称加密产生一个秘钥并且用公钥来加密发送给服务器端，这个秘钥就是以后用来通信的钥匙。这样服务器端收到公钥加密的秘钥时就可以用私钥来解公钥从而获得秘钥。这样的话客户端和服务器端都获得了秘钥，信息交流相对是安全的</p>
 </blockquote>
 <div align="center"><br>    <img src="http://upload-images.jianshu.io/upload_images/535139-206dfc1d526b4b1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" align="center"> <br> </div> 
 
 <blockquote>
-<p>&#x200B; &#x542C;&#x8D77;&#x6765;&#x786E;&#x5B9E;&#x662F;&#x633A;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x66F4;&#x6076;&#x52A3;&#x7684;&#x653B;&#x51FB;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x65E0; &#x6CD5;&#x9632;&#x8303;&#x7684;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x4F20;&#x8BF4;&#x4E2D;&#x7684;&#x201C;&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#x201D;&#x3002;&#x5728;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x201C;&#x4E2D;&#x95F4;&#x4EBA;&#x201D;&#x62E6;&#x622A;&#x6211;&#x4EEC;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4ED6;&#x6709;&#x610F;&#x60F3;&#x8981;&#x77E5;&#x9053;&#x4F60;&#x4EEC;&#x7684;&#x6D88;&#x606F;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E2A;&#x4E2D;&#x95F4;&#x4EBA;&#x79F0;&#x4E3A;M&#x3002;&#x5F53;&#x670D;&#x52A1;&#x5668;&#x7B2C;&#x4E00;&#x6B21;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x516C;&#x94A5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9014;&#x5F84;M&#x3002;M&#x77E5;&#x9053;&#x4F60;&#x8981;&#x8FDB;&#x884C;&#x5BC6;&#x94A5;&#x4EA4;&#x6362;&#x4E86;&#xFF0C;&#x5B83;&#x628A;&#x516C;&#x94A5;&#x6263;&#x4E86;&#x4E0B;&#x6765;&#xFF0C;&#x5047;&#x88C5;&#x81EA;&#x5DF1;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4F2A;&#x9020;&#x4E86;&#x4E00;&#x4E2A;&#x4F2A;&#x79D8;&#x94A5;&#xFF08;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x4EA7;&#x751F;&#x7684;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x7528;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x6765;&#x7684;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x4E86;&#x4F2A;&#x79D8;&#x94A5;&#x53D1;&#x8FD8;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FD9;&#x6837;&#x670D;&#x52A1;&#x5668;&#x4EE5;&#x4E3A;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x5B8C;&#x6210;&#x4E86;&#x5BC6;&#x94A5;&#x4EA4;&#x6362;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x670D;&#x52A1;&#x5668;&#x662F;&#x548C;M&#x5B8C;&#x6210;&#x4E86;&#x5BC6;&#x94A5;&#x4EA4;&#x6362;&#xFF08;&#x83B7;&#x5F97;&#x4E86;&#x4F2A;&#x79D8;&#x94A5;&#xFF09;&#x3002;&#x540C;&#x65F6;M&#x5047;&#x626E;&#x6210;&#x670D;&#x52A1;&#x5668;&#x81EA;&#x884C;&#x7528;&#x975E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x4EA7;&#x751F;&#x4F2A;&#x516C;&#x94A5;&#x548C;&#x4F2A;&#x79C1;&#x94A5;&#xFF0C;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x79D8;&#x94A5;&#x4EA4;&#x6362;&#xFF0C;&#x62FF;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x8FC7;&#x6765;&#x7684;&#x79D8;&#x94A5;&#x3002;&#x73B0;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x62FF;&#x7740;&#x79D8;&#x94A5;&#xFF0C;M&#x62FF;&#x7740;&#x79D8;&#x94A5;&#x548C;&#x4E3A;&#x4F2A;&#x79D8;&#x94A5;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x62FF;&#x7740;&#x4F2A;&#x79D8;&#x94A5;&#xFF0C;&#x6574;&#x4E2A;&#x4EA4;&#x6D41;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#xFF1A;</p>
+<p>​ 听起来确实是挺安全的，但实际上，还有一种更恶劣的攻击是这种方法无 法防范的，这就是传说中的“中间人攻击”。在身份认证的过程中，出现了一个“中间人”拦截我们的信息，他有意想要知道你们的消息。我们将这个中间人称为M。当服务器第一次给客户端发送公钥的时候，途径M。M知道你要进行密钥交换了，它把公钥扣了下来，假装自己是客户端，伪造了一个伪秘钥（对称加密产生的），然后用服务器发来的公钥加密了伪秘钥发还给服务器，这样服务器以为和客户端完成了密钥交换，实际上服务器是和M完成了密钥交换（获得了伪秘钥）。同时M假扮成服务器自行用非对称加密产生伪公钥和伪私钥，与客户端进行秘钥交换，拿到客户端发送过来的秘钥。现在客户端拿着秘钥，M拿着秘钥和为伪秘钥，服务器拿着伪秘钥，整个交流的过程就是：</p>
 </blockquote>
 <div align="center"><br>    <img src="https://user-gold-cdn.xitu.io/2017/6/21/5d38312283e1e59840315ba2099aff38 " align="center"> <br> </div> 
 
 <blockquote>
-<p>&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x5C31;&#x9700;&#x8981;CA&#x8BC1;&#x4E66;&#x53BB;&#x89E3;&#x51B3;. (&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x5927;&#x90E8;&#x5206;&#x9762;&#x8BD5;&#x95EE;&#x9898;&#x4E0D;&#x518D;&#x8FC7;&#x591A;&#x6DF1;&#x5165;)</p>
+<p>这种问题就需要CA证书去解决. (应该可以满足大部分面试问题不再过多深入)</p>
 </blockquote>
-<h1 id="&#x6301;&#x7EED;&#x5316;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"><a href="#&#x6301;&#x7EED;&#x5316;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;" class="headerlink" title="&#x6301;&#x7EED;&#x5316;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"></a>&#x6301;&#x7EED;&#x5316;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</h1><ul>
+<h1 id="持续化存储方式"><a href="#持续化存储方式" class="headerlink" title="持续化存储方式"></a>持续化存储方式</h1><ul>
 <li>NSUserDefaults</li>
 <li>plist</li>
 <li>NSKeyedArchiver</li>
 <li>SQL</li>
 <li>CoreData</li>
-<li>Realm(&#x65B0;&#x5174;&#x6570;&#x636E;&#x5E93;, &#x6682;&#x65F6;&#x6CA1;&#x63A5;&#x89E6;)</li>
+<li>Realm(新兴数据库, 暂时没接触)</li>
 </ul>
-<h1 id="&#x4E00;&#x4E9B;&#x4E09;&#x65B9;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;"><a href="#&#x4E00;&#x4E9B;&#x4E09;&#x65B9;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;" class="headerlink" title="&#x4E00;&#x4E9B;&#x4E09;&#x65B9;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;"></a>&#x4E00;&#x4E9B;&#x4E09;&#x65B9;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;</h1><h2 id="SDWebImage"><a href="#SDWebImage" class="headerlink" title="SDWebImage"></a>SDWebImage</h2><p><a href="http://www.jianshu.com/p/733954fce261" target="_blank" rel="external">&#x5F15;&#x7528;</a></p>
+<h1 id="一些三方实现过程"><a href="#一些三方实现过程" class="headerlink" title="一些三方实现过程"></a>一些三方实现过程</h1><h2 id="SDWebImage"><a href="#SDWebImage" class="headerlink" title="SDWebImage"></a>SDWebImage</h2><p><a href="http://www.jianshu.com/p/733954fce261" target="_blank" rel="external">引用</a></p>
 <ol>
-<li>&#x5165;&#x53E3; setImageWithURL:placeholderImage:options: &#x4F1A;&#x5148;&#x628A; placeholderImage &#x663E;&#x793A;&#xFF0C;&#x7136;&#x540E; SDWebImageManager &#x6839;&#x636E; URL &#x5F00;&#x59CB;&#x5904;&#x7406;&#x56FE;&#x7247;&#x3002;</li>
-<li>&#x8FDB;&#x5165; SDWebImageManager-downloadWithURL:delegate:options:userInfo:&#xFF0C;&#x4EA4;&#x7ED9; SDImageCache &#x4ECE;&#x7F13;&#x5B58;&#x67E5;&#x627E;&#x56FE;&#x7247;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D; queryDiskCacheForKey:delegate:userInfo:.</li>
-<li>&#x5148;&#x4ECE;&#x5185;&#x5B58;&#x56FE;&#x7247;&#x7F13;&#x5B58;&#x67E5;&#x627E;&#x662F;&#x5426;&#x6709;&#x56FE;&#x7247;&#xFF0C;&#x5982;&#x679C;&#x5185;&#x5B58;&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x56FE;&#x7247;&#x7F13;&#x5B58;&#xFF0C;SDImageCacheDelegate &#x56DE;&#x8C03; imageCache:didFindImage:forKey:userInfo: &#x5230; SDWebImageManager&#x3002;</li>
-<li>SDWebImageManagerDelegate &#x56DE;&#x8C03; webImageManager:didFinishWithImage: &#x5230; UIImageView+WebCache &#x7B49;&#x524D;&#x7AEF;&#x5C55;&#x793A;&#x56FE;&#x7247;&#x3002;</li>
-<li>&#x5982;&#x679C;&#x5185;&#x5B58;&#x7F13;&#x5B58;&#x4E2D;&#x6CA1;&#x6709;&#xFF0C;&#x751F;&#x6210; NSInvocationOperation &#x6DFB;&#x52A0;&#x5230;&#x961F;&#x5217;&#x5F00;&#x59CB;&#x4ECE;&#x786C;&#x76D8;&#x67E5;&#x627E;&#x56FE;&#x7247;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x7F13;&#x5B58;&#x3002;</li>
-<li>&#x6839;&#x636E; URLKey &#x5728;&#x786C;&#x76D8;&#x7F13;&#x5B58;&#x76EE;&#x5F55;&#x4E0B;&#x5C1D;&#x8BD5;&#x8BFB;&#x53D6;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E00;&#x6B65;&#x662F;&#x5728; NSOperation &#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x56DE;&#x4E3B;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#x7ED3;&#x679C;&#x56DE;&#x8C03; notifyDelegate:&#x3002;</li>
-<li>&#x5982;&#x679C;&#x4E0A;&#x4E00;&#x64CD;&#x4F5C;&#x4ECE;&#x786C;&#x76D8;&#x8BFB;&#x53D6;&#x5230;&#x4E86;&#x56FE;&#x7247;&#xFF0C;&#x5C06;&#x56FE;&#x7247;&#x6DFB;&#x52A0;&#x5230;&#x5185;&#x5B58;&#x7F13;&#x5B58;&#x4E2D;&#xFF08;&#x5982;&#x679C;&#x7A7A;&#x95F2;&#x5185;&#x5B58;&#x8FC7;&#x5C0F;&#xFF0C;&#x4F1A;&#x5148;&#x6E05;&#x7A7A;&#x5185;&#x5B58;&#x7F13;&#x5B58;&#xFF09;&#x3002;SDImageCacheDelegate &#x56DE;&#x8C03; imageCache:didFindImage:forKey:userInfo:&#x3002;&#x8FDB;&#x800C;&#x56DE;&#x8C03;&#x5C55;&#x793A;&#x56FE;&#x7247;&#x3002;</li>
-<li>&#x5982;&#x679C;&#x4ECE;&#x786C;&#x76D8;&#x7F13;&#x5B58;&#x76EE;&#x5F55;&#x8BFB;&#x53D6;&#x4E0D;&#x5230;&#x56FE;&#x7247;&#xFF0C;&#x8BF4;&#x660E;&#x6240;&#x6709;&#x7F13;&#x5B58;&#x90FD;&#x4E0D;&#x5B58;&#x5728;&#x8BE5;&#x56FE;&#x7247;&#xFF0C;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x56DE;&#x8C03; imageCache:didNotFindImageForKey:userInfo:&#x3002;</li>
-<li>&#x5171;&#x4EAB;&#x6216;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4E0B;&#x8F7D;&#x5668; SDWebImageDownloader &#x5F00;&#x59CB;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;&#x3002;</li>
-<li>&#x56FE;&#x7247;&#x4E0B;&#x8F7D;&#x7531; NSURLConnection &#x6765;&#x505A;&#xFF0C;&#x5B9E;&#x73B0;&#x76F8;&#x5173; delegate &#x6765;&#x5224;&#x65AD;&#x56FE;&#x7247;&#x4E0B;&#x8F7D;&#x4E2D;&#x3001;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x548C;&#x4E0B;&#x8F7D;&#x5931;&#x8D25;&#x3002;</li>
-<li>connection:didReceiveData: &#x4E2D;&#x5229;&#x7528; ImageIO &#x505A;&#x4E86;&#x6309;&#x56FE;&#x7247;&#x4E0B;&#x8F7D;&#x8FDB;&#x5EA6;&#x52A0;&#x8F7D;&#x6548;&#x679C;&#x3002;</li>
-<li>connectionDidFinishLoading: &#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#x4EA4;&#x7ED9; SDWebImageDecoder &#x505A;&#x56FE;&#x7247;&#x89E3;&#x7801;&#x5904;&#x7406;&#x3002;</li>
-<li>&#x56FE;&#x7247;&#x89E3;&#x7801;&#x5904;&#x7406;&#x5728;&#x4E00;&#x4E2A; NSOperationQueue &#x5B8C;&#x6210;&#xFF0C;&#x4E0D;&#x4F1A;&#x62D6;&#x6162;&#x4E3B;&#x7EBF;&#x7A0B; UI&#x3002;&#x5982;&#x679C;&#x6709;&#x9700;&#x8981;&#x5BF9;&#x4E0B;&#x8F7D;&#x7684;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x4E8C;&#x6B21;&#x5904;&#x7406;&#xFF0C;&#x6700;&#x597D;&#x4E5F;&#x5728;&#x8FD9;&#x91CC;&#x5B8C;&#x6210;&#xFF0C;&#x6548;&#x7387;&#x4F1A;&#x597D;&#x5F88;&#x591A;&#x3002;</li>
-<li>&#x5728;&#x4E3B;&#x7EBF;&#x7A0B; notifyDelegateOnMainThreadWithInfo: &#x5BA3;&#x544A;&#x89E3;&#x7801;&#x5B8C;&#x6210;, imageDecoder:didFinishDecodingImage:userInfo: &#x56DE;&#x8C03;&#x7ED9; SDWebImageDownloader&#x3002;</li>
-<li>imageDownloader:didFinishWithImage: &#x56DE;&#x8C03;&#x7ED9; SDWebImageManager &#x544A;&#x77E5;&#x56FE;&#x7247;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x3002;</li>
-<li>&#x901A;&#x77E5;&#x6240;&#x6709;&#x7684; downloadDelegates &#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#xFF0C;&#x56DE;&#x8C03;&#x7ED9;&#x9700;&#x8981;&#x7684;&#x5730;&#x65B9;&#x5C55;&#x793A;&#x56FE;&#x7247;&#x3002;</li>
-<li>&#x5C06;&#x56FE;&#x7247;&#x4FDD;&#x5B58;&#x5230; SDImageCache &#x4E2D;&#xFF0C;&#x5185;&#x5B58;&#x7F13;&#x5B58;&#x548C;&#x786C;&#x76D8;&#x7F13;&#x5B58;&#x540C;&#x65F6;&#x4FDD;&#x5B58;&#x3002;&#x5199;&#x6587;&#x4EF6;&#x5230;&#x786C;&#x76D8;&#x4E5F;&#x5728;&#x4EE5;&#x5355;&#x72EC; NSInvocationOperation &#x5B8C;&#x6210;&#xFF0C;&#x907F;&#x514D;&#x62D6;&#x6162;&#x4E3B;&#x7EBF;&#x7A0B;&#x3002;</li>
-<li>SDImageCache &#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6CE8;&#x518C;&#x4E00;&#x4E9B;&#x6D88;&#x606F;&#x901A;&#x77E5;&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x8B66;&#x544A;&#x6216;&#x9000;&#x5230;&#x540E;&#x53F0;&#x7684;&#x65F6;&#x5019;&#x6E05;&#x7406;&#x5185;&#x5B58;&#x56FE;&#x7247;&#x7F13;&#x5B58;&#xFF0C;&#x5E94;&#x7528;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#x6E05;&#x7406;&#x8FC7;&#x671F;&#x56FE;&#x7247;&#x3002;</li>
-<li>SDWI &#x4E5F;&#x63D0;&#x4F9B;&#x4E86; UIButton+WebCache &#x548C; MKAnnotationView+WebCache&#xFF0C;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x3002;</li>
-<li>SDWebImagePrefetcher &#x53EF;&#x4EE5;&#x9884;&#x5148;&#x4E0B;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x65B9;&#x4FBF;&#x540E;&#x7EED;&#x4F7F;&#x7528;&#x3002;</li>
+<li>入口 setImageWithURL:placeholderImage:options: 会先把 placeholderImage 显示，然后 SDWebImageManager 根据 URL 开始处理图片。</li>
+<li>进入 SDWebImageManager-downloadWithURL:delegate:options:userInfo:，交给 SDImageCache 从缓存查找图片是否已经下载 queryDiskCacheForKey:delegate:userInfo:.</li>
+<li>先从内存图片缓存查找是否有图片，如果内存中已经有图片缓存，SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo: 到 SDWebImageManager。</li>
+<li>SDWebImageManagerDelegate 回调 webImageManager:didFinishWithImage: 到 UIImageView+WebCache 等前端展示图片。</li>
+<li>如果内存缓存中没有，生成 NSInvocationOperation 添加到队列开始从硬盘查找图片是否已经缓存。</li>
+<li>根据 URLKey 在硬盘缓存目录下尝试读取图片文件。这一步是在 NSOperation 进行的操作，所以回主线程进行结果回调 notifyDelegate:。</li>
+<li>如果上一操作从硬盘读取到了图片，将图片添加到内存缓存中（如果空闲内存过小，会先清空内存缓存）。SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo:。进而回调展示图片。</li>
+<li>如果从硬盘缓存目录读取不到图片，说明所有缓存都不存在该图片，需要下载图片，回调 imageCache:didNotFindImageForKey:userInfo:。</li>
+<li>共享或重新生成一个下载器 SDWebImageDownloader 开始下载图片。</li>
+<li>图片下载由 NSURLConnection 来做，实现相关 delegate 来判断图片下载中、下载完成和下载失败。</li>
+<li>connection:didReceiveData: 中利用 ImageIO 做了按图片下载进度加载效果。</li>
+<li>connectionDidFinishLoading: 数据下载完成后交给 SDWebImageDecoder 做图片解码处理。</li>
+<li>图片解码处理在一个 NSOperationQueue 完成，不会拖慢主线程 UI。如果有需要对下载的图片进行二次处理，最好也在这里完成，效率会好很多。</li>
+<li>在主线程 notifyDelegateOnMainThreadWithInfo: 宣告解码完成, imageDecoder:didFinishDecodingImage:userInfo: 回调给 SDWebImageDownloader。</li>
+<li>imageDownloader:didFinishWithImage: 回调给 SDWebImageManager 告知图片下载完成。</li>
+<li>通知所有的 downloadDelegates 下载完成，回调给需要的地方展示图片。</li>
+<li>将图片保存到 SDImageCache 中，内存缓存和硬盘缓存同时保存。写文件到硬盘也在以单独 NSInvocationOperation 完成，避免拖慢主线程。</li>
+<li>SDImageCache 在初始化的时候会注册一些消息通知，在内存警告或退到后台的时候清理内存图片缓存，应用结束的时候清理过期图片。</li>
+<li>SDWI 也提供了 UIButton+WebCache 和 MKAnnotationView+WebCache，方便使用。</li>
+<li>SDWebImagePrefetcher 可以预先下载图片，方便后续使用。</li>
 </ol>
-<h1 id="&#x4F18;&#x5316;&#x95EE;&#x9898;"><a href="#&#x4F18;&#x5316;&#x95EE;&#x9898;" class="headerlink" title="&#x4F18;&#x5316;&#x95EE;&#x9898;"></a>&#x4F18;&#x5316;&#x95EE;&#x9898;</h1><h2 id="iOS&#x79BB;&#x5C4F;&#x6E32;&#x67D3;"><a href="#iOS&#x79BB;&#x5C4F;&#x6E32;&#x67D3;" class="headerlink" title="iOS&#x79BB;&#x5C4F;&#x6E32;&#x67D3;"></a>iOS&#x79BB;&#x5C4F;&#x6E32;&#x67D3;</h2><blockquote>
-<p>&#x76F4;&#x63A5;&#x5C06;&#x56FE;&#x5C42;&#x5408;&#x6210;&#x5230;&#x5E27;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x4E2D;(&#x5728;&#x5C4F;&#x5E55;&#x4E0A;)&#x6BD4;&#x5148;&#x521B;&#x5EFA;&#x5C4F;&#x5E55;&#x5916;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x7136;&#x540E;&#x6E32;&#x67D3;&#x5230;&#x7EB9;&#x7406;&#x4E2D;&#xFF0C;&#x6700;&#x540E;&#x5C06;&#x7ED3;&#x679C;&#x6E32;&#x67D3;&#x5230;&#x5E27;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x4E2D;&#x8981;&#x5EC9;&#x4EF7;&#x5F88;&#x591A;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x5176;&#x4E2D;&#x6D89;&#x53CA;&#x4E24;&#x6B21;&#x6602;&#x8D35;&#x7684;&#x73AF;&#x5883;&#x8F6C;&#x6362;(&#x8F6C;&#x6362;&#x73AF;&#x5883;&#x5230;&#x5C4F;&#x5E55;&#x5916;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x7136;&#x540E;&#x8F6C;&#x6362;&#x73AF;&#x5883;&#x5230;&#x5E27;&#x7F13;&#x51B2;&#x533A;)&#x3002;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x540E;&#x8FD9;&#x79CD;&#x8F6C;&#x6362;&#x53D1;&#x751F;&#x5728;&#x6BCF;&#x4E00;&#x5E27;&#xFF0C;&#x5728;&#x754C;&#x9762;&#x7684;&#x6EDA;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#x5982;&#x679C;&#x6709;&#x5927;&#x91CF;&#x7684;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x53D1;&#x751F;&#x65F6;&#x4F1A;&#x4E25;&#x91CD;&#x5F71;&#x54CD;&#x5E27;&#x7387;</p>
+<h1 id="优化问题"><a href="#优化问题" class="headerlink" title="优化问题"></a>优化问题</h1><h2 id="iOS离屏渲染"><a href="#iOS离屏渲染" class="headerlink" title="iOS离屏渲染"></a>iOS离屏渲染</h2><blockquote>
+<p>直接将图层合成到帧的缓冲区中(在屏幕上)比先创建屏幕外缓冲区，然后渲染到纹理中，最后将结果渲染到帧的缓冲区中要廉价很多。因为这其中涉及两次昂贵的环境转换(转换环境到屏幕外缓冲区，然后转换环境到帧缓冲区)。触发离屏渲染后这种转换发生在每一帧，在界面的滚动过程中如果有大量的离屏渲染发生时会严重影响帧率</p>
 </blockquote>
-<h3 id="iOS&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x7684;&#x64CD;&#x4F5C;"><a href="#iOS&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x7684;&#x64CD;&#x4F5C;" class="headerlink" title="iOS&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x7684;&#x64CD;&#x4F5C;"></a>iOS&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x7684;&#x64CD;&#x4F5C;</h3><ul>
+<h3 id="iOS中可能会触发离屏渲染的操作"><a href="#iOS中可能会触发离屏渲染的操作" class="headerlink" title="iOS中可能会触发离屏渲染的操作"></a>iOS中可能会触发离屏渲染的操作</h3><ul>
 <li>mask</li>
 <li>shadow </li>
 <li>group opacity</li>
 <li>edge antialiasing</li>
 </ul>
 <blockquote>
-<p>&#x5728;iOS 8&#x4E4B;&#x524D; Core Graphics &#x4E5F;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;, &#x4F46;&#x662F;&#x4E0D;&#x662F;GPU&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x662F;, Core Graphics &#x7ED8;&#x5236; API &#x662F;&#x5728; CPU &#x4E0A;&#x6267;&#x884C;&#xFF0C;&#x89E6;&#x53D1;&#x7684;&#x662F; CPU &#x7248;&#x672C;&#x7684;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x3002;</p>
+<p>在iOS 8之前 Core Graphics 也会触发离屏渲染, 但是不是GPU离屏渲染是, Core Graphics 绘制 API 是在 CPU 上执行，触发的是 CPU 版本的离屏渲染。</p>
 </blockquote>
-<h3 id="layer-cornerRaius-gt-0-&#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;"><a href="#layer-cornerRaius-gt-0-&#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;" class="headerlink" title="layer.cornerRaius &gt; 0 &#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;"></a>layer.cornerRaius &gt; 0 &#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;</h3><blockquote>
-<p>&#x7B54;&#x6848;&#x662F;&#x4E0D;&#x4F1A;. &#x53EA;&#x6709;&#x5B83;&#x548C;<code>layer.masksToBounds = true</code> &#x4E00;&#x8D77;&#x624D;&#x4F1A;&#x89E6;&#x53D1;</p>
+<h3 id="layer-cornerRaius-gt-0-是否会触发离屏渲染"><a href="#layer-cornerRaius-gt-0-是否会触发离屏渲染" class="headerlink" title="layer.cornerRaius &gt; 0 是否会触发离屏渲染"></a>layer.cornerRaius &gt; 0 是否会触发离屏渲染</h3><blockquote>
+<p>答案是不会. 只有它和<code>layer.masksToBounds = true</code> 一起才会触发</p>
 </blockquote>
-<h3 id="shouldRasterize-YES-&#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x5462;"><a href="#shouldRasterize-YES-&#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x5462;" class="headerlink" title="shouldRasterize = YES &#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x5462;"></a>shouldRasterize = YES &#x662F;&#x5426;&#x4F1A;&#x89E6;&#x53D1;&#x5462;</h3><blockquote>
-<p>&#x662F;</p>
-<p>&#x4F46;&#x662F;&#x4ED6;&#x8F83;&#x4E3A;&#x7279;&#x6B8A;, &#x4ED6;&#x4F1A;&#x5C06;&#x79BB;&#x5C4F;&#x6E32;&#x67D3;&#x7684;&#x7684;&#x540C;&#x65F6;, &#x4F1A;&#x5C06;&#x5149;&#x6805;&#x5316;&#x7684;&#x5185;&#x5BB9;&#x7F13;&#x5B58;&#x8D77;&#x6765;, &#x5982;&#x679C;layer &#x6216;&#x8005; SubLayer &#x672A;&#x53D1;&#x751F;&#x53D8;&#x5316;, &#x4E0B;&#x4E00;&#x5E27;&#x4F1A;&#x62FF;&#x6765;&#x76F4;&#x63A5;&#x4F7F;&#x7528;. </p>
-<p>&#x5F53;&#x4F60;&#x4F7F;&#x7528;&#x5149;&#x6805;&#x5316;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5F00;&#x542F;&#x201C;Color Hits Green and Misses Red&#x201D;&#x6765;&#x68C0;&#x67E5;&#x8BE5;&#x573A;&#x666F;&#x4E0B;&#x5149;&#x6805;&#x5316;&#x64CD;&#x4F5C;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x9009;&#x62E9;&#x3002;&#x7EFF;&#x8272;&#x8868;&#x793A;&#x7F13;&#x5B58;&#x88AB;&#x590D;&#x7528;&#xFF0C;&#x7EA2;&#x8272;&#x8868;&#x793A;&#x7F13;&#x5B58;&#x5728;&#x88AB;&#x91CD;&#x590D;&#x521B;&#x5EFA;&#x3002;</p>
-<p>&#x5BF9;&#x4E8E;&#x7ECF;&#x5E38;&#x53D8;&#x52A8;&#x7684;&#x5185;&#x5BB9;,&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x4E0D;&#x8981;&#x5F00;&#x542F;,&#x5426;&#x5219;&#x4F1A;&#x9020;&#x6210;&#x6027;&#x80FD;&#x7684;&#x6D6A;&#x8D39;(&#x6BD4;&#x5982;TableView)</p>
+<h3 id="shouldRasterize-YES-是否会触发呢"><a href="#shouldRasterize-YES-是否会触发呢" class="headerlink" title="shouldRasterize = YES 是否会触发呢"></a>shouldRasterize = YES 是否会触发呢</h3><blockquote>
+<p>是</p>
+<p>但是他较为特殊, 他会将离屏渲染的的同时, 会将光栅化的内容缓存起来, 如果layer 或者 SubLayer 未发生变化, 下一帧会拿来直接使用. </p>
+<p>当你使用光栅化时，你可以开启“Color Hits Green and Misses Red”来检查该场景下光栅化操作是否是一个好的选择。绿色表示缓存被复用，红色表示缓存在被重复创建。</p>
+<p>对于经常变动的内容,这个时候不要开启,否则会造成性能的浪费(比如TableView)</p>
 </blockquote>
-<h1 id="Crash&#x95EE;&#x9898;"><a href="#Crash&#x95EE;&#x9898;" class="headerlink" title="Crash&#x95EE;&#x9898;"></a>Crash&#x95EE;&#x9898;</h1><p><a href="http://www.open-open.com/lib/view/open1481531504413.html" target="_blank" rel="external">&#x53C2;&#x8003;</a></p>
-<h2 id="&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x4EA7;&#x751F;&#x5D29;&#x6E83;&#x65E5;&#x5FD7;"><a href="#&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x4EA7;&#x751F;&#x5D29;&#x6E83;&#x65E5;&#x5FD7;" class="headerlink" title="&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x4EA7;&#x751F;&#x5D29;&#x6E83;&#x65E5;&#x5FD7;"></a>&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x4EA7;&#x751F;&#x5D29;&#x6E83;&#x65E5;&#x5FD7;</h2><ul>
-<li>&#x5E94;&#x7528;&#x4E2D;&#x6709;Bug &#x5D29;&#x6E83;</li>
-<li>Watchdog &#x8D85;&#x65F6;&#x673A;&#x5236;. &#x5982;&#x679C;&#x7528;&#x6237;&#x5F3A;&#x5236;&#x9000;&#x51FA;</li>
-<li>&#x4F4E;&#x5185;&#x5B58;&#x65E5;&#x5FD7;</li>
+<h1 id="Crash问题"><a href="#Crash问题" class="headerlink" title="Crash问题"></a>Crash问题</h1><p><a href="http://www.open-open.com/lib/view/open1481531504413.html" target="_blank" rel="external">参考</a></p>
+<h2 id="什么情况下会产生崩溃日志"><a href="#什么情况下会产生崩溃日志" class="headerlink" title="什么情况下会产生崩溃日志"></a>什么情况下会产生崩溃日志</h2><ul>
+<li>应用中有Bug 崩溃</li>
+<li>Watchdog 超时机制. 如果用户强制退出</li>
+<li>低内存日志</li>
 </ul>
-<h2 id="Crash&#x6536;&#x96C6;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;"><a href="#Crash&#x6536;&#x96C6;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;" class="headerlink" title="Crash&#x6536;&#x96C6;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;"></a>Crash&#x6536;&#x96C6;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;</h2><ul>
-<li>&#x7B80;&#x5355;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; &#x4E4B;&#x540E;&#x5728;&#x5199;&#x5165;&#x8BCD;&#x78C1;&#x76D8;&#x4E2D;, &#x4E0B;&#x6B21;&#x8FDB;&#x5165;&#x65F6;&#x5019;&#x4E0A;&#x4F20;&#x670D;&#x52A1;&#x5668;, &#x4E4B;&#x540E;&#x5220;&#x9664;</li>
+<h2 id="Crash收集的几种方式"><a href="#Crash收集的几种方式" class="headerlink" title="Crash收集的几种方式"></a>Crash收集的几种方式</h2><ul>
+<li>简单可以自己写一个方法 之后在写入词磁盘中, 下次进入时候上传服务器, 之后删除</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">void handleException(NSException *exception) {</div><div class="line">	 NSArray *callStack = [exception callStackSymbols];</div><div class="line">    NSString *reason = [exception reason];</div><div class="line">    NSString *name = [exception name];</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">void handleException(NSException *exception) &#123;</div><div class="line">	 NSArray *callStack = [exception callStackSymbols];</div><div class="line">    NSString *reason = [exception reason];</div><div class="line">    NSString *name = [exception name];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>&#x4F7F;&#x7528;Xcode&#x81EA;&#x5E26;&#x7684;&#x5DE5;&#x5177;.Windows-&gt;Organizer-&gt;&#x9009;&#x62E9;&#x4F60;&#x9700;&#x8981;&#x7684;App-&gt;Crashes&#x4F1A;&#x81EA;&#x5DF1;&#x52A8;&#x4E0B;&#x8F7D;&#x5D29;&#x6E83; &#x76F4;&#x63A5;&#x6253;&#x5F00;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</li>
-<li>&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x6846;&#x67B6;&#x4F8B;&#x5982;Bugly&#x7B49;</li>
+<li>使用Xcode自带的工具.Windows-&gt;Organizer-&gt;选择你需要的App-&gt;Crashes会自己动下载崩溃 直接打开就可以了</li>
+<li>使用第三方框架例如Bugly等</li>
 </ul>
-<h2 id="Crash&#x5206;&#x6790;"><a href="#Crash&#x5206;&#x6790;" class="headerlink" title="Crash&#x5206;&#x6790;"></a>Crash&#x5206;&#x6790;</h2><blockquote>
-<p>&#x4E00;&#x822C;&#x91C7;&#x7528; .Crash &#x6587;&#x4EF6; + .dSYM&#x6587;&#x4EF6; + symbolicatecrash(Xcode&#x81EA;&#x5E26;&#x5DE5;&#x5177;) &#x8F93;&#x51FA;.log<br>&#x8BE6;&#x7EC6;&#x8BF7;&#x770B;&#x53C2;&#x8003; )</p>
+<h2 id="Crash分析"><a href="#Crash分析" class="headerlink" title="Crash分析"></a>Crash分析</h2><blockquote>
+<p>一般采用 .Crash 文件 + .dSYM文件 + symbolicatecrash(Xcode自带工具) 输出.log<br>详细请看参考 )</p>
 </blockquote>
-<h1 id="&#x5176;&#x4ED6;&#x77E5;&#x8BC6;"><a href="#&#x5176;&#x4ED6;&#x77E5;&#x8BC6;" class="headerlink" title="&#x5176;&#x4ED6;&#x77E5;&#x8BC6;"></a>&#x5176;&#x4ED6;&#x77E5;&#x8BC6;</h1><h2 id="&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x60C5;&#x51B5;&#x4E0B;&#x5982;&#x4F55;&#x533A;&#x5206;&#x6587;&#x4EF6;"><a href="#&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x60C5;&#x51B5;&#x4E0B;&#x5982;&#x4F55;&#x533A;&#x5206;&#x6587;&#x4EF6;" class="headerlink" title="&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x60C5;&#x51B5;&#x4E0B;&#x5982;&#x4F55;&#x533A;&#x5206;&#x6587;&#x4EF6;"></a>&#x5728;&#x4E0D;&#x77E5;&#x9053;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x60C5;&#x51B5;&#x4E0B;&#x5982;&#x4F55;&#x533A;&#x5206;&#x6587;&#x4EF6;</h2><blockquote>
-<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E8C;&#x8FDB;&#x5236;&#x5934;&#x8BC6;&#x522B;&#x6587;&#x4EF6;&#x7C7B;&#x578B;(&#x8BF4;&#x51E0;&#x4E2A;&#x7B80;&#x5355;&#x7684; &#x4E0D;&#x597D;&#x610F;&#x601D; &#x4E00;&#x4E2A;&#x6CA1;&#x8BB0;&#x4F4F;)&#x6216;&#x8005;UE&#x7B49;&#x5DE5;&#x5177;&#x6253;&#x5F00;</p>
+<h1 id="其他知识"><a href="#其他知识" class="headerlink" title="其他知识"></a>其他知识</h1><h2 id="在不知道二进制文件格式情况下如何区分文件"><a href="#在不知道二进制文件格式情况下如何区分文件" class="headerlink" title="在不知道二进制文件格式情况下如何区分文件"></a>在不知道二进制文件格式情况下如何区分文件</h2><blockquote>
+<p>可以通过二进制头识别文件类型(说几个简单的 不好意思 一个没记住)或者UE等工具打开</p>
 </blockquote>
-<p><a href="http://blog.csdn.net/yagerfgcs/article/details/51427085" target="_blank" rel="external">&#x53C2;&#x8003;&#x7F51;&#x5740;</a></p>
-<h1 id="lldb&#x5E38;&#x7528;&#x64CD;&#x4F5C;"><a href="#lldb&#x5E38;&#x7528;&#x64CD;&#x4F5C;" class="headerlink" title="lldb&#x5E38;&#x7528;&#x64CD;&#x4F5C;"></a>lldb&#x5E38;&#x7528;&#x64CD;&#x4F5C;</h1><p><a href="http://www.dsperson.com/2017/06/14/lldb%E5%AD%A6%E4%B9%A0/" target="_blank" rel="external">&#x67E5;&#x770B;&#x6211;&#x4EE5;&#x524D;&#x7684;&#x6587;&#x7AE0;</a></p>
+<p><a href="http://blog.csdn.net/yagerfgcs/article/details/51427085" target="_blank" rel="external">参考网址</a></p>
+<h1 id="lldb常用操作"><a href="#lldb常用操作" class="headerlink" title="lldb常用操作"></a>lldb常用操作</h1><p><a href="http://www.dsperson.com/2017/06/14/lldb%E5%AD%A6%E4%B9%A0/" target="_blank" rel="external">查看我以前的文章</a></p>
 ]]></content>
       <categories>
         <category>面试</category>

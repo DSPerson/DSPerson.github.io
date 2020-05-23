@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="&amp;#x4F7F;&amp;#x7528;Homebrew &amp;#x642D;&amp;#x5EFA;Mysql&amp;#x662F;&amp;#x975E;&amp;#x5E38;&amp;#x7A33;&amp;#x59A5;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x5899;&amp;#x7684;&amp;#x539F;&amp;#x56E0;&amp;#x53EF;&amp;#x80FD;&amp;#x901F;&amp;#x5EA6;&amp;#x8F83;&amp;#x6162;&amp;#x4E00;&amp;">
+<meta name="description" content="使用Homebrew 搭建Mysql是非常稳妥，因为墙的原因可能速度较慢一些，如果使用梯子可能会很快(比如我)。下面看到我写分号的你也得记得写上。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac 上搭建Mysql总结">
 <meta property="og:url" content="http://yoursite.com/2017/01/19/MacMysql/index.html">
 <meta property="og:site_name" content="DSPerson">
-<meta property="og:description" content="&amp;#x4F7F;&amp;#x7528;Homebrew &amp;#x642D;&amp;#x5EFA;Mysql&amp;#x662F;&amp;#x975E;&amp;#x5E38;&amp;#x7A33;&amp;#x59A5;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x5899;&amp;#x7684;&amp;#x539F;&amp;#x56E0;&amp;#x53EF;&amp;#x80FD;&amp;#x901F;&amp;#x5EA6;&amp;#x8F83;&amp;#x6162;&amp;#x4E00;&amp;">
+<meta property="og:description" content="使用Homebrew 搭建Mysql是非常稳妥，因为墙的原因可能速度较慢一些，如果使用梯子可能会很快(比如我)。下面看到我写分号的你也得记得写上。">
 <meta property="og:image" content="http://yoursite.com/2017/01/19/MacMysql/success.png">
 <meta property="og:image" content="http://yoursite.com/2017/01/19/MacMysql/show_one.png">
 <meta property="og:image" content="http://yoursite.com/2017/01/19/MacMysql/show_2.png">
 <meta property="og:updated_time" content="2017-01-20T01:19:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 上搭建Mysql总结">
-<meta name="twitter:description" content="&amp;#x4F7F;&amp;#x7528;Homebrew &amp;#x642D;&amp;#x5EFA;Mysql&amp;#x662F;&amp;#x975E;&amp;#x5E38;&amp;#x7A33;&amp;#x59A5;&amp;#xFF0C;&amp;#x56E0;&amp;#x4E3A;&amp;#x5899;&amp;#x7684;&amp;#x539F;&amp;#x56E0;&amp;#x53EF;&amp;#x80FD;&amp;#x901F;&amp;#x5EA6;&amp;#x8F83;&amp;#x6162;&amp;#x4E00;&amp;">
+<meta name="twitter:description" content="使用Homebrew 搭建Mysql是非常稳妥，因为墙的原因可能速度较慢一些，如果使用梯子可能会很快(比如我)。下面看到我写分号的你也得记得写上。">
 <meta name="twitter:image" content="http://yoursite.com/2017/01/19/MacMysql/success.png">
 
 
@@ -377,33 +377,33 @@
 
       
         <blockquote>
-<p>&#x4F7F;&#x7528;<code>Homebrew</code> &#x642D;&#x5EFA;<code>Mysql</code>&#x662F;&#x975E;&#x5E38;&#x7A33;&#x59A5;&#xFF0C;&#x56E0;&#x4E3A;&#x5899;&#x7684;&#x539F;&#x56E0;&#x53EF;&#x80FD;&#x901F;&#x5EA6;&#x8F83;&#x6162;&#x4E00;&#x4E9B;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x68AF;&#x5B50;&#x53EF;&#x80FD;&#x4F1A;&#x5F88;&#x5FEB;(&#x6BD4;&#x5982;&#x6211;)&#x3002;&#x4E0B;&#x9762;&#x770B;&#x5230;&#x6211;&#x5199;&#x5206;&#x53F7;&#x7684;&#x4F60;&#x4E5F;&#x5F97;&#x8BB0;&#x5F97;&#x5199;&#x4E0A;&#x3002;</p>
+<p>使用<code>Homebrew</code> 搭建<code>Mysql</code>是非常稳妥，因为墙的原因可能速度较慢一些，如果使用梯子可能会很快(比如我)。下面看到我写分号的你也得记得写上。</p>
 </blockquote>
 <a id="more"></a>
-<p> &#x7B2C;&#x4E00;&#x6B65;&#x6267;&#x884C;</p>
+<p> 第一步执行</p>
 <pre><code>brew install mysql
-</code></pre><p>&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x7B49;&#x5F85;&#x4E86;&#x5EFA;&#x8BAE;&#x7FFB;&#x5899;&#x901F;&#x5EA6;&#x6C47;&#x6B3E;&#x5F88;&#x591A;&#x56E0;&#x4E3A;&#x5185;&#x5BB9;&#x8F83;&#x5927; 400&#x591A;M</p>
-<p>&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;</p>
+</code></pre><p>之后就是等待了建议翻墙速度汇款很多因为内容较大 400多M</p>
+<p>启动服务器</p>
 <pre><code>base mysql.server start
-</code></pre><p> &#x7B2C;&#x4E8C;&#x6B65; &#x8FDB;&#x5165;Mysql</p>
+</code></pre><p> 第二步 进入Mysql</p>
 <pre><code>mysql -uroot -p
-</code></pre><p>&#x6B64;&#x5904;&#x4F1A;&#x8BA9;&#x4F60;&#x8F93;&#x5165;&#x5BC6;&#x7801; &#x8BB0;&#x5F97; &#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x76F4;&#x63A5;&#x56DE;&#x8F66;&#xFF01;&#xFF01;&#xFF01;&#x6211;&#x5728;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x803D;&#x8BEF;&#x4E0D;&#x5C11;&#x65F6;&#x95F4;</p>
-<pre><code>&#x6B64;&#x5904;&#x5E94;&#x8BE5;&#x6709;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x7684;&#x56FE;&#x7247;
+</code></pre><p>此处会让你输入密码 记得 直接回车！！！直接回车！！！直接回车！！！我在这个地方耽误不少时间</p>
+<pre><code>此处应该有一个成功的图片
 /-------------------\
-</code></pre><p><img src="/2017/01/19/MacMysql/success.png" alt="&#x6B64;&#x5904;&#x5E94;&#x8BE5;&#x6709;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x7684;&#x56FE;&#x7247;"></p>
+</code></pre><p><img src="/2017/01/19/MacMysql/success.png" alt="此处应该有一个成功的图片"></p>
 <hr>
-<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;</p>
+<p>查看当前数据库</p>
 <pre><code>show databases;    
 </code></pre><p><img src="/2017/01/19/MacMysql/show_one.png" alt=""></p>
-<p>&#x7B2C;&#x4E09;&#x6B65;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;<br>&#x6B64;&#x5904;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x8BBE;&#x7F6E;&#x4F1A;&#x63D0;&#x793A;&#x4F60;&#x9009;&#x7528;&#x90A3;&#x4E2A;&#x6570;&#x636E;&#x5E93; &#x53EF;&#x4EE5;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x8981;&#x52A8;&#x5B83;&#x81EA;&#x5E26;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4EE5;&#x514D;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x3002;</p>
-<p>&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x636E;&#x5E93;</p>
+<p>第三步设置密码<br>此处如果直接设置会提示你选用那个数据库 可以用命令行创建一个自己的数据库不要动它自带的数据库，以免出现错误。</p>
+<p>先创建一个新的数据库</p>
 <pre><code>create databases DS;
 </code></pre><p><img src="/2017/01/19/MacMysql/show_2.png" alt=""></p>
-<p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x9519;&#x7684;&#x8BDD;&#x5C31;&#x628A;&#x5206;&#x53F7;&#x52A0;&#x4E0A;&#x5427; &#x5F53;&#x7136;&#x4F60;&#x590D;&#x5236;&#x4E0B;&#x6765;&#x6700;&#x597D;<code>DS</code>&#x6570;&#x636E;&#x5E93;&#x540D;&#x5B57;&#x968F;&#x4FBF;&#x6539;&#x522B;&#x91CD;&#x590D;&#x5C31;&#x884C;&#x3002;&#x3002;&#x3002;</p>
+<p>如果不想错的话就把分号加上吧 当然你复制下来最好<code>DS</code>数据库名字随便改别重复就行。。。</p>
 <pre><code>use DS;
-</code></pre><p>&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;</p>
+</code></pre><p>设置密码</p>
 <pre><code>set password=password(&apos;xxxxxx&apos;)
-</code></pre><p>xxxx&#x5373;&#x5BC6;&#x7801;</p>
+</code></pre><p>xxxx即密码</p>
 
       
     </div>
@@ -488,6 +488,12 @@
 
     <div class="post-spread">
       
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
     </div>
   </div>
 
@@ -570,7 +576,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -652,6 +658,15 @@
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66559989";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 

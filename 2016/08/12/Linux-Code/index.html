@@ -79,25 +79,49 @@
 
 
 
-<meta name="description" content="scp&amp;#x5C06;&amp;#x672C;&amp;#x5730;&amp;#x6587;&amp;#x4EF6;&amp;#x6DFB;&amp;#x52A0;&amp;#x5230;&amp;#x8FDC;&amp;#x7A0B;&amp;#x670D;&amp;#x52A1;&amp;#x5668;
-&amp;#x6211;&amp;#x7684;&amp;#x8FDC;&amp;#x7A0B;&amp;#x670D;&amp;#x52A1;&amp;#x5668;tiger@192.168.0.3
+<meta name="description" content="scp将本地文件添加到远程服务器
+我的远程服务器tiger@192.168.0.3
 
-1scp &amp;#x672C;&amp;#x5">
+1scp 本地文件路径 tiger@192.168.0.3:服务器的路径
+删除 rm两个参数
+f 强制删除1rm -f
+r 递归删除有多少都删除掉1rm -rf
+有权限就添加sudo 加上面的命令
+git ssh 问题1cd ~/.ssh/
+1vim config
+按i 插入
+12Host git.oschina">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux命令行学习">
 <meta property="og:url" content="http://yoursite.com/2016/08/12/Linux-Code/index.html">
 <meta property="og:site_name" content="DSPerson">
-<meta property="og:description" content="scp&amp;#x5C06;&amp;#x672C;&amp;#x5730;&amp;#x6587;&amp;#x4EF6;&amp;#x6DFB;&amp;#x52A0;&amp;#x5230;&amp;#x8FDC;&amp;#x7A0B;&amp;#x670D;&amp;#x52A1;&amp;#x5668;
-&amp;#x6211;&amp;#x7684;&amp;#x8FDC;&amp;#x7A0B;&amp;#x670D;&amp;#x52A1;&amp;#x5668;tiger@192.168.0.3
+<meta property="og:description" content="scp将本地文件添加到远程服务器
+我的远程服务器tiger@192.168.0.3
 
-1scp &amp;#x672C;&amp;#x5">
+1scp 本地文件路径 tiger@192.168.0.3:服务器的路径
+删除 rm两个参数
+f 强制删除1rm -f
+r 递归删除有多少都删除掉1rm -rf
+有权限就添加sudo 加上面的命令
+git ssh 问题1cd ~/.ssh/
+1vim config
+按i 插入
+12Host git.oschina">
 <meta property="og:updated_time" content="2016-09-06T05:59:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令行学习">
-<meta name="twitter:description" content="scp&amp;#x5C06;&amp;#x672C;&amp;#x5730;&amp;#x6587;&amp;#x4EF6;&amp;#x6DFB;&amp;#x52A0;&amp;#x5230;&amp;#x8FDC;&amp;#x7A0B;&amp;#x670D;&amp;#x52A1;&amp;#x5668;
-&amp;#x6211;&amp;#x7684;&amp;#x8FDC;&amp;#x7A0B;&amp;#x670D;&amp;#x52A1;&amp;#x5668;tiger@192.168.0.3
+<meta name="twitter:description" content="scp将本地文件添加到远程服务器
+我的远程服务器tiger@192.168.0.3
 
-1scp &amp;#x672C;&amp;#x5">
+1scp 本地文件路径 tiger@192.168.0.3:服务器的路径
+删除 rm两个参数
+f 强制删除1rm -f
+r 递归删除有多少都删除掉1rm -rf
+有权限就添加sudo 加上面的命令
+git ssh 问题1cd ~/.ssh/
+1vim config
+按i 插入
+12Host git.oschina">
 
 
 
@@ -381,18 +405,18 @@
       
 
       
-        <h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h3 id="&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"><a href="#&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;" class="headerlink" title="&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;"></a>&#x5C06;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5230;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;</h3><ul>
-<li>&#x6211;&#x7684;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;tiger@192.168.0.3</li>
+        <h2 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h2><h3 id="将本地文件添加到远程服务器"><a href="#将本地文件添加到远程服务器" class="headerlink" title="将本地文件添加到远程服务器"></a>将本地文件添加到远程服务器</h3><ul>
+<li>我的远程服务器tiger@192.168.0.3</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp &#x672C;&#x5730;&#x6587;&#x4EF6;&#x8DEF;&#x5F84; tiger@192.168.0.3:&#x670D;&#x52A1;&#x5668;&#x7684;&#x8DEF;&#x5F84;</div></pre></td></tr></table></figure>
-<h2 id="&#x5220;&#x9664;-rm"><a href="#&#x5220;&#x9664;-rm" class="headerlink" title="&#x5220;&#x9664; rm"></a>&#x5220;&#x9664; rm</h2><p>&#x4E24;&#x4E2A;&#x53C2;&#x6570;</p>
-<h3 id="f-&#x5F3A;&#x5236;&#x5220;&#x9664;"><a href="#f-&#x5F3A;&#x5236;&#x5220;&#x9664;" class="headerlink" title="f &#x5F3A;&#x5236;&#x5220;&#x9664;"></a>f &#x5F3A;&#x5236;&#x5220;&#x9664;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -f</div></pre></td></tr></table></figure>
-<h3 id="r-&#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;"><a href="#r-&#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;" class="headerlink" title="r &#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;"></a>r &#x9012;&#x5F52;&#x5220;&#x9664;&#x6709;&#x591A;&#x5C11;&#x90FD;&#x5220;&#x9664;&#x6389;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf</div></pre></td></tr></table></figure>
-<p>&#x6709;&#x6743;&#x9650;&#x5C31;&#x6DFB;&#x52A0;sudo &#x52A0;&#x4E0A;&#x9762;&#x7684;&#x547D;&#x4EE4;</p>
-<h2 id="git-ssh-&#x95EE;&#x9898;"><a href="#git-ssh-&#x95EE;&#x9898;" class="headerlink" title="git ssh &#x95EE;&#x9898;"></a>git ssh &#x95EE;&#x9898;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh/</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp 本地文件路径 tiger@192.168.0.3:服务器的路径</div></pre></td></tr></table></figure>
+<h2 id="删除-rm"><a href="#删除-rm" class="headerlink" title="删除 rm"></a>删除 rm</h2><p>两个参数</p>
+<h3 id="f-强制删除"><a href="#f-强制删除" class="headerlink" title="f 强制删除"></a>f 强制删除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -f</div></pre></td></tr></table></figure>
+<h3 id="r-递归删除有多少都删除掉"><a href="#r-递归删除有多少都删除掉" class="headerlink" title="r 递归删除有多少都删除掉"></a>r 递归删除有多少都删除掉</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm -rf</div></pre></td></tr></table></figure>
+<p>有权限就添加sudo 加上面的命令</p>
+<h2 id="git-ssh-问题"><a href="#git-ssh-问题" class="headerlink" title="git ssh 问题"></a>git ssh 问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh/</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim config</div></pre></td></tr></table></figure>
-<p>&#x6309;i &#x63D2;&#x5165;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Host git.oschina.net</div><div class="line">IdentityFile ~/.ssh/&#x4F60;&#x7684;ssh&#x516C;&#x94A5;&#x4E0D;&#x5E26;.pub</div></pre></td></tr></table></figure>
+<p>按i 插入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Host git.oschina.net</div><div class="line">IdentityFile ~/.ssh/你的ssh公钥不带.pub</div></pre></td></tr></table></figure>
 <p>ssh  .ssh/id_rsa id_rsa.pub</p>
 
       
@@ -483,6 +507,12 @@
 
 
     <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
       
     </div>
   </div>
@@ -575,7 +605,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -673,6 +703,15 @@
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66559989";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 

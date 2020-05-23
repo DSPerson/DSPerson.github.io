@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="lldb &amp;#x66FF;&amp;#x4EE3;gdb &amp;#x5728;&amp;#x7A0B;&amp;#x5E8F;&amp;#x8FD0;&amp;#x884C;&amp;#x4E2D; &amp;#x6682;&amp;#x505C; &amp;#x5373;&amp;#x53EF;&amp;#x4F7F;&amp;#x7528;lldb&amp;#x4E86; &amp;#x5728;&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;&amp;#x53EF;&amp;#x4EE5;&amp;#x6709;&amp;#x591A">
+<meta name="description" content="lldb 替代gdb 在程序运行中 暂停 即可使用lldb了 在项目中可以有多帮助">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lldb 学习">
 <meta property="og:url" content="http://yoursite.com/2017/06/14/lldb学习/index.html">
 <meta property="og:site_name" content="DSPerson">
-<meta property="og:description" content="lldb &amp;#x66FF;&amp;#x4EE3;gdb &amp;#x5728;&amp;#x7A0B;&amp;#x5E8F;&amp;#x8FD0;&amp;#x884C;&amp;#x4E2D; &amp;#x6682;&amp;#x505C; &amp;#x5373;&amp;#x53EF;&amp;#x4F7F;&amp;#x7528;lldb&amp;#x4E86; &amp;#x5728;&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;&amp;#x53EF;&amp;#x4EE5;&amp;#x6709;&amp;#x591A">
+<meta property="og:description" content="lldb 替代gdb 在程序运行中 暂停 即可使用lldb了 在项目中可以有多帮助">
 <meta property="og:image" content="http://yoursite.com/2017/06/14/lldb学习/Snip20170614_1.png">
 <meta property="og:updated_time" content="2020-05-23T11:14:26.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lldb 学习">
-<meta name="twitter:description" content="lldb &amp;#x66FF;&amp;#x4EE3;gdb &amp;#x5728;&amp;#x7A0B;&amp;#x5E8F;&amp;#x8FD0;&amp;#x884C;&amp;#x4E2D; &amp;#x6682;&amp;#x505C; &amp;#x5373;&amp;#x53EF;&amp;#x4F7F;&amp;#x7528;lldb&amp;#x4E86; &amp;#x5728;&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;&amp;#x53EF;&amp;#x4EE5;&amp;#x6709;&amp;#x591A">
+<meta name="twitter:description" content="lldb 替代gdb 在程序运行中 暂停 即可使用lldb了 在项目中可以有多帮助">
 <meta name="twitter:image" content="http://yoursite.com/2017/06/14/lldb学习/Snip20170614_1.png">
 
 
@@ -397,30 +397,30 @@
 
       
         <blockquote>
-<p>lldb &#x66FF;&#x4EE3;gdb &#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E2D; &#x6682;&#x505C; &#x5373;&#x53EF;&#x4F7F;&#x7528;lldb&#x4E86; &#x5728;&#x9879;&#x76EE;&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x5E2E;&#x52A9;</p>
+<p>lldb 替代gdb 在程序运行中 暂停 即可使用lldb了 在项目中可以有多帮助</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="&#x5B89;&#x88C5;Chisel"><a href="#&#x5B89;&#x88C5;Chisel" class="headerlink" title="&#x5B89;&#x88C5;Chisel"></a>&#x5B89;&#x88C5;Chisel</h1><p><a href="https://github.com/facebook/chisel" target="_blank" rel="external">Chisel&#x7F51;&#x5740;</a></p>
-<p>&#x4E5F;&#x53EF;&#x4EE5; &#x5728;&#x7EC8;&#x7AEF;&#x76F4;&#x63A5;</p>
+<h1 id="安装Chisel"><a href="#安装Chisel" class="headerlink" title="安装Chisel"></a>安装Chisel</h1><p><a href="https://github.com/facebook/chisel" target="_blank" rel="external">Chisel网址</a></p>
+<p>也可以 在终端直接</p>
 <pre><code>brew update
 brew install chisel
-</code></pre><p><img src="/2017/06/14/lldb&#x5B66;&#x4E60;/Snip20170614_1.png" alt=""></p>
+</code></pre><p><img src="/2017/06/14/lldb学习/Snip20170614_1.png" alt=""></p>
 <blockquote>
-<p>&#x6210;&#x529F;&#x540E; &#x5C06;&#x7EA2;&#x8272;&#x6846;&#x5185;&#x5728; &#x7EC8;&#x7AEF; &#x4E2D; &#x8F93;&#x5165; <code>touch ~/.lldbinit</code> &#x590D;&#x5236;&#x8FDB;&#x53BB; &#x91CD;&#x542F;Xcode</p>
+<p>成功后 将红色框内在 终端 中 输入 <code>touch ~/.lldbinit</code> 复制进去 重启Xcode</p>
 </blockquote>
-<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="headerlink" title="&#x5E38;&#x7528;&#x547D;&#x4EE4;"></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2><blockquote>
-<p>&#x90FD;&#x662F;&#x5728;&#x9879;&#x76EE;&#x5728;&#x8FD0;&#x884C;&#x540E; &#x6682;&#x505C;&#x6761;&#x4EF6;&#x4E0B;</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><blockquote>
+<p>都是在项目在运行后 暂停条件下</p>
 </blockquote>
-<p> &#x4F7F;&#x7528; <code>visualize</code> + &#x5185;&#x5B58;&#x5730;&#x5740;&#x5373;&#x53EF;&#x5728;&#x9884;&#x89C8;&#x4E2D;&#x6253;&#x5F00;&#x56FE;&#x7247;&#x67E5;&#x770B;</p>
-<p> &#x4F7F;&#x7528; <code>pvc</code> &#x67E5;&#x770B;&#x5F53;&#x524D;NavigationBar&#x6808;</p>
-<p> &#x4F7F;&#x7528; <code>pintnals</code> + &#x5185;&#x5B58;&#x5730;&#x5740; &#x67E5;&#x770B; &#x79C1;&#x6709;&#x5C5E;&#x6027;</p>
-<p> &#x4F7F;&#x7528; <code>pviews</code> &#x4ECE;&#x5F53;&#x524D;&#x5230;&#x5F53;&#x524D;View&#x6240;&#x6709;&#x89C6;&#x56FE; <code>pviews</code>  + &#x5185;&#x5B58;&#x5730;&#x5740;</p>
-<p> &#x4F7F;&#x7528; <code>caflush</code> &#x624B;&#x52A8;&#x5237;&#x65B0;</p>
-<p> &#x4F7F;&#x7528; <code>presponder + &#x5185;&#x5B58;&#x5730;&#x5740;</code> &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5730;&#x5740;&#x7684;&#x5C42;&#x7EA7;</p>
-<p> &#x4F7F;&#x7528; <code>taplog</code> &#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x6682;&#x505C;&#x4E4B;&#x540E;&#x70B9;&#x51FB;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E; &#x4F1A;&#x6253;&#x5370;&#x51FA;&#x6700;&#x8FD1;&#x4E00;&#x4E2A;     &#x54CD;&#x5E94;&#x70B9;&#x51FB;&#x65F6;&#x95F4;&#x7684;View</p>
-<p> &#x4F7F;&#x7528; <code>pclass + &#x5185;&#x5B58;&#x5730;&#x5740;</code> &#x67E5;&#x770B;&#x7EE7;&#x627F;&#x5173;&#x7CFB;</p>
-<p> &#x4F7F;&#x7528; <code>bmessage + &#x7C7B; + &#x65B9;&#x6CD5;</code> &#x7C7B;&#x4F3C;&#x65AD;&#x70B9;</p>
-<p> &#x4F7F;&#x7528; <code>show</code> &#x6216;&#x8005; <code>hide</code> + &#x5185;&#x5B58;&#x5730;&#x5740; &#x6765; &#x5C55;&#x793A;&#x6216;&#x8005;&#x9690;&#x85CF;&#x63A7;&#x4EF6;</p>
+<p> 使用 <code>visualize</code> + 内存地址即可在预览中打开图片查看</p>
+<p> 使用 <code>pvc</code> 查看当前NavigationBar栈</p>
+<p> 使用 <code>pintnals</code> + 内存地址 查看 私有属性</p>
+<p> 使用 <code>pviews</code> 从当前到当前View所有视图 <code>pviews</code>  + 内存地址</p>
+<p> 使用 <code>caflush</code> 手动刷新</p>
+<p> 使用 <code>presponder + 内存地址</code> 查看当前地址的层级</p>
+<p> 使用 <code>taplog</code> 会自动关闭暂停之后点击任意位置 会打印出最近一个     响应点击时间的View</p>
+<p> 使用 <code>pclass + 内存地址</code> 查看继承关系</p>
+<p> 使用 <code>bmessage + 类 + 方法</code> 类似断点</p>
+<p> 使用 <code>show</code> 或者 <code>hide</code> + 内存地址 来 展示或者隐藏控件</p>
 
       
     </div>
@@ -510,6 +510,12 @@ brew install chisel
 
 
     <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
       
     </div>
   </div>
@@ -602,7 +608,7 @@ brew install chisel
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -700,6 +706,15 @@ brew install chisel
 
 
 
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66559989";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
