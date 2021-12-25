@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Godot 技巧备忘录</title>
+    <link href="/blog/2021/12/25/Godot/"/>
+    <url>/blog/2021/12/25/Godot/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>做游戏，爱游戏，不知这次能坚持多久。</p></blockquote><span id="more"></span> <h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h3 id="Group-分组概念"><a href="#Group-分组概念" class="headerlink" title="Group 分组概念"></a>Group 分组概念</h3><blockquote><p>如果发现玩家潜入秘密基地, 则可以使用 <code>SceneTree.call_group() </code>发出警报声来通知所有敌人:</p></blockquote><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">get_tree</span><span class="hljs-params">()</span></span><span class="hljs-selector-class">.call_group</span>(<span class="hljs-string">&quot;enemies&quot;</span>， <span class="hljs-string">&quot;player_was_discovered&quot;</span>)<br></code></pre></td></tr></table></figure><h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><blockquote><p>延时1s执行</p></blockquote><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">yield</span><span class="hljs-params">(get_tree()</span></span><span class="hljs-selector-class">.create_timer</span>(<span class="hljs-number">1.0</span>), <span class="hljs-string">&quot;timeout&quot;</span>)<br></code></pre></td></tr></table></figure><h3 id="释放"><a href="#释放" class="headerlink" title="释放"></a>释放</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta">#最好使用, 它会在空闲的安全的删除节点</span><br>node.queue_free()<br></code></pre></td></tr></table></figure><h3 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a>碰撞</h3><blockquote><p>move_and_slide()</p></blockquote><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-tag">var</span> velocity = Vector(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)<br><span class="hljs-comment">//不能 乘以 delta， 函数内部已经默认包含了此参数</span><br><span class="hljs-function"><span class="hljs-title">move_and_slide</span><span class="hljs-params">(velocity)</span></span> <br></code></pre></td></tr></table></figure><h3 id="跟随"><a href="#跟随" class="headerlink" title="跟随"></a>跟随</h3><blockquote><p>look_at简直是跟随鼠标转向的神器<br>例子： 当玩家拿着枪，鼠标的方向就是玩家瞄准的方向</p></blockquote><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式1 最简单的方式, 在玩家的脚本中</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>look<span class="hljs-constructor">_at(<span class="hljs-params">get_global_mouse_position</span>()</span>)<br></code></pre></td></tr></table></figure><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式2 他们(方式1和2)其实相等</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>get<span class="hljs-constructor">_global_mouse_position()</span> - get<span class="hljs-constructor">_global_position()</span><br>rotation = dir.angle<span class="hljs-literal">()</span><br></code></pre></td></tr></table></figure><h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><blockquote><p>Area2d <a href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html#overlap-detection">文档</a></p></blockquote><ul><li><p> 区域对于子弹和其他弹丸物体来说是非常好用, 它可以击中并造成伤害, 但不需要其他物理效果, 如弹跳.</p></li><li><p> 用敌人周围的一个大圆圈区域设定为 “探测” 半径, 当玩家在该区域外时, 敌人就无法 “看到” 玩家.</p></li><li><p>“安保摄像头” - 在有多个摄像头的大型关卡中, 在每个摄像头上附加区域(area), 并在玩家进入时激活它们.</p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+      <category>游戏</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Godot</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>命令行备忘录</title>
+    <link href="/blog/2021/12/25/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    <url>/blog/2021/12/25/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%87%E5%BF%98%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p> 好记性不如烂笔头</p></blockquote><span id="more"></span><h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">vim ~<span class="hljs-string">/.bash_profile</span><br><span class="hljs-keyword">alias</span> podi=&#x27;pod install <span class="hljs-params">--verbose</span>&#x27;<br>source vim ~<span class="hljs-string">/.bash_profile</span><br></code></pre></td></tr></table></figure><h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><blockquote><p>排序查看文件大小</p></blockquote><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">du -<span class="hljs-keyword">sh</span> * | <span class="hljs-keyword">sort</span> -rh<br></code></pre></td></tr></table></figure><h1 id="Xcode"><a href="#Xcode" class="headerlink" title="Xcode"></a>Xcode</h1><h3 id="根据UUID查询dSYM所在位置"><a href="#根据UUID查询dSYM所在位置" class="headerlink" title="根据UUID查询dSYM所在位置"></a>根据UUID查询dSYM所在位置</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-keyword">find</span> ~<span class="hljs-regexp">/Library/</span>Developer/Xcode -iname <span class="hljs-string">&#x27;*.dSYM&#x27;</span><br>-print0| xargs -<span class="hljs-number">0</span> -I % dwarfdump -u %|<span class="hljs-keyword">grep</span> -i UUID<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2021年基金回望</title>
+    <link href="/blog/2021/12/21/money01/"/>
+    <url>/blog/2021/12/21/money01/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>总结一下2021年理财，自己给自己玩的坑。</p></blockquote><span id="more"></span><blockquote><p>有买两年基金的背景，每年基本上都是5w块不到的样子</p></blockquote><h3 id="新手死于追高、老手死于抄底"><a href="#新手死于追高、老手死于抄底" class="headerlink" title="新手死于追高、老手死于抄底"></a>新手死于追高、老手死于抄底</h3><blockquote><p>很不幸我属于老手，2021年是互联网大崩盘的一年，政策问题，导致中概股无一幸免，K12更是基本不值钱了。</p><p>我踩的很准，在高位买了两个基金 <code>易方达中证海外互联网50ETF</code>、<code>交银海外中国互联网指数</code>，自己以为不会有大问题，即使在下跌的途中，也是采用技术性定投的方式，打算分散投资，但是倾巢之下岂有完卵，到写本次记录之前已经-30%。我不知道后面还会有多少的亏损，但是这次投资给了我很大的打击，甚至我现在每天都觉得压力很大，一度想要割肉，我知道现在如果割肉我可能不会亏那么多，但是也有可能这个钱我永远也不能赚回来了。</p></blockquote><blockquote><p>但是现在我也不会再往里面投钱了，虽然我很想这么做，如果不克制，可能后面很更惨烈。后面如果真的有一天，这个钱我赚回来了，我可能会感谢之前的自己吧！ </p></blockquote><h3 id="纸上得来终觉浅，绝知此事要躬行。"><a href="#纸上得来终觉浅，绝知此事要躬行。" class="headerlink" title="纸上得来终觉浅，绝知此事要躬行。"></a>纸上得来终觉浅，绝知此事要躬行。</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>夜晚</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>理财</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ios xcframework合成</title>
+    <link href="/blog/2021/12/20/ios-xcframework/"/>
+    <url>/blog/2021/12/20/ios-xcframework/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>编译xcframework 记录</p></blockquote><span id="more"></span><h3 id="编译xcframework"><a href="#编译xcframework" class="headerlink" title="编译xcframework"></a>编译xcframework</h3><h4 id="配置信息"><a href="#配置信息" class="headerlink" title="配置信息"></a>配置信息</h4><blockquote><p>target name: kdslll</p><p>project name: kdslll.xcodeproj</p><p>文件路径：/Users/zuiyou/Downloads/kdslll</p></blockquote><h4 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h4><blockquote><ol><li>编译包含所有模拟器的framework</li></ol></blockquote><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs livescript">xcodebuild GCC_PREPROCESSOR_DEFINITIONS=<span class="hljs-string">&#x27;$(inherited)&#x27;</span>  <span class="hljs-string">\</span><br>-sdk iphonesimulator <span class="hljs-string">\</span><br>ARCHS=<span class="hljs-string">&#x27;arm64 x86_64&#x27;</span>   <span class="hljs-string">\</span><br>CONFIGURATION_BUILD_DIR=<span class="hljs-regexp">/Users/zuiyou/Downloads/kdslll/build_simulator/</span> <span class="hljs-string">\</span><br>BUILD_LIBRARY_FOR_DISTRIBUTION=YES <span class="hljs-string">\</span><br>clean <span class="hljs-string">\</span><br>build -configuration Release <span class="hljs-string">\</span><br>-target kdslll <span class="hljs-string">\</span><br>GCC_GENERATE_DEBUGGING_SYMBOLS=YES <span class="hljs-string">\</span><br>DEBUG_INFORMATION_FORMAT=<span class="hljs-string">&quot;dwarf-with-dsym&quot;</span> <span class="hljs-string">\</span><br>-project kdslll.xcodeproj <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure><blockquote><ol start="2"><li>编译真机framework</li></ol></blockquote><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs livescript">xcodebuild GCC_PREPROCESSOR_DEFINITIONS=<span class="hljs-string">&#x27;$(inherited)&#x27;</span>  <span class="hljs-string">\</span><br>ARCHS=<span class="hljs-string">&#x27;arm64&#x27;</span>   <span class="hljs-string">\</span><br>CONFIGURATION_BUILD_DIR=<span class="hljs-regexp">/Users/zuiyou/Downloads/kdslll/build_mobile/</span> <span class="hljs-string">\</span><br>BUILD_LIBRARY_FOR_DISTRIBUTION=YES <span class="hljs-string">\</span><br>clean <span class="hljs-string">\</span><br>build -configuration Release <span class="hljs-string">\</span><br>-target kdslll <span class="hljs-string">\</span><br>GCC_GENERATE_DEBUGGING_SYMBOLS=YES <span class="hljs-string">\</span><br>DEBUG_INFORMATION_FORMAT=<span class="hljs-string">&quot;dwarf-with-dsym&quot;</span> <span class="hljs-string">\</span><br>-project kdslll.xcodeproj <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span><br></code></pre></td></tr></table></figure><blockquote><ol start="3"><li>合并</li></ol></blockquote><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dsconfig"><span class="hljs-string">xcrun</span> <span class="hljs-string">xcodebuild</span> -<span class="hljs-built_in">create-xcframework</span> -<span class="hljs-string">framework</span> <span class="hljs-string">build_mobile</span>/<br><span class="hljs-string">kdslll</span>.<span class="hljs-string">framework</span> -<span class="hljs-string">framework</span> <span class="hljs-string">build_simulator</span>/<span class="hljs-string">kdslll</span>.<span class="hljs-string">framework</span> -<span class="hljs-string">output</span> <br><span class="hljs-string">kdslll</span>.<span class="hljs-string">xcframework</span><br></code></pre></td></tr></table></figure><h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><blockquote><p>导入到项目中需要配置一下，将Embed方式修改一下</p></blockquote><p><img src="/blog/img/xcframework/xcfrmework01.png" alt="备注"></p><blockquote><p>感谢同事孙佳琪的无私奉献</p></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>iOS</tag>
+      
+      <tag>xcframework</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2020-7-19 晚</title>
+    <link href="/blog/2021/07/19/2020-7-19-%E6%99%9A/"/>
+    <url>/blog/2021/07/19/2020-7-19-%E6%99%9A/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p><del>Github</del> Gitee 真香理论是永远不会过时的.</p></blockquote><span id="more"></span>]]></content>
+    
+    
+    <categories>
+      
+      <category>夜晚</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>LLVM</title>
+    <link href="/blog/2021/07/19/llvm/"/>
+    <url>/blog/2021/07/19/llvm/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>llvm 记录</p></blockquote><span id="more"></span><blockquote><p>词法分析<br><code>clang -fmodules -fsyntax-only -Xclang -dump-tokens main.m</code></p></blockquote><blockquote><p>语法分析生成AST(抽象语法树)<br><code>clang -fmodules -fsyntax-only -Xclang -ast-dump main.m</code></p></blockquote><blockquote><p>无优化的代码（O0）<br> clang -S -fobjc-arc -emit-llvm main.m -o main00.ll</p></blockquote><blockquote><p>优化代码(Os)<br>clang -Os -S -fobjc-arc -emit-llvm main.m -o mainOs.ll  //  Os 最快最小</p></blockquote><blockquote><p>Bitcode优化<br>clang -emit-llvm -c main.ll -o main.bc</p></blockquote><blockquote><p>生成汇编<br>clang -S -fobjc-arc main.bc -o mainbc.s</p></blockquote><blockquote><p>生成目标文件（Object）此时已经被转换为机器码但是不能被执行（需要将所有资源链接起来才可以）<br>clang -fmodules -c main.s -o main.o</p></blockquote><blockquote><p>xcrun 查看目标文件符号<br>xcrun nm -nm main.o</p></blockquote><blockquote><p>生成可执行文件（链接）<br>clang main.o -o main<br>此时继续使用xcrun可以看到undefined 已经被指明了来源库</p></blockquote><p><img src="/blog/img/llvm/12857030-6c86ad63332ee60e.png" alt="流程"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+      <category>iOS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>iOS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
