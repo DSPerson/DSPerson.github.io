@@ -1,0 +1,590 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon_title.png">
+  <link rel="icon" href="/img/icon_title.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+早期同时兼顾 iOS和PHP任务功能记录
+">
+  <meta name="author" content="DSperson">
+  <meta name="keywords" content="is Key">
+  
+  <title>iOS内购买IAP和服务器交互问题 - DSperson</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"dsperson.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","app_key":"6ElnyXcLII1QFX7E7uXVqkaM","server_url":"https://fkwcmqvx.lc-cn-n1-shared.com"}},"search_path":"/blog/local_search/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>DSperson</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/null') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="iOS内购买IAP和服务器交互问题">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-02-19 00:00" pubdate>
+        2017年2月19日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      32
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">iOS内购买IAP和服务器交互问题</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>早期同时兼顾 iOS和PHP任务功能记录</p>
+</blockquote>
+<span id="more"></span>
+
+<blockquote>
+<p>warning 此处不讲解IA如何P配置了，网上挺全面的而且还写的都不错的。但是前提是你有沙盒测试账号和itunesconnect设置过了内购买所需虚拟物品和银行协议的一堆配置<br>此处只讲解两点</p>
+<ul>
+<li>我碰见的问题</li>
+<li>和服务器的交互问题(此处以PHP为例子，本人PHP刚入门也是copy来的，根据自己的需求做出小小改变)</li>
+</ul>
+</blockquote>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="配置消耗型物品重复购买却显示此项目免费恢复"><a href="#配置消耗型物品重复购买却显示此项目免费恢复" class="headerlink" title="配置消耗型物品重复购买却显示此项目免费恢复"></a>配置消耗型物品重复购买却显示此项目免费恢复</h3><ul>
+<li><p>需要在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray&lt;SKPaymentTransaction *&gt; *)transactions<br></code></pre></td></tr></table></figure></li>
+<li><p>的每个状态后面都需要添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">[[SKPaymentQueue defaultQueue] finishTransaction:tran];<br></code></pre></td></tr></table></figure>
+<h2 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h2><h3 id="先解释一下OC代码和PHP代码"><a href="#先解释一下OC代码和PHP代码" class="headerlink" title="先解释一下OC代码和PHP代码"></a>先解释一下OC代码和PHP代码</h3><blockquote>
+<p>第一步拾掇拾掇需要的东西</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>#import &lt;StoreKit/StoreKit.h&gt;</li>
+<li>&lt;SKPaymentTransactionObserver, SKProductsRequestDelegate&gt; 两个协议方法你也得实现吧<blockquote>
+<p>第二步注册观察者，并且判断该用户能否使用内购买</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">[[SKPaymentQueue defaultQueue] addTransactionObserver:self];<br>            if([SKPaymentQueue canMakePayments])&#123;<br>                weakSelf.currentProId         = productID;<br>                [weakSelf requestProductData:productID];<br>            &#125;else&#123;<br>                UIAlertView *alerView         = [[UIAlertView alloc] initWithTitle:@&quot;提示&quot;<br>                                                                           message:@&quot;您的手机没有打开程序内付费购买&quot;<br>                                                                          delegate:self cancelButtonTitle:NSLocalizedString(@&quot;关闭&quot;,nil) otherButtonTitles:NSLocalizedString(@&quot;提示&quot;,nil), nil];     <br>                [alerView show];<br>            &#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>第三步查询 =&gt; 你传一个你在itunesconnect 中App中定义的内购买Product_ID<br><img src="/blog/img/OC-IAP/itunesconntent.png" srcset="/img/loading.gif" lazyload alt="我是图"></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">NSArray *product = [[NSArray alloc] initWithObjects:type, nil];<br>NSSet *nsset = [NSSet setWithArray:product];<br>// 请求动作<br>SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:nsset];<br>request.delegate = self;<br>[request start];<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>第四步 收到你在itunesconnect 中定义的Product_ID的详细数据,顺便把购买请求发送了()</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response &#123;<br>    NSLog(@&quot;--------------收到产品反馈消息---------------------&quot;);<br>    NSArray *product              = response.products;<br>    if([product count] == 0)&#123;<br>        //[SVProgressHUD dismiss];<br>        NSLog(@&quot;--------------没有商品------------------&quot;);<br>        return;<br>    &#125;<br>    <br>    NSLog(@&quot;productID:%@&quot;, response.invalidProductIdentifiers);<br>    NSLog(@&quot;产品付费数量:%lu&quot;,(unsigned long)[product count]);<br>    <br>    SKProduct *p                  = nil;<br>    for (SKProduct *pro in product) &#123;<br>        NSLog(@&quot;%@&quot;, [pro description]);<br>        NSLog(@&quot;%@&quot;, [pro localizedTitle]);<br>        NSLog(@&quot;%@&quot;, [pro localizedDescription]);<br>        NSLog(@&quot;%@&quot;, [pro price]);<br>        NSLog(@&quot;%@&quot;, [pro productIdentifier]);<br>        <br>        if([pro.productIdentifier isEqualToString:_currentProId])&#123;<br>            p                             = pro;<br>        &#125;<br>    &#125;<br>    <br>    SKPayment *payment            = [SKPayment paymentWithProduct:p];<br>    NSLog(@&quot;发送购买请求&quot;);<br>    [[SKPaymentQueue defaultQueue] addPayment:payment];<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>第五步收到信息给你返回数据了</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray&lt;SKPaymentTransaction *&gt; *)transactions &#123;<br>    for(SKPaymentTransaction *tran in transactions)&#123;<br>        <br>        switch (tran.transactionState) &#123;<br>            case SKPaymentTransactionStatePurchased:&#123;<br>                NSLog(@&quot;交易完成&quot;);<br>                //方法在下面<br>                [self completeTransaction:tran];<br>            &#125;<br>                break;<br>            case SKPaymentTransactionStatePurchasing:<br>                NSLog(@&quot;商品添加进列表&quot;);<br>                <br>                break;<br>            case SKPaymentTransactionStateRestored:&#123;<br>                NSLog(@&quot;已经购买过商品&quot;);<br>                <br>                [[SKPaymentQueue defaultQueue] finishTransaction:tran];<br>            &#125;<br>                break;<br>            case SKPaymentTransactionStateFailed:&#123;<br>                NSLog(@&quot;交易失败&quot;);<br>                [[SKPaymentQueue defaultQueue] finishTransaction:tran];<br>              //  [SVProgressHUD showErrorWithStatus:@&quot;购买失败&quot;];<br>                startConntentService = false;<br>            &#125;<br>                break;<br>            default:<br>                break;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>此处是最后的方法还有我和服务器交互的地方，但是此处我也不懂为什么这个方法会调用两次如果您明白，请在下面留言告诉我谢谢，所以我此处加了一个全局的判断，来约束它和服务器交互的次数。<br>！！！看好我发送数据请求的方法其实就是AFNetworing的封装，都会用对吧。。。网址看好，别光顾着复制哦</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">- (void)completeTransaction:(SKPaymentTransaction *)transaction &#123;<br>    NSLog(@&quot;交易结束&quot;);<br>    [SVProgressHUD dismiss];<br>    <br>    NSURL *receiptURL             = [[NSBundle mainBundle] appStoreReceiptURL];<br>    NSData *receipt               = [NSData dataWithContentsOfURL:receiptURL];<br>    if (!receipt) &#123; /* No local receipt -- handle the error. */ &#125;<br>    //因为此处可能会多次调用原因不明所以加判断只调用一次<br>    else if (receipt &amp;&amp; startConntentService) &#123;<br>        /**<br>                  服务器要做的事情:<br>                  接收ios端发过来的购买凭证。<br>                  判断凭证是否已经存在或验证过，然后存储该凭证。<br>                  将该凭证发送到苹果的服务器验证，并将验证结果返回给客户端。<br>                  如果需要，修改用户相应的会员权限<br>                 */<br>        startConntentService = false;<br>        //字典中第二个参数是为了debug准备的，正常你不用写<br>        NSDictionary *requestContents = @&#123;<br>                                          @&quot;receipt-data&quot;: [receipt base64EncodedStringWithOptions:0],<br>                                          @&quot;XDEBUG_SESSION_START&quot;:@&quot;12477&quot;<br>                                          &#125;;<br>        [HTTPClient postWithURLString:@&quot;你的后台网址&quot; parameters:requestContents success:^(id returnValue) &#123;<br>            id name                       = returnValue;<br>            <br>        &#125; failure:^(id failureValue) &#123;<br>            <br>        &#125;];<br>    &#125;<br>    //这个千万别忘了 ，要不你就会犯第一条问题(配置消耗型物品重复购买却显示此项目免费恢复)<br>    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="下面是PHP代码，我用的是ThinkPHP框架-会php都会框架，像我只会框架暂时还不会php-咳咳…"><a href="#下面是PHP代码，我用的是ThinkPHP框架-会php都会框架，像我只会框架暂时还不会php-咳咳…" class="headerlink" title="下面是PHP代码，我用的是ThinkPHP框架(会php都会框架，像我只会框架暂时还不会php.咳咳…)"></a>下面是PHP代码，我用的是ThinkPHP框架(会php都会框架，像我只会框架暂时还不会php.咳咳…)</h3><blockquote>
+<p>只有两个方法<br>1 外部调用的方法，此处我的逻辑都系在了Controller中，是为了大家方便，我建议还是写在Model中(MVC哦，其实感觉都一样哈哈)</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs php?linenums">public function iosIAPPay() &#123;<br><br>        $status = array(&#x27;status&#x27;=&gt;-1);<br>        //获取 App 发送过来的数据,设置时候是沙盒状态<br>        $receipt   = $_POST[&#x27;receipt-data&#x27;];<br>        $isSandbox = true;<br>        //开始执行验证<br>        try<br>        &#123;<br>            $info = $this-&gt;getReceiptData($receipt, $isSandbox);<br>            // 通过product_id 来判断是下载哪个资源<br>            switch($info[&#x27;product_id&#x27;])&#123;<br>                case &#x27;你的Product_ID&#x27;:<br>                    $status[&#x27;status&#x27;] = 1;<br>                    Header(&quot;Location:xxxx.zip&quot;);<br>                    break;<br>            &#125;<br>            return $status;<br>        &#125;<br>            //捕获异常<br>        catch(\Exception $e)<br>        &#123;<br>            $this-&gt;ajaxReturn($status);<br>        &#125;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs php?linenums">//服务器二次验证代码<br>    function getReceiptData($receipt, $isSandbox = false)<br>    &#123;<br>        if ($isSandbox) &#123;<br>            $endpoint = &#x27;https://sandbox.itunes.apple.com/verifyReceipt&#x27;;<br>        &#125;<br>        else &#123;<br>            $endpoint = &#x27;https://buy.itunes.apple.com/verifyReceipt&#x27;;<br>        &#125;<br><br>        $postData = json_encode(array(&quot;receipt-data&quot; =&gt; $receipt));;<br><br>        $ch = curl_init($endpoint);<br>        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);<br>        curl_setopt($ch, CURLOPT_POST, true);<br>        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);<br>        curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, 0);  //这两行一定要加，不加会报SSL 错误<br>        curl_setopt ($ch, CURLOPT_SSL_VERIFYHOST, 0);<br><br><br>        $response = curl_exec($ch);<br>        $errno    = curl_errno($ch);<br>        $errmsg   = curl_error($ch);<br>        curl_close($ch);<br>        //判断时候出错，抛出异常<br>        if ($errno != 0) &#123;<br>            throw new \Exception($errmsg, $errno);<br>        &#125;<br><br>        $data = json_decode($response);<br>        //此处是看到先人们的指导，又看到apple的官方说法改的。否则会审核不过貌似是审核也会走沙盒测试者，<br>        //此处先判断一次返回的status是否=21007 这数据是从测试环境，但它发送到生产环境中进行验证。它发送到测试环境来代替。<br>        if ($data-&gt;status == 21007) &#123;<br>            $this-&gt;getReceiptData($receipt,true);<br>            return;<br>        &#125;<br>        //判断返回的数据是否是对象<br>        if (!is_object($data)) &#123;<br>            throw new \Exception(&#x27;Invalid response data&#x27;);<br>        &#125;<br>        //判断购买时候成功<br>        if (!isset($data-&gt;status) || $data-&gt;status != 0) &#123;<br>            throw new \Exception(&#x27;Invalid receipt&#x27;);<br>        &#125;<br>         $in_app = $data-&gt;receipt-&gt;in_app;<br>        //返回产品的信息<br>        <br>         $status[&#x27;data&#x27;] = array(<br>            &#x27;quantity&#x27; =&gt; $in_app-&gt;quantity,<br>            &#x27;product_id&#x27; =&gt; $in_app-&gt;product_id,<br>            &#x27;transaction_id&#x27; =&gt; $in_app-&gt;transaction_id,<br>            &#x27;purchase_date&#x27; =&gt; $in_app-&gt;purchase_date,<br>            &#x27;app_item_id&#x27; =&gt; $data-&gt;receipt-&gt;app_item_id,<br>        );<br>        return(<br>            $status;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>我一直都困在和后台交互的时候苹果返回的数据中status=21002,哭死。。。因为status=0才是购买成功.</p>
+<ul>
+<li>OC中将苹果所需的凭证其实就是</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs objectivec?linenums">NSData *receipt               = [NSData dataWithContentsOfURL:receiptURL];<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>base64EncodedStringWithOptions一次<br>在PHP在将这个数据json_encode(array(“receipt-data” =&gt; $receipt));一次在传给苹果服务器，自己写百度谷歌一起来真心好难。<br>一遍一遍的改OC和PHP代码，还好公司太小两个都是我在做，我有大把时间和不用麻烦别人。</p>
+</blockquote>
+<h3 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h3><blockquote>
+<p>帮大家理理思路也是我目前知道的最好的app和服务器交互的方法：<br>在支付之前在后台服务器记录一次你的数据，包括product_id，之后才开始去支付支付成功后再和服务器进行比对product_id可以预防app本地破解支付和防止用户篡改(比如他买的518却只支付6块)等.<br>还有就是漏单问题，就是用户买东西成功了，但是和自己服务器交互出现了意外(不会怀孕)，我现在并未尝试但觉得可行(在更新这个博客之前，因为今天周五要回家了所以下周测试)，就是讲xcode的凭证保存到本地，这样用户就可以自己重新点击一次，在和服务器交互一次，将虚拟物品重新不给他一次。</p>
+</blockquote>
+</li>
+</ul>
+<p>参考:</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/e9ae4cece800">应用内支付IAP全部流程</a><br><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/86ac7d3b593a">iOS开发内购全套图文教程</a></p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/iOS/">iOS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/IAP/">IAP</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/03/01/MacMysql/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Mac 上搭建MySQL总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/02/10/talkIsCheap/">
+                        <span class="hidden-mobile">回首2016，展望2017</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","appKey":"6ElnyXcLII1QFX7E7uXVqkaM","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-x-md">
+    <div class="container custom post-custom mx-auto">
+      <div style="text-align:center;"> <a class="qr-trigger" target="_self"><p1>请我一杯可乐</p1><img class="qr-img" src="https://z3.ax1x.com/2021/08/26/hnysyR.png" srcset="/img/loading.gif" lazyload alt="qrcode" /></a> </div>
+    </div>
+  </div>
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

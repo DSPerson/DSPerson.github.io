@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon_title.png">
+  <link rel="icon" href="/img/icon_title.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+早期使用webRTC 问题记录, 后来留下的问题都经过升级版本得到解决，这篇文章意义不是很大了
+">
+  <meta name="author" content="DSperson">
+  <meta name="keywords" content="is Key">
+  
+  <title>iOS WebRTC 使用 - DSperson</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"dsperson.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","app_key":"6ElnyXcLII1QFX7E7uXVqkaM","server_url":"https://fkwcmqvx.lc-cn-n1-shared.com"}},"search_path":"/blog/local_search/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>DSperson</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/null') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="iOS WebRTC 使用">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-09-29 00:00" pubdate>
+        2017年9月29日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      54
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">iOS WebRTC 使用</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>早期使用webRTC 问题记录, 后来留下的问题都经过升级版本得到解决，这篇文章意义不是很大了</p>
+</blockquote>
+<span id="more"></span>
+
+<blockquote>
+<p>这段项目使用WebRTC 的经验,拿出来分享(提醒, 原理部分请看特别感谢. 基础部分会使用模拟代码)<br>本文包含音视频和RTCDataChannel</p>
+</blockquote>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ul>
+<li>Turn Server (47.93.21.132:3478)<blockquote>
+<p>用来打洞的服务器, 这个是我自己搭建的,  可以使用谷歌的(需要梯子. stun:stun.l.google.com:19302)<br>用户名: u1<br>密码: p1</p>
+</blockquote>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs haskell">// 代码注解<br><span class="hljs-type">NSArray</span> *<span class="hljs-class"><span class="hljs-keyword">data</span> = @[@&quot;turn:139.199.190.85:3478&quot; ,@&quot;stun:139.199.190.85:3478&quot;];//服务器</span><br><span class="hljs-title">_stunServerArray</span> = [<span class="hljs-type">NSMutableArray</span> arrayWithCapacity:<span class="hljs-class"><span class="hljs-keyword">data</span>.count];//全局变量</span><br>[<span class="hljs-class"><span class="hljs-keyword">data</span> enumerateObjectsUsingBlock:^(<span class="hljs-type">NSString</span> * <span class="hljs-title">_Nonnull</span> <span class="hljs-title">obj</span>, <span class="hljs-type">NSUInteger</span> <span class="hljs-title">idx</span>, <span class="hljs-type">BOOL</span> * <span class="hljs-title">_Nonnull</span> <span class="hljs-title">stop</span>) &#123;</span><br><span class="hljs-class">        <span class="hljs-type">NSURL</span> *<span class="hljs-title">url</span> = [<span class="hljs-type">NSURL</span> <span class="hljs-type">URLWithString</span>:<span class="hljs-title">obj</span>];</span><br><span class="hljs-class">        <span class="hljs-type">RTCICEServer</span> *<span class="hljs-title">server</span> = [[<span class="hljs-type">RTCICEServer</span> <span class="hljs-title">alloc</span>] <span class="hljs-title">initWithURI</span>:<span class="hljs-title">url</span> <span class="hljs-title">username</span>:@&quot;<span class="hljs-title">u1</span>&quot; <span class="hljs-title">password</span>:@&quot;<span class="hljs-title">p1</span>&quot;]];</span><br><span class="hljs-class">        <span class="hljs-title">if</span> (<span class="hljs-title">server</span>) &#123;</span><br><span class="hljs-class">            [<span class="hljs-title">self</span>.<span class="hljs-title">stunServerArray</span> <span class="hljs-title">addObject</span>:<span class="hljs-title">server</span>];</span><br><span class="hljs-class">        &#125;</span><br>&#125;];<br></code></pre></td></tr></table></figure></li>
+<li>个人服务器<blockquote>
+<p>用来交换A和B的打洞信息(全文都是模拟A给B发送消息. 信息包括但不仅限于sdp、 ICE Candidate…)<br>采用TCP(注意粘包问题.  <strong>本文采用</strong>), WebSocket方式都可以. 亦可以采用Socket加Http请求方式.即时即可</p>
+</blockquote>
+</li>
+<li>WebRTC库<blockquote>
+<p>一个外国人编译好的. 直接pod 使用</p>
+</blockquote>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">pod</span> <span class="hljs-string">&#x27;libjingle_peerconnection&#x27;</span><br></code></pre></td></tr></table></figure>
+<h1 id="项目阶段"><a href="#项目阶段" class="headerlink" title="项目阶段"></a>项目阶段</h1><blockquote>
+<p>单例类</p>
+</blockquote>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs objectivec">+ (<span class="hljs-keyword">instancetype</span>)shareInstance &#123;<br>    <span class="hljs-keyword">static</span> DSWebRTCManager *manager = <span class="hljs-literal">nil</span>;<br>    <span class="hljs-keyword">static</span> <span class="hljs-built_in">dispatch_once_t</span> onceToken;<br>    <span class="hljs-built_in">dispatch_once</span>(&amp;onceToken, ^&#123;<br>        manager = [[DSWebRTCManager alloc] init];<br>        [manager setup];<br>    &#125;);<br>    <span class="hljs-keyword">return</span> manager;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="SDP"><a href="#SDP" class="headerlink" title="SDP"></a>SDP</h2></li>
+</ul>
+<ol>
+<li>加载准备阶段Turn Server</li>
+<li>创建唯一的P2P工厂<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs csharp">- (<span class="hljs-keyword">void</span>)setup &#123;<br>    [<span class="hljs-meta">RTCPeerConnectionFactory initializeSSL</span>];<br>    _factory = [[RTCPeerConnectionFactory alloc] <span class="hljs-keyword">init</span>];<span class="hljs-comment">//全局变量.</span><br>    _isInititor = <span class="hljs-literal">false</span>;<span class="hljs-comment">//这个需要用来判断是否是发起者. 收到init 方为false. 收到answerInit为true. </span><br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>本文采用方式:</strong> 可以想象为A给B发送视频/音频聊天请求, B收到请求后(类型:init)进行判断是否同意, 同意返回同意(类型:answerInit). 否则返回关闭(类型:Bye). 双方关闭音视频, 处理掉相关缓存. 此种方式在音视频方便尤为重要</p>
+</blockquote>
+</li>
+<li>A给B发送消息准备发送音视频消息(本文采用TCP, B是否在线是可以得到的. 而且双方都必须在线才可以. 此处不做代码注解, 即发送TCP消息.B解析出来即可. 发送类型为init)</li>
+<li>假设B同意的情况下. 收到消息使用TCP返回同意消息(answerInit)<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk"> @weakify(self);<br>[self.delegate dspersonReceiveInvitationVideoWithOther:other agree:^(BOOL isAgree) &#123;<br>               @strongify(self);<br>                <span class="hljs-keyword">if</span> (isAgree) &#123;<br>                <span class="hljs-regexp">//</span>同意 发送tcp消息<br>                <span class="hljs-regexp">//</span>模拟代码<br>                <span class="hljs-regexp">//</span>[_tcp send:init(同意)];<br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                 <span class="hljs-regexp">//</span>发送Bye<br>                   <span class="hljs-regexp">//</span>[_tcp send:Byet(不同意)];<br>                &#125;<br>&#125;];<br></code></pre></td></tr></table></figure></li>
+<li>A收到B发送的同意信息</li>
+</ol>
+<ul>
+<li>创建RTCPeerConnection<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk">RTCPeerConnection *connection = [_factory peerConnectionWithICEServers:stunServerArray <br>                                                           constraints:[self peerConnectionConstraints]  <br>                                                              delegate:self];<span class="hljs-regexp">//</span>根据约束创建. 并且将RTCPeerConnection代理RTCPeerConnectionDelegate放在self中<br><span class="hljs-regexp">//</span>全局变量.可以不定义成全局变量. 添加到数组中(本文为了需要改为全局<br><span class="hljs-regexp">//</span>方便使用.⚠️⚠️⚠️ 如果你添加到数组中, 从数组中删除中前,一定要先调用 [connection close]; 否则崩溃)<br>_peerConnection = connection;<br><br></code></pre></td></tr></table></figure></li>
+<li>创建RTCPeerConnection的的约束<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs prolog">- (<span class="hljs-symbol">RTCMediaConstraints</span> *)peerConnectionConstraints &#123;<br>    <span class="hljs-symbol">RTCPair</span> *pair = [[<span class="hljs-symbol">RTCPair</span> alloc] initWithKey:@<span class="hljs-string">&quot;DtlsSrtpKeyAgreement&quot;</span> value:@<span class="hljs-string">&quot;true&quot;</span>];//这个是定义好的.不能更改<br>    <span class="hljs-symbol">RTCMediaConstraints</span> *constraints = [[<span class="hljs-symbol">RTCMediaConstraints</span> alloc] initWithMandatoryConstraints:nil <br>                                                                             optionalConstraints:@[pair]];<br>    return constraints;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<ol start="4">
+<li>创建本地SDP<figure class="highlight gml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gml"><span class="hljs-comment">//会调用RTCPeerConnection 代理 RTCSessionDescriptionDelegate</span><br>[_peerConnection createOfferWithDelegate:<span class="hljs-literal">self</span> constraints:[<span class="hljs-literal">self</span> defaultOfferConstraints]];<br></code></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>Offer约束<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs prolog">- (<span class="hljs-symbol">RTCMediaConstraints</span> *)defaultOfferConstraints &#123;<br>    <span class="hljs-symbol">NSArray</span> *mandatoryConstraints = @[<br>                                      [[<span class="hljs-symbol">RTCPair</span> alloc] initWithKey:@<span class="hljs-string">&quot;OfferToReceiveAudio&quot;</span> value:@<span class="hljs-string">&quot;true&quot;</span>],//是否含有音频<br>                                      [[<span class="hljs-symbol">RTCPair</span> alloc] initWithKey:@<span class="hljs-string">&quot;OfferToReceiveVideo&quot;</span> value:@<span class="hljs-string">&quot;true&quot;</span>]//是否含有视频<br>                                      ];<br>    <span class="hljs-symbol">RTCMediaConstraints</span>* constraints =<br>    [[<span class="hljs-symbol">RTCMediaConstraints</span> alloc]<br>     initWithMandatoryConstraints:mandatoryConstraints<br>     optionalConstraints:nil];<br>    return constraints;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>详解RTCSessionDescriptionDelegate<blockquote>
+<p>RTCSessionDescriptionDelegate 有两个回调</p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>创建本地SDP时候, 会调用<br><span class="hljs-regexp">//</span> 代理方法<span class="hljs-number">2</span><br>- (void)peerConnection:(RTCPeerConnection *)peerConnection<br>    didCreateSessionDescription:(RTCSessionDescription *)sdp<br>                          error:(NSError *)error &#123;<br>   <span class="hljs-regexp">//</span><span class="hljs-number">0</span>.判断是否出现错误<br>   <span class="hljs-keyword">if</span> (error) &#123;<br>           <span class="hljs-regexp">//</span> DSpersonKitLog(@<span class="hljs-string">&quot;\n😂😂😂😂😂😂😂😂发送本地SDP 出现错误😂😂😂😂😂😂😂😂\n%@&quot;</span>, error);<br>           <span class="hljs-regexp">//</span> 出现错误就要给对方发送Bye<br>           <span class="hljs-regexp">//</span>[_tcp send:Bye]; <br>            return;<br>    &#125;<br>       <span class="hljs-regexp">//</span><span class="hljs-number">1</span>. 设置本地SDP. 调用此方法回调用代理方法<span class="hljs-number">2</span>. WebRTC会进行内部保存,此时的代理<span class="hljs-number">2</span>的方法根A其实已经没任何关系了<br>       <span class="hljs-regexp">//</span> <span class="hljs-number">2</span>. B创建Answer sdp发送 给A也会调用代理<span class="hljs-number">2</span> peerConnection.signalingState 状态已经发生改变.所以不会出现死循环问题<br>      [_peerConnection setLocalDescriptionWithDelegate:self sessionDescription:sdp];<br>      <span class="hljs-regexp">//</span><span class="hljs-number">2</span>. 发送SDP给对方<br>      <span class="hljs-regexp">//</span>[ _tcp send:sdp];<br>&#125;<br><span class="hljs-regexp">//</span> 代理方法<span class="hljs-number">2</span><br>- (void)peerConnection:(RTCPeerConnection *)peerConnection<br>    didSetSessionDescriptionWithError:(NSError *)error &#123;<br>    <span class="hljs-regexp">//</span><span class="hljs-number">0</span>.判断是否出现错误<br>   <span class="hljs-keyword">if</span> (error) &#123;<br>           <span class="hljs-regexp">//</span> DSpersonKitLog(@<span class="hljs-string">&quot;\n😂😂😂😂😂😂😂😂发送本地SDP 出现错误😂😂😂😂😂😂😂😂\n%@&quot;</span>, error);<br>           <span class="hljs-regexp">//</span> 出现错误就要给对方发送Bye<br>           <span class="hljs-regexp">//</span>[_tcp send:Bye]; <br>            return;<br>    &#125;<br>   <span class="hljs-regexp">//</span>B正在回答A,远程Offer. 我们需要创建的answer, 和一个本地描述()<br>        <span class="hljs-keyword">if</span> (!_isInititor &amp;&amp; peerConnection.signalingState == RTCSignalingHaveRemoteOffer) &#123;<br>            <span class="hljs-regexp">//</span> DSpersonKitLog(@<span class="hljs-string">&quot;接收到远端发来的Offer, 创建本地Answer&quot;</span>);<br>            <span class="hljs-regexp">//</span>他应该在SetRemoteDescription之后调用, 否则报错. <br>            <span class="hljs-regexp">//</span>创建完会调用代理<span class="hljs-number">1</span>. 给A发送Answer<br>            [_peerConnection createAnswerWithDelegate:self constraints:[self defaultOfferConstraints]];<br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<ol start="5">
+<li>B收到Offer <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>创建远程SDP. 会调用RTCSessionDescriptionDelegate 代理<span class="hljs-number">2</span>. 此时_isInititor = false<br>[_peerConnection setRemoteDescriptionWithDelegate:self sessionDescription:sdp];<br><span class="hljs-regexp">//</span>sdp 是收到消息出来并创建的解析创建的RTCSessionDescription<br></code></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>SDP 创建<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ada">+ (RTCSessionDescription *)ds_descriptionFromDictionary:(NSDictionary *)dic &#123;<br>    <span class="hljs-keyword">if</span> (!dic) &#123;<br>        <span class="hljs-keyword">return</span> nil;<br>    &#125;<br>    NSString *<span class="hljs-keyword">type</span> <span class="hljs-type">= </span>dic[@<span class="hljs-string">&quot;type&quot;</span>];<br>    NSString *sdp = dic[@<span class="hljs-string">&quot;sdp&quot;</span>];<br>    <span class="hljs-keyword">return</span> [[RTCSessionDescription alloc] initWithType:<span class="hljs-keyword">type</span> <span class="hljs-type">sdp:sdp];</span><br><span class="hljs-type"></span>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<ol start="6">
+<li>A收到Answer.<blockquote>
+<p>和B一样收到answer 要添加到远程sdp 中.方法同 步骤5. 但是<code>_isInititor = true</code>. 会调用RTCSessionDescriptionDelegate 代理2方法.但是没有实际效果.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="ICECandidat"><a href="#ICECandidat" class="headerlink" title="ICECandidat"></a>ICECandidat</h2><blockquote>
+<p>ICECandidat 主要和 位于RTCPeerConnectionDelegate 此代理中. 暂时讲解几个此处需要的. 无需主动调用.</p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>代理<span class="hljs-number">1</span>: 新的 ICE Candidate 被发现时调用 需要将信息返回给Socket服务器<br>- (void)peerConnection:(RTCPeerConnection *)peerConnection<br>       gotICECandidate:(RTCICECandidate *)candidate &#123;<br>      <span class="hljs-regexp">//</span> 需要将这些ice 发给对方客户端<br>      <span class="hljs-regexp">//</span>[_tcp send:candidate]<br>&#125;<br></code></pre></td></tr></table></figure>
+<ol>
+<li>A或者B.收到ICE Candidate<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[_peerConnection addICECandidate:ice_candidate]</span><span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs haxe"><span class="hljs-comment">//代理2: 状态变化</span><br>- (void)peerConnection:<span class="hljs-type"></span>(RTCPeerConnection *)peerConnection<br>  iceConnectionChanged:<span class="hljs-type"></span>(RTCICEConnectionState)<span class="hljs-keyword">new</span><span class="hljs-type">State</span>  &#123;<br>    <span class="hljs-keyword">switch</span> (<span class="hljs-keyword">new</span><span class="hljs-type">State</span>) &#123;<br>                <span class="hljs-keyword">case</span> RTCICEConnectionConnected:<span class="hljs-type"></span><br>                &#123;<br>                        <span class="hljs-comment">//除了这个别的都是没打开的状态</span><br>                &#125;<br>                <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> RTCICEConnectionFailed:<span class="hljs-type"></span><br>                &#123;<br>                        <span class="hljs-comment">//这个状态就可以发送Bye了</span><br>                &#125;<br>                <span class="hljs-keyword">break</span>;<br>   &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="媒体"><a href="#媒体" class="headerlink" title="媒体"></a>媒体</h2><blockquote>
+<p>媒体流<code>_meidaStream</code>全局变量</p>
+</blockquote>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sqf">- (RTCMediaStream *)meidaStream &#123;<br>    <span class="hljs-keyword">if</span> (!<span class="hljs-variable">_meidaStream</span>) &#123;<br>        <span class="hljs-variable">_meidaStream</span> = [<span class="hljs-variable">_factory</span> mediaStreamWithLabel:@<span class="hljs-string">&quot;ARDAMS&quot;</span>];<span class="hljs-comment">//`ARDAMS`固定就这么写</span><br>    &#125;<br>    return <span class="hljs-variable">_meidaStream</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h3><ol>
+<li>创建<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-comment">//position : AVCaptureDevicePosition. 摄像头方向</span><br>RTCVideoTrack *videoTrack = [self createVideoTrackWithDirecion:position];<br></code></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs objectivec">- (RTCVideoTrack *)createVideoTrackWithDirecion:(<span class="hljs-built_in">AVCaptureDevicePosition</span>)position &#123;<br>    RTCVideoTrack *localVideoTrack = <span class="hljs-literal">nil</span>;<br><span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> !TARGET_IPHONE_SIMULATOR &amp;&amp; TARGET_OS_IPHONE</span><br>    <span class="hljs-comment">//更新方法. 和网上大多创建方法不同.</span><br>    localVideoTrack = [[RTCVideoTrack alloc] initWithFactory:_factory source:<span class="hljs-keyword">self</span>.source trackId:<span class="hljs-string">@&quot;AVAMSv0&quot;</span>];<span class="hljs-comment">//AVAMSv0不能更改</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span><br>    <span class="hljs-keyword">return</span> localVideoTrack;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><code>self.source</code> 懒加载的方式创建</p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk">- (RTCAVFoundationVideoSource *)source &#123;<br>    <span class="hljs-keyword">if</span> (!_source) &#123;<br>        _source = [[RTCAVFoundationVideoSource alloc] initWithFactory:_factory constraints:[self defaultMediaStreamConstraints]];<br>        <span class="hljs-regexp">//</span>_source.captureSession.sessionPreset = AVCaptureSessionPreset1280x720;<br><span class="hljs-regexp">//</span>        <span class="hljs-keyword">if</span> ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)<br><span class="hljs-regexp">//</span>            [_source.captureSession setSessionPreset:AVCaptureSessionPreset640x480];<br><span class="hljs-regexp">//</span>        <span class="hljs-keyword">else</span> &#123;<br><span class="hljs-regexp">//</span>            [_source.captureSession setSessionPreset:AVCaptureSessionPresetPhoto];<br><span class="hljs-regexp">//</span>        &#125;<br>    &#125;<br>    return _source;<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>媒体约束. 这是安卓给我的.. 添不添加 效果感觉不出来😓</p>
+</blockquote>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs prolog">- (<span class="hljs-symbol">RTCMediaConstraints</span> *)defaultMediaStreamConstraints &#123;<br>    <span class="hljs-symbol">RTCPair</span> *width = [[<span class="hljs-symbol">RTCPair</span> alloc] initWithKey:@<span class="hljs-string">&quot;MAX_VIDEO_WIDTH_CONSTRAINT&quot;</span> value:@<span class="hljs-string">&quot;maxWidth&quot;</span>];<br>    <span class="hljs-symbol">RTCPair</span> *height = [[<span class="hljs-symbol">RTCPair</span> alloc] initWithKey:@<span class="hljs-string">&quot;MAX_VIDEO_HEIGHT_CONSTRAINT&quot;</span> value:@<span class="hljs-string">&quot;maxHeight&quot;</span>];<br>    <span class="hljs-symbol">RTCPair</span> *rate = [[<span class="hljs-symbol">RTCPair</span> alloc] initWithKey:@<span class="hljs-string">&quot;MAX_VIDEO_FPS_CONSTRAINT&quot;</span> value:@<span class="hljs-string">&quot;maxFrameRate&quot;</span>];<br>    return [[<span class="hljs-symbol">RTCMediaConstraints</span> alloc] initWithMandatoryConstraints:nil optionalConstraints:@[width, height, rate]];<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>添加到媒体流中<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[self.meidaStream addVideoTrack:videoTrack]</span><span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+<h3 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h3></li>
+<li>创建音频并添加到媒体流中<figure class="highlight profile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs profile"> RTCAudioTrack *audio = [kApp.factory audioTrackWithID:@<span class="hljs-string">&quot;ARDAMSa0&quot;</span>];<br>[self.meidaStream addAudioTrack:audio];<br></code></pre></td></tr></table></figure>
+<h3 id="添加到P2P通道中"><a href="#添加到P2P通道中" class="headerlink" title="添加到P2P通道中"></a>添加到P2P通道中</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[_peerConnection addStream:self.meidaStream]</span><span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+<h3 id="接收音视频"><a href="#接收音视频" class="headerlink" title="接收音视频"></a>接收音视频</h3><blockquote>
+<p>回到RTCPeerConnectionDelegate代理中</p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk">- (void)peerConnection:(RTCPeerConnection *)peerConnection<br>           addedStream:(RTCMediaStream *)stream  &#123;<br>        <span class="hljs-regexp">//</span>收到远程流.RTCMediaStream这类中包含audioTracks, videoTracks. <br>        <span class="hljs-regexp">//</span>拿到视频流. 这流需要使用RTCEAGLVideoView 这类来渲染.使用起来很简单. 但是记得<br>        <span class="hljs-regexp">//</span>- (void)videoView:(RTCEAGLVideoView*)videoView didChangeVideoSize:(CGSize)size; 这个回调<br>        <span class="hljs-regexp">//</span>当改变尺寸时候会调用.调用时机为初始化调用一次.每次改变尺寸调用.比如说技巧问题的时候<br>        <span class="hljs-regexp">//</span>可以使用代理发送到界面上.这也是真正意义上音视频打洞完成.<br>        RTCVideoTrack *videoTrack = [stream.videoTracks firstObject];<br>        <span class="hljs-regexp">//</span>音频流不用拿到,直接播放就可以了<br>&#125;<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p>提供size改变部分代码</p>
+</blockquote>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs objectivec">- (<span class="hljs-keyword">void</span>)videoView:(RTCEAGLVideoView *)videoView didChangeVideoSize:(<span class="hljs-built_in">CGSize</span>)size &#123;<br>    <span class="hljs-built_in">UIDeviceOrientation</span> orientation = [[<span class="hljs-built_in">UIDevice</span> currentDevice] orientation];<br>    [<span class="hljs-built_in">UIView</span> animateWithDuration:<span class="hljs-number">0.4</span>f animations:^&#123;<br>        <span class="hljs-built_in">CGFloat</span> containerWidth = <span class="hljs-keyword">self</span>.view.frame.size.width;<br>        <span class="hljs-built_in">CGFloat</span> containerHeight = <span class="hljs-keyword">self</span>.view.frame.size.height;<br>        <span class="hljs-built_in">CGSize</span> defaultAspectRatio = <span class="hljs-built_in">CGSizeMake</span>(<span class="hljs-number">4</span>, <span class="hljs-number">3</span>);<br>        <span class="hljs-keyword">if</span> (videoView == <span class="hljs-keyword">self</span>.localView) &#123;<br>            <span class="hljs-keyword">self</span>.localVideoSize = size;<br>            <span class="hljs-built_in">CGSize</span> aspectRatio = <span class="hljs-built_in">CGSizeEqualToSize</span>(size, <span class="hljs-built_in">CGSizeZero</span>) ? defaultAspectRatio : size;<br>            <span class="hljs-built_in">CGRect</span> videoRect = <span class="hljs-keyword">self</span>.view.bounds;<br>            <span class="hljs-built_in">CGRect</span> videoFrame = <span class="hljs-built_in">AVMakeRectWithAspectRatioInsideRect</span>(aspectRatio, videoRect);<br>            <span class="hljs-built_in">CGFloat</span> scaleView = videoFrame.size.width/videoFrame.size.height;<br>            <span class="hljs-built_in">CGFloat</span> endWidth = kDeviceHeight*scaleView;<br>            videoFrame.size.width =endWidth;<br>            videoFrame.size.height = kDeviceHeight;<br>            [<span class="hljs-keyword">self</span>.locaViewTopConstraint setConstant:containerHeight/<span class="hljs-number">2.0</span>f - videoFrame.size.height/<span class="hljs-number">2.0</span>f];<br>            [<span class="hljs-keyword">self</span>.locaViewBottomConstraint setConstant:containerHeight/<span class="hljs-number">2.0</span>f - videoFrame.size.height/<span class="hljs-number">2.0</span>f];<br>            [<span class="hljs-keyword">self</span>.locaViewLeftConstraint setConstant:containerWidth/<span class="hljs-number">2.0</span>f - videoFrame.size.width/<span class="hljs-number">2.0</span>f]; <span class="hljs-comment">//center</span><br>            [<span class="hljs-keyword">self</span>.locaViewRightConstraint setConstant:containerWidth/<span class="hljs-number">2.0</span>f - videoFrame.size.width/<span class="hljs-number">2.0</span>f]; <span class="hljs-comment">//center</span><br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (videoView == <span class="hljs-keyword">self</span>.remoteView) &#123;<br>            <span class="hljs-keyword">self</span>.remoteVideoSize = size;<br>            <span class="hljs-built_in">CGSize</span> aspectRatio = <span class="hljs-built_in">CGSizeEqualToSize</span>(size, <span class="hljs-built_in">CGSizeZero</span>) ? defaultAspectRatio : size;<br>            <span class="hljs-built_in">CGRect</span> videoRect = <span class="hljs-keyword">self</span>.view.bounds;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">self</span>.remoteVideoTrack) &#123;<br>                videoRect = <span class="hljs-built_in">CGRectMake</span>(<span class="hljs-number">0.0</span>f, <span class="hljs-number">0.0</span>f, <span class="hljs-keyword">self</span>.view.frame.size.width/<span class="hljs-number">4.0</span>f, <span class="hljs-keyword">self</span>.view.frame.size.height/<span class="hljs-number">4.0</span>f);<br>                <span class="hljs-keyword">if</span> (orientation == <span class="hljs-built_in">UIDeviceOrientationLandscapeLeft</span> || orientation == <span class="hljs-built_in">UIDeviceOrientationLandscapeRight</span>) &#123;<br>                    videoRect = <span class="hljs-built_in">CGRectMake</span>(<span class="hljs-number">0.0</span>f, <span class="hljs-number">0.0</span>f, <span class="hljs-keyword">self</span>.view.frame.size.height/<span class="hljs-number">4.0</span>f, <span class="hljs-keyword">self</span>.view.frame.size.width/<span class="hljs-number">4.0</span>f);<br>                &#125;<br>            &#125;<br>            <span class="hljs-built_in">CGRect</span> videoFrame = <span class="hljs-built_in">AVMakeRectWithAspectRatioInsideRect</span>(aspectRatio, videoRect);<br>            <br>            <span class="hljs-comment">//Resize the localView accordingly</span><br>            [<span class="hljs-keyword">self</span>.remoteVideoWidthLayout setConstant:videoFrame.size.width];<br>            [<span class="hljs-keyword">self</span>.remoteVideoHeightLayout setConstant:videoFrame.size.height];<br>        &#125;<br>        [<span class="hljs-keyword">self</span>.view layoutIfNeeded];<br>    &#125;];<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="RTCDataChannel"><a href="#RTCDataChannel" class="headerlink" title="RTCDataChannel"></a>RTCDataChannel</h2><blockquote>
+<p>建立互相发送的通道.发送数据类型为<code>NSData</code>. 经过测试数据单次发送大于为<code>20m</code> 左右. 但是会分三次发送.如果超出<code>RTCDataChannel</code> 会直接断开.<code>RTCDataChannel</code> 单次发送量大约为<code>6M</code>左右.<br>这里面存在一个坑. 安卓和iOS都出现了此问题具体原因不明,这个也是大部分童鞋, RTCDataChannel不能打通的原因</p>
+</blockquote>
+</li>
+<li>创建<blockquote>
+<p>和音视频很像, 只需要创建<code>_peerConnection</code> 添加进去即可. </p>
+</blockquote>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>注释部分是参数填写, 可以不必填写.<br><span class="hljs-regexp">//</span>    RTCDataChannelInit *datainit = [[RTCDataChannelInit alloc] init];<br><span class="hljs-regexp">//</span>    datainit.isNegotiated = YES;<br><span class="hljs-regexp">//</span>    datainit.isOrdered = YES;<br><span class="hljs-regexp">//</span>    datainit.maxRetransmits = <span class="hljs-number">30</span>;<br><span class="hljs-regexp">//</span>    datainit.maxRetransmitTimeMs = <span class="hljs-number">30000</span>;<br><span class="hljs-regexp">//</span>    datainit.streamId = <span class="hljs-number">1</span>;<br>RTCDataChannelInit *config = [[RTCDataChannelInit alloc] init];<br>config.isOrdered = YES;<br><span class="hljs-regexp">//</span>_peerConnection 在此时必须已经创建了<br>_dataChannel = [_peerConnection createDataChannelWithLabel:@<span class="hljs-string">&quot;commands&quot;</span> config:config];<br>_dataChannel.delegate = self;<span class="hljs-regexp">//</span>RTCDataChannelDelegate<br></code></pre></td></tr></table></figure></li>
+<li>发送消息<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs arduino">NSData *data = [@<span class="hljs-string">&quot;Hello World!&quot;</span> dataUsingEncoding:NSUTF8StringEncoding];<br>RTCDataBuffer *buffer =  [[RTCDataBuffer alloc] initWithData:data isBinary:<span class="hljs-literal">false</span>];<span class="hljs-comment">//这个地方一定要选false. 安卓那边要求.具体不明</span><br>[_dataChannel sendData:buffer];<br></code></pre></td></tr></table></figure></li>
+<li>RTCDataChannelDelegate 详解<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-comment">//代理1 判断是否打开成功</span><br>- (<span class="hljs-keyword">void</span>)channelDidChangeState:(RTCDataChannel *)channel &#123;<br><span class="hljs-built_in"><span class="hljs-keyword">switch</span></span> (channel.state) &#123;<br>                <br>            <span class="hljs-keyword">case</span> kRTCDataChannelStateOpen:<br>               <span class="hljs-comment">// DSpersonKitLog(@&quot;DataChannel 通道打开&quot;);</span><br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> kRTCDataChannelStateClosing:<br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> kRTCDataChannelStateClosed:<br>                <span class="hljs-comment">//DSpersonKitLog(@&quot;DataChannel 关闭&quot;);</span><br>            &#123;<br>               [_tcp send:Bye];<span class="hljs-comment">//发送失败了</span><br>            &#125;<br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> kRTCDataChannelStateConnecting:<br>               <span class="hljs-comment">// DSpersonKitLog(@&quot;DataChannel 正在开启&quot;);</span><br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">default</span>:<br>                <span class="hljs-keyword">break</span>;<br>        &#125;<br>&#125;<br>- (<span class="hljs-keyword">void</span>)channel:(RTCDataChannel*)channel<br>didReceiveMessageWithBuffer:(RTCDataBuffer*)buffer &#123;<br>  <span class="hljs-comment">//收到RTCDataChannel对面发送过来的消息. 自己去解析就好</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>关闭<blockquote>
+<p>移除之前必须关闭. 否则会在框架内崩溃.</p>
+</blockquote>
+<h3 id="RTCDataChannel坑"><a href="#RTCDataChannel坑" class="headerlink" title="RTCDataChannel坑"></a>RTCDataChannel坑</h3><blockquote>
+<p>刚接触RTCDataChannel 的时候, 运行别人的Demo, 发现一个问题**. 发起者发起, 接受者接受, 成功, DataChannel 开启成功, 发起者可以发送, 接受者可以收到反之则不行. <strong>经过测试安卓和iOS都出现了这个问题(自己跟自己测试, 即iOS-&gt;iOS, Android-&gt;Android).有意思的是, 安卓和iOS可以. 经过对比iOS采用双方都采用初始化赋值给</strong>全局变量**. 安卓采用都采用初始化后不赋值方式, 在协议回调中赋值给全局变量的方式,<strong>随之改为全部初始化, 但是接收端在协议回调中重新再次赋值一次, 发起端不赋值的方式</strong>, DataChannel 可以使用. 原因不明.如有知道的请告知.</p>
+</blockquote>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs sqf"><span class="hljs-comment">//创建方式不变 在RTCPeerConnectionDelegate代理中重新再次赋值一次</span><br>- (void)peerConnection:(RTCPeerConnection *)peerConnection<br>    didOpenDataChannel:(RTCDataChannel *)dataChannel &#123;<br>    dispatch_async_on_main_queue(^&#123;<br>        DSpersonKitLog(@<span class="hljs-string">&quot;RTCDataChannel 通道已经打开&quot;</span>);<br>        <span class="hljs-comment">//发起者和接受者都需要创建, 但是接受者需要在通道打开的时候重新赋值一次, 原因不明</span><br>        <span class="hljs-keyword">if</span> (!<span class="hljs-variable">_isInititor</span>) &#123;<br>            <span class="hljs-variable">_dataChannel</span> = dataChannel;<br>            <span class="hljs-variable">_dataChannel</span>.delegate = self;<br>        &#125;<br>    &#125;);<br>&#125;<br></code></pre></td></tr></table></figure>
+<a target="_blank" rel="noopener" href="http://www.52im.net/thread-1020-1-1.html">此问题我在52im中的说明和询问</a></li>
+</ol>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<li>根据测试. 创建sdp 等方法必须在主线程内调用. 否则代理不执行. 在回调中使用异步线程无所谓.</li>
+<li>如果你在调用此方法时候.,即未使用我使用的方法创建摄像头的方法. 崩溃了在框架中. 网上的解决方法为在主线程内创建. 还是出现崩溃的解决方法.将_factory 的创建由单例移到AppDelegate中创建具体原因不明.(我找了2天/(ㄒoㄒ)/~~)<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dart">RTCVideoSource *videoSource = [_<span class="hljs-keyword">factory</span> videoSourceWithCapturer:capturer constraints:mediaConstraints];<br></code></pre></td></tr></table></figure></li>
+<li>RTCDataChannel 坑问题(在👆)</li>
+<li>如果你出现了崩溃并且找不到原因, 记得看一看是不是未调用<code>close</code> .却移除了缓存<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs sqf">- (void)close &#123;<br>    [<span class="hljs-variable">_peerConnection</span> close];<br>    <span class="hljs-variable">_peerConnection</span> = <span class="hljs-literal">nil</span>;<br>    <span class="hljs-variable">_peerConnection</span> = NULL;<br>    <span class="hljs-variable">_state</span> = kDSP2PStateDisconnect;<br>    <span class="hljs-keyword">if</span> (!<span class="hljs-variable">_dataChannel</span>) &#123;<span class="hljs-comment">//视频的时候不存在_dataChannel</span><br>        return;<br>    &#125;<br>    [<span class="hljs-variable">_dataChannel</span> close];<br>    <span class="hljs-variable">_dataChannel</span> = <span class="hljs-literal">nil</span>;<br>    <span class="hljs-variable">_dataChannel</span> = NULL;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h1></li>
+<li> <code>self.source</code> //创建的时候使用默认, 如果通道打通后可以提升清晰度清晰度. 如果直接使用高清晰度,打洞速度会非常慢.  默认创建的视频大小为<code>480X640</code><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs objectivec"><span class="hljs-comment">//切换摄像头清晰度</span><br><span class="hljs-keyword">self</span>.source.captureSession.sessionPreset = <span class="hljs-built_in">AVCaptureSessionPreset1280x720</span>;<br></code></pre></td></tr></table></figure></li>
+<li>创建音视频的时候, 不建议打开<code>RTCDataChannel</code>, 会影响打洞速度.<h1 id="最大问题"><a href="#最大问题" class="headerlink" title="最大问题"></a>最大问题</h1><blockquote>
+<p>截止于2017.9.29日 仍然未解决. 发送视频的时候, iOS和iOS之间视频界面无卡顿问题. 但是和安卓之间. 打通后不久界面就会卡住. 至今原因不明. 后切换发现视频流应该是不传送了 .因为界面会黑屏. 如果您知道原因请联系我. 谢谢QQ/微信 576895195</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>因为项目不是我的…. 就不拿出来了. <a target="_blank" rel="noopener" href="https://github.com/ISBX/apprtc-ios">有一个Demo是不错的</a>. 采用WebSocket和Http方式交换信息</p>
+</blockquote>
+<blockquote>
+<p>特别感谢<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/c49da1d93df4">@涂耀辉</a>大婶分享的这篇入门教程<br> <a target="_blank" rel="noopener" href="https://github.com/DSPerson/WebRTCMacFramework">自己编译的 MacOS WebRTC Framework</a></p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/iOS/">iOS</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/iOS/">iOS</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/10/09/WX-IDE/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">微信小程序问题总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/03/01/MacMysql/">
+                        <span class="hidden-mobile">Mac 上搭建MySQL总结</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","appKey":"6ElnyXcLII1QFX7E7uXVqkaM","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-x-md">
+    <div class="container custom post-custom mx-auto">
+      <div style="text-align:center;"> <a class="qr-trigger" target="_self"><p1>请我一杯可乐</p1><img class="qr-img" src="https://z3.ax1x.com/2021/08/26/hnysyR.png" srcset="/img/loading.gif" lazyload alt="qrcode" /></a> </div>
+    </div>
+  </div>
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

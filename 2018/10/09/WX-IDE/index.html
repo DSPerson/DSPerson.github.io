@@ -1,0 +1,573 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon_title.png">
+  <link rel="icon" href="/img/icon_title.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+早期尝试 微信小程序
+">
+  <meta name="author" content="DSperson">
+  <meta name="keywords" content="is Key">
+  
+  <title>微信小程序问题总结 - DSperson</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"dsperson.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","app_key":"6ElnyXcLII1QFX7E7uXVqkaM","server_url":"https://fkwcmqvx.lc-cn-n1-shared.com"}},"search_path":"/blog/local_search/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>DSperson</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/null') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="微信小程序问题总结">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-10-09 00:00" pubdate>
+        2018年10月9日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      818 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">微信小程序问题总结</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>早期尝试 微信小程序</p>
+</blockquote>
+<span id="more"></span>
+
+<blockquote>
+<p>我是做iOS开发的，很多人都会说这个微信小程序又是动态的，我不反对苹果对动态的讨厌，毕竟这样很容易不受控制，但是<a target="_blank" rel="noopener" href="http://reactnative.cn/">ReactNative(中文网)</a>不是还活的好好的吗(貌似版本到了0.33了)!而且我觉得可以学个大概万一真用到的时候也不至于无所适从(我先做个非常简陋的电商类，完事后放到下面)。学习！学习！学习！才不会被淘汰。</p>
+</blockquote>
+<blockquote>
+<p>申明 ：会将我认为是问题的问题记录下来，如果您觉得太简单可以关掉。并且我是边做小程序边写的这个博客，会一直更新，！！！MAC环境</p>
+</blockquote>
+<blockquote>
+<p>我可以说不太懂微信小程序的语言。它使用XML+JS ，不支持HTML5，兼容部分CSS写法(从这个句号到这句话完事我是抄来的，因为我不懂XML和JS)。不懂但是不能开发吗？我觉得语言都是相通的，还好之前做了<code>React Native </code>项目(总觉得很相似)，上手小程序也很快。</p>
+</blockquote>
+<blockquote>
+<p>ps: 很冷清。。。我知道我是菜鸟</p>
+</blockquote>
+<h2 id="从头开始-开始一个项目"><a href="#从头开始-开始一个项目" class="headerlink" title="从头开始 - 开始一个项目"></a>从头开始 - 开始一个项目</h2><h3 id="工具下载安装"><a href="#工具下载安装" class="headerlink" title="工具下载安装"></a>工具下载安装</h3><p><a target="_blank" rel="noopener" href="https://servicewechat.com/wxa-dev-logic/download_redirect?type=darwin&from=mpwiki&t=1475052055457">微信小程序开发者工具下载</a></p>
+<ul>
+<li>开发工具缺少appid问题，这个只要破解就可以了(<a target="_blank" rel="noopener" href="http://blog.csdn.net/chenqiuge1984/article/details/52692394">引用 一</a>) </li>
+</ul>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><ul>
+<li>不清楚是开发工具的原因还是怎么回事，说好新建一个项目会有一个QuickStart的，然而我并没有所以打开就是这个样子的</li>
+</ul>
+<p><img src="/blog/img/WX-IDE/startError.png" srcset="/img/loading.gif" lazyload alt="11"></p>
+<ul>
+<li>只能从官网下载一个<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/debug/wxadoc/dev/demo/quickstart.zip?t=1475052047016">HelloWorld</a>直接放大开采创建的项目路径下面</li>
+</ul>
+<h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><p><img src="/blog/img/WX-IDE/appDetail.png" srcset="/img/loading.gif" lazyload alt="默认的"><br>默认就几个文件剩下的就是目录再加上不同名字的这个几个文件当然还得加上.wxml，这个文件就是来书写界面的</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>app.json</p>
+<p><img src="/blog/img/WX-IDE/appJson.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>pages : 应该就是项目加载文件的入口(用应该的原因是我不确定)，如果此处不加载的话后面用了也是不会有所显示的(这里是确定的如果不信可以尝试)。</li>
+<li>window : 程序的窗口</li>
+<li>tabBar : 很好理解就是标签栏(App下面负责切换不同界面)</li>
+</ul>
+<h2 id="需记录问题"><a href="#需记录问题" class="headerlink" title="需记录问题"></a>需记录问题</h2><h3 id="scroll-view"><a href="#scroll-view" class="headerlink" title="scroll-view"></a>scroll-view</h3><h4 id="注意问题"><a href="#注意问题" class="headerlink" title="注意问题"></a>注意问题</h4><ul>
+<li>横向需要给scroll-view 一个高度<code>height: 200px</code>文档上是这么说的但是scroll-view中元素设置高度就可以将scroll-view撑起来了</li>
+</ul>
+<h4 id="只展示第一个元素滑动无效"><a href="#只展示第一个元素滑动无效" class="headerlink" title="只展示第一个元素滑动无效"></a>只展示第一个元素滑动无效</h4><ul>
+<li><p>scroll-view需要设置<code>white-space: nowrap;</code>(百度一下:文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。)</p>
+</li>
+<li><p>子元素设置<code>display:inline-block</code>(百度一下:让一个元素具有“区块元素”的属性（可以设置width和height），又具有“内联元素”的属性（不产生换行))</p>
+</li>
+</ul>
+<p>这样scroll-view可以正常展示了</p>
+<blockquote>
+<p>问题：但是scroll-view如果绑定<code>wx:for = &#39;&#123;&#123;数据&#125;&#125;&#39;</code>子类中有一个view 他一直都是<code>column</code>排列不会是<code>row</code>排列。希望有人帮解决</p>
+</blockquote>
+<p>针对上面问题 我只能用<code>swiper</code>来解决暂时未想到办法.</p>
+<p>发布于2016-10-2日 </p>
+<p><a target="_blank" rel="noopener" href="https://github.com/DSPerson/wx-demo">自己做的demo很丑但是希望给星</a></p>
+<p><a target="_blank" rel="noopener" href="http://blog.csdn.net/chenqiuge1984/article/details/52692394">引用 一</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/07/19/llvm/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">LLVM</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/09/29/webRTC/">
+                        <span class="hidden-mobile">iOS WebRTC 使用</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","appKey":"6ElnyXcLII1QFX7E7uXVqkaM","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-x-md">
+    <div class="container custom post-custom mx-auto">
+      <div style="text-align:center;"> <a class="qr-trigger" target="_self"><p1>请我一杯可乐</p1><img class="qr-img" src="https://z3.ax1x.com/2021/08/26/hnysyR.png" srcset="/img/loading.gif" lazyload alt="qrcode" /></a> </div>
+    </div>
+  </div>
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
