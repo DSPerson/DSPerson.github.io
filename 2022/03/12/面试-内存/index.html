@@ -1,0 +1,740 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icon_title.png">
+  <link rel="icon" href="/img/icon_title.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+iOS内存管理总结
+">
+  <meta name="author" content="DSperson">
+  <meta name="keywords" content="is Key">
+  
+  <title>内存管理 - DSperson</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"dsperson.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","app_key":"6ElnyXcLII1QFX7E7uXVqkaM","server_url":"https://fkwcmqvx.lc-cn-n1-shared.com"}},"search_path":"/local_search/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>DSperson</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                
+                关于
+              </a>
+            </li>
+          
+        
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/null') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="内存管理">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-03-12 09:24" pubdate>
+        2022年3月12日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      24
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- LeanCloud 统计文章PV -->
+      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="leancloud-page-views"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">内存管理</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>iOS内存管理总结</p>
+</blockquote>
+<span id="more"></span>
+
+<h1 id="iOS的内存管理方案"><a href="#iOS的内存管理方案" class="headerlink" title="iOS的内存管理方案"></a>iOS的内存管理方案</h1><blockquote>
+<ol>
+<li>iOS对于小对象（类似<code>NSNumber</code>、<code>NSIndexPath</code>）等，使用的是TaggedPointer</li>
+<li>在arm64位架构下，因为指针不需用到所有64位，为了节约内存，使用了NonPointer_ISA（非指针形的isa，主要利用isa剩余空间）指针</li>
+<li>散列表，其中包含了引用计数表和弱引用表 </li>
+</ol>
+</blockquote>
+<h2 id="TaggedPointer"><a href="#TaggedPointer" class="headerlink" title="TaggedPointer"></a>TaggedPointer</h2><blockquote>
+<p>iOS中的小对象的内存管理方式</p>
+</blockquote>
+<h2 id="NONPOINTER-ISA"><a href="#NONPOINTER-ISA" class="headerlink" title="NONPOINTER_ISA"></a>NONPOINTER_ISA</h2><blockquote>
+<p>数字指针位数</p>
+</blockquote>
+<blockquote>
+<ol start="0">
+<li>最低位（Indexed标志位）如果为0则就是纯指针的isa，1的话就是非指针形isa指针</li>
+<li>是否有关联对象</li>
+<li>是否有C++相关</li>
+<li>33位表达isa指针</li>
+<li>magic 这个不重要</li>
+<li>是否有弱引用指针</li>
+<li>是否在dealloc操作</li>
+<li>是否有外挂的引用计数SideTable（超过一定数量的引用计数将在外面外挂一个此散列表来存储引用计数）</li>
+<li>额外引用计数</li>
+</ol>
+</blockquote>
+<h2 id="SideTables"><a href="#SideTables" class="headerlink" title="SideTables"></a>SideTables</h2><blockquote>
+<p><code>SideTables</code>包含多个<code>SideTable</code></p>
+</blockquote>
+<div align='center'>
+<pre><code class=" mermaid">graph BT;
+    E(weak_table_t)--&gt;A(SideTable);
+    D(RefCountMap)--&gt;A(SideTable);
+    C(spinklock_t)--&gt;A(SideTable);
+    A(SideTable)--&gt;B(SideTables);
+    E1(weak_table_t)--&gt;A1(SideTable);
+    D1(RefCountMap)--&gt;A1(SideTable);
+    C1(spinklock_t)--&gt;A1(SideTable);
+    A1(SideTable)--&gt;B;
+</code></pre>
+</div>
+
+<h3 id="为什么是多个SideTable组成SideTables"><a href="#为什么是多个SideTable组成SideTables" class="headerlink" title="为什么是多个SideTable组成SideTables"></a>为什么是多个SideTable组成SideTables</h3><blockquote>
+<p>主要是为了解决效率问题. 当程序创建成千上万个对象的时候, 当调用引用计数改变的时候, 可能会在不同的线程中, 这个时候就需要加锁, 如果所有对象都在一个<code>SideTable</code>中, 就会存在效率问题. </p>
+</blockquote>
+<h3 id="系统如果解决这种效率问题"><a href="#系统如果解决这种效率问题" class="headerlink" title="系统如果解决这种效率问题"></a>系统如果解决这种效率问题</h3><blockquote>
+<p>引入了分离锁的概念. 假如建立8个这样的<code>SideTable</code>, 对应就是8个锁, 将所有对象分配到不同表中, 这样在不同表中的对象就可以做到并发操作, 同一个表中进行顺序操作. 提高访问效率</p>
+</blockquote>
+<h3 id="如何快速分流-如何快速定位一个对象在那个SideTable表中"><a href="#如何快速分流-如何快速定位一个对象在那个SideTable表中" class="headerlink" title="如何快速分流(如何快速定位一个对象在那个SideTable表中)"></a>如何快速分流(如何快速定位一个对象在那个SideTable表中)</h3><blockquote>
+<p><code>SideTable</code> 他本质是一个<code>Hash</code>表, 可以使用对象的指针地址, 经过<code>Hash</code>函数, 找到目标对象的索引值</p>
+</blockquote>
+<div align='center'>
+<pre><code class=" mermaid">graph LR;
+	A(对象指针地址) --Hash函数--&gt; B(SideTable);
+</code></pre>
+</div>
+
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">f<span class="hljs-comment">(prt)</span> = <span class="hljs-comment">(uniptr_t)</span>prt <span class="hljs-meta">%</span> array.cou<span class="hljs-symbol">nt</span><br></code></pre></td></tr></table></figure>
+<h3 id="spinlock-t"><a href="#spinlock-t" class="headerlink" title="spinlock_t"></a>spinlock_t</h3><blockquote>
+<p><del>使用<code>OSSpinLock</code>自旋锁, 是一种忙等锁, 线程反复检查锁变量是否可用, 不会被挂起. 避免了进程上下文的调度开销，适合阻塞很短时间的场合.</del> 因为优先级翻转问题被苹果抛弃了. <a target="_blank" rel="noopener" href="https://blog.ibireme.com/2016/01/16/spinlock_is_unsafe_in_ios/">解释详情</a><br>iOS 10以后替换为<code>os_unfair_lock</code>,  它是一个互斥锁,  他保存这线程中的所有权信息. 在加锁后, 处于线程休眠的状态.</p>
+</blockquote>
+<h3 id="RefcountMap-引用计数表"><a href="#RefcountMap-引用计数表" class="headerlink" title="RefcountMap 引用计数表"></a>RefcountMap 引用计数表</h3><blockquote>
+<p>本质也是一个Hash表.</p>
+</blockquote>
+<blockquote>
+<p>根据对象指针地址, 经过一个伪装(用来躲避一些监测工具如Leak)的操作, 获取对象的引用计数.</p>
+</blockquote>
+<div align='center'>
+<pre><code class=" mermaid">graph LR;
+	A(ptr) --DisguisedPtr传入objc_object --&gt; B(size_t);
+</code></pre>
+</div>
+
+<blockquote>
+<ol start="0">
+<li>是否有弱引用</li>
+<li>是否在deallocating</li>
+<li>RC 剩下保存引用计数值(向右偏移2位)</li>
+</ol>
+</blockquote>
+<h3 id="weak-table-t"><a href="#weak-table-t" class="headerlink" title="weak_table_t"></a>weak_table_t</h3><blockquote>
+<p>根据对象指针找到<code>weak_entry_t</code>, 进行存储</p>
+</blockquote>
+<div align='center'>
+<pre><code class=" mermaid">graph LR;
+	A(ptr) --Hash函数 --&gt; B(weak_entry_t);
+</code></pre>
+</div>
+<div align='center'>
+<pre><code class=" mermaid">graph BT;
+	B(weak_entry_t);
+	C(weakPrt) --&gt; B;
+	D(weakPrt) --&gt; B;
+	E(weakPrt) --&gt; B;
+	F(...) --&gt; B;
+</code></pre>
+</div>
+
+
+<h2 id="MRC"><a href="#MRC" class="headerlink" title="MRC"></a>MRC</h2><h3 id="什么是MRC"><a href="#什么是MRC" class="headerlink" title="什么是MRC"></a>什么是MRC</h3><blockquote>
+<p>通过手动引用计数来管理对象的引用计数</p>
+</blockquote>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-comment">// 常用引用计数函数</span><br>alloc<br>retain<br>rataincount<br>release<br><span class="hljs-built_in">auto</span>release<br></code></pre></td></tr></table></figure>
+<h3 id="alloc-原理"><a href="#alloc-原理" class="headerlink" title="alloc 原理"></a>alloc 原理</h3><blockquote>
+<p>调用alloc, 分配内存(内存对齐16), 此时并没有给对象的引用计数赋值为1</p>
+</blockquote>
+<div align='center'>
+
+<pre><code class=" mermaid">graph TD;
+	A(alloc)--&gt;B(_objc_rootAlloc);
+	B--&gt;C(callAlloc);
+	C--&gt;D(calloc);
+	
+</code></pre>
+</div>
+
+<h3 id="retain"><a href="#retain" class="headerlink" title="retain"></a>retain</h3><blockquote>
+<p>经过两次Hash函数找到对象的引用计数值+1</p>
+</blockquote>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">SideTable&amp; table = SideTables()[<span class="hljs-keyword">this</span>];<br>size_t&amp; <span class="hljs-built_in">ref</span>cntStorage = table.<span class="hljs-built_in">ref</span>cnts[<span class="hljs-keyword">this</span>];<br><span class="hljs-keyword">if</span> (! (<span class="hljs-built_in">ref</span>cntStorage &amp; SIDE_TABLE_RC_PINNED)) &#123;<br>   <span class="hljs-built_in">ref</span>cntStorage += SIDE_TABLE_RC_ONE;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="release"><a href="#release" class="headerlink" title="release"></a>release</h3><blockquote>
+<p>和<code>retain</code>正好相反</p>
+</blockquote>
+<h3 id="retainCount"><a href="#retainCount" class="headerlink" title="retainCount"></a>retainCount</h3><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-built_in">uint</span>ptr_t<br>objc_object::sidetable_retainCount()<br>&#123;<br>    SideTable&amp; table = SideTables()[<span class="hljs-keyword">this</span>];<br><br>    size_t <span class="hljs-built_in">ref</span>cnt_result = <span class="hljs-number">1</span>;<br>    <br>    table.lock();<br>    RefcountMap::iterator it = table.<span class="hljs-built_in">ref</span>cnts.find(<span class="hljs-keyword">this</span>);<br>    <span class="hljs-keyword">if</span> (it != table.<span class="hljs-built_in">ref</span>cnts.end()) &#123;<br>        <span class="hljs-comment">/// 对象为空 默认就是1</span><br>        <span class="hljs-built_in">ref</span>cnt_result += it-&gt;second &gt;&gt; SIDE_TABLE_RC_SHIFT;<br>    &#125;<br>    table.unlock();<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">ref</span>cnt_result;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="dealloc"><a href="#dealloc" class="headerlink" title="dealloc"></a>dealloc</h3><blockquote>
+<ol>
+<li>对象释放</li>
+</ol>
+</blockquote>
+<div align='center'>
+
+<pre><code class=" mermaid">graph TD;
+	tip(提示)-.虚线是小几率.-&gt;Z(slowpath);
+	A(dealloc)--&gt;B(_objc_rootDealloc);
+	B--&gt;C(rootDealloc);
+	C--&gt;D&#123;是否直接释放?&#125;;
+	E(nonpointer)--是--&gt;D;
+	F(weakly_referenced)--否--&gt;D;
+	I(has_cxx_dtor)--否--&gt;D;
+	G(has_assoc)--否--&gt;D;
+	H(has_sidetable_rc)--否--&gt;D;
+	D--是--&gt;K(free);
+	D-.否.-&gt;L(object_dispose);
+	L--&gt;M(objc_destructInstance);
+	M--&gt;K;
+</code></pre>
+</div>
+
+<blockquote>
+<ol start="2">
+<li>C++和关联对象处理</li>
+</ol>
+</blockquote>
+<div align='center'>
+
+<pre><code class=" mermaid">graph TD;
+	A(objc_destructInstance)--&gt;B&#123;hasCxxDtor&#125;;
+	B-.是.-&gt;C(object_cxxDestruct);
+	B--否--&gt;D&#123;hasAssociatedObject&#125;;
+	D-.是.-&gt;E(_object_remove_assocations);
+	D--否--&gt;F[clearDeallocating];
+	C --&gt; D;
+	E --&gt; F;
+</code></pre>
+</div>
+
+<blockquote>
+<ol start="3">
+<li>引用计数处理, <code>weak_clear_no_lock </code> 将弱引用自动置为nil; <code>table-&gt;refcnts-&gt;erase</code> 擦除对应额外的引用计数</li>
+</ol>
+</blockquote>
+<div align='center'>
+
+<pre><code class=" mermaid">graph TD;
+	A(clearDeallocating)--&gt;B&#123;是否是指针型isa&#125;;
+	B-.是.-&gt;C(sidetable_clearDeallocating);
+	C--&gt;G1(weak_clear_no_lock);
+	G1--&gt;H1(table-&gt;refcnts-&gt;erase);
+	H1--&gt;F[结束];
+	
+	B--否--&gt;D&#123;是否含有弱引用或者额外引用计数表&#125;;
+	D-.是.-&gt;E(clearDeallocating_slow);
+	E--&gt;J&#123;是否有弱引用&#125;;
+	J--是--&gt;G(weak_clear_no_lock);
+	J--否--&gt;K&#123;是否有额外引用计数表&#125;;
+	K--是--&gt;H(table-&gt;refcnts-&gt;erase);
+	K--否--&gt;F;
+	G--&gt;K;
+	H--&gt;F;
+	D--否--&gt;F;
+	
+</code></pre>
+</div>
+
+<h2 id="ARC"><a href="#ARC" class="headerlink" title="ARC"></a>ARC</h2><h3 id="什么是ARC"><a href="#什么是ARC" class="headerlink" title="什么是ARC"></a>什么是ARC</h3><blockquote>
+<p>自动引用计数管理内存.<br>ARC是由编译器自动插入<code>retain</code>和<code>Release</code>, 并且是由<code>LLVM</code>和<code>Runtime</code>共同协作的结果.</p>
+</blockquote>
+<h3 id="弱引用管理"><a href="#弱引用管理" class="headerlink" title="弱引用管理"></a>弱引用管理</h3><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><blockquote>
+<p>给一个对象添加弱引用</p>
+</blockquote>
+<div align='center'>
+<pre><code class=" mermaid">graph TD;
+	A(objc_initWeak)--&gt;B(storeWeak);
+	B--&gt;C&#123;weak_register_no_lock&#125;;
+	C--有--&gt;D(通过Hash找到weak_entry_t添加进入);
+	C--没有--&gt;G(新建一个weak_entry_t);
+</code></pre>
+</div>
+
+<h4 id="释放"><a href="#释放" class="headerlink" title="释放"></a>释放</h4><blockquote>
+<p>当一个对象被调到用dealloc之后，那么在内部实现当中会去调用它weak_clear_no_lock的函数, 去执行清除相关操作，在函数中会根据当前对象指针查找到弱引用表，把当前对象相对应的所有弱引用取出来, 是一个数组，遍历该数组将对象置为nil.</p>
+</blockquote>
+<div align='center'>
+<pre><code class=" mermaid">graph TD;
+	A(dealloc)--&gt;B(weak_clear_no_lock);
+	B--&gt;C(找到所有的weak_referrer_t);
+	C--&gt;D(遍历将对象置为nil);
+	D--&gt;F(从weak_table_t删除weak_entry_t);
+</code></pre>
+</div>
+
+
+<h3 id="AutoreleasePool"><a href="#AutoreleasePool" class="headerlink" title="AutoreleasePool"></a>AutoreleasePool</h3><blockquote>
+<p>以栈为节点通过双向链表形式组合而成, 并且和线程一一对应.</p>
+</blockquote>
+<blockquote>
+<p>释放时机: 当前<code>Runloop</code>将要结束的时候调用<code>AutorepleasePoolPage::Pop</code>,  给所有对象发送<code>release</code></p>
+</blockquote>
+<blockquote>
+<p>嵌套调用相当于增加对象到Page中</p>
+</blockquote>
+<h4 id="autoreleasePool"><a href="#autoreleasePool" class="headerlink" title="@autoreleasePool"></a>@autoreleasePool</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@autoreleasePool</span> &#123;&#125; <br><span class="hljs-comment">//解析</span><br>void *pool objc_autoreleasePoolPush();<br>&#123;&#125; 中代码<br><span class="hljs-selector-tag">objc_autoreleasePoolPop</span>(pool);<br></code></pre></td></tr></table></figure>
+
+<div align='center'>
+<pre><code class=" mermaid">graph TD;
+	A(objc_autoreleasePoolPush)--&gt;B(AutorepleasePoolPage::Push);
+	C(objc_autoreleasePoolPop)--&gt;D(AutorepleasePoolPage::Pop);
+</code></pre>
+</div>
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/iOS/">iOS</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%86%85%E5%AD%98/">内存</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/12/28/Godot01-Camera/">
+                        <span class="hidden-mobile">Godot-Camera2D</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"fKwCmQVXP4fwdbaOiqD5zeNS-gzGzoHsz","appKey":"6ElnyXcLII1QFX7E7uXVqkaM","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-x-md">
+    <div class="container custom post-custom mx-auto">
+      <div style="text-align:center;"> <a class="qr-trigger" target="_self"><p1>请我一杯可乐</p1><img class="qr-img" src="https://z3.ax1x.com/2021/08/26/hnysyR.png" srcset="/img/loading.gif" lazyload alt="qrcode" /></a> </div>
+    </div>
+  </div>
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- LeanCloud 统计PV -->
+        <span id="leancloud-site-pv-container" style="display: none">
+            总访问量 
+            <span id="leancloud-site-pv"></span>
+             次
+          </span>
+      
+      
+        <!-- LeanCloud 统计UV -->
+        <span id="leancloud-site-uv-container" style="display: none">
+            总访客数 
+            <span id="leancloud-site-uv"></span>
+             人
+          </span>
+      
+
+    
+  </div>
+
+
+  
+
+  
+
+</footer>
+
+<script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({theme: 'dark'});
+  }
+</script>
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script defer src="/js/leancloud.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/mermaid@7.1.2/dist/mermaid.min.js" ></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize(null);
+    }
+  </script>
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
