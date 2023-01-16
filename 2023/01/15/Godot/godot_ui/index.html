@@ -15,12 +15,12 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="
-做游戏，爱游戏，不知这次能坚持多久。
+Godot UI 备忘录
 ">
   <meta name="author" content="DSperson">
   <meta name="keywords" content="is Key">
   
-  <title>Godot 技巧备忘录 - DSperson</title>
+  <title>Godot UI备忘录 - DSperson</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -155,12 +155,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/img/godot/640.png') no-repeat center center;
+         style="background: url('https://godotengine.org/storage/app/uploads/public/63c/17e/368/63c17e3689796351687911.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Godot 技巧备忘录">
+            <span class="h2" id="subtitle" title="Godot UI备忘录">
               
             </span>
 
@@ -170,8 +170,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-11-20 00:00" pubdate>
-        2021年11月20日 凌晨
+      <time datetime="2023-01-15 16:00" pubdate>
+        2023年1月15日 下午
       </time>
     </span>
   
@@ -182,7 +182,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      337 字
+      82 字
     </span>
   
 
@@ -192,7 +192,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      1
        分钟
     </span>
   
@@ -230,48 +230,21 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Godot 技巧备忘录</h1>
+            <h1 style="display: none">Godot UI备忘录</h1>
             
             <div class="markdown-body">
               <blockquote>
-<p>做游戏，爱游戏，不知这次能坚持多久。</p>
+<p>Godot UI 备忘录</p>
 </blockquote>
 <span id="more"></span> 
 
-<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h3 id="Group-分组概念"><a href="#Group-分组概念" class="headerlink" title="Group 分组概念"></a>Group 分组概念</h3><blockquote>
-<p>如果发现玩家潜入秘密基地, 则可以使用 <code>SceneTree.call_group() </code>发出警报声来通知所有敌人:</p>
+<h3 id="Size-Flag心得"><a href="#Size-Flag心得" class="headerlink" title="Size Flag心得"></a>Size Flag心得</h3><blockquote>
+<p>应该是在UI中使用, 在父Container节点中调节位置. 记住: 是自己在父类中位置</p>
 </blockquote>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">get_tree</span><span class="hljs-params">()</span></span><span class="hljs-selector-class">.call_group</span>(<span class="hljs-string">&quot;enemies&quot;</span>， <span class="hljs-string">&quot;player_was_discovered&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><blockquote>
-<p>延时1s执行</p>
+<h3 id="min-size-在动画中小技巧"><a href="#min-size-在动画中小技巧" class="headerlink" title="min size 在动画中小技巧"></a>min size 在动画中小技巧</h3><blockquote>
+<p>如果再UI 尺寸动画中, 只处理size的动画属性, 他只会左边固定, 没办法从中间开始动画</p>
 </blockquote>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">yield</span><span class="hljs-params">(get_tree()</span></span><span class="hljs-selector-class">.create_timer</span>(<span class="hljs-number">1.0</span>), <span class="hljs-string">&quot;timeout&quot;</span>)<br></code></pre></td></tr></table></figure>
-
-<h3 id="释放"><a href="#释放" class="headerlink" title="释放"></a>释放</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta">#最好使用, 它会在空闲的安全的删除节点</span><br>node.queue_free()<br></code></pre></td></tr></table></figure>
-
-<h3 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a>碰撞</h3><blockquote>
-<p>move_and_slide()</p>
-</blockquote>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-tag">var</span> velocity = Vector(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)<br><span class="hljs-comment">//不能 乘以 delta， 函数内部已经默认包含了此参数</span><br><span class="hljs-function"><span class="hljs-title">move_and_slide</span><span class="hljs-params">(velocity)</span></span> <br></code></pre></td></tr></table></figure>
-
-<h3 id="跟随"><a href="#跟随" class="headerlink" title="跟随"></a>跟随</h3><blockquote>
-<p>look_at简直是跟随鼠标转向的神器<br>例子： 当玩家拿着枪，鼠标的方向就是玩家瞄准的方向</p>
-</blockquote>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式1 最简单的方式, 在玩家的脚本中</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>	look<span class="hljs-constructor">_at(<span class="hljs-params">get_global_mouse_position</span>()</span>)<br></code></pre></td></tr></table></figure>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式2 他们(方式1和2)其实相等</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>	get<span class="hljs-constructor">_global_mouse_position()</span> - get<span class="hljs-constructor">_global_position()</span><br>	rotation = dir.angle<span class="hljs-literal">()</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><blockquote>
-<p>Area2d <a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html#overlap-detection">文档</a></p>
-</blockquote>
-<ul>
-<li><p> 区域对于子弹和其他弹丸物体来说是非常好用, 它可以击中并造成伤害, 但不需要其他物理效果, 如弹跳.</p>
-</li>
-<li><p> 用敌人周围的一个大圆圈区域设定为 “探测” 半径, 当玩家在该区域外时, 敌人就无法 “看到” 玩家.</p>
-</li>
-<li><p>“安保摄像头” - 在有多个摄像头的大型关卡中, 在每个摄像头上附加区域(area), 并在玩家进入时激活它们.</p>
-</li>
-</ul>
+<p><img src="/img/godot/godot_ui.png" srcset="/img/loading.gif" lazyload alt="img"></p>
 
             </div>
             <hr>
@@ -308,18 +281,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/12/20/ios-xcframework/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ios xcframework合成</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/11/01/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%87%E5%BF%98%E5%BD%95/">
-                        <span class="hidden-mobile">命令行备忘录</span>
+                      <a href="/2022/03/12/%E9%9D%A2%E8%AF%95-%E5%86%85%E5%AD%98/">
+                        <span class="hidden-mobile">内存管理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

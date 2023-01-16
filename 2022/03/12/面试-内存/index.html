@@ -192,7 +192,7 @@ iOS内存管理总结
       <i class="iconfont icon-clock-fill"></i>
       
       
-      24
+      22
        分钟
     </span>
   
@@ -268,16 +268,15 @@ iOS内存管理总结
 <p><code>SideTables</code>包含多个<code>SideTable</code></p>
 </blockquote>
 <div align='center'>
-<pre><code class=" mermaid">graph BT;
-    E(weak_table_t)--&gt;A(SideTable);
-    D(RefCountMap)--&gt;A(SideTable);
-    C(spinklock_t)--&gt;A(SideTable);
-    A(SideTable)--&gt;B(SideTables);
-    E1(weak_table_t)--&gt;A1(SideTable);
-    D1(RefCountMap)--&gt;A1(SideTable);
-    C1(spinklock_t)--&gt;A1(SideTable);
-    A1(SideTable)--&gt;B;
-</code></pre>
+<pre class="mermaid">graph BT;
+    E(weak_table_t)-->A(SideTable);
+    D(RefCountMap)-->A(SideTable);
+    C(spinklock_t)-->A(SideTable);
+    A(SideTable)-->B(SideTables);
+    E1(weak_table_t)-->A1(SideTable);
+    D1(RefCountMap)-->A1(SideTable);
+    C1(spinklock_t)-->A1(SideTable);
+    A1(SideTable)-->B;</pre>
 </div>
 
 <h3 id="为什么是多个SideTable组成SideTables"><a href="#为什么是多个SideTable组成SideTables" class="headerlink" title="为什么是多个SideTable组成SideTables"></a>为什么是多个SideTable组成SideTables</h3><blockquote>
@@ -290,9 +289,8 @@ iOS内存管理总结
 <p><code>SideTable</code> 他本质是一个<code>Hash</code>表, 可以使用对象的指针地址, 经过<code>Hash</code>函数, 找到目标对象的索引值</p>
 </blockquote>
 <div align='center'>
-<pre><code class=" mermaid">graph LR;
-	A(对象指针地址) --Hash函数--&gt; B(SideTable);
-</code></pre>
+<pre class="mermaid">graph LR;
+    A(对象指针地址) --Hash函数--> B(SideTable);</pre>
 </div>
 
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs gcode">f<span class="hljs-comment">(prt)</span> = <span class="hljs-comment">(uniptr_t)</span>prt <span class="hljs-meta">%</span> array.cou<span class="hljs-symbol">nt</span><br></code></pre></td></tr></table></figure>
@@ -306,9 +304,8 @@ iOS内存管理总结
 <p>根据对象指针地址, 经过一个伪装(用来躲避一些监测工具如Leak)的操作, 获取对象的引用计数.</p>
 </blockquote>
 <div align='center'>
-<pre><code class=" mermaid">graph LR;
-	A(ptr) --DisguisedPtr传入objc_object --&gt; B(size_t);
-</code></pre>
+<pre class="mermaid">graph LR;
+    A(ptr) --DisguisedPtr传入objc_object --> B(size_t);</pre>
 </div>
 
 <blockquote>
@@ -322,18 +319,16 @@ iOS内存管理总结
 <p>根据对象指针找到<code>weak_entry_t</code>, 进行存储</p>
 </blockquote>
 <div align='center'>
-<pre><code class=" mermaid">graph LR;
-	A(ptr) --Hash函数 --&gt; B(weak_entry_t);
-</code></pre>
+<pre class="mermaid">graph LR;
+    A(ptr) --Hash函数 --> B(weak_entry_t);</pre>
 </div>
 <div align='center'>
-<pre><code class=" mermaid">graph BT;
-	B(weak_entry_t);
-	C(weakPrt) --&gt; B;
-	D(weakPrt) --&gt; B;
-	E(weakPrt) --&gt; B;
-	F(...) --&gt; B;
-</code></pre>
+<pre class="mermaid">graph BT;
+    B(weak_entry_t);
+    C(weakPrt) --> B;
+    D(weakPrt) --> B;
+    E(weakPrt) --> B;
+    F(...) --> B;</pre>
 </div>
 
 
@@ -346,12 +341,10 @@ iOS内存管理总结
 </blockquote>
 <div align='center'>
 
-<pre><code class=" mermaid">graph TD;
-	A(alloc)--&gt;B(_objc_rootAlloc);
-	B--&gt;C(callAlloc);
-	C--&gt;D(calloc);
-	
-</code></pre>
+<pre class="mermaid">graph TD;
+    A(alloc)-->B(_objc_rootAlloc);
+    B-->C(callAlloc);
+    C-->D(calloc);</pre>
 </div>
 
 <h3 id="retain"><a href="#retain" class="headerlink" title="retain"></a>retain</h3><blockquote>
@@ -369,21 +362,20 @@ iOS内存管理总结
 </blockquote>
 <div align='center'>
 
-<pre><code class=" mermaid">graph TD;
-	tip(提示)-.虚线是小几率.-&gt;Z(slowpath);
-	A(dealloc)--&gt;B(_objc_rootDealloc);
-	B--&gt;C(rootDealloc);
-	C--&gt;D&#123;是否直接释放?&#125;;
-	E(nonpointer)--是--&gt;D;
-	F(weakly_referenced)--否--&gt;D;
-	I(has_cxx_dtor)--否--&gt;D;
-	G(has_assoc)--否--&gt;D;
-	H(has_sidetable_rc)--否--&gt;D;
-	D--是--&gt;K(free);
-	D-.否.-&gt;L(object_dispose);
-	L--&gt;M(objc_destructInstance);
-	M--&gt;K;
-</code></pre>
+<pre class="mermaid">graph TD;
+    tip(提示)-.虚线是小几率.->Z(slowpath);
+    A(dealloc)-->B(_objc_rootDealloc);
+    B-->C(rootDealloc);
+    C-->D{是否直接释放?};
+    E(nonpointer)--是-->D;
+    F(weakly_referenced)--否-->D;
+    I(has_cxx_dtor)--否-->D;
+    G(has_assoc)--否-->D;
+    H(has_sidetable_rc)--否-->D;
+    D--是-->K(free);
+    D-.否.->L(object_dispose);
+    L-->M(objc_destructInstance);
+    M-->K;</pre>
 </div>
 
 <blockquote>
@@ -393,15 +385,14 @@ iOS内存管理总结
 </blockquote>
 <div align='center'>
 
-<pre><code class=" mermaid">graph TD;
-	A(objc_destructInstance)--&gt;B&#123;hasCxxDtor&#125;;
-	B-.是.-&gt;C(object_cxxDestruct);
-	B--否--&gt;D&#123;hasAssociatedObject&#125;;
-	D-.是.-&gt;E(_object_remove_assocations);
-	D--否--&gt;F[clearDeallocating];
-	C --&gt; D;
-	E --&gt; F;
-</code></pre>
+<pre class="mermaid">graph TD;
+    A(objc_destructInstance)-->B{hasCxxDtor};
+    B-.是.->C(object_cxxDestruct);
+    B--否-->D{hasAssociatedObject};
+    D-.是.->E(_object_remove_assocations);
+    D--否-->F[clearDeallocating];
+    C --> D;
+    E --> F;</pre>
 </div>
 
 <blockquote>
@@ -411,25 +402,23 @@ iOS内存管理总结
 </blockquote>
 <div align='center'>
 
-<pre><code class=" mermaid">graph TD;
-	A(clearDeallocating)--&gt;B&#123;是否是指针型isa&#125;;
-	B-.是.-&gt;C(sidetable_clearDeallocating);
-	C--&gt;G1(weak_clear_no_lock);
-	G1--&gt;H1(table-&gt;refcnts-&gt;erase);
-	H1--&gt;F[结束];
-	
-	B--否--&gt;D&#123;是否含有弱引用或者额外引用计数表&#125;;
-	D-.是.-&gt;E(clearDeallocating_slow);
-	E--&gt;J&#123;是否有弱引用&#125;;
-	J--是--&gt;G(weak_clear_no_lock);
-	J--否--&gt;K&#123;是否有额外引用计数表&#125;;
-	K--是--&gt;H(table-&gt;refcnts-&gt;erase);
-	K--否--&gt;F;
-	G--&gt;K;
-	H--&gt;F;
-	D--否--&gt;F;
-	
-</code></pre>
+<pre class="mermaid">graph TD;
+    A(clearDeallocating)-->B{是否是指针型isa};
+    B-.是.->C(sidetable_clearDeallocating);
+    C-->G1(weak_clear_no_lock);
+    G1-->H1(table->refcnts->erase);
+    H1-->F[结束];
+    
+    B--否-->D{是否含有弱引用或者额外引用计数表};
+    D-.是.->E(clearDeallocating_slow);
+    E-->J{是否有弱引用};
+    J--是-->G(weak_clear_no_lock);
+    J--否-->K{是否有额外引用计数表};
+    K--是-->H(table->refcnts->erase);
+    K--否-->F;
+    G-->K;
+    H-->F;
+    D--否-->F;</pre>
 </div>
 
 <h2 id="ARC"><a href="#ARC" class="headerlink" title="ARC"></a>ARC</h2><h3 id="什么是ARC"><a href="#什么是ARC" class="headerlink" title="什么是ARC"></a>什么是ARC</h3><blockquote>
@@ -439,24 +428,22 @@ iOS内存管理总结
 <p>给一个对象添加弱引用</p>
 </blockquote>
 <div align='center'>
-<pre><code class=" mermaid">graph TD;
-	A(objc_initWeak)--&gt;B(storeWeak);
-	B--&gt;C&#123;weak_register_no_lock&#125;;
-	C--有--&gt;D(通过Hash找到weak_entry_t添加进入);
-	C--没有--&gt;G(新建一个weak_entry_t);
-</code></pre>
+<pre class="mermaid">graph TD;
+    A(objc_initWeak)-->B(storeWeak);
+    B-->C{weak_register_no_lock};
+    C--有-->D(通过Hash找到weak_entry_t添加进入);
+    C--没有-->G(新建一个weak_entry_t);</pre>
 </div>
 
 <h4 id="释放"><a href="#释放" class="headerlink" title="释放"></a>释放</h4><blockquote>
 <p>当一个对象被调到用dealloc之后，那么在内部实现当中会去调用它weak_clear_no_lock的函数, 去执行清除相关操作，在函数中会根据当前对象指针查找到弱引用表，把当前对象相对应的所有弱引用取出来, 是一个数组，遍历该数组将对象置为nil.</p>
 </blockquote>
 <div align='center'>
-<pre><code class=" mermaid">graph TD;
-	A(dealloc)--&gt;B(weak_clear_no_lock);
-	B--&gt;C(找到所有的weak_referrer_t);
-	C--&gt;D(遍历将对象置为nil);
-	D--&gt;F(从weak_table_t删除weak_entry_t);
-</code></pre>
+<pre class="mermaid">graph TD;
+    A(dealloc)-->B(weak_clear_no_lock);
+    B-->C(找到所有的weak_referrer_t);
+    C-->D(遍历将对象置为nil);
+    D-->F(从weak_table_t删除weak_entry_t);</pre>
 </div>
 
 
@@ -472,10 +459,9 @@ iOS内存管理总结
 <h4 id="autoreleasePool"><a href="#autoreleasePool" class="headerlink" title="@autoreleasePool"></a>@autoreleasePool</h4><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-variable">@autoreleasePool</span> &#123;&#125; <br><span class="hljs-comment">//解析</span><br>void *pool objc_autoreleasePoolPush();<br>&#123;&#125; 中代码<br><span class="hljs-selector-tag">objc_autoreleasePoolPop</span>(pool);<br></code></pre></td></tr></table></figure>
 
 <div align='center'>
-<pre><code class=" mermaid">graph TD;
-	A(objc_autoreleasePoolPush)--&gt;B(AutorepleasePoolPage::Push);
-	C(objc_autoreleasePoolPop)--&gt;D(AutorepleasePoolPage::Pop);
-</code></pre>
+<pre class="mermaid">graph TD;
+    A(objc_autoreleasePoolPush)-->B(AutorepleasePoolPage::Push);
+    C(objc_autoreleasePoolPop)-->D(AutorepleasePoolPage::Pop);</pre>
 </div>
 
 
@@ -508,11 +494,17 @@ iOS内存管理总结
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2023/01/15/Godot/godot_ui/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Godot UI备忘录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/12/28/Godot01-Camera/">
+                      <a href="/2021/12/28/Godot/Godot01-Camera/">
                         <span class="hidden-mobile">Godot-Camera2D</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>

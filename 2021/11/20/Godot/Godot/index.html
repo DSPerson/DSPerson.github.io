@@ -15,12 +15,12 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="
-早期记录  Mac 上搭建MySQL
+做游戏，爱游戏，不知这次能坚持多久。
 ">
   <meta name="author" content="DSperson">
   <meta name="keywords" content="is Key">
   
-  <title>Mac 上搭建MySQL总结 - DSperson</title>
+  <title>Godot 技巧备忘录 - DSperson</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -155,12 +155,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/null') no-repeat center center;
+         style="background: url('https://godotengine.org/assets/home/features/language.webp') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Mac 上搭建MySQL总结">
+            <span class="h2" id="subtitle" title="Godot 技巧备忘录">
               
             </span>
 
@@ -170,8 +170,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2017-03-01 00:00" pubdate>
-        2017年3月1日 凌晨
+      <time datetime="2021-11-20 00:00" pubdate>
+        2021年11月20日 凌晨
       </time>
     </span>
   
@@ -182,7 +182,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      295 字
+      337 字
     </span>
   
 
@@ -230,49 +230,48 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Mac 上搭建MySQL总结</h1>
+            <h1 style="display: none">Godot 技巧备忘录</h1>
             
             <div class="markdown-body">
               <blockquote>
-<p>早期记录  Mac 上搭建MySQL</p>
+<p>做游戏，爱游戏，不知这次能坚持多久。</p>
 </blockquote>
-<span id="more"></span>
+<span id="more"></span> 
 
-<blockquote>
-<p>使用<code>Homebrew</code> 搭建<code>MySQL </code>是非常稳妥，因为墙的原因可能速度较慢一些，如果使用梯子可能会很快(比如我)。下面看到我写分号的你也得记得写上。</p>
+<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h3 id="Group-分组概念"><a href="#Group-分组概念" class="headerlink" title="Group 分组概念"></a>Group 分组概念</h3><blockquote>
+<p>如果发现玩家潜入秘密基地, 则可以使用 <code>SceneTree.call_group() </code>发出警报声来通知所有敌人:</p>
 </blockquote>
-<p> 第一步执行</p>
-<pre><code>brew install mysql
-</code></pre>
-<p>之后就是等待了建议翻墙速度汇款很多因为内容较大 400多M</p>
-<p>启动服务器</p>
-<pre><code>base mysql.server start
-</code></pre>
-<p> 第二步 进入Mysql</p>
-<pre><code>mysql -uroot -p
-</code></pre>
-<p>此处会让你输入密码 记得 直接回车！！！直接回车！！！直接回车！！！我在这个地方耽误不少时间</p>
-<pre><code>             此处应该有一个成功的图片
-             /-------------------\
-</code></pre>
-<p><img src="/img/MacMysql/success.png" srcset="/img/loading.gif" lazyload alt="此处应该有一个成功的图片"></p>
-<hr>
-<p>查看当前数据库</p>
-<pre><code>show databases;    
-</code></pre>
-<p><img src="/img/MacMysql/show_one.png" srcset="/img/loading.gif" lazyload></p>
-<p>第三步设置密码<br>此处如果直接设置会提示你选用那个数据库 可以用命令行创建一个自己的数据库不要动它自带的数据库，以免出现错误。</p>
-<p>先创建一个新的数据库</p>
-<pre><code>create databases DS;
-</code></pre>
-<p><img src="/img/MacMysql/show_2.png" srcset="/img/loading.gif" lazyload></p>
-<p>如果不想错的话就把分号加上吧 当然你复制下来最好<code>DS</code>数据库名字随便改别重复就行。。。</p>
-<pre><code>use DS;
-</code></pre>
-<p>设置密码</p>
-<pre><code>set password=password(&#39;xxxxxx&#39;)
-</code></pre>
-<p>xxxx即密码</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">get_tree</span><span class="hljs-params">()</span></span><span class="hljs-selector-class">.call_group</span>(<span class="hljs-string">&quot;enemies&quot;</span>， <span class="hljs-string">&quot;player_was_discovered&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><blockquote>
+<p>延时1s执行</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">yield</span><span class="hljs-params">(get_tree()</span></span><span class="hljs-selector-class">.create_timer</span>(<span class="hljs-number">1.0</span>), <span class="hljs-string">&quot;timeout&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="释放"><a href="#释放" class="headerlink" title="释放"></a>释放</h3><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta">#最好使用, 它会在空闲的安全的删除节点</span><br>node.queue_free()<br></code></pre></td></tr></table></figure>
+
+<h3 id="碰撞"><a href="#碰撞" class="headerlink" title="碰撞"></a>碰撞</h3><blockquote>
+<p>move_and_slide()</p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-selector-tag">var</span> velocity = Vector(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)<br><span class="hljs-comment">//不能 乘以 delta， 函数内部已经默认包含了此参数</span><br><span class="hljs-function"><span class="hljs-title">move_and_slide</span><span class="hljs-params">(velocity)</span></span> <br></code></pre></td></tr></table></figure>
+
+<h3 id="跟随"><a href="#跟随" class="headerlink" title="跟随"></a>跟随</h3><blockquote>
+<p>look_at简直是跟随鼠标转向的神器<br>例子： 当玩家拿着枪，鼠标的方向就是玩家瞄准的方向</p>
+</blockquote>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式1 最简单的方式, 在玩家的脚本中</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>	look<span class="hljs-constructor">_at(<span class="hljs-params">get_global_mouse_position</span>()</span>)<br></code></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式2 他们(方式1和2)其实相等</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>	get<span class="hljs-constructor">_global_mouse_position()</span> - get<span class="hljs-constructor">_global_position()</span><br>	rotation = dir.angle<span class="hljs-literal">()</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><blockquote>
+<p>Area2d <a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html#overlap-detection">文档</a></p>
+</blockquote>
+<ul>
+<li><p> 区域对于子弹和其他弹丸物体来说是非常好用, 它可以击中并造成伤害, 但不需要其他物理效果, 如弹跳.</p>
+</li>
+<li><p> 用敌人周围的一个大圆圈区域设定为 “探测” 半径, 当玩家在该区域外时, 敌人就无法 “看到” 玩家.</p>
+</li>
+<li><p>“安保摄像头” - 在有多个摄像头的大型关卡中, 在每个摄像头上附加区域(area), 并在玩家进入时激活它们.</p>
+</li>
+</ul>
 
             </div>
             <hr>
@@ -284,13 +283,15 @@
                     
                       <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/%E6%B8%B8%E6%88%8F/">游戏</a>
+                    
                   </div>
                 
                 
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/MySQL/">MySQL</a>
+                      <a class="hover-with-bg" href="/tags/Godot/">Godot</a>
                     
                   </div>
                 
@@ -307,9 +308,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2017/09/29/webRTC/">
+                      <a href="/2021/12/20/ios-xcframework/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">iOS WebRTC 使用</span>
+                        <span class="hidden-mobile">ios xcframework合成</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -317,8 +318,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2017/02/19/OC-IAP/">
-                        <span class="hidden-mobile">iOS内购买IAP和服务器交互问题</span>
+                      <a href="/2021/11/01/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%87%E5%BF%98%E5%BD%95/">
+                        <span class="hidden-mobile">命令行备忘录</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
