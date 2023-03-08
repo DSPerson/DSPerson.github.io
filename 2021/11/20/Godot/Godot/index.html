@@ -182,7 +182,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      337 字
+      406 字
     </span>
   
 
@@ -192,7 +192,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      4
+      5
        分钟
     </span>
   
@@ -261,7 +261,7 @@
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式1 最简单的方式, 在玩家的脚本中</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>	look<span class="hljs-constructor">_at(<span class="hljs-params">get_global_mouse_position</span>()</span>)<br></code></pre></td></tr></table></figure>
 <figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-comment">// 方式2 他们(方式1和2)其实相等</span><br>func <span class="hljs-constructor">_physics_process(<span class="hljs-params">delta</span>)</span>:<br>	get<span class="hljs-constructor">_global_mouse_position()</span> - get<span class="hljs-constructor">_global_position()</span><br>	rotation = dir.angle<span class="hljs-literal">()</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><blockquote>
+<h2 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h2><h3 id="Area2d"><a href="#Area2d" class="headerlink" title="Area2d"></a>Area2d</h3><blockquote>
 <p>Area2d <a target="_blank" rel="noopener" href="https://docs.godotengine.org/zh_CN/stable/tutorials/physics/using_area_2d.html#overlap-detection">文档</a></p>
 </blockquote>
 <ul>
@@ -272,6 +272,12 @@
 <li><p>“安保摄像头” - 在有多个摄像头的大型关卡中, 在每个摄像头上附加区域(area), 并在玩家进入时激活它们.</p>
 </li>
 </ul>
+<h3 id="CavasLayer"><a href="#CavasLayer" class="headerlink" title="CavasLayer"></a>CavasLayer</h3><blockquote>
+<p>用做UI层显示， layer属性可以代表他的层级， 数字越大 层级越高，</p>
+</blockquote>
+<ol>
+<li>用来制作过度界面， 因为他总是在最上层 动画 0.4s, 可以在0.2s的时候发送一个信号(Signal)， 用来切换界面， </li>
+</ol>
 
             </div>
             <hr>
