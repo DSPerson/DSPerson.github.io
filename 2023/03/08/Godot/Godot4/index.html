@@ -14,11 +14,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="DSperson">
+  <meta name="description" content="
+Godot4.0 正式版终于发布了！！！
+">
   <meta name="author" content="DSperson">
   <meta name="keywords" content="is Key">
   
-  <title>DSperson</title>
+  <title>Godot4 - DSperson</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -153,12 +155,12 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('/null') no-repeat center center;
+         style="background: url('https://godotengine.org/storage/blog/covers/godot-4-0-sets-sail.webp') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="">
+            <span class="h2" id="subtitle" title="Godot4">
               
             </span>
 
@@ -168,8 +170,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2023-03-06 11:01" pubdate>
-        2023年3月6日 上午
+      <time datetime="2023-03-08 15:13" pubdate>
+        2023年3月8日 下午
       </time>
     </span>
   
@@ -180,7 +182,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      92 字
+      352 字
     </span>
   
 
@@ -190,7 +192,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      5
        分钟
     </span>
   
@@ -228,10 +230,14 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">Godot4</h1>
             
             <div class="markdown-body">
-              <p>title: Godot4<br>date: 2023-03-08 15:13:52<br>tags: Godot<br>category: [技术, 游戏]<br>banner_img: <a target="_blank" rel="noopener" href="https://godotengine.org/assets/home/features/cross-platform.svg">https://godotengine.org/assets/home/features/cross-platform.svg</a></p>
+              <blockquote>
+<p>Godot4.0 正式版终于发布了！！！</p>
+</blockquote>
+<span id="more"></span>
+
 <h1 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1gR4y1G7Fa/">https://www.bilibili.com/video/BV1gR4y1G7Fa/</a></p>
 <h1 id="Godot4"><a href="#Godot4" class="headerlink" title="Godot4"></a>Godot4</h1><blockquote>
 <p>重新导入2d像素</p>
@@ -240,9 +246,24 @@
 </ol>
 </blockquote>
 <h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><h3 id="icon-问题"><a href="#icon-问题" class="headerlink" title="icon 问题"></a>icon 问题</h3><blockquote>
-<p><img src="/blog/img/Godot/image-20230306155022639.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/img/Godot/image-20230306155022639.png" srcset="/img/loading.gif" lazyload alt="icon"></p>
 </blockquote>
-<h1 id="Player"><a href="#Player" class="headerlink" title="Player"></a>Player</h1><blockquote>
+<h3 id="添加到该Node之上"><a href="#添加到该Node之上" class="headerlink" title="添加到该Node之上"></a>添加到该Node之上</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs GDScript">current.get_parent().get_child(current.get_index() - 1).add_sibling(silbing)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h2><blockquote>
+<p>导出自定义对象可以创建</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/DSPerson/images/master/uPic/image-20230313103933316.png" srcset="/img/loading.gif" lazyload alt="image-20230313103933316"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment">## 类型需要指定Resource</span><br>extends Resource<br>class_name EntranceModel<br><br><span class="hljs-meta">@export var alta: Vector2i = Vector2i(<span class="hljs-params">-<span class="hljs-number">1</span>, -<span class="hljs-number">1</span></span>)</span><br><span class="hljs-meta">@export var layer_index: int = -<span class="hljs-number">1</span></span><br><br>func _init():<br>	<span class="hljs-keyword">pass</span><br>	<br>  <br><span class="hljs-meta">@export var entrance_model: EntranceModel = EntranceModel.new()</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Player"><a href="#Player" class="headerlink" title="Player"></a>Player</h1><h2 id="Tip"><a href="#Tip" class="headerlink" title="Tip"></a>Tip</h2><blockquote>
+<p>敌人和玩家脸部默认都朝向右边</p>
+</blockquote>
+<h2 id="碰撞处理"><a href="#碰撞处理" class="headerlink" title="碰撞处理"></a>碰撞处理</h2><blockquote>
 <p>碰撞分层</p>
 <ol>
 <li>玩家Coliistion</li>
@@ -251,13 +272,122 @@
 <li>攻击Area2d</li>
 </ol>
 </blockquote>
-<h1 id="攻击效果"><a href="#攻击效果" class="headerlink" title="攻击效果"></a>攻击效果</h1><p><img src="../img/godot/image-20230308154755827.png" srcset="/img/loading.gif" lazyload alt="image-20230308154755827"></p>
+<h1 id="攻击效果"><a href="#攻击效果" class="headerlink" title="攻击效果"></a>攻击效果</h1><p><img src="https://raw.githubusercontent.com/DSPerson/images/master/uPic/image-20230308160731009.png" srcset="/img/loading.gif" lazyload alt="攻击效果"></p>
+<h1 id="鼠标特效"><a href="#鼠标特效" class="headerlink" title="鼠标特效"></a>鼠标特效</h1><p><img src="https://raw.githubusercontent.com/DSPerson/images/master/uPic/image-20230309104949345.png" srcset="/img/loading.gif" lazyload alt="鼠标图片"></p>
+<h1 id="Shader-函数"><a href="#Shader-函数" class="headerlink" title="Shader 函数"></a>Shader 函数</h1><blockquote>
+<p>mix 让你以百分比的方式混合两个值，百分比范围 0 ~ 1</p>
+</blockquote>
+<h1 id="粒子特效"><a href="#粒子特效" class="headerlink" title="粒子特效"></a>粒子特效</h1><h2 id="Process-Materail注解"><a href="#Process-Materail注解" class="headerlink" title="Process Materail注解"></a>Process Materail注解</h2><table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>指定粒子发射方向的单位向量</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x y z</td>
+<td>粒子发射方向?</td>
+<td></td>
+</tr>
+<tr>
+<td>Spread</td>
+<td>粒子的初始方向范围</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Gravity</th>
+<th>重力方向</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x y z</td>
+<td>重力方向 默认 y 98向下</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>Tangential Accel</th>
+<th>切向加速度</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x y z</td>
+<td>重力方向 默认 y 98向下</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="作为武器的发光动画？"><a href="#作为武器的发光动画？" class="headerlink" title="作为武器的发光动画？"></a>作为武器的发光动画？</h2><h1 id="TileMap"><a href="#TileMap" class="headerlink" title="TileMap"></a>TileMap</h1><h2 id="关键函数"><a href="#关键函数" class="headerlink" title="关键函数"></a>关键函数</h2><blockquote>
+<p>将本地坐标转换到TileMap中</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs GDScript">func localTolMap(position)<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>设置TileMap中贴片</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">func set_cell(layer: <span class="hljs-built_in">int</span>, coords: Vector2i, source_id: <span class="hljs-built_in">int</span> = -<span class="hljs-number">1</span>, atlas_coords: Vector2i = Vector2i(-<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>), alternative_tile: <span class="hljs-built_in">int</span> = <span class="hljs-number">0</span>)<br><br>set_cell(layer层级, 需要设置的坐标, <span class="hljs-number">0</span>, 需要的瓦片在资源中的坐标)<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="度和弧度"><a href="#度和弧度" class="headerlink" title="度和弧度"></a>度和弧度</h1><blockquote>
+<p>Vector2.angle() 返回时角度 是</p>
+</blockquote>
+<h1 id="场景切换"><a href="#场景切换" class="headerlink" title="场景切换"></a>场景切换</h1><img src="https://raw.githubusercontent.com/DSPerson/images/master/uPic/image-20230320172447223.png" srcset="/img/loading.gif" lazyload alt="场景切换示意图" style="zoom:30%;" align="middle" />
+
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF/%E6%B8%B8%E6%88%8F/">游戏</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Godot/">Godot</a>
+                    
+                  </div>
                 
               </div>
               
